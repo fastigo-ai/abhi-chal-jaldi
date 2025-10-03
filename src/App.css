@@ -40,3 +40,8 @@
 .read-the-docs {
   color: #888;
 }
+
+
+.animate-scroll:hover {
+  animation-play-state:running;
+}

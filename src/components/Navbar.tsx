@@ -1,7 +1,6 @@
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
-import { Button } from "./ui/button";
 
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -17,78 +16,104 @@ export const Navbar = () => {
   const isActive = (path: string) => location.pathname === path;
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border/40">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-center h-20 relative">
-          <div className="hidden md:flex items-center space-x-12 absolute left-0">
+    <>
+      {/* === DESKTOP NAVBAR === */}
+      <nav className="fixed top-4 left-1/2 transform -translate-x-1/2 z-50 w-full max-w-screen-lg px-4 hidden md:block">
+        <div className="flex items-center justify-center space-x-8 px-8 py-3 bg-white rounded-full shadow-md border border-gray-200 backdrop-blur-md">
+          {/* Left Links */}
+          {navLinks.slice(0, 2).map((link) => (
             <Link
-              to="/why-us"
-              className={`text-base font-medium transition-colors hover:text-primary ${
-                isActive("/why-us") ? "text-primary" : "text-foreground"
-              }`}
+              key={link.path}
+              to={link.path}
+              className={`text-base font-medium transition-colors ${
+                isActive(link.path) ? "text-green-600" : "text-gray-800"
+              } hover:text-green-600`}
             >
-              Why us
+              {link.name}
             </Link>
-            <Link
-              to="/services"
-              className={`text-base font-medium transition-colors hover:text-primary ${
-                isActive("/services") ? "text-primary" : "text-foreground"
-              }`}
-            >
-              Services
-            </Link>
-          </div>
+          ))}
 
-          <Link to="/" className="flex items-center">
-            <span className="text-4xl font-bold text-primary">Pronto</span>
+          {/* Center Logo */}
+          <Link to="/" className="text-2xl font-extrabold text-green-600">
+            Door2fy
           </Link>
 
-          <div className="hidden md:flex items-center space-x-12 absolute right-0">
+          {/* Right Links */}
+          {navLinks.slice(2).map((link) => (
             <Link
-              to="/how-it-works"
-              className={`text-base font-medium transition-colors hover:text-primary ${
-                isActive("/how-it-works") ? "text-primary" : "text-foreground"
-              }`}
+              key={link.path}
+              to={link.path}
+              className={`text-base font-medium transition-colors ${
+                isActive(link.path) ? "text-green-600" : "text-gray-800"
+              } hover:text-green-600`}
             >
-              How it works
+              {link.name}
             </Link>
-            <Link
-              to="/faqs"
-              className={`text-base font-medium transition-colors hover:text-primary ${
-                isActive("/faqs") ? "text-primary" : "text-foreground"
-              }`}
-            >
-              FAQs
-            </Link>
-          </div>
+          ))}
+        </div>
+      </nav>
 
+      {/* === MOBILE NAVBAR === */}
+      <nav className="fixed top-4 left-0 right-0 z-50 px-4 md:hidden">
+        <div className="flex items-center justify-between bg-white rounded-full shadow-md border border-gray-200 px-6 py-3 backdrop-blur-md">
+          {/* Left-aligned logo */}
+          <Link to="/" className="text-2xl font-extrabold text-green-600">
+            Door2fy
+          </Link>
+
+          {/* Green Circular Hamburger Button */}
           <button
-            className="md:hidden p-2 absolute right-0"
-            onClick={() => setIsOpen(!isOpen)}
-            aria-label="Toggle menu"
+            className="bg-green-600 p-2 rounded-full"
+            onClick={() => setIsOpen(true)}
+            aria-label="Open Menu"
           >
-            {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+            <Menu className="w-5 h-5 text-white" />
+          </button>
+        </div>
+      </nav>
+
+      {/* === SLIDE-IN MENU FOR MOBILE === */}
+      <div
+        className={`fixed top-0 right-0 h-full w-64 bg-white shadow-lg z-50 transform transition-transform duration-300 ease-in-out ${
+          isOpen ? "translate-x-0" : "translate-x-full"
+        }`}
+      >
+        {/* Header */}
+        <div className="flex items-center justify-between px-4 py-4 border-b">
+          <span className="text-xl font-semibold text-green-600">Menu</span>
+          <button
+            onClick={() => setIsOpen(false)}
+            className="text-gray-600"
+            aria-label="Close Menu"
+          >
+            <X className="w-6 h-6" />
           </button>
         </div>
 
-        {isOpen && (
-          <div className="md:hidden py-4 space-y-4">
-            {navLinks.map((link) => (
-              <Link
-                key={link.path}
-                to={link.path}
-                className={`block text-sm font-medium transition-colors hover:text-primary ${
-                  isActive(link.path) ? "text-primary" : "text-foreground"
-                }`}
-                onClick={() => setIsOpen(false)}
-              >
-                {link.name}
-              </Link>
-            ))}
-            <Button size="sm" className="w-full">Download App</Button>
-          </div>
-        )}
+        {/* Mobile Nav Links */}
+        <div className="flex flex-col space-y-4 px-6 py-6">
+          {navLinks.map((link) => (
+            <Link
+              key={link.path}
+              to={link.path}
+              onClick={() => setIsOpen(false)}
+              className={`text-base font-medium transition-colors ${
+                isActive(link.path) ? "text-green-600" : "text-gray-800"
+              } hover:text-green-600`}
+            >
+              {link.name}
+            </Link>
+          ))}
+        </div>
       </div>
-    </nav>
+
+      {/* Background Overlay when menu is open */}
+      {isOpen && (
+        <div
+          className="fixed inset-0 bg-black bg-opacity-30 z-40"
+          onClick={() => setIsOpen(false)}
+        />
+      )}
+    </>
   );
 };

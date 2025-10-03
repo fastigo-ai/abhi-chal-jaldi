@@ -1,9 +1,12 @@
+import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { ArrowRight, CheckCircle2, Clock, Shield, Star } from "lucide-react";
+import { ArrowRight, Clock, Shield, Star } from "lucide-react";
+
 import heroWorker1 from "@/assets/hero-worker-1.png";
 import heroWorker2 from "@/assets/hero-worker-2.png";
 import appMockup from "@/assets/app-mockup.png";
+
 import serviceMopping from "@/assets/service-mopping.png";
 import serviceLaundry from "@/assets/service-laundry.png";
 import serviceWindow from "@/assets/service-window.png";
@@ -14,9 +17,9 @@ import serviceKitchen from "@/assets/service-kitchen.png";
 
 export default function Home() {
   const stats = [
-    { number: "99,952+", label: "Homes cleaned" },
-    { number: "84,952+", label: "Hours saved" },
-    { number: "957+", label: "Pronto professionals" },
+    { number: "99952+", label: "Homes cleaned" },
+    { number: "84952+", label: "Hours saved" },
+    { number: "957+", label: "Door2fy professionals" },
   ];
 
   const services = [
@@ -52,31 +55,20 @@ export default function Home() {
       {/* Hero Section */}
       <section className="relative pt-32 pb-16 px-4 sm:px-6 lg:px-8 overflow-hidden min-h-screen flex items-center">
         <div className="absolute inset-0 bg-accent/20 -z-10" />
-        
-        {/* Worker Images on Sides */}
+
         <div className="absolute left-0 bottom-0 hidden lg:block w-64 xl:w-80">
-          <img
-            src={heroWorker1}
-            alt="Professional cleaner"
-            className="w-full h-auto object-contain"
-          />
+          <img src={heroWorker1} alt="Professional cleaner" className="w-full h-auto object-contain" />
         </div>
         <div className="absolute right-0 bottom-0 hidden lg:block w-64 xl:w-80">
-          <img
-            src={heroWorker2}
-            alt="Professional cleaner"
-            className="w-full h-auto object-contain"
-          />
+          <img src={heroWorker2} alt="Professional cleaner" className="w-full h-auto object-contain" />
         </div>
 
         <div className="max-w-5xl mx-auto text-center relative z-10">
           <div className="space-y-8">
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight">
-              India's 10 minute
-              <br />
-              House Help Service App
+              India's 10 minute<br />House Help Service App
             </h1>
-            
+
             <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto">
               Your home, professionally cleaned — exactly when you need it
             </p>
@@ -96,15 +88,12 @@ export default function Home() {
 
             <p className="text-lg text-muted-foreground pt-6">
               Ready to book? Download the app<br />
-              or call us at <span className="font-semibold text-foreground">+91 99104 83315</span>
+              or call us at{" "}
+              <span className="font-semibold text-foreground">+91 99104 83315</span>
             </p>
 
             <div className="pt-8 max-w-md mx-auto">
-              <img
-                src={appMockup}
-                alt="Pronto App"
-                className="w-full h-auto object-contain"
-              />
+              <img src={appMockup} alt="Door2fy App" className="w-full h-auto object-contain" />
             </div>
           </div>
         </div>
@@ -115,16 +104,13 @@ export default function Home() {
         <div className="max-w-7xl mx-auto">
           <div className="grid md:grid-cols-3 gap-8">
             {stats.map((stat, index) => (
-              <div key={index} className="text-center space-y-2">
-                <div className="text-5xl md:text-6xl font-bold">{stat.number}</div>
-                <div className="text-lg opacity-90">{stat.label}</div>
-              </div>
+              <AnimatedStat key={index} number={stat.number} label={stat.label} />
             ))}
           </div>
         </div>
       </section>
 
-      {/* Services Section */}
+      {/* Services Section - Auto Scroll */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center space-y-4 mb-16">
@@ -133,24 +119,47 @@ export default function Home() {
             </div>
             <h2 className="text-4xl md:text-5xl font-bold">Book trusted cleaning help</h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              From deep cleans to daily upkeep, Pronto's got you covered
+              From deep cleans to daily upkeep, Door2fy's got you covered
             </p>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-            {services.map((service, index) => (
-              <Card key={index} className="group p-6 hover:shadow-xl transition-all duration-300 hover:-translate-y-2 cursor-pointer bg-gradient-to-br from-card to-accent/20">
-                <div className="aspect-square mb-4 rounded-xl overflow-hidden bg-accent/30 flex items-center justify-center">
-                  <img
-                    src={service.image}
-                    alt={service.name}
-                    className="h-24 w-24 object-contain group-hover:scale-110 transition-transform duration-300"
-                  />
-                </div>
-                <h3 className="text-center font-semibold">{service.name}</h3>
-              </Card>
-            ))}
+          <div className="overflow-hidden">
+            <div
+              className="flex gap-6 w-max"
+              style={{
+                animation: "scroll-left 30s linear infinite",
+              }}
+            >
+              {[...services, ...services].map((service, index) => (
+                <Card
+                  key={index}
+                  className="group min-w-[200px] max-w-[200px] p-6 flex-shrink-0 hover:shadow-xl transition-all duration-300 hover:-translate-y-2 cursor-pointer bg-gradient-to-br from-card to-accent/20"
+                >
+                  <div className="aspect-square mb-4 rounded-xl overflow-hidden bg-accent/30 flex items-center justify-center">
+                    <img
+                      src={service.image}
+                      alt={service.name}
+                      className="h-24 w-24 object-contain group-hover:scale-110 transition-transform duration-300"
+                    />
+                  </div>
+                  <h3 className="text-center font-semibold">{service.name}</h3>
+                </Card>
+              ))}
+            </div>
           </div>
+
+          <style>
+            {`
+              @keyframes scroll-left {
+                0% { transform: translateX(0%); }
+                100% { transform: translateX(-50%); }
+              }
+
+              div[style*="scroll-left"]:hover {
+                animation-play-state: paused;
+              }
+            `}
+          </style>
         </div>
       </section>
 
@@ -158,7 +167,7 @@ export default function Home() {
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-accent/30">
         <div className="max-w-7xl mx-auto">
           <div className="text-center space-y-4 mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold">Why choose Pronto?</h2>
+            <h2 className="text-4xl md:text-5xl font-bold">Why choose Door2fy?</h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
               On-demand professional cleaners available 24x7
             </p>
@@ -166,7 +175,10 @@ export default function Home() {
 
           <div className="grid md:grid-cols-3 gap-8">
             {features.map((feature, index) => (
-              <Card key={index} className="p-8 space-y-4 hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+              <Card
+                key={index}
+                className="p-8 space-y-4 hover:shadow-xl transition-all duration-300 hover:-translate-y-2"
+              >
                 <div className="h-16 w-16 rounded-full bg-primary/10 flex items-center justify-center">
                   <feature.icon className="h-8 w-8 text-primary" />
                 </div>
@@ -197,6 +209,41 @@ export default function Home() {
           </div>
         </div>
       </section>
+    </div>
+  );
+}
+
+// ✅ AnimatedStat component
+function AnimatedStat({ number, label }: { number: string; label: string }) {
+  const target = parseInt(number.replace(/\D/g, ""));
+  const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    let current = 0;
+    const duration = 1000;
+    const stepTime = 16;
+    const totalSteps = duration / stepTime;
+    const increment = Math.ceil(target / totalSteps);
+
+    const timer = setInterval(() => {
+      current += increment;
+      if (current >= target) {
+        setCount(target);
+        clearInterval(timer);
+      } else {
+        setCount(current);
+      }
+    }, stepTime);
+
+    return () => clearInterval(timer);
+  }, [target]);
+
+  return (
+    <div className="text-center space-y-2">
+      <div className="text-5xl md:text-6xl font-bold">
+        {count.toLocaleString()}+
+      </div>
+      <div className="text-lg opacity-90">{label}</div>
     </div>
   );
 }

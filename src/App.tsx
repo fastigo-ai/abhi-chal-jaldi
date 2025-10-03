@@ -11,6 +11,7 @@ import Services from "./pages/Services";
 import HowItWorks from "./pages/HowItWorks";
 import FAQs from "./pages/FAQs";
 import NotFound from "./pages/NotFound";
+import { ScrollToTop } from "./components/ScrollToTop";
 
 const queryClient = new QueryClient();
 
@@ -19,7 +20,9 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
+
       <BrowserRouter>
+        <ScrollToTop />
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />

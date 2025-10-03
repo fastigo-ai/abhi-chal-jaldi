@@ -12,7 +12,7 @@ export default function WhyUs() {
     {
       icon: Shield,
       title: "100% Verified Professionals",
-      description: "Every Pronto professional undergoes rigorous background verification, police clearance, and skill training before joining our team.",
+      description: "Every Door2fy professional undergoes rigorous background verification, police clearance, and skill training before joining our team.",
     },
     {
       icon: Star,
@@ -27,7 +27,7 @@ export default function WhyUs() {
     {
       icon: Award,
       title: "Trusted by Thousands",
-      description: "Join 99,952+ satisfied customers who have experienced the Pronto difference in their homes across India.",
+      description: "Join 99,952+ satisfied customers who have experienced the Door2fy difference in their homes across India.",
     },
     {
       icon: Heart,
@@ -51,7 +51,7 @@ export default function WhyUs() {
       name: "Priya Sharma",
       location: "Delhi",
       rating: 5,
-      text: "Absolutely love Pronto! The cleaner arrived within 8 minutes and did an amazing job. My house has never looked better!",
+      text: "Absolutely love Door2fy! The cleaner arrived within 8 minutes and did an amazing job. My house has never looked better!",
     },
     {
       name: "Rajesh Kumar",
@@ -72,7 +72,7 @@ export default function WhyUs() {
       {/* Hero Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-accent via-background to-background">
         <div className="max-w-4xl mx-auto text-center space-y-6">
-          <h1 className="text-5xl md:text-6xl font-bold">Why Choose Pronto?</h1>
+          <h1 className="text-5xl md:text-6xl font-bold">Why Choose Door2fy?</h1>
           <p className="text-xl md:text-2xl text-muted-foreground">
             India's most trusted house help service platform, built on reliability, quality, and trust
           </p>
@@ -149,9 +149,9 @@ export default function WhyUs() {
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-accent/30">
         <div className="max-w-4xl mx-auto text-center space-y-8">
-          <h2 className="text-4xl md:text-5xl font-bold">Experience the Pronto Difference</h2>
+          <h2 className="text-4xl md:text-5xl font-bold">Experience the Door2fy Difference</h2>
           <p className="text-xl text-muted-foreground">
-            Join thousands of satisfied customers who trust Pronto for their home cleaning needs
+            Join thousands of satisfied customers who trust Door2fy for their home cleaning needs
           </p>
           <Button size="lg">Download the App Now</Button>
         </div>

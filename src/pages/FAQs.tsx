@@ -14,20 +14,20 @@ export default function FAQs() {
       category: "General",
       questions: [
         {
-          question: "What is Pronto?",
-          answer: "Pronto is India's fastest house help service platform that connects you with verified professional cleaners who can arrive at your doorstep within 10 minutes of booking.",
+          question: "What is Door2fy?",
+          answer: "Door2fy is India's fastest house help service platform that connects you with verified professional cleaners who can arrive at your doorstep within 10 minutes of booking.",
         },
         {
-          question: "Where is Pronto available?",
-          answer: "Pronto is currently available in major metro cities including Delhi NCR, Mumbai, Bangalore, Hyderabad, Pune, and Chennai. We're rapidly expanding to more cities.",
+          question: "Where is Door2fy available?",
+          answer: "Door2fy is currently available in major metro cities including Delhi NCR, Mumbai, Bangalore, Hyderabad, Pune, and Chennai. We're rapidly expanding to more cities.",
         },
         {
           question: "What are your service hours?",
-          answer: "Pronto services are available 24x7, 365 days a year. You can book a service anytime that suits your schedule.",
+          answer: "Door2fy services are available 24x7, 365 days a year. You can book a service anytime that suits your schedule.",
         },
         {
-          question: "How do I download the Pronto app?",
-          answer: "You can download the Pronto app from Google Play Store for Android devices or Apple App Store for iOS devices. Simply search for 'Pronto' and install.",
+          question: "How do I download the Door2fy app?",
+          answer: "You can download the Door2fy app from Google Play Store for Android devices or Apple App Store for iOS devices. Simply search for 'Door2fy' and install.",
         },
       ],
     },
@@ -61,7 +61,7 @@ export default function FAQs() {
       questions: [
         {
           question: "Are your professionals verified?",
-          answer: "Absolutely! Every Pronto professional undergoes rigorous background verification, police clearance, and skill training before joining our platform.",
+          answer: "Absolutely! Every Door2fy professional undergoes rigorous background verification, police clearance, and skill training before joining our platform.",
         },
         {
           question: "Do I need to provide cleaning materials?",
@@ -124,7 +124,7 @@ export default function FAQs() {
         <div className="max-w-4xl mx-auto text-center space-y-6">
           <h1 className="text-5xl md:text-6xl font-bold">Frequently Asked Questions</h1>
           <p className="text-xl md:text-2xl text-muted-foreground">
-            Find answers to common questions about Pronto services
+            Find answers to common questions about Door2fy services
           </p>
         </div>
       </section>
@@ -186,7 +186,7 @@ export default function FAQs() {
                 <p className="text-muted-foreground text-sm mb-4">
                   We'll respond within 24 hours
                 </p>
-                <Button variant="outline" size="sm">support@withpronto.com</Button>
+                <Button variant="outline" size="sm">support@withDoor2fy.com</Button>
               </div>
             </Card>
 
@@ -211,7 +211,7 @@ export default function FAQs() {
         <div className="max-w-4xl mx-auto text-center space-y-8">
           <h2 className="text-4xl md:text-5xl font-bold">Ready to Get Started?</h2>
           <p className="text-xl text-muted-foreground">
-            Download the Pronto app and experience professional cleaning service today
+            Download the Door2fy app and experience professional cleaning service today
           </p>
           <Button size="lg">Download App Now</Button>
         </div>

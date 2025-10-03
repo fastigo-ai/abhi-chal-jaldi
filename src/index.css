@@ -85,3 +85,6 @@ All colors MUST be HSL.
     @apply bg-background text-foreground;
   }
 }
+.animate-scroll:hover {
+  animation-play-state: paused;
+}
