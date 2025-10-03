@@ -50,63 +50,61 @@ export default function Home() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-accent via-background to-background -z-10" />
+      <section className="relative pt-32 pb-16 px-4 sm:px-6 lg:px-8 overflow-hidden min-h-screen flex items-center">
+        <div className="absolute inset-0 bg-accent/20 -z-10" />
         
-        <div className="max-w-7xl mx-auto">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="space-y-8">
-              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight">
-                India's <span className="text-primary">10 minute</span>
-                <br />
-                House Help Service App
-              </h1>
-              
-              <p className="text-xl md:text-2xl text-muted-foreground">
-                Your home, professionally cleaned — exactly when you need it
-              </p>
+        {/* Worker Images on Sides */}
+        <div className="absolute left-0 bottom-0 hidden lg:block w-64 xl:w-80">
+          <img
+            src={heroWorker1}
+            alt="Professional cleaner"
+            className="w-full h-auto object-contain"
+          />
+        </div>
+        <div className="absolute right-0 bottom-0 hidden lg:block w-64 xl:w-80">
+          <img
+            src={heroWorker2}
+            alt="Professional cleaner"
+            className="w-full h-auto object-contain"
+          />
+        </div>
 
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Button size="lg" className="group">
-                  Download App
-                  <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-                </Button>
-                <Button size="lg" variant="outline">
-                  Call +91 99104 83315
-                </Button>
-              </div>
+        <div className="max-w-5xl mx-auto text-center relative z-10">
+          <div className="space-y-8">
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight">
+              India's 10 minute
+              <br />
+              House Help Service App
+            </h1>
+            
+            <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto">
+              Your home, professionally cleaned — exactly when you need it
+            </p>
 
-              <div className="pt-8">
-                <p className="text-sm text-muted-foreground mb-4">Trusted by thousands</p>
-                <div className="flex items-center space-x-2">
-                  <div className="flex -space-x-2">
-                    {[1, 2, 3, 4].map((i) => (
-                      <div key={i} className="h-10 w-10 rounded-full bg-primary/20 border-2 border-background" />
-                    ))}
-                  </div>
-                  <div className="flex items-center space-x-1 text-secondary">
-                    {[1, 2, 3, 4, 5].map((i) => (
-                      <Star key={i} className="h-5 w-5 fill-current" />
-                    ))}
-                  </div>
-                </div>
-              </div>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-4">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
+                alt="Get it on Google Play"
+                className="h-14 cursor-pointer hover:opacity-80 transition-opacity"
+              />
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Download_on_the_App_Store_Badge.svg"
+                alt="Download on the App Store"
+                className="h-14 cursor-pointer hover:opacity-80 transition-opacity"
+              />
             </div>
 
-            <div className="relative">
-              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-primary/5 rounded-full blur-3xl" />
-              <div className="relative grid grid-cols-2 gap-4 items-center">
-                <img
-                  src={heroWorker1}
-                  alt="Professional cleaner"
-                  className="rounded-2xl shadow-2xl"
-                />
-                <img
-                  src={heroWorker2}
-                  alt="Professional cleaner"
-                  className="rounded-2xl shadow-2xl mt-12"
-                />
-              </div>
+            <p className="text-lg text-muted-foreground pt-6">
+              Ready to book? Download the app<br />
+              or call us at <span className="font-semibold text-foreground">+91 99104 83315</span>
+            </p>
+
+            <div className="pt-8 max-w-md mx-auto">
+              <img
+                src={appMockup}
+                alt="Pronto App"
+                className="w-full h-auto object-contain"
+              />
             </div>
           </div>
         </div>
