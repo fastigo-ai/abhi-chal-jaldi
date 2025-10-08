@@ -34,7 +34,7 @@ export const Navbar = () => {
           ))}
 
           {/* Center Logo */}
-          <Link to="/" className="text-2xl font-extrabold text-green-600">
+          <Link to="/" className="text-2xl font-extrabold text-[#53BED1]">
             Door2fy
           </Link>
 
@@ -57,13 +57,13 @@ export const Navbar = () => {
       <nav className="fixed top-4 left-0 right-0 z-50 px-4 md:hidden">
         <div className="flex items-center justify-between bg-white rounded-full shadow-md border border-gray-200 px-6 py-3 backdrop-blur-md">
           {/* Left-aligned logo */}
-          <Link to="/" className="text-2xl font-extrabold text-green-600">
+          <Link to="/" className="text-2xl font-extrabold text-[#53BED1]">
             Door2fy
           </Link>
 
           {/* Green Circular Hamburger Button */}
           <button
-            className="bg-green-600 p-2 rounded-full"
+            className="bg-[#53BED1] p-2 rounded-full"
             onClick={() => setIsOpen(true)}
             aria-label="Open Menu"
           >
@@ -80,7 +80,7 @@ export const Navbar = () => {
       >
         {/* Header */}
         <div className="flex items-center justify-between px-4 py-4 border-b">
-          <span className="text-xl font-semibold text-green-600">Menu</span>
+          <span className="text-xl font-semibold text-[#53BED1]">Menu</span>
           <button
             onClick={() => setIsOpen(false)}
             className="text-gray-600"

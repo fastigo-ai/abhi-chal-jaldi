@@ -17,9 +17,9 @@ import serviceKitchen from "@/assets/service-kitchen.png";
 
 export default function Home() {
   const stats = [
-    { number: "99952+", label: "Homes cleaned" },
-    { number: "84952+", label: "Hours saved" },
-    { number: "957+", label: "Door2fy professionals" },
+    { number: "99952+", label: "Jobs Completed" },
+    { number: "84952+", label: "Hours Saved for Our Users" },
+    { number: "957+", label: "Door2fy professionals Ready to Help" },
   ];
 
   const services = [
@@ -36,17 +36,17 @@ export default function Home() {
     {
       icon: Clock,
       title: "10-Minute Response",
-      description: "Professional help arrives within 10 minutes of your booking",
+      description:"Professional help arrives within 10 minutes of your request — that’s the Door2fy promise.",
     },
     {
       icon: Shield,
       title: "Verified Professionals",
-      description: "All our cleaners are background-verified and trained",
+      description: "All Door2fy experts are background-verified and fully trained for your peace of mind.",
     },
     {
       icon: Star,
       title: "Quality Guaranteed",
-      description: "100% satisfaction guaranteed or your money back",
+      description: "100% satisfaction guaranteed — or your money back. That’s how Door2fy works.",
     },
   ];
 
@@ -66,11 +66,11 @@ export default function Home() {
         <div className="max-w-5xl mx-auto text-center relative z-10">
           <div className="space-y-8">
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight">
-              India's 10 minute<br />House Help Service App
+              India's 10 minute<br />Doorsetp Service App
             </h1>
 
             <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto">
-              Your home, professionally cleaned — exactly when you need it
+              Door2fy — instant tech solutions, anytime you need them
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-4">
@@ -89,7 +89,7 @@ export default function Home() {
             <p className="text-lg text-muted-foreground pt-6">
               Ready to book? Download the app<br />
               or call us at{" "}
-              <span className="font-semibold text-foreground">+91 99104 83315</span>
+              <span className="font-semibold text-foreground">+91 9599094941</span>
             </p>
 
             <div className="pt-8 max-w-md mx-auto">
@@ -100,7 +100,7 @@ export default function Home() {
       </section>
 
       {/* Stats Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-primary text-primary-foreground">
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-[#53BED1] text-primary-foreground">
         <div className="max-w-7xl mx-auto">
           <div className="grid md:grid-cols-3 gap-8">
             {stats.map((stat, index) => (
@@ -117,9 +117,9 @@ export default function Home() {
             <div className="inline-block px-4 py-2 bg-accent rounded-full text-sm font-semibold text-accent-foreground">
               Our Services
             </div>
-            <h2 className="text-4xl md:text-5xl font-bold">Book trusted cleaning help</h2>
+            <h2 className="text-4xl md:text-5xl font-bold">Trusted support</h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              From deep cleans to daily upkeep, Door2fy's got you covered
+              just a click away — that’s Door2fy
             </p>
           </div>
 
@@ -198,11 +198,11 @@ export default function Home() {
             Download the app and book your first cleaning service in under a minute
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="group">
+            <Button size="lg" className="group bg-[#53BED1]">
               Download on App Store
               <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
             </Button>
-            <Button size="lg" className="group">
+            <Button size="lg" className="group bg-[#53BED1]">
               Get it on Google Play
               <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
             </Button>
