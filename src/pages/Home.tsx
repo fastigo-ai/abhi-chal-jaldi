@@ -6,6 +6,7 @@ import { ArrowRight, Clock, Shield, Star } from "lucide-react";
 import heroWorker1 from "@/assets/hero-worker-1.png";
 import heroWorker2 from "@/assets/hero-worker-2.png";
 import appMockup from "@/assets/app-mockup.png";
+import Banner from "@/assets/banner.png";
 
 import serviceMopping from "@/assets/service-mopping.png";
 import serviceLaundry from "@/assets/service-laundry.png";
@@ -93,7 +94,7 @@ export default function Home() {
             </p>
 
             <div className="pt-8 max-w-md mx-auto">
-              <img src={appMockup} alt="Door2fy App" className="w-full h-auto object-contain" />
+              <img src={Banner} alt="Door2fy App" className="w-full h-auto object-contain" />
             </div>
           </div>
         </div>
