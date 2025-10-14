@@ -6,31 +6,41 @@ import { ArrowRight, Clock, Shield, Star } from "lucide-react";
 import heroWorker1 from "@/assets/hero-worker-1.png";
 import heroWorker2 from "@/assets/hero-worker-2.png";
 import appMockup from "@/assets/app-mockup.png";
-import Banner from "@/assets/banner.png";
+// import Banner from "@/assets/banner.png";
+import physical from "@/assets/banner/physical-damage.png";
+import system from "@/assets/banner/my system is slow.png";
+import port from "@/assets/banner/port issue.png";
+import speaker from "@/assets/banner/speaker,camera.png";
+import banner from "@/assets/banner/last banner.png";
 
-import serviceMopping from "@/assets/service-mopping.png";
-import serviceLaundry from "@/assets/service-laundry.png";
-import serviceWindow from "@/assets/service-window.png";
-import serviceSweeping from "@/assets/service-sweeping.png";
-import serviceUtensils from "@/assets/service-utensils.png";
-import serviceBathroom from "@/assets/service-bathroom.png";
-import serviceKitchen from "@/assets/service-kitchen.png";
+
+import Software from "@/assets/quickSupport/Software not opening or crashing.png";
+import excel from "@/assets/quickSupport/excel not working.png";
+import hanging from "@/assets/quickSupport/laptop hanging or freezing.png";
+import macbook from "@/assets/quickSupport/macbook starting slowly.png";
+import macos from "@/assets/quickSupport/macos update no installing.png";
+import problem from "@/assets/quickSupport/not sure about the problem.png";
+
+
 
 export default function Home() {
   const stats = [
-    { number: "99952+", label: "Jobs Completed" },
-    { number: "84952+", label: "Hours Saved for Our Users" },
-    { number: "957+", label: "Door2fy professionals Ready to Help" },
+    { number: "10,000+", label: "Jobs Completed" },
+    { number: "9000+", label: "Hours Saved for Our Users" },
+    { number: "5000+", label: "Door2fy professionals Ready to Help" },
   ];
 
   const services = [
-    { name: "Mopping", image: serviceMopping },
-    { name: "Laundry", image: serviceLaundry },
-    { name: "Window cleaning", image: serviceWindow },
-    { name: "Sweeping", image: serviceSweeping },
-    { name: "Utensils", image: serviceUtensils },
-    { name: "Bathroom cleaning", image: serviceBathroom },
-    { name: "Kitchen cleaning", image: serviceKitchen },
+    { name: "Physical Damage", image: physical },
+    { name: "System Slow", image: system },
+    { name: "Port Issue", image: port },
+    { name: "Speaker & Camera", image: speaker },
+    { name: "Software Crashing", image: Software },
+    { name: "Excel not Working", image: excel },
+    { name: "laptop hanging", image: hanging },
+    { name: "Macbook Starting Slowly", image: macbook },
+    { name: "Macos installing", image: macos },
+    { name: "Not sure about the problem", image: problem },
   ];
 
   const features = [
@@ -55,50 +65,35 @@ export default function Home() {
     <div className="min-h-screen">
       {/* Hero Section */}
       <section className="relative pt-32 pb-16 px-4 sm:px-6 lg:px-8 overflow-hidden min-h-screen flex items-center">
-        <div className="absolute inset-0 bg-accent/20 -z-10" />
+      {/* Background image */}
+      <div
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat -z-20"
+        style={{ backgroundImage: `url(${banner})` }}
+      />
 
-        <div className="absolute left-0 bottom-0 hidden lg:block w-64 xl:w-80">
-          <img src={heroWorker1} alt="Professional cleaner" className="w-full h-auto object-contain" />
+      {/* Optional dark overlay */}
+      <div className="absolute inset-0 bg-black/40 -z-10" />
+
+      {/* Content */}
+      <div className="max-w-5xl mx-auto text-center relative z-10 text-white">
+        <div className="space-y-8">
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight">
+            India's 10 minute<br />
+            Doorstep Service App
+          </h1>
+
+          <p className="text-xl md:text-2xl max-w-3xl mx-auto text-white/90">
+            Door2fy — instant tech solutions, anytime you need them
+          </p>
+
+          <p className="text-lg text-white/80 pt-6">
+            Ready to book? Download the app<br />
+            or call us at{" "}
+            <span className="font-semibold text-white">+91 9599094941</span>
+          </p>
         </div>
-        <div className="absolute right-0 bottom-0 hidden lg:block w-64 xl:w-80">
-          <img src={heroWorker2} alt="Professional cleaner" className="w-full h-auto object-contain" />
-        </div>
-
-        <div className="max-w-5xl mx-auto text-center relative z-10">
-          <div className="space-y-8">
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight">
-              India's 10 minute<br />Doorsetp Service App
-            </h1>
-
-            <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto">
-              Door2fy — instant tech solutions, anytime you need them
-            </p>
-
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-4">
-              <img
-                src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
-                alt="Get it on Google Play"
-                className="h-14 cursor-pointer hover:opacity-80 transition-opacity"
-              />
-              <img
-                src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Download_on_the_App_Store_Badge.svg"
-                alt="Download on the App Store"
-                className="h-14 cursor-pointer hover:opacity-80 transition-opacity"
-              />
-            </div>
-
-            <p className="text-lg text-muted-foreground pt-6">
-              Ready to book? Download the app<br />
-              or call us at{" "}
-              <span className="font-semibold text-foreground">+91 9599094941</span>
-            </p>
-
-            <div className="pt-8 max-w-md mx-auto">
-              <img src={Banner} alt="Door2fy App" className="w-full h-auto object-contain" />
-            </div>
-          </div>
-        </div>
-      </section>
+      </div>
+    </section>
 
       {/* Stats Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-[#53BED1] text-primary-foreground">
@@ -112,11 +107,11 @@ export default function Home() {
       </section>
 
       {/* Services Section - Auto Scroll */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-blue-50">
         <div className="max-w-7xl mx-auto">
           <div className="text-center space-y-4 mb-16">
-            <div className="inline-block px-4 py-2 bg-accent rounded-full text-sm font-semibold text-accent-foreground">
-              Our Services
+            <div className="inline-block px-4 py-2 bg-[#53BED1] rounded-full text-sm font-semibold text-white">
+              Our Services 
             </div>
             <h2 className="text-4xl md:text-5xl font-bold">Trusted support</h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
@@ -165,7 +160,7 @@ export default function Home() {
       </section>
 
       {/* Features Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-accent/30">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-blue-50">
         <div className="max-w-7xl mx-auto">
           <div className="text-center space-y-4 mb-16">
             <h2 className="text-4xl md:text-5xl font-bold">Why choose Door2fy?</h2>
@@ -174,14 +169,14 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-3 gap-8 ">
             {features.map((feature, index) => (
               <Card
                 key={index}
                 className="p-8 space-y-4 hover:shadow-xl transition-all duration-300 hover:-translate-y-2"
               >
-                <div className="h-16 w-16 rounded-full bg-primary/10 flex items-center justify-center">
-                  <feature.icon className="h-8 w-8 text-primary" />
+                <div className="h-16 w-16 rounded-full bg-blue-50 flex items-center justify-center">
+                  <feature.icon className="h-8 w-8 text-blue-500" />
                 </div>
                 <h3 className="text-2xl font-bold">{feature.title}</h3>
                 <p className="text-muted-foreground">{feature.description}</p>
@@ -199,13 +194,13 @@ export default function Home() {
             Download the app and book your first cleaning service in under a minute
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="group bg-[#53BED1]">
+            <Button size="lg" className=" bg-[#53BED1] hover:bg-[#53BED1]">
               Download on App Store
-              <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+              <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
-            <Button size="lg" className="group bg-[#53BED1]">
+            <Button size="lg" className=" bg-[#53BED1] hover:bg-[#53BED1]">
               Get it on Google Play
-              <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+              <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
           </div>
         </div>

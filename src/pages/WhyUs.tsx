@@ -22,12 +22,12 @@ export default function WhyUs() {
     {
       icon: Users,
       title: "Trained & Professional",
-      description: "Our team members receive comprehensive training in professional cleaning techniques, customer service, and safety protocols.",
+      description: "Our team members receive comprehensive training in professional Engineering techniques, customer service, and safety protocols.",
     },
     {
       icon: Award,
       title: "Trusted by Thousands",
-      description: "Join 99,952+ satisfied customers who have experienced the Door2fy difference in their homes across India.",
+      description: "Join 5000+ satisfied customers who have experienced the Door2fy difference in their homes across India.",
     },
     {
       icon: Heart,
@@ -42,7 +42,7 @@ export default function WhyUs() {
     {
       icon: CheckCircle2,
       title: "Eco-Friendly Products",
-      description: "We use only certified, eco-friendly cleaning products that are safe for your family, pets, and the environment.",
+      description: "We deploy only professionally trained engineers who use certified, eco-friendly tools and methods — ensuring safety for your devices, your family, and the environment.",
     },
   ];
 
@@ -51,7 +51,7 @@ export default function WhyUs() {
       name: "Priya Sharma",
       location: "Delhi",
       rating: 5,
-      text: "Absolutely love Door2fy! The cleaner arrived within 8 minutes and did an amazing job. My house has never looked better!",
+      text: "Absolutely love Door2fy! The engineer arrived within 8 minutes and did an amazing job. My laptop is rebooting fast!",
     },
     {
       name: "Rajesh Kumar",
@@ -63,18 +63,18 @@ export default function WhyUs() {
       name: "Anita Desai",
       location: "Bangalore",
       rating: 5,
-      text: "Game changer for working professionals like me. Book in the morning, come home to a sparkling clean house!",
+      text: "Game changer for working professionals like me. Book at late night if system crashing, no worries for morning meeting Engineers will be there at instant!",
     },
   ];
 
   return (
     <div className="min-h-screen pt-20">
       {/* Hero Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-accent via-background to-background">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-blue-50">
         <div className="max-w-4xl mx-auto text-center space-y-6">
           <h1 className="text-5xl md:text-6xl font-bold">Why Choose Door2fy?</h1>
           <p className="text-xl md:text-2xl text-muted-foreground">
-            India's most trusted house help service platform, built on reliability, quality, and trust
+            India's most trusted DoorStep service platform, built on reliability, quality, and trust
           </p>
         </div>
       </section>
@@ -85,8 +85,8 @@ export default function WhyUs() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {reasons.map((reason, index) => (
               <Card key={index} className="p-8 space-y-4 hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
-                <div className="h-16 w-16 rounded-full bg-primary/10 flex items-center justify-center">
-                  <reason.icon className="h-8 w-8 text-primary" />
+                <div className="h-16 w-16 rounded-full bg-blue-50 flex items-center justify-center">
+                  <reason.icon className="h-8 w-8 text-blue-400 " />
                 </div>
                 <h3 className="text-2xl font-bold">{reason.title}</h3>
                 <p className="text-muted-foreground leading-relaxed">{reason.description}</p>
@@ -97,7 +97,7 @@ export default function WhyUs() {
       </section>
 
       {/* Stats Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-primary text-primary-foreground">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-[#53BED1] text-primary-foreground">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">Our Impact</h2>
@@ -105,9 +105,9 @@ export default function WhyUs() {
           </div>
           <div className="grid md:grid-cols-4 gap-8">
             {[
-              { number: "99,952+", label: "Happy Customers" },
-              { number: "84,952+", label: "Hours Saved" },
-              { number: "957+", label: "Professionals" },
+              { number: "10,000+", label: "Happy Customers" },
+              { number: "9000+", label: "Hours Saved" },
+              { number: "5000+", label: "Professionals" },
               { number: "4.9/5", label: "Average Rating" },
             ].map((stat, index) => (
               <div key={index} className="text-center space-y-2">
@@ -153,7 +153,7 @@ export default function WhyUs() {
           <p className="text-xl text-muted-foreground">
             Join thousands of satisfied customers who trust Door2fy for their home cleaning needs
           </p>
-          <Button size="lg">Download the App Now</Button>
+          <Button size="lg" className="bg-[#53BED1] hover:bg-[#53BED1]">Download the App Now</Button>
         </div>
       </section>
     </div>

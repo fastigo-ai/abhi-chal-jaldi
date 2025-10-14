@@ -15,7 +15,7 @@ export default function FAQs() {
       questions: [
         {
           question: "What is Door2fy?",
-          answer: "Door2fy is India's fastest house help service platform that connects you with verified professional cleaners who can arrive at your doorstep within 10 minutes of booking.",
+          answer: "Door2fy is India's fastest Doorstep service & Quick Support  platform that connects you with verified professional Engineers who can arrive at your doorstep within 10 minutes of booking.",
         },
         {
           question: "Where is Door2fy available?",
@@ -40,7 +40,7 @@ export default function FAQs() {
         },
         {
           question: "Can I schedule services in advance?",
-          answer: "Yes! You can schedule services up to 7 days in advance through the app. We also support recurring bookings for regular cleaning needs.",
+          answer: "Yes! You can schedule services up to 7 days in advance through the app. We also support recurring bookings for Quick support.",
         },
         {
           question: "What payment methods do you accept?",
@@ -64,8 +64,8 @@ export default function FAQs() {
           answer: "Absolutely! Every Door2fy professional undergoes rigorous background verification, police clearance, and skill training before joining our platform.",
         },
         {
-          question: "Do I need to provide cleaning materials?",
-          answer: "No, our professionals come fully equipped with all necessary cleaning materials, equipment, and eco-friendly products.",
+          question: "Do I need to provide laptop hardware essentials?",
+          answer: "No, our professionals come fully equipped with all necessary Laptop hardware essentials, equipment, and eco-friendly products.",
         },
         {
           question: "What if I'm not satisfied with the service?",
@@ -76,8 +76,8 @@ export default function FAQs() {
           answer: "Yes! If you're happy with a particular professional, you can save them as a favorite and request them for future bookings through the app.",
         },
         {
-          question: "What cleaning products do you use?",
-          answer: "We use only certified, eco-friendly cleaning products that are safe for your family, pets, and the environment. All products are non-toxic and biodegradable.",
+          question: "What hardware products do you use?",
+          answer: "We use only certified, brand hardware as respect to the user requirements.",
         },
       ],
     },
@@ -120,7 +120,7 @@ export default function FAQs() {
   return (
     <div className="min-h-screen pt-20">
       {/* Hero Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-accent via-background to-background">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-blue-50">
         <div className="max-w-4xl mx-auto text-center space-y-6">
           <h1 className="text-5xl md:text-6xl font-bold">Frequently Asked Questions</h1>
           <p className="text-xl md:text-2xl text-muted-foreground">
@@ -134,12 +134,12 @@ export default function FAQs() {
         <div className="max-w-4xl mx-auto space-y-12">
           {faqCategories.map((category, categoryIndex) => (
             <div key={categoryIndex} className="space-y-6">
-              <h2 className="text-3xl font-bold text-primary">{category.category}</h2>
+              <h2 className="text-3xl font-bold text-[#53BED1]">{category.category}</h2>
               
               <Accordion type="single" collapsible className="space-y-4">
                 {category.questions.map((faq, index) => (
                   <AccordionItem key={index} value={`${categoryIndex}-${index}`} className="border rounded-lg px-6">
-                    <AccordionTrigger className="text-left text-lg font-semibold hover:text-primary">
+                    <AccordionTrigger className="text-left text-lg font-semibold hover:text-[#53BED1]">
                       {faq.question}
                     </AccordionTrigger>
                     <AccordionContent className="text-muted-foreground pt-2 pb-4">
@@ -165,41 +165,41 @@ export default function FAQs() {
 
           <div className="grid md:grid-cols-3 gap-6">
             <Card className="p-6 text-center space-y-4 hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
-              <div className="h-16 w-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto">
-                <Phone className="h-8 w-8 text-primary" />
+              <div className="h-16 w-16 rounded-full bg-blue-50 flex items-center justify-center mx-auto">
+                <Phone className="h-8 w-8 text-blue-400" />
               </div>
               <div>
                 <h3 className="font-bold text-lg mb-2">Call Us</h3>
                 <p className="text-muted-foreground text-sm mb-4">
                   Speak with our customer support team
                 </p>
-                <Button variant="outline" size="sm">+91 99104 83315</Button>
+                <Button className="bg-[#53BED1] hover:bg-[#53BED1]" size="sm">+91 9599094941</Button>
               </div>
             </Card>
 
             <Card className="p-6 text-center space-y-4 hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
-              <div className="h-16 w-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto">
-                <Mail className="h-8 w-8 text-primary" />
+              <div className="h-16 w-16 rounded-full bg-blue-50 flex items-center justify-center mx-auto">
+                <Mail className="h-8 w-8 text-blue-400" />
               </div>
               <div>
                 <h3 className="font-bold text-lg mb-2">Email Us</h3>
                 <p className="text-muted-foreground text-sm mb-4">
                   We'll respond within 24 hours
                 </p>
-                <Button variant="outline" size="sm">support@withDoor2fy.com</Button>
+                <Button className="bg-[#53BED1] hover:bg-[#53BED1]" size="sm">support@Door2fy.in</Button>
               </div>
             </Card>
 
             <Card className="p-6 text-center space-y-4 hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
-              <div className="h-16 w-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto">
-                <MessageCircle className="h-8 w-8 text-primary" />
+              <div className="h-16 w-16 rounded-full bg-blue-50  flex items-center justify-center mx-auto">
+                <MessageCircle className="h-8 w-8 text-blue-400" />
               </div>
               <div>
                 <h3 className="font-bold text-lg mb-2">Live Chat</h3>
                 <p className="text-muted-foreground text-sm mb-4">
                   Chat with us in the app
                 </p>
-                <Button variant="outline" size="sm">Open App Chat</Button>
+                <Button className="bg-[#53BED1] hover:bg-[#53BED1]" size="sm">Open App Chat</Button>
               </div>
             </Card>
           </div>
@@ -213,7 +213,9 @@ export default function FAQs() {
           <p className="text-xl text-muted-foreground">
             Download the Door2fy app and experience professional cleaning service today
           </p>
-          <Button size="lg">Download App Now</Button>
+          <Button size="lg" className=" bg-[#53BED1] hover:bg-[#53BED1]">
+              Download for Android
+            </Button>
         </div>
       </section>
     </div>

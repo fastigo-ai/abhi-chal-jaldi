@@ -8,59 +8,98 @@ import serviceUtensils from "@/assets/service-utensils.png";
 import serviceBathroom from "@/assets/service-bathroom.png";
 import serviceKitchen from "@/assets/service-kitchen.png";
 
+
+import physical from "@/assets/banner/physical-damage.png";
+import system from "@/assets/banner/my system is slow.png";
+import port from "@/assets/banner/port issue.png";
+import speaker from "@/assets/banner/speaker,camera.png";
+// import banner from "@/assets/banner/last banner.png";
+
+
+import Software from "@/assets/quickSupport/Software not opening or crashing.png";
+import excel from "@/assets/quickSupport/excel not working.png";
+import hanging from "@/assets/quickSupport/laptop hanging or freezing.png";
+import macbook from "@/assets/quickSupport/macbook starting slowly.png";
+import macos from "@/assets/quickSupport/macos update no installing.png";
+import problem from "@/assets/quickSupport/not sure about the problem.png";
+
 export default function Services() {
   const services = [
     {
-      name: "Mopping & Floor Cleaning",
-      image: serviceMopping,
+      name: "Excel not working",
+      image: excel,
       description:
-        "Professional mopping service for all floor types including tiles, marble, and wood",
+        "5-10 minutes,our experts will diagnose the problem and provide the best possible solution",
     },
     {
-      name: "Laundry Service",
-      image: serviceLaundry,
+      name: "Laptop Hanging/Freezing",
+      image: hanging,
       description:
-        "Complete laundry solutions including washing, drying, ironing, and folding",
+        "5-10 minutes,our experts will diagnose the problem and provide the best possible solution",
     },
     {
-      name: "Window & Glass Cleaning",
-      image: serviceWindow,
+      name: "Macbook rebooting slowly",
+      image: macbook,
       description:
-        "Streak-free cleaning for windows, mirrors, and glass surfaces",
+        "5-10 minutes,our experts will diagnose the problem and provide the best possible solution",
     },
     {
-      name: "Sweeping & Dusting",
-      image: serviceSweeping,
-      description: "Comprehensive sweeping and dusting for your entire home",
+      name: "Macos update not installing",
+      image: macos,
+      description: "5-10 minutes,our experts will diagnose the problem and provide the best possible solution",
     },
     {
-      name: "Utensils Washing",
-      image: serviceUtensils,
+      name: "Not sure about the problem",
+      image: problem,
       description:
-        "Professional utensil cleaning service for your kitchen",
+        "5-10 minutes,our experts will diagnose the problem and provide the best possible solution",
     },
     {
-      name: "Bathroom Deep Clean",
-      image: serviceBathroom,
+      name: "Software not opening",
+      image: Software,
       description:
-        "Thorough bathroom cleaning including tiles, fixtures, and sanitization",
+        "5-10 minutes,our experts will diagnose the problem and provide the best possible solution",
+    },
+    // {
+    //   name: "WiFi not Connecting",
+    //   image: serviceKitchen,
+    //   description:
+    //     "5-10 minutes,our experts will diagnose the problem and provide the best possible solution",
+    // },
+    {
+      name: "My System is Slow",
+      image: system,
+      description:
+        "5-10 minutes,our experts will diagnose the problem and provide the best possible solution",
     },
     {
-      name: "Kitchen Deep Clean",
-      image: serviceKitchen,
+      name: "Physical Damage",
+      image: physical,
       description:
-        "Complete kitchen cleaning including appliances, counters, and cabinets",
+        "5-10 minutes,our experts will diagnose the problem and provide the best possible solution",
+    },
+    {
+      name: "Port Issue",
+      image: port,
+      description:
+        "5-10 minutes,our experts will diagnose the problem and provide the best possible solution",
+    },
+    {
+      name: "Speaker/Camera Issue",
+      image: speaker,
+      description:
+        "5-10 minutes,our experts will diagnose the problem and provide the best possible solution",
     },
   ];
 
   return (
     <div className="min-h-screen pt-20">
       {/* Hero Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-accent via-background to-background">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-blue-50 ">
         <div className="max-w-4xl mx-auto text-center space-y-6">
           <h1 className="text-5xl md:text-6xl font-bold">Our Services</h1>
           <p className="text-xl md:text-2xl text-muted-foreground">
-            Professional cleaning services tailored to your needs
+            Doorstep Services
           </p>
         </div>
       </section>
@@ -68,12 +107,7 @@ export default function Services() {
       {/* Services List */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4">Choose Your Service</h2>
-            <p className="text-xl text-muted-foreground">
-              Book individual services at your convenience
-            </p>
-          </div>
+          
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
@@ -112,8 +146,10 @@ export default function Services() {
             Contact us to create a personalized cleaning plan that fits your specific needs
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg">Call +91 99104 83315</Button>
-            <Button size="lg" variant="outline">Download App</Button>
+            <Button size="lg" className=" bg-[#53BED1] hover:bg-[#53BED1]">Download for iOS</Button>
+            <Button size="lg" className=" bg-[#53BED1] hover:bg-[#53BED1]">
+              Download for Android
+            </Button>
           </div>
         </div>
       </section>

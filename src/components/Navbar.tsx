@@ -18,7 +18,7 @@ export const Navbar = () => {
   return (
     <>
       {/* === DESKTOP NAVBAR === */}
-      <nav className="fixed top-4 left-1/2 transform -translate-x-1/2 z-50 w-full max-w-screen-lg px-4 hidden md:block">
+      <nav className="fixed top-4 left-1/2 transform -translate-x-1/2 z-50 w-full max-w-screen-sm px-4 hidden md:block">
         <div className="flex items-center justify-center space-x-8 px-8 py-3 bg-white rounded-full shadow-md border border-gray-200 backdrop-blur-md">
           {/* Left Links */}
           {navLinks.slice(0, 2).map((link) => (
@@ -26,8 +26,8 @@ export const Navbar = () => {
               key={link.path}
               to={link.path}
               className={`text-base font-medium transition-colors ${
-                isActive(link.path) ? "text-green-600" : "text-gray-800"
-              } hover:text-green-600`}
+                isActive(link.path) ? "text-[#53BED1]" : "text-gray-800"
+              } hover:text-[#53BED1]`}
             >
               {link.name}
             </Link>
@@ -44,8 +44,8 @@ export const Navbar = () => {
               key={link.path}
               to={link.path}
               className={`text-base font-medium transition-colors ${
-                isActive(link.path) ? "text-green-600" : "text-gray-800"
-              } hover:text-green-600`}
+                isActive(link.path) ? "text-[#53BED1]" : "text-gray-800"
+              } hover:text-[#53BED1]`}
             >
               {link.name}
             </Link>
