@@ -92,10 +92,13 @@ const Footer = () => {
           <div>
             <h3 className="text-cyan-400 font-semibold mb-2">For Partners</h3>
             <ul className="space-y-1">
-              <Link to="/Register-Professional">
-                <li className="cursor-pointer">Register as a Professional</li>
-              </Link>
-            </ul>
+  <li className="cursor-pointer">
+    <a href="http://partner.door2fy.in" target="_blank" rel="noopener noreferrer">
+      Register as a Professional
+    </a>
+  </li>
+</ul>
+
           </div>
         </div>
 
