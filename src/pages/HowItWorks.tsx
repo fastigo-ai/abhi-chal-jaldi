@@ -68,8 +68,7 @@ export default function HowItWorks() {
     {
       icon: CreditCard,
       title: "Cashless Payments",
-      description:
-        "Pay securely through the app with multiple payment options",
+      description: "Pay securely through the app with multiple payment options",
     },
     {
       icon: CheckCircle2,
@@ -109,7 +108,7 @@ export default function HowItWorks() {
         <div className="max-w-4xl mx-auto text-center space-y-6">
           <h1 className="text-5xl md:text-6xl font-bold">How It Works</h1>
           <p className="text-xl md:text-2xl text-muted-foreground">
-            Get professional cleaning help in just 6 simple steps
+            Get Professional Doorstep Engineer in just 6 simple steps{" "}
           </p>
         </div>
       </section>
@@ -143,7 +142,9 @@ export default function HowItWorks() {
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-[#53BED1] text-primary-foreground">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">App Features</h2>
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">
+              App Features
+            </h2>
             <p className="text-lg opacity-90">
               Everything you need for hassle-free booking
             </p>
@@ -167,7 +168,9 @@ export default function HowItWorks() {
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4">Frequently Asked Questions</h2>
+            <h2 className="text-4xl font-bold mb-4">
+              Frequently Asked Questions
+            </h2>
             <p className="text-xl text-muted-foreground">
               Got questions? We've got answers
             </p>
@@ -194,10 +197,13 @@ export default function HowItWorks() {
             Ready to Experience Pronto?
           </h2>
           <p className="text-xl text-muted-foreground">
-            Download the app now and get your first booking done in under a minute
+            Download the app now and get your first booking done in under a
+            minute
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className=" bg-[#53BED1] hover:bg-[#53BED1]">Download for iOS</Button>
+            <Button size="lg" className=" bg-[#53BED1] hover:bg-[#53BED1]">
+              Download for iOS
+            </Button>
             <Button size="lg" className=" bg-[#53BED1] hover:bg-[#53BED1]">
               Download for Android
             </Button>

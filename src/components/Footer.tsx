@@ -127,7 +127,7 @@ const Footer = () => {
 
         {/* Copyright  */}
         <p className="text-center mt-6 text-gray-400 text-xs border-t border-gray-700 pt-4">
-          © Copyright 2024 Doorfy. All rights reserved.
+          © Copyright 2025 Door2fy. All rights reserved.
         </p>
       </div>
     </footer>

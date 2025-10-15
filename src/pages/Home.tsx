@@ -13,15 +13,12 @@ import port from "@/assets/banner/port issue.png";
 import speaker from "@/assets/banner/speaker,camera.png";
 import banner from "@/assets/banner/last banner.png";
 
-
 import Software from "@/assets/quickSupport/Software not opening or crashing.png";
 import excel from "@/assets/quickSupport/excel not working.png";
 import hanging from "@/assets/quickSupport/laptop hanging or freezing.png";
 import macbook from "@/assets/quickSupport/macbook starting slowly.png";
 import macos from "@/assets/quickSupport/macos update no installing.png";
 import problem from "@/assets/quickSupport/not sure about the problem.png";
-
-
 
 export default function Home() {
   const stats = [
@@ -47,17 +44,20 @@ export default function Home() {
     {
       icon: Clock,
       title: "10-Minute Response",
-      description:"Professional help arrives within 10 minutes of your request — that’s the Door2fy promise.",
+      description:
+        "Professional help arrives within 10 minutes of your request — that’s the Door2fy promise.",
     },
     {
       icon: Shield,
       title: "Verified Professionals",
-      description: "All Door2fy experts are background-verified and fully trained for your peace of mind.",
+      description:
+        "All Door2fy experts are background-verified and fully trained for your peace of mind.",
     },
     {
       icon: Star,
       title: "Quality Guaranteed",
-      description: "100% satisfaction guaranteed — or your money back. That’s how Door2fy works.",
+      description:
+        "100% satisfaction guaranteed — or your money back. That’s how Door2fy works.",
     },
   ];
 
@@ -65,42 +65,48 @@ export default function Home() {
     <div className="min-h-screen">
       {/* Hero Section */}
       <section className="relative pt-32 pb-16 px-4 sm:px-6 lg:px-8 overflow-hidden min-h-screen flex items-center">
-      {/* Background image */}
-      <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat -z-20"
-        style={{ backgroundImage: `url(${banner})` }}
-      />
+        {/* Background image */}
+        <div
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat -z-20"
+          style={{ backgroundImage: `url(${banner})` }}
+        />
 
-      {/* Optional dark overlay */}
-      <div className="absolute inset-0 bg-black/40 -z-10" />
+        {/* Optional dark overlay */}
+        <div className="absolute inset-0 bg-black/40 -z-10" />
 
-      {/* Content */}
-      <div className="max-w-5xl mx-auto text-center relative z-10 text-white">
-        <div className="space-y-8">
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight">
-            India's 10 minute<br />
-            Doorstep Service App
-          </h1>
+        {/* Content */}
+        <div className="max-w-5xl mx-auto text-center relative z-10 text-white">
+          <div className="space-y-8">
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight">
+              India's 10 minute
+              <br />
+              Doorstep Service App
+            </h1>
 
-          <p className="text-xl md:text-2xl max-w-3xl mx-auto text-white/90">
-            Door2fy — instant tech solutions, anytime you need them
-          </p>
+            <p className="text-xl md:text-2xl max-w-3xl mx-auto text-white/90">
+              Door2fy — instant tech solutions, anytime you need them
+            </p>
 
-          <p className="text-lg text-white/80 pt-6">
-            Ready to book? Download the app<br />
-            or call us at{" "}
-            <span className="font-semibold text-white">+91 9599094941</span>
-          </p>
+            <p className="text-lg text-white/80 pt-6">
+              Ready to book? Download the app
+              <br />
+              or call us at{" "}
+              <span className="font-semibold text-white">+91 9599094941</span>
+            </p>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
 
       {/* Stats Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-[#53BED1] text-primary-foreground">
         <div className="max-w-7xl mx-auto">
           <div className="grid md:grid-cols-3 gap-8">
             {stats.map((stat, index) => (
-              <AnimatedStat key={index} number={stat.number} label={stat.label} />
+              <AnimatedStat
+                key={index}
+                number={stat.number}
+                label={stat.label}
+              />
             ))}
           </div>
         </div>
@@ -111,7 +117,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center space-y-4 mb-16">
             <div className="inline-block px-4 py-2 bg-[#53BED1] rounded-full text-sm font-semibold text-white">
-              Our Services 
+              Our Services
             </div>
             <h2 className="text-4xl md:text-5xl font-bold">Trusted support</h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
@@ -163,9 +169,11 @@ export default function Home() {
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-blue-50">
         <div className="max-w-7xl mx-auto">
           <div className="text-center space-y-4 mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold">Why choose Door2fy?</h2>
+            <h2 className="text-4xl md:text-5xl font-bold">
+              Why choose Door2fy?
+            </h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              On-demand professional cleaners available 24x7
+              On-demand professional Engineer available 24x7
             </p>
           </div>
 
@@ -189,9 +197,12 @@ export default function Home() {
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center space-y-8">
-          <h2 className="text-4xl md:text-5xl font-bold">Ready to get started?</h2>
+          <h2 className="text-4xl md:text-5xl font-bold">
+            Ready to get started?
+          </h2>
           <p className="text-xl text-muted-foreground">
-            Download the app and book your first cleaning service in under a minute
+            Download the app and book your first Doorstep & Quick support
+            Service in under a minute{" "}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" className=" bg-[#53BED1] hover:bg-[#53BED1]">
