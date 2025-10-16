@@ -1,6 +1,7 @@
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
+import Logo from "../assets/Logo-removebg-preview.png";
 
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -18,8 +19,8 @@ export const Navbar = () => {
   return (
     <>
       {/* === DESKTOP NAVBAR === */}
-      <nav className="fixed top-4 left-1/2 transform -translate-x-1/2 z-50 w-full max-w-screen-sm px-4 hidden md:block">
-        <div className="flex items-center justify-center space-x-8 px-8 py-3 bg-white rounded-full shadow-md border border-gray-200 backdrop-blur-md">
+      <nav className="fixed top-4 left-1/2 transform -translate-x-1/2 z-50 w-full max-w-screen-sm px-4 hidden md:block h-16">
+        <div className="flex items-center justify-center space-x-8 px-8 py-3 bg-white rounded-full shadow-md border border-gray-200 backdrop-blur-md h-full">
           {/* Left Links */}
           {navLinks.slice(0, 2).map((link) => (
             <Link
@@ -34,8 +35,8 @@ export const Navbar = () => {
           ))}
 
           {/* Center Logo */}
-          <Link to="/" className="text-2xl font-extrabold text-[#53BED1]">
-            Door2fy
+          <Link to="/" className="text-[#53BED1] h-full flex items-center">
+            <img src={Logo} alt="Logo" className="h-7 w-auto" />
           </Link>
 
           {/* Right Links */}

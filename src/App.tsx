@@ -13,6 +13,7 @@ import FAQs from "./pages/FAQs";
 import NotFound from "./pages/NotFound";
 import { ScrollToTop } from "./components/ScrollToTop";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
+import CityService from "./pages/CityService";
 
 const queryClient = new QueryClient();
 
@@ -32,6 +33,10 @@ const App = () => (
           <Route path="/how-it-works" element={<HowItWorks />} />
           <Route path="/faqs" element={<FAQs />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+
+          {/* ✅ Updated route to use :city */}
+          <Route path="/best-laptop-service-in/:city" element={<CityService />} />
+
           <Route path="*" element={<NotFound />} />
         </Routes>
         <Footer />
