@@ -338,7 +338,7 @@ export default function Home() {
   return (
     <div className="min-h-screen">
       {/* ✅ Hero Section with Responsive Text */}
-      <section className="pt-32 pb-16 px-4 sm:px-6 lg:px-8 min-h-screen flex flex-col md:flex-row items-center justify-between max-w-6xl mx-auto">
+      <section className="pt-32 pb-16 px-4 sm:px-6 lg:px-8 min-h-screen flex flex-col md:flex-row items-center justify-between max-w-7xl mx-auto">
         {/* Left: Text Content */}
         <div className="w-full md:w-1/2 space-y-6 text-center md:text-left">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-gray-900">
