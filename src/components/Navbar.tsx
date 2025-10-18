@@ -58,8 +58,8 @@ export const Navbar = () => {
       <nav className="fixed top-4 left-0 right-0 z-50 px-4 md:hidden">
         <div className="flex items-center justify-between bg-white rounded-full shadow-md border border-gray-200 px-6 py-3 backdrop-blur-md">
           {/* Left-aligned logo */}
-          <Link to="/" className="text-2xl font-extrabold text-[#53BED1]">
-            Door2fy
+          <Link to="/" className="text-[#53BED1] h-full flex items-center">
+            <img src={Logo} alt="Logo" className="h-7 w-auto" />
           </Link>
 
           {/* Green Circular Hamburger Button */}
