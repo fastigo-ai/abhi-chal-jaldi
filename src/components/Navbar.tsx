@@ -11,6 +11,7 @@ export const Navbar = () => {
     { name: "Why us", path: "/why-us" },
     { name: "Services", path: "/services" },
     { name: "How it works", path: "/how-it-works" },
+    { name: "Blog", path: "/blogs" },
     { name: "FAQs", path: "/faqs" },
   ];
 
