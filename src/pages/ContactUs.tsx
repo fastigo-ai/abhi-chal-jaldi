@@ -108,9 +108,7 @@ const Contact = () => {
           {/* LEFT SIDE INFO */}
           <div className="w-full px-4 lg:w-1/2 xl:w-6/12">
             <div className="mb-12 max-w-[570px] lg:mb-0">
-              <span className="mb-4 block text-base font-semibold text-primary">
-                Contact Us
-              </span>
+              
               <h2 className="mb-6 text-[32px] font-bold uppercase text-dark dark:text-white">
                 GET IN TOUCH WITH US
               </h2>
@@ -184,7 +182,7 @@ const Contact = () => {
                 <button
                   type="submit"
                   disabled={loading}
-                  className={`w-full rounded border border-primary bg-primary p-3 text-white transition hover:bg-opacity-90 ${
+                  className={`w-full rounded border border-primary  p-3  transition hover:bg-opacity-90 bg-[#53BED1] hover:bg-[#53BED1] text-white ${
                     loading ? "opacity-70 cursor-not-allowed" : ""
                   }`}
                 >
