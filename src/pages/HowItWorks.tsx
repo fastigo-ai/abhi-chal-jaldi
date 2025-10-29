@@ -11,6 +11,7 @@ import {
   CreditCard,
   CheckCircle2,
 } from "lucide-react";
+import { Helmet } from "react-helmet-async";
 
 export default function HowItWorks() {
   const steps = [
@@ -103,6 +104,24 @@ export default function HowItWorks() {
 
   return (
     <div className="min-h-screen pt-20">
+      <Helmet>
+        <title>How It Works | Door2fy - 10 Minute Doorstep Service</title>
+        <meta
+          name="description"
+          content="Learn how Door2fy works — from booking to doorstep repair in 10 minutes. Quick, professional, and guaranteed tech support made simple."
+        />
+        <meta
+          name="keywords"
+          content="door2fy repair process, laptop repair booking, doorstep repair service, laptop pickup and drop, easy repair steps, how laptop repair works"
+        />
+        <meta property="og:title" content="How Door2fy Works | Quick Doorstep Tech Support" />
+        <meta
+          property="og:description"
+          content="Book a verified engineer, track in real-time, and get tech support at your doorstep within 10 minutes. Learn how it works!"
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://door2fy.com/how-it-works" />
+      </Helmet>
       {/* Hero Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-blue-50">
         <div className="max-w-4xl mx-auto text-center space-y-6">

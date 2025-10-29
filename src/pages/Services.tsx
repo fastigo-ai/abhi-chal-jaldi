@@ -1,18 +1,10 @@
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import serviceMopping from "@/assets/service-mopping.png";
-import serviceLaundry from "@/assets/service-laundry.png";
-import serviceWindow from "@/assets/service-window.png";
-import serviceSweeping from "@/assets/service-sweeping.png";
-import serviceUtensils from "@/assets/service-utensils.png";
-import serviceBathroom from "@/assets/service-bathroom.png";
-import serviceKitchen from "@/assets/service-kitchen.png";
 
 import physical from "@/assets/banner/physical-damage.png";
 import system from "@/assets/banner/my system is slow.png";
 import port from "@/assets/banner/port issue.png";
 import speaker from "@/assets/banner/speaker,camera.png";
-// import banner from "@/assets/banner/last banner.png";
 
 import Software from "@/assets/quickSupport/Software not opening or crashing.png";
 import excel from "@/assets/quickSupport/excel not working.png";
@@ -20,6 +12,7 @@ import hanging from "@/assets/quickSupport/laptop hanging or freezing.png";
 import macbook from "@/assets/quickSupport/macbook starting slowly.png";
 import macos from "@/assets/quickSupport/macos update no installing.png";
 import problem from "@/assets/quickSupport/not sure about the problem.png";
+import { Helmet } from "react-helmet-async";
 
 export default function Services() {
   const services = [
@@ -59,12 +52,7 @@ export default function Services() {
       description:
         "5-10 minutes,our experts will diagnose the problem and provide the best possible solution",
     },
-    // {
-    //   name: "WiFi not Connecting",
-    //   image: serviceKitchen,
-    //   description:
-    //     "5-10 minutes,our experts will diagnose the problem and provide the best possible solution",
-    // },
+
     {
       name: "My System is Slow",
       image: system,
@@ -93,6 +81,24 @@ export default function Services() {
 
   return (
     <div className="min-h-screen pt-20">
+       <Helmet>
+        <title>Our Services | Door2fy - Fast Doorstep Repair & Tech Support</title>
+        <meta
+          name="description"
+          content="Explore Door2fy's range of doorstep and quick tech support services. From slow systems to software crashes, our experts fix it all in just 10 minutes."
+        />
+        <meta
+          name="keywords"
+          content="laptop repair services, screen replacement, battery replacement, motherboard repair, laptop maintenance, software troubleshooting, laptop cleaning, computer repair India"
+        />
+        <meta property="og:title" content="Door2fy Services | Quick Doorstep Tech Support" />
+        <meta
+          property="og:description"
+          content="Our experts diagnose and fix laptop, MacBook, and software problems within minutes — at your doorstep."
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://door2fy.com/services" />
+      </Helmet>
       {/* Hero Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-blue-50 ">
         <div className="max-w-4xl mx-auto text-center space-y-6">

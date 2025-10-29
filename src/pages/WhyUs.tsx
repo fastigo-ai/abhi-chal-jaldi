@@ -10,6 +10,7 @@ import {
   Heart,
   Zap,
 } from "lucide-react";
+import { Helmet } from "react-helmet-async";
 
 export default function WhyUs() {
   const reasons = [
@@ -86,6 +87,23 @@ export default function WhyUs() {
 
   return (
     <div className="min-h-screen pt-20">
+       <Helmet>
+        <title>Why Choose Door2fy? | Trusted Laptop Repair Service</title>
+        <meta
+          name="description"
+          content="Door2fy is India's most trusted doorstep laptop repair service. Get professional, certified technicians and reliable computer service at your convenience."
+        />
+        <meta
+          name="keywords"
+          content="why choose door2fy, trusted laptop repair service, professional laptop technicians, reliable computer service India, doorstep repair experts, certified laptop engineers"
+        />
+        <meta property="og:title" content="Why Choose Door2fy? | Trusted Laptop Repair Service" />
+        <meta
+          property="og:description"
+          content="Door2fy is India's most trusted doorstep laptop repair service. Get professional, certified technicians and reliable computer service at your convenience."
+        />
+        <meta property="og:type" content="website" />
+      </Helmet>
       {/* Hero Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-blue-50">
         <div className="max-w-4xl mx-auto text-center space-y-6">

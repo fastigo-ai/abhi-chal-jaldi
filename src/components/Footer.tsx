@@ -46,7 +46,9 @@ const Footer = () => {
             <h3 className="text-cyan-400 font-semibold mb-2">For Customers</h3>
             <ul className="space-y-1">
               <li className="cursor-pointer">Refundable Policy</li>
+              <Link to='/contact-us'>
               <li className="cursor-pointer">Contact Us</li>
+              </Link>
             </ul>
           </div>
           <div>
