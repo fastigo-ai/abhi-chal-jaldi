@@ -11,12 +11,13 @@ const BlogList: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>Latest Blogs & Tech Guides | Pronto</title>
-        <meta name="description" content={metaDescription} />
-        <meta property="og:title" content="Latest Blogs & Tech Guides | Pronto" />
-        <meta property="og:description" content={metaDescription} />
-        <meta property="og:type" content="website" />
-        <link rel="canonical" href="https://yourdomain.com/blogs" />
+        <title>{blog.title} | Door2fy</title>
+        <meta name="description" content={blog.metaDescription} />
+        <meta property="og:title" content={blog.title} />
+        <meta property="og:description" content={blog.metaDescription} />
+        <meta property="og:image" content={blog.featuredImage} />
+        <meta property="og:type" content="article" />
+        <meta name="twitter:card" content="summary_large_image" />
       </Helmet>
 
       <section className="max-w-6xl mx-auto px-4 py-28">
