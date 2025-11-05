@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  
+<urlset 
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 
+  http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+  <!-- Main Pages -->
   <url>
     <loc>https://www.door2fy.in/</loc>
     <lastmod>2025-10-22</lastmod>
@@ -21,12 +26,14 @@
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
+
   <url>
     <loc>https://www.door2fy.in/how-it-works</loc>
     <lastmod>2025-10-22</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
+
   <url>
     <loc>https://www.door2fy.in/faqs</loc>
     <lastmod>2025-10-22</lastmod>
@@ -34,6 +41,56 @@
     <priority>0.8</priority>
   </url>
 
-  
+  <!-- City Service Pages -->
+  <url><loc>https://www.door2fy.in/best-laptop-service-in/Agra</loc></url>
+  <url><loc>https://www.door2fy.in/best-laptop-service-in/Ahmedabad</loc></url>
+  <url><loc>https://www.door2fy.in/best-laptop-service-in/Aligarh</loc></url>
+  <url><loc>https://www.door2fy.in/best-laptop-service-in/Amritsar</loc></url>
+  <url><loc>https://www.door2fy.in/best-laptop-service-in/Bareilly</loc></url>
+  <url><loc>https://www.door2fy.in/best-laptop-service-in/Bengaluru</loc></url>
+  <url><loc>https://www.door2fy.in/best-laptop-service-in/Bhagalpur</loc></url>
+  <url><loc>https://www.door2fy.in/best-laptop-service-in/Bhopal</loc></url>
+  <url><loc>https://www.door2fy.in/best-laptop-service-in/Bhubaneswar</loc></url>
+  <url><loc>https://www.door2fy.in/best-laptop-service-in/Chandigarh</loc></url>
+  <url><loc>https://www.door2fy.in/best-laptop-service-in/Cuttack</loc></url>
+  <url><loc>https://www.door2fy.in/best-laptop-service-in/Dehradun</loc></url>
+  <url><loc>https://www.door2fy.in/best-laptop-service-in/Delhi</loc></url>
+  <url><loc>https://www.door2fy.in/best-laptop-service-in/Faridabad</loc></url>
+  <url><loc>https://www.door2fy.in/best-laptop-service-in/Gandhi-Nagar</loc></url>
+  <url><loc>https://www.door2fy.in/best-laptop-service-in/Ghaziabad</loc></url>
+  <url><loc>https://www.door2fy.in/best-laptop-service-in/Gorakhpur</loc></url>
+  <url><loc>https://www.door2fy.in/best-laptop-service-in/Greater-Noida</loc></url>
+  <url><loc>https://www.door2fy.in/best-laptop-service-in/Gurugram</loc></url>
+  <url><loc>https://www.door2fy.in/best-laptop-service-in/Gwalior</loc></url>
+  <url><loc>https://www.door2fy.in/best-laptop-service-in/Haridwar</loc></url>
+  <url><loc>https://www.door2fy.in/best-laptop-service-in/Haldwani</loc></url>
+  <url><loc>https://www.door2fy.in/best-laptop-service-in/Hyderabad</loc></url>
+  <url><loc>https://www.door2fy.in/best-laptop-service-in/Indore</loc></url>
+  <url><loc>https://www.door2fy.in/best-laptop-service-in/Jabalpur</loc></url>
+  <url><loc>https://www.door2fy.in/best-laptop-service-in/Jaipur</loc></url>
+  <url><loc>https://www.door2fy.in/best-laptop-service-in/Jhansi</loc></url>
+  <url><loc>https://www.door2fy.in/best-laptop-service-in/Kanpur</loc></url>
+  <url><loc>https://www.door2fy.in/best-laptop-service-in/Lucknow</loc></url>
+  <url><loc>https://www.door2fy.in/best-laptop-service-in/Ludhiana</loc></url>
+  <url><loc>https://www.door2fy.in/best-laptop-service-in/Meerut</loc></url>
+  <url><loc>https://www.door2fy.in/best-laptop-service-in/Mohali</loc></url>
+  <url><loc>https://www.door2fy.in/best-laptop-service-in/Moradabad</loc></url>
+  <url><loc>https://www.door2fy.in/best-laptop-service-in/Mumbai</loc></url>
+  <url><loc>https://www.door2fy.in/best-laptop-service-in/Mysuru</loc></url>
+  <url><loc>https://www.door2fy.in/best-laptop-service-in/Nagpur</loc></url>
+  <url><loc>https://www.door2fy.in/best-laptop-service-in/Noida</loc></url>
+  <url><loc>https://www.door2fy.in/best-laptop-service-in/Patna</loc></url>
+  <url><loc>https://www.door2fy.in/best-laptop-service-in/Panchkula</loc></url>
+  <url><loc>https://www.door2fy.in/best-laptop-service-in/Prayagraj</loc></url>
+  <url><loc>https://www.door2fy.in/best-laptop-service-in/Pune</loc></url>
+  <url><loc>https://www.door2fy.in/best-laptop-service-in/Raipur</loc></url>
+  <url><loc>https://www.door2fy.in/best-laptop-service-in/Roorkee</loc></url>
+  <url><loc>https://www.door2fy.in/best-laptop-service-in/Rudrapur</loc></url>
+  <url><loc>https://www.door2fy.in/best-laptop-service-in/Tirupati</loc></url>
+  <url><loc>https://www.door2fy.in/best-laptop-service-in/Ujjain</loc></url>
+  <url><loc>https://www.door2fy.in/best-laptop-service-in/Varanasi</loc></url>
+  <url><loc>https://www.door2fy.in/best-laptop-service-in/Vijayawada</loc></url>
+  <url><loc>https://www.door2fy.in/best-laptop-service-in/Zirakpur</loc></url>
+  <url><loc>https://www.door2fy.in/best-laptop-service-in/New-Delhi</loc></url>
 
 </urlset>
