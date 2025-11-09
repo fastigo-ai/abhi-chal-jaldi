@@ -18,7 +18,7 @@ const BlogDetail: React.FC<BlogDetailProps> = ({ blog }) => {
       <img
         src={blog.featuredImage}
         alt={blog.title}
-        className="w-full h-80 object-fill rounded-md mb-8"
+        className="w-full h-96 object-fill rounded-md mb-8"
       />
 
       <p className="text-lg text-gray-700 mb-8">{blog.content.intro}</p>

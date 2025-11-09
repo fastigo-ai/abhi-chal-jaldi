@@ -4,6 +4,9 @@ import repairNoida from '../assets/data2.jpeg'
 import repairGhaziabad from '../assets/data3.jpeg'
 import systemSlow from '../assets/data4.jpeg'
 import Urgent from '../assets/data5.jpeg'
+import ProfessionalRepair from '../assets/data8.png'
+import slowLaptopImages from "../assets/data7.png"
+import slowLaptopImage from "../assets/data9.png"
 
 export interface BlogSection {
   heading: string;
@@ -158,9 +161,7 @@ export const blogs: Blog[] = [
         "If your laptop has stopped working, is running slow, or has a damaged screen, Door2fy offers complete laptop repair in Meerut with doorstep service and affordable pricing. Visit Door2fy.in and book your service today.",
     },
   },
-
-  // ✅ Add More Blogs Below
- {
+  {
   slug: "laptop-repair-noida",
   metaTitle:
     "Laptop Repair in Noida | Door2fy – Expert & Affordable Doorstep Laptop Service",
@@ -768,7 +769,249 @@ export const blogs: Blog[] = [
    
   },
 },
+{
+  slug: "fix-slow-laptop-in-5-steps",
+  metaTitle: "How to Fix a Slow Laptop in 5 Steps | Door2fy IT Tips",
+  metaDescription: "Learn 5 easy and effective ways to fix a slow laptop before the engineer arrives. Optimize performance, remove malware, and boost speed with Door2fy.",
+  category: "Laptop Tips",
+  city: "NCR",
+  featuredImage: slowLaptopImages, // replace with your imported image variable
+  title: "How to Fix a Slow Laptop in 5 Steps (Before the Engineer Arrives)",
+  content: {
+    intro: "A slow laptop is one of the most frustrating tech problems — especially when you’re in the middle of important work. It takes longer to boot up, applications freeze, and even simple tasks like opening a browser can feel like a chore. In this guide, Door2fy - your trusted doorstep IT support and repair partner - walks you through five easy, safe, and effective ways to fix a slow laptop before the engineer arrives.",
+    sections: [
+      {
+        heading: "1. Close Background Apps and Startup Programs",
+        list: [
+          "Press Ctrl + Shift + Esc to open the Task Manager.",
+          "Click on the Startup tab to see which programs launch automatically.",
+          "Right-click and disable non-essential apps (like chat tools or cloud drives).",
+          "Go to the Processes tab and end tasks that are eating up too much memory.",
+          "Restart your laptop after disabling startup apps to feel the difference instantly."
+        ],
+      },
+      {
+        heading: "2. Clear Temporary and Junk Files",
+        list: [
+          "Press Windows + R, type %temp%, and hit Enter.",
+          "Delete all files in that folder (these are safe to remove).",
+          "Open the Disk Cleanup Tool via Start menu, select your drive, and clean Temporary Files, Thumbnails, and Recycle Bin.",
+          "Clearing these files can free gigabytes of space and improve performance."
+        ],
+      },
+      {
+        heading: "3. Uninstall Unused Software and Apps",
+        list: [
+          "Go to Control Panel → Programs → Uninstall a Program.",
+          "Sort the list by size or install date.",
+          "Uninstall applications you no longer need or recognize.",
+          "Optional: Run CCleaner to remove leftover registry entries and unused data."
+        ],
+      },
+      {
+        heading: "4. Check for Viruses, Malware, or Spyware",
+        list: [
+          "Run a full scan using your antivirus program (Windows Defender works too).",
+          "Use trusted tools like Malwarebytes or AdwCleaner for deeper scanning.",
+          "Remove any detected threats or quarantined files.",
+          "If malware persists, contact Door2fy professional repair for a safe solution."
+        ],
+      },
+      {
+        heading: "5. Upgrade or Optimize Your Storage and Memory",
+        list: [
+          "Switch from HDD to SSD for faster boot times, file transfers, and multitasking.",
+          "Upgrade RAM (4GB → 8GB or 16GB) to improve performance for multitasking and heavy software.",
+          "Consult Door2fy technicians to safely upgrade hardware on-site."
+        ],
+      },
+      {
+        heading: "Bonus Step: Optimize System Settings",
+        list: [
+          "Adjust Power Settings to 'High Performance'.",
+          "Keep drivers updated using Windows Update or manufacturer’s site.",
+          "Limit browser tabs and disable unused extensions for better memory management."
+        ],
+      },
+      {
+        heading: "When to Call a Professional",
+        list: [
+          "Failing hard drives",
+          "Overheating CPU or GPU",
+          "Corrupted operating system",
+          "Damaged RAM modules",
+          "Door2fy doorstep engineers can safely diagnose and repair these issues."
+        ],
+      },
+      {
+        heading: "Why Choose Door2fy for Laptop Repairs?",
+        list: [
+          "Instant Scheduling: Get an engineer at your doorstep within hours.",
+          "Transparent Pricing: Clear cost estimates before repair.",
+          "On-the-Spot Fixes: Most software and basic hardware issues resolved in one visit.",
+          "Trusted Experts: Background-verified and trained on multi-brand laptops.",
+          "Genuine Parts & Warranty: Peace of mind with authentic parts and service warranty."
+        ],
+      },
+    ],
+    conclusion: "A slow laptop doesn’t always mean it’s time for a replacement. Often, a bit of cleanup, optimization, and maintenance can restore speed. Follow these five steps to give your system a quick boost — and if things don’t improve, Door2fy’s professional doorstep IT repair service is ready to help. Keep your devices fast, safe, and reliable without visiting a service center."
+  },
+},
 
+{
+  slug: "top-7-signs-laptop-needs-repair",
+  metaTitle: "Top 7 Signs Your Laptop Needs Professional Repair | Door2fy IT Tips",
+  metaDescription: "Learn the top 7 signs your laptop needs professional repair. From overheating to slow performance, Door2fy doorstep technicians can fix it all.",
+  category: "Laptop Repair",
+  city: "NCR",
+  featuredImage: ProfessionalRepair, // replace with your imported image variable
+  title: "Top 7 Signs Your Laptop Needs Professional Repair",
+  content: {
+    intro: "Your laptop is more than just a device — it’s your work partner, study tool, and entertainment hub. But even the best machines show signs of trouble over time. While minor issues can often be fixed at home, certain problems indicate it’s time to call in the experts. Here are the top seven signs your laptop needs professional repair, brought to you by Door2fy, your reliable doorstep IT support service.",
+    sections: [
+      {
+        heading: "1. Overheating or Sudden Shutdowns",
+        list: [
+          "Laptop feels unusually hot or shuts down unexpectedly.",
+          "Cooling fan or heat sink may be malfunctioning.",
+          "Door2fy technicians can clean cooling system and reapply thermal paste to prevent long-term damage."
+        ],
+      },
+      {
+        heading: "2. Slow Performance and Freezes",
+        list: [
+          "Lagging system, slow boot, or freezes during basic tasks may indicate failing hardware, corrupted files, or outdated software.",
+          "Schedule a doorstep laptop repair to run diagnostics and restore smooth performance."
+        ],
+      },
+      {
+        heading: "3. Strange Noises from Inside",
+        list: [
+          "Grinding or clicking noises often indicate a dying hard drive or faulty fan.",
+          "Mechanical parts require professional inspection and potential replacement to avoid data loss."
+        ],
+      },
+      {
+        heading: "4. Battery Problems",
+        list: [
+          "Battery drains faster than usual or refuses to charge.",
+          "May indicate failing battery, charger, or power circuit.",
+          "Door2fy offers on-site battery replacement and genuine accessories."
+        ],
+      },
+      {
+        heading: "5. Flickering or Dim Display",
+        list: [
+          "Dim, flickering, or black screens caused by damaged cable, backlight, or graphics card.",
+          "Display repairs involve delicate internal components — best handled by certified engineers."
+        ],
+      },
+      {
+        heading: "6. Unresponsive Keyboard or Touchpad",
+        list: [
+          "Keyboard stops responding or touchpad behaves erratically.",
+          "Could be due to dust, water damage, or internal wiring faults.",
+          "Professional cleaning or component replacement restores function."
+        ],
+      },
+      {
+        heading: "7. Virus Infections or Pop-ups",
+        list: [
+          "Constant pop-ups, unknown software, or random browser redirects indicate malware infection.",
+          "Door2fy malware removal service cleans your system and installs trusted security updates."
+        ],
+      },
+      {
+        heading: "Why Choose Door2fy?",
+        list: [
+          "Certified technicians repair devices at your home or office.",
+          "Transparent pricing with no hidden costs.",
+          "Same-day service for most issues.",
+          "Genuine parts and service warranty."
+        ],
+      },
+    ],
+    conclusion: "Ignoring early warning signs can lead to bigger, more expensive problems. If you notice any of these issues, don’t wait — book a Door2fy doorstep IT service today. Our professionals diagnose, repair, and optimize your laptop without you ever having to leave your desk."
+  },
+},
+
+
+{
+  "slug": "top-7-signs-laptop-needs-repair",
+  "metaTitle": "Top 7 Signs Your Laptop Needs Professional Repair | Door2fy IT Tips",
+  "metaDescription": "Learn the top 7 signs your laptop needs professional repair. From overheating to slow performance, Door2fy doorstep technicians can fix it all.",
+  "category": "Laptop Repair",
+  "city": "NCR",
+  "featuredImage": slowLaptopImage,  
+  "title": "Top 7 Signs Your Laptop Needs Professional Repair",
+  "content": {
+    "intro": "Your laptop is more than just a device — it’s your work partner, study tool, and entertainment hub. But even the best machines show signs of trouble over time. While minor issues can often be fixed at home, certain problems indicate it’s time to call in the experts. Here are the top seven signs your laptop needs professional repair, brought to you by Door2fy, your reliable doorstep IT support service.",
+    "sections": [
+      {
+        "heading": "1. Overheating or Sudden Shutdowns",
+        "list": [
+          "Laptop feels unusually hot or shuts down unexpectedly.",
+          "Cooling fan or heat sink may be malfunctioning.",
+          "Door2fy technicians can clean cooling system and reapply thermal paste to prevent long-term damage."
+        ]
+      },
+      {
+        "heading": "2. Slow Performance and Freezes",
+        "list": [
+          "Lagging system, slow boot, or freezes during basic tasks may indicate failing hardware, corrupted files, or outdated software.",
+          "Schedule a doorstep laptop repair to run diagnostics and restore smooth performance."
+        ]
+      },
+      {
+        "heading": "3. Strange Noises from Inside",
+        "list": [
+          "Grinding or clicking noises often indicate a dying hard drive or faulty fan.",
+          "Mechanical parts require professional inspection and potential replacement to avoid data loss."
+        ]
+      },
+      {
+        "heading": "4. Battery Problems",
+        "list": [
+          "Battery drains faster than usual or refuses to charge.",
+          "May indicate failing battery, charger, or power circuit.",
+          "Door2fy offers on-site battery replacement and genuine accessories."
+        ]
+      },
+      {
+        "heading": "5. Flickering or Dim Display",
+        "list": [
+          "Dim, flickering, or black screens caused by damaged cable, backlight, or graphics card.",
+          "Display repairs involve delicate internal components — best handled by certified engineers."
+        ]
+      },
+      {
+        "heading": "6. Unresponsive Keyboard or Touchpad",
+        "list": [
+          "Keyboard stops responding or touchpad behaves erratically.",
+          "Could be due to dust, water damage, or internal wiring faults.",
+          "Professional cleaning or component replacement restores function."
+        ]
+      },
+      {
+        "heading": "7. Virus Infections or Pop-ups",
+        "list": [
+          "Constant pop-ups, unknown software, or random browser redirects indicate malware infection.",
+          "Door2fy malware removal service cleans your system and installs trusted security updates."
+        ]
+      },
+      {
+        "heading": "Why Choose Door2fy?",
+        "list": [
+          "Certified technicians repair devices at your home or office.",
+          "Transparent pricing with no hidden costs.",
+          "Same-day service for most issues.",
+          "Genuine parts and service warranty."
+        ]
+      }
+    ],
+    "conclusion": "Ignoring early warning signs can lead to bigger, more expensive problems. If you notice any of these issues, don’t wait — book a Door2fy doorstep IT service today. Our professionals diagnose, repair, and optimize your laptop without you ever having to leave your desk."
+  }
+}
 
 
 ];
