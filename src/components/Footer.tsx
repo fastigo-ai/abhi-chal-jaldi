@@ -4,12 +4,56 @@ import { Link } from "react-router-dom";
 import App from "@/assets/aap.jpg";
 
 const cities = [
-  "Agra", "Ahmedabad", "Aligarh", "Amritsar", "Bareilly", "Bengaluru", "Bhagalpur", "Bhopal", "Bhubaneswar",
-  "Chandigarh", "Cuttack", "Dehradun", "Delhi", "Faridabad", "Gandhi Nagar", "Ghaziabad", "Gorakhpur",
-  "Greater Noida", "Gurugram", "Gwalior", "Haridwar", "Haldwani", "Hyderabad", "Indore", "Jabalpur", "Jaipur",
-  "Jhansi", "Kanpur", "Lucknow", "Ludhiana", "Meerut", "Mohali", "Moradabad", "Mumbai", "Mysuru", "Nagpur",
-  "Noida", "Patna", "Panchkula", "Prayagraj", "Pune", "Raipur", "Roorkee", "Rudrapur", "Tirupati", "Ujjain",
-  "Varanasi", "Vijayawada", "Zirakpur", "New Delhi"
+  "Agra",
+  "Ahmedabad",
+  "Aligarh",
+  "Amritsar",
+  "Bareilly",
+  "Bengaluru",
+  "Bhagalpur",
+  "Bhopal",
+  "Bhubaneswar",
+  "Chandigarh",
+  "Cuttack",
+  "Dehradun",
+  "Delhi",
+  "Faridabad",
+  "Gandhi Nagar",
+  "Ghaziabad",
+  "Gorakhpur",
+  "Greater Noida",
+  "Gurugram",
+  "Gwalior",
+  "Haridwar",
+  "Haldwani",
+  "Hyderabad",
+  "Indore",
+  "Jabalpur",
+  "Jaipur",
+  "Jhansi",
+  "Kanpur",
+  "Lucknow",
+  "Ludhiana",
+  "Meerut",
+  "Mohali",
+  "Moradabad",
+  "Mumbai",
+  "Mysuru",
+  "Nagpur",
+  "Noida",
+  "Patna",
+  "Panchkula",
+  "Prayagraj",
+  "Pune",
+  "Raipur",
+  "Roorkee",
+  "Rudrapur",
+  "Tirupati",
+  "Ujjain",
+  "Varanasi",
+  "Vijayawada",
+  "Zirakpur",
+  "New Delhi",
 ];
 
 const Footer = () => {
@@ -22,7 +66,9 @@ const Footer = () => {
           {cities.map((city, idx) => (
             <Link
               key={idx}
-              to={`/best-laptop-service-in/${encodeURIComponent(city)}`}
+              to={`/best-laptop-service-in/${city
+                .toLowerCase()
+                .replace(/\s+/g, "-")}`}
               className="hover:underline"
             >
               | {city}
@@ -46,8 +92,8 @@ const Footer = () => {
             <h3 className="text-cyan-400 font-semibold mb-2">For Customers</h3>
             <ul className="space-y-1">
               <li className="cursor-pointer">Refundable Policy</li>
-              <Link to='/contact-us'>
-              <li className="cursor-pointer">Contact Us</li>
+              <Link to="/contact-us">
+                <li className="cursor-pointer">Contact Us</li>
               </Link>
             </ul>
           </div>
