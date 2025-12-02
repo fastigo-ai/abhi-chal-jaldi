@@ -108,16 +108,26 @@ const PrivacyPolicy = () => {
         </ul>
 
         <h2 className="text-2xl font-semibold text-gray-900 mb-3">
-  1.3 Location Data Retention
-</h2>
-<p className="text-gray-700 mb-3">
-  Door2fy retains your location data only for the duration necessary to complete your service request.
-</p>
-<ul className="list-disc list-inside text-gray-700 mb-6 space-y-1">
-  <li>Once the service is completed, location data is automatically discarded or anonymized.</li>
-  <li>We do not store or retain any real-time tracking history after service completion.</li>
-  <li>Retention may be extended only when legally required (court orders, fraud investigation, etc.).</li>
-</ul>
+          1.3 Location Data Retention
+        </h2>
+        <p className="text-gray-700 mb-3">
+          Door2fy retains your location data only for the duration necessary to
+          complete your service request.
+        </p>
+        <ul className="list-disc list-inside text-gray-700 mb-6 space-y-1">
+          <li>
+            Once the service is completed, location data is automatically
+            discarded or anonymized.
+          </li>
+          <li>
+            We do not store or retain any real-time tracking history after
+            service completion.
+          </li>
+          <li>
+            Retention may be extended only when legally required (court orders,
+            fraud investigation, etc.).
+          </li>
+        </ul>
 
         {/* 2. How We Use Your Information */}
         <h2 className="text-2xl font-semibold text-gray-900 mb-3">
@@ -131,7 +141,9 @@ const PrivacyPolicy = () => {
             service address.
           </li>
           <li>Send updates, notifications, and service-related messages.</li>
-          <li>Improve user experience, customer support, and app performance.</li>
+          <li>
+            Improve user experience, customer support, and app performance.
+          </li>
           <li>Ensure security and prevent fraudulent activities.</li>
         </ul>
 

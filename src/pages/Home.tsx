@@ -3,7 +3,6 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { ArrowRight, Clock, Shield, Star } from "lucide-react";
 
-
 import physical from "@/assets/banner/physical-damage.png";
 import system from "@/assets/banner/my system is slow.png";
 import port from "@/assets/banner/port issue.png";
@@ -72,7 +71,10 @@ export default function Home() {
           name="keywords"
           content="door2fy, laptop repair service, laptop repair India, best laptop service, doorstep laptop repair, computer repair near me, laptop maintenance, online laptop repair booking"
         />
-        <meta property="og:title" content="Door2fy | 10-Minute Doorstep Service App" />
+        <meta
+          property="og:title"
+          content="Door2fy | 10-Minute Doorstep Service App"
+        />
         <meta
           property="og:description"
           content="Get professional doorstep repair & support within 10 minutes. Trusted by thousands across India."
@@ -96,20 +98,33 @@ export default function Home() {
             <span className="font-semibold text-gray-800">+91 9599094941</span>
           </p>
           <div className="flex flex-col sm:flex-row gap-4 pt-6 justify-center md:justify-start">
-            <Button
-              size="lg"
-              className="bg-[#53BED1] hover:bg-[#53BED1] text-white"
+            <a
+              href="https://play.google.com/store/apps/details?id=com.Door2fy&pli=1"
+              target="_blank"
+              rel="noopener noreferrer"
             >
-              Download on App Store
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </Button>
-            <Button
-              size="lg"
-              className="bg-[#53BED1] hover:bg-[#53BED1] text-white"
+              <Button
+                size="lg"
+                className="bg-[#53BED1] hover:bg-[#53BED1] text-white w-full sm:w-auto"
+              >
+                Download on App Store
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Button>
+            </a>
+
+            <a
+              href="https://play.google.com/store/apps/details?id=com.Door2fy&pli=1"
+              target="_blank"
+              rel="noopener noreferrer"
             >
-              Get it on Google Play
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </Button>
+              <Button
+                size="lg"
+                className="bg-[#53BED1] hover:bg-[#53BED1] text-white w-full sm:w-auto"
+              >
+                Get it on Google Play
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Button>
+            </a>
           </div>
         </div>
 
@@ -229,15 +244,31 @@ export default function Home() {
             Service in under a minute{" "}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-[#53BED1] hover:bg-[#53BED1]">
-              Download on App Store
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </Button>
-            <Button size="lg" className="bg-[#53BED1] hover:bg-[#53BED1]">
-              Get it on Google Play
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </Button>
-          </div>
+
+  <a
+    href="https://play.google.com/store/apps/details?id=com.Door2fy&pli=1"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <Button size="lg" className="bg-[#53BED1] hover:bg-[#53BED1]">
+      Download on App Store
+      <ArrowRight className="ml-2 h-5 w-5" />
+    </Button>
+  </a>
+
+  <a
+    href="https://play.google.com/store/apps/details?id=com.Door2fy&pli=1"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <Button size="lg" className="bg-[#53BED1] hover:bg-[#53BED1]">
+      Get it on Google Play
+      <ArrowRight className="ml-2 h-5 w-5" />
+    </Button>
+  </a>
+
+</div>
+
         </div>
       </section>
     </div>

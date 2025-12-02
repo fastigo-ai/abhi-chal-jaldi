@@ -150,13 +150,29 @@ export default function Services() {
             plan that fits your specific needs{" "}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className=" bg-[#53BED1] hover:bg-[#53BED1]">
-              Download for iOS
-            </Button>
-            <Button size="lg" className=" bg-[#53BED1] hover:bg-[#53BED1]">
-              Download for Android
-            </Button>
-          </div>
+
+  <a
+    href="https://play.google.com/store/apps/details?id=com.Door2fy&pli=1"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <Button size="lg" className=" bg-[#53BED1] hover:bg-[#53BED1]">
+      Download for iOS
+    </Button>
+  </a>
+
+  <a
+    href="https://play.google.com/store/apps/details?id=com.Door2fy&pli=1"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <Button size="lg" className=" bg-[#53BED1] hover:bg-[#53BED1]">
+      Download for Android
+    </Button>
+  </a>
+
+</div>
+
         </div>
       </section>
     </div>

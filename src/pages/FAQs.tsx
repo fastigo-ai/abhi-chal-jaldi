@@ -246,13 +246,21 @@ export default function FAQs() {
           <h2 className="text-4xl md:text-5xl font-bold">
             Ready to Get Started?
           </h2>
-          <p className="text-xl text-muted-foreground">
+
+          <p className="text-xl  text-muted-foreground">
             Download the app and book your first Doorstep & Quick support
-            Service in under a minute{" "}
+            Service in under a minute
           </p>
-          <Button size="lg" className=" bg-[#53BED1] hover:bg-[#53BED1]">
-            Download for Android
-          </Button>
+
+          <a
+            href="https://play.google.com/store/apps/details?id=com.Door2fy&pli=1"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Button size="lg" className="bg-[#53BED1] hover:bg-[#53BED1] my-6">
+              Download for Android
+            </Button>
+          </a>
         </div>
       </section>
     </div>
