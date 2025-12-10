@@ -1134,131 +1134,317 @@ export const blogs: Blog[] = [
     },
   },
   {
-  slug: "common-laptop-problems-doorstep-repair",
-  metaTitle: "Top Laptop Problems & Best Doorstep Repair Solutions in 2026",
+    slug: "common-laptop-problems-doorstep-repair",
+    metaTitle: "Top Laptop Problems & Best Doorstep Repair Solutions in 2026",
+    metaDescription:
+      "Discover the most common laptop problems and how doorstep repair services fix them quickly. Save time, data, & money with professional laptop technicians at home.",
+    category: "Laptop Repair",
+    city: "",
+    featuredImage: Repair,
+    title:
+      "Top 10 Common Laptop Problems & How Doorstep Repair Services Save Time & Money",
+    content: {
+      intro:
+        "Laptops are essential for work, study, entertainment, and business — so when a laptop suddenly stops working, it can disturb your entire day. Small issues like slow performance or a loose charger port can become serious problems if ignored. The good news? Doorstep laptop repair services have made it easy to get instant fixes without traveling to a service center. Here are the Top 10 most common laptop problems faced by users — and how doorstep experts like Door2fy solve them quickly and professionally.",
+      sections: [
+        {
+          heading: "Top 10 Laptop Issues & Smart Doorstep Solutions",
+          list: [
+            {
+              title: "1. Slow or Hanging Laptop",
+              description:
+                "Caused by overloaded software, low RAM, or full HDD. Solutions include SSD upgrade, RAM upgrade, OS cleanup, and virus removal.",
+            },
+            {
+              title: "2. Broken or Flickering Screen",
+              description:
+                "Often due to accidental drops or dead pixels. Doorstep screen replacement is done at home with no device deposit.",
+            },
+            {
+              title: "3. Battery Draining Fast",
+              description:
+                "Happens due to battery aging, adapter issues, or background apps. Solution: Original battery replacement with warranty.",
+            },
+            {
+              title: "4. Laptop Not Turning On",
+              description:
+                "May be caused by power failures or motherboard issues. Professionals offer doorstep diagnosis and chip-level repair.",
+            },
+            {
+              title: "5. Overheating & Loud Fan Noise",
+              description:
+                "Dust buildup blocks airflow. Fixes include deep cleaning and thermal paste replacement.",
+            },
+            {
+              title: "6. Keyboard Keys Not Working",
+              description:
+                "Results from spills, dust, or connector issues. Full keyboard replacement is done at home, quickly and affordably.",
+            },
+            {
+              title: "7. Charging / Adapter Port Issues",
+              description:
+                "Loose DC jack leads to charging interruptions. Charging port repair or soldering done by experts.",
+            },
+            {
+              title: "8. Hard Disk Failure / Data Loss",
+              description:
+                "Causes include HDD crashes and clicking noise. Solutions: Data recovery + SSD upgrade for speed and safety.",
+            },
+            {
+              title: "9. Wi-Fi / Bluetooth Not Connecting",
+              description:
+                "Occurs due to driver issues or faulty network cards. Fixes include software repair or card replacement.",
+            },
+            {
+              title: "10. Software Errors / OS Crashes",
+              description:
+                "Windows crashes, BSOD, or viruses. Solutions include OS installation, formatting, and licensed software setup.",
+            },
+          ],
+        },
+        {
+          heading: "Why You Shouldn’t Delay Laptop Repairs",
+          table: [
+            {
+              issue: "Overheating",
+              effect: "Hardware damage",
+              result: "Expensive motherboard repair",
+            },
+            {
+              issue: "Battery swelling",
+              effect: "Screen damage",
+              result: "Safety hazard",
+            },
+            {
+              issue: "HDD errors",
+              effect: "Frequent crashes",
+              result: "Data loss",
+            },
+            {
+              issue: "Charger issues",
+              effect: "Short circuit",
+              result: "Laptop dead",
+            },
+            {
+              issue: "Cracked screen",
+              effect: "More damage",
+              result: "High replacement cost",
+            },
+          ],
+          note: "Early repair = lower cost + longer laptop life",
+        },
+        {
+          heading: "How Doorstep Laptop Repair Services Help",
+          points: [
+            {
+              title: "Service at home",
+              description: "No shop visits, no waiting.",
+            },
+            {
+              title: "Verified technicians",
+              description: "Safe & trustworthy repairs.",
+            },
+            { title: "Affordable pricing", description: "No hidden costs." },
+            {
+              title: "Original spare parts",
+              description: "Ensures long-lasting performance.",
+            },
+            {
+              title: "Repair warranty",
+              description: "Peace of mind after service.",
+            },
+            {
+              title: "Faster turnaround",
+              description: "Minimal downtime for your laptop.",
+            },
+          ],
+          note: "Doorstep repair = Time saving + secure + hassle-free",
+        },
+        {
+          heading: "Pro Tips to Avoid Laptop Repairs",
+          tips: [
+            "Use a cooling pad for long usage.",
+            "Install antivirus protection.",
+            "Avoid overcharging the battery.",
+            "Clean air vents regularly.",
+            "Update OS and drivers on time.",
+            "Don’t ignore unusual sounds or overheating.",
+            "Care today = fewer repairs later!",
+          ],
+        },
+        {
+          heading: "Book Trusted Doorstep Laptop Repair with Door2fy",
+          points: [
+            "Laptop Screen Replacement",
+            "Battery Replacement",
+            "Keyboard Replacement",
+            "SSD / RAM Upgrade",
+            "Laptop Not Turning On",
+            "Software Issues & OS Installation",
+            "Heating Solutions",
+            "Data Recovery",
+            "Chip-Level Repairs",
+          ],
+          benefits: [
+            "Affordable & transparent pricing",
+            "Fast doorstep service",
+            "Warranty on repairs",
+            "Expert technicians",
+          ],
+        },
+      ],
+      conclusion:
+        "Laptop issues are common — but letting them grow can cost more later. Door2fy ensures your laptop stays fast, safe, and productive without leaving your home. Just book & relax — we fix your laptop at your doorstep! Door2fy — Smart Solution for Every Laptop Need!",
+    },
+  },
+  {
+  slug: "hp-dell-laptop-repair-at-home",
+  metaTitle:
+    "HP Laptop Repair at Home & Dell Laptop Service at Home | Fast & Affordable Doorstep Repair",
   metaDescription:
-    "Discover the most common laptop problems and how doorstep repair services fix them quickly. Save time, data, & money with professional laptop technicians at home.",
+    "Get HP laptop repair at home and Dell laptop service at home with Door2Fy. Fast, affordable, and professional doorstep laptop repair services.",
   category: "Laptop Repair",
-  city: "",
-  featuredImage: Repair,
-  title: "Top 10 Common Laptop Problems & How Doorstep Repair Services Save Time & Money",
+  city: "All Cities",
+  featuredImage: repairNoida, // change if needed
+  title:
+    "HP Laptop Repair at Home & Dell Laptop Service at Home – Fast, Reliable, and Convenient",
   content: {
     intro:
-      "Laptops are essential for work, study, entertainment, and business — so when a laptop suddenly stops working, it can disturb your entire day. Small issues like slow performance or a loose charger port can become serious problems if ignored. The good news? Doorstep laptop repair services have made it easy to get instant fixes without traveling to a service center. Here are the Top 10 most common laptop problems faced by users — and how doorstep experts like Door2fy solve them quickly and professionally.",
+      "Laptops are essential tools for work, study, and entertainment. HP and Dell are among the most trusted brands, but like all devices, they face issues over time. Traditionally, users had to visit service centers for repairs — a process that is often inconvenient and time-consuming. With Door2Fy, you can now get fast and reliable HP laptop repair at home and Dell laptop service at home without any hassle.",
+
     sections: [
       {
-        heading: "Top 10 Laptop Issues & Smart Doorstep Solutions",
-        list: [
+        heading: "Why Home Laptop Repair Services Are a Game-Changer",
+        points: [
           {
-            title: "1. Slow or Hanging Laptop",
+            title: "Convenience at Your Doorstep",
             description:
-              "Caused by overloaded software, low RAM, or full HDD. Solutions include SSD upgrade, RAM upgrade, OS cleanup, and virus removal."
+              "Technicians arrive at your home, diagnose the problem, and fix the laptop on-site. No more long queues or travel."
           },
           {
-            title: "2. Broken or Flickering Screen",
+            title: "Cost-Effective Solutions",
             description:
-              "Often due to accidental drops or dead pixels. Doorstep screen replacement is done at home with no device deposit."
+              "Door2Fy provides affordable HP and Dell laptop repair at home without any hidden charges."
           },
           {
-            title: "3. Battery Draining Fast",
+            title: "Fast and Efficient Service",
             description:
-              "Happens due to battery aging, adapter issues, or background apps. Solution: Original battery replacement with warranty."
+              "Most issues like slow performance, battery faults, and screen replacement are fixed within a single visit."
           },
           {
-            title: "4. Laptop Not Turning On",
+            title: "Skilled and Certified Technicians",
             description:
-              "May be caused by power failures or motherboard issues. Professionals offer doorstep diagnosis and chip-level repair."
-          },
-          {
-            title: "5. Overheating & Loud Fan Noise",
-            description:
-              "Dust buildup blocks airflow. Fixes include deep cleaning and thermal paste replacement."
-          },
-          {
-            title: "6. Keyboard Keys Not Working",
-            description:
-              "Results from spills, dust, or connector issues. Full keyboard replacement is done at home, quickly and affordably."
-          },
-          {
-            title: "7. Charging / Adapter Port Issues",
-            description:
-              "Loose DC jack leads to charging interruptions. Charging port repair or soldering done by experts."
-          },
-          {
-            title: "8. Hard Disk Failure / Data Loss",
-            description:
-              "Causes include HDD crashes and clicking noise. Solutions: Data recovery + SSD upgrade for speed and safety."
-          },
-          {
-            title: "9. Wi-Fi / Bluetooth Not Connecting",
-            description:
-              "Occurs due to driver issues or faulty network cards. Fixes include software repair or card replacement."
-          },
-          {
-            title: "10. Software Errors / OS Crashes",
-            description:
-              "Windows crashes, BSOD, or viruses. Solutions include OS installation, formatting, and licensed software setup."
+              "Door2Fy employs trained professionals who specialize in HP and Dell laptop repairs."
           }
         ]
       },
+
       {
-        heading: "Why You Shouldn’t Delay Laptop Repairs",
-        table: [
-          { issue: "Overheating", effect: "Hardware damage", result: "Expensive motherboard repair" },
-          { issue: "Battery swelling", effect: "Screen damage", result: "Safety hazard" },
-          { issue: "HDD errors", effect: "Frequent crashes", result: "Data loss" },
-          { issue: "Charger issues", effect: "Short circuit", result: "Laptop dead" },
-          { issue: "Cracked screen", effect: "More damage", result: "High replacement cost" }
-        ],
-        note: "Early repair = lower cost + longer laptop life"
-      },
-      {
-        heading: "How Doorstep Laptop Repair Services Help",
-        points: [
-          { title: "Service at home", description: "No shop visits, no waiting." },
-          { title: "Verified technicians", description: "Safe & trustworthy repairs." },
-          { title: "Affordable pricing", description: "No hidden costs." },
-          { title: "Original spare parts", description: "Ensures long-lasting performance." },
-          { title: "Repair warranty", description: "Peace of mind after service." },
-          { title: "Faster turnaround", description: "Minimal downtime for your laptop." }
-        ],
-        note: "Doorstep repair = Time saving + secure + hassle-free"
-      },
-      {
-        heading: "Pro Tips to Avoid Laptop Repairs",
-        tips: [
-          "Use a cooling pad for long usage.",
-          "Install antivirus protection.",
-          "Avoid overcharging the battery.",
-          "Clean air vents regularly.",
-          "Update OS and drivers on time.",
-          "Don’t ignore unusual sounds or overheating.",
-          "Care today = fewer repairs later!"
+        heading: "Common HP Laptop Issues Fixed at Home",
+        list: [
+          "Battery and charging problems",
+          "Cracked or flickering screen issues",
+          "Slow performance or system lag",
+          "Keyboard and touchpad problems",
+          "Virus removal and system optimization"
         ]
       },
+
       {
-        heading: "Book Trusted Doorstep Laptop Repair with Door2fy",
+        heading: "Common Dell Laptop Issues Fixed at Home",
+        list: [
+          "Battery replacement and charging issues",
+          "Screen repair or replacement",
+          "Faulty RAM or hard drive replacement",
+          "Software troubleshooting and OS crashes",
+          "Keyboard and port repairs"
+        ]
+      },
+
+      {
+        heading: "Why Choose Door2Fy for HP and Dell Laptops",
         points: [
-          "Laptop Screen Replacement",
-          "Battery Replacement",
-          "Keyboard Replacement",
-          "SSD / RAM Upgrade",
-          "Laptop Not Turning On",
-          "Software Issues & OS Installation",
-          "Heating Solutions",
-          "Data Recovery",
-          "Chip-Level Repairs"
-        ],
-        benefits: [
-          "Affordable & transparent pricing",
-          "Fast doorstep service",
-          "Warranty on repairs",
-          "Expert technicians"
+          {
+            title: "Certified Technicians",
+            description: "Experts specialized in HP and Dell laptop repair."
+          },
+          {
+            title: "Transparent Pricing",
+            description: "Affordable repair charges with no hidden fees."
+          },
+          {
+            title: "Fast Turnaround",
+            description: "Most repairs are completed in a single visit."
+          },
+          {
+            title: "Convenient Booking",
+            description: "Easy online scheduling via website or app."
+          },
+          {
+            title: "Support for All Major Brands",
+            description:
+              "Door2Fy also repairs Lenovo, Acer, Asus, and other laptop brands."
+          }
+        ]
+      },
+
+      {
+        heading: "How HP & Dell Laptop Repair at Home Works",
+        steps: [
+          "Visit the Door2Fy website or app.",
+          "Select HP or Dell laptop and choose the issue.",
+          "Schedule a convenient time slot.",
+          "A certified technician arrives at your home for repair.",
+          "Make payment after the repair is completed."
+        ]
+      },
+
+      {
+        heading: "Benefits of Choosing Home Laptop Repair",
+        list: [
+          "Save time with doorstep service",
+          "Affordable compared to service centers",
+          "Certified and reliable technicians",
+          "Repairs done in the comfort of your home",
+          "Eco-friendly (less travel required)"
+        ]
+      },
+
+      {
+        heading: "Common Misconceptions About Home Laptop Repair",
+        points: [
+          {
+            title: "Myth 1: Home Repairs Are Expensive",
+            description:
+              "Reality: Door2Fy offers low-cost HP and Dell laptop repair at home, often cheaper than service centers."
+          },
+          {
+            title: "Myth 2: Technicians at Home Are Less Skilled",
+            description:
+              "Reality: Door2Fy employs certified experts with years of experience."
+          },
+          {
+            title: "Myth 3: Repairs Take Longer at Home",
+            description:
+              "Reality: Most repairs like battery, screen, and software fixes are completed within hours."
+          }
+        ]
+      },
+
+      {
+        heading: "Tips to Maintain Your HP or Dell Laptop",
+        tips: [
+          "Keep the laptop dust-free.",
+          "Use trusted antivirus software.",
+          "Avoid overcharging the battery.",
+          "Handle your laptop with care.",
+          "Regularly update OS and software."
         ]
       }
     ],
+
     conclusion:
-      "Laptop issues are common — but letting them grow can cost more later. Door2fy ensures your laptop stays fast, safe, and productive without leaving your home. Just book & relax — we fix your laptop at your doorstep! Door2fy — Smart Solution for Every Laptop Need!"
+      "Technical issues don’t have to disrupt your daily routine. With Door2Fy’s HP laptop repair at home and Dell laptop service at home, you get fast, affordable, and expert doorstep repair services. From hardware issues to software troubleshooting, Door2Fy ensures reliable and convenient laptop repair right at your home."
   }
 }
 
