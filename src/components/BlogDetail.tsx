@@ -12,47 +12,132 @@ const BlogDetail: React.FC<BlogDetailProps> = ({ blog }) => {
 
   return (
     <main className="max-w-5xl mx-auto px-4 py-28">
-      <h1 className="text-3xl md:text-4xl font-bold mb-4">{blog.title}</h1>
+      {/* Title */}
+      <h1 className="text-3xl md:text-4xl font-bold mb-4">
+        {blog.title}
+      </h1>
+
+      {/* Meta Description */}
       <p className="text-gray-600 mb-6">{blog.metaDescription}</p>
 
+      {/* Featured Image */}
       <img
         src={blog.featuredImage}
         alt={blog.title}
-        className="w-full h-96 object-fill rounded-md mb-8"
+        className="w-full h-96 object-cover rounded-md mb-8"
       />
 
-      <p className="text-lg text-gray-700 mb-8">{blog.content.intro}</p>
+      {/* Intro */}
+      <p className="text-lg text-gray-700 mb-10">
+        {blog.content.intro}
+      </p>
 
+      {/* Sections */}
       {blog.content.sections.map((section, index) => (
-        <section key={index} className="mb-10">
+        <section key={index} className="mb-12">
+          {/* Heading */}
           <h2 className="text-2xl font-semibold text-blue-600 mb-4">
             {section.heading}
           </h2>
 
+          {/* LIST (title + description) */}
+          {section.list && (
+            <div className="space-y-4">
+              {section.list.map((item, i) => (
+                <div key={i}>
+                  <p className="font-semibold text-gray-800">
+                    {item.title}
+                  </p>
+                  <p className="text-gray-700">
+                    {item.description}
+                  </p>
+                </div>
+              ))}
+            </div>
+          )}
+
+          {/* POINTS (title + description OR string) */}
           {section.points && (
-            <ul className="space-y-3">
-              {section.points.map((p, i) => (
-                <li key={i}>
-                  <strong>{p.title}:</strong> {p.description}
+            <ul className="space-y-3 mt-4">
+              {section.points.map((point: any, i: number) => (
+                <li key={i} className="text-gray-700">
+                  {typeof point === "string" ? (
+                    point
+                  ) : (
+                    <>
+                      <strong>{point.title}:</strong> {point.description}
+                    </>
+                  )}
                 </li>
               ))}
             </ul>
           )}
 
-          {section.list && (
-            <ul className="list-disc pl-6 text-gray-700">
-              {section.list.map((item, i) => (
-                <li key={i}>{item}</li>
+          {/* BENEFITS (string list) */}
+          {section.benefits && (
+            <ul className="list-disc pl-6 space-y-2 mt-4 text-gray-700">
+              {section.benefits.map((benefit: string, i: number) => (
+                <li key={i}>{benefit}</li>
               ))}
             </ul>
           )}
 
+          {/* TABLE (Dynamic columns) */}
+          {section.table && section.table.length > 0 && (
+            <div className="overflow-x-auto mt-6">
+              <table className="w-full border border-gray-300 border-collapse">
+                <thead className="bg-gray-100">
+                  <tr>
+                    {Object.keys(section.table[0]).map((key) => (
+                      <th
+                        key={key}
+                        className="border p-2 text-left capitalize"
+                      >
+                        {key.replace(/_/g, " ")}
+                      </th>
+                    ))}
+                  </tr>
+                </thead>
+                <tbody>
+                  {section.table.map((row: any, i: number) => (
+                    <tr key={i}>
+                      {Object.values(row).map((value: any, j: number) => (
+                        <td key={j} className="border p-2 text-gray-700">
+                          {value}
+                        </td>
+                      ))}
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          )}
+
+          {/* STEPS */}
+          {section.steps && (
+            <ol className="list-decimal pl-6 space-y-2 mt-4 text-gray-700">
+              {section.steps.map((step: string, i: number) => (
+                <li key={i}>{step}</li>
+              ))}
+            </ol>
+          )}
+
+          {/* TIPS */}
+          {section.tips && (
+            <ul className="list-disc pl-6 space-y-2 mt-4 text-gray-700">
+              {section.tips.map((tip: string, i: number) => (
+                <li key={i}>{tip}</li>
+              ))}
+            </ul>
+          )}
+
+          {/* BRANDS */}
           {section.brands && (
-            <div className="flex flex-wrap gap-2">
-              {section.brands.map((brand, i) => (
+            <div className="flex flex-wrap gap-2 mt-4">
+              {section.brands.map((brand: string, i: number) => (
                 <span
                   key={i}
-                  className="bg-gray-100 px-3 py-1 rounded text-sm border"
+                  className="bg-gray-100 border px-3 py-1 rounded text-sm"
                 >
                   {brand}
                 </span>
@@ -60,9 +145,10 @@ const BlogDetail: React.FC<BlogDetailProps> = ({ blog }) => {
             </div>
           )}
 
+          {/* AREAS */}
           {section.areas && (
-            <div className="flex flex-wrap gap-2 mt-2">
-              {section.areas.map((area, i) => (
+            <div className="flex flex-wrap gap-2 mt-4">
+              {section.areas.map((area: string, i: number) => (
                 <span
                   key={i}
                   className="bg-blue-50 text-blue-700 px-3 py-1 rounded text-sm"
@@ -73,46 +159,26 @@ const BlogDetail: React.FC<BlogDetailProps> = ({ blog }) => {
             </div>
           )}
 
-          {section.table && (
-            <table className="w-full border-collapse border border-gray-300 mt-4">
-              <thead>
-                <tr className="bg-gray-100">
-                  <th className="border p-2 text-left">Service Type</th>
-                  <th className="border p-2 text-left">Estimated Cost (INR)</th>
-                </tr>
-              </thead>
-              <tbody>
-                {section.table.map((row, i) => (
-                  <tr key={i}>
-                    <td className="border p-2">{row.service}</td>
-                    <td className="border p-2">{row.cost}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
+          {/* TEXT */}
+          {section.text && (
+            <p className="text-gray-700 mt-4">
+              {section.text}
+            </p>
           )}
 
-          {section.steps && (
-            <ol className="list-decimal pl-6 space-y-2 mt-3">
-              {section.steps.map((step, i) => (
-                <li key={i}>{step}</li>
-              ))}
-            </ol>
+          {/* NOTE */}
+          {section.note && (
+            <div className="bg-yellow-50 border-l-4 border-yellow-400 p-3 mt-5 rounded">
+              <p className="text-sm text-gray-800">
+                {section.note}
+              </p>
+            </div>
           )}
-
-          {section.tips && (
-            <ul className="list-disc pl-6 space-y-2 mt-3">
-              {section.tips.map((tip, i) => (
-                <li key={i}>{tip}</li>
-              ))}
-            </ul>
-          )}
-
-          {section.text && <p className="text-gray-700">{section.text}</p>}
         </section>
       ))}
 
-      <div className="bg-blue-50 border-l-4 border-blue-500 p-4 mt-10 rounded">
+      {/* Conclusion */}
+      <div className="bg-blue-50 border-l-4 border-blue-500 p-5 mt-12 rounded">
         <p className="text-lg text-gray-800 font-medium">
           {blog.content.conclusion}
         </p>
