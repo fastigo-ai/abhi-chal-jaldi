@@ -3,11 +3,14 @@ import Repair from "../assets/data1.jpeg";
 import repairNoida from "../assets/data2.jpeg";
 import repairGhaziabad from "../assets/data3.jpeg";
 import systemSlow from "../assets/data4.jpeg";
+// Retaining other imports even if not currently used in the 4 blogs below, 
+// in case you add more later.
 import Urgent from "../assets/data5.jpeg";
 import ProfessionalRepair from "../assets/data8.png";
 import slowLaptopImages from "../assets/data7.png";
 import slowLaptopImage from "../assets/data9.png";
 
+// Interface for individual sections within the blog content
 export interface BlogSection {
   heading: string;
   points?: { title: string; description: string }[];
@@ -20,12 +23,14 @@ export interface BlogSection {
   text?: string;
 }
 
+// Interface for the main content structure
 export interface BlogContent {
   intro: string;
   sections: BlogSection[];
   conclusion: string;
 }
 
+// Interface for the Blog Object
 export interface Blog {
   slug: string;
   metaTitle: string;
@@ -34,57 +39,52 @@ export interface Blog {
   city: string;
   featuredImage: string;
   title: string;
+  updatedAt: string; // Moved here based on your Component usage
   content: BlogContent;
 }
 
 export const blogs: Blog[] = [
+  // =========================================
+  // BLOG 1: MEERUT REPAIR
+  // =========================================
   {
     slug: "laptop-repair-meerut",
-    metaTitle:
-      "Laptop Repair in Meerut | Door2fy – Fast and Affordable Laptop Service at Your Doorstep",
-    metaDescription:
-      "Looking for professional laptop repair in Meerut? Door2fy offers affordable, expert, and doorstep laptop repair services for all brands. Book your service today at Door2fy.in.",
+    metaTitle: "Laptop Repair in Meerut | Door2fy – Fast and Affordable Laptop Service at Your Doorstep",
+    metaDescription: "Looking for professional laptop repair in Meerut? Door2fy offers affordable, expert, and doorstep laptop repair services for all brands. Book your service today at Door2fy.in.",
     category: "Laptop Repair",
     city: "Meerut",
     featuredImage: Repair,
-    title:
-      "Laptop Repair in Meerut – Reliable and Affordable Service by Door2fy",
+    title: "Laptop Repair in Meerut – Reliable and Affordable Service by Door2fy",
+    updatedAt: "2025-12-19",
     content: {
-      intro:
-        "In today’s fast-paced digital world, a laptop is more than just a gadget — it’s an essential tool for work, studies, and entertainment. When your laptop stops working, lags, or faces hardware issues, it can disrupt your routine completely. If you are searching for laptop repair in Meerut, you need a service that is fast, affordable, and trustworthy. Door2fy.in offers professional doorstep laptop repair in Meerut for all brands and models.",
+      intro: "In today’s fast-paced digital world, a laptop is more than just a gadget — it’s an essential tool for work, studies, and entertainment. When your laptop stops working, lags, or faces hardware issues, it can disrupt your routine completely. If you are searching for laptop repair in Meerut, you need a service that is fast, affordable, and trustworthy. Door2fy.in offers professional doorstep laptop repair in Meerut for all brands and models.",
       sections: [
         {
           heading: "Why Choose Door2fy for Laptop Repair in Meerut",
           points: [
             {
               title: "Doorstep Laptop Repair Service",
-              description:
-                "Door2fy saves you time and effort. Simply book your laptop repair service online, and a professional technician will visit your home or office.",
+              description: "Door2fy saves you time and effort. Simply book your laptop repair service online, and a professional technician will visit your home or office.",
             },
             {
               title: "Trained and Verified Technicians",
-              description:
-                "All technicians are verified and trained to handle HP, Dell, Lenovo, Acer, Asus, and Apple laptops efficiently.",
+              description: "All technicians are verified and trained to handle HP, Dell, Lenovo, Acer, Asus, and Apple laptops efficiently.",
             },
             {
               title: "Transparent Pricing",
-              description:
-                "Get a clear price estimate before repair — no hidden charges.",
+              description: "Get a clear price estimate before repair — no hidden charges.",
             },
             {
               title: "Data Security",
-              description:
-                "Technicians follow strict safety measures to protect your data.",
+              description: "Technicians follow strict safety measures to protect your data.",
             },
             {
               title: "Same-Day Service",
-              description:
-                "Most laptop issues are resolved on the same day for your convenience.",
+              description: "Most laptop issues are resolved on the same day for your convenience.",
             },
             {
               title: "Genuine Spare Parts and Warranty",
-              description:
-                "Only genuine parts are used with a service warranty for peace of mind.",
+              description: "Only genuine parts are used with a service warranty for peace of mind.",
             },
           ],
         },
@@ -106,7 +106,7 @@ export const blogs: Blog[] = [
         },
         {
           heading: "Areas Covered for Laptop Repair in Meerut",
-          areas: [
+          steps: [
             "Shastri Nagar",
             "Ganga Nagar",
             "Begumpul",
@@ -157,57 +157,51 @@ export const blogs: Blog[] = [
           text: "Door2fy has built a strong reputation in Meerut for reliable, fast, and affordable laptop repair services. Hundreds of customers trust Door2fy for their laptops due to quality work and transparent service.",
         },
       ],
-      conclusion:
-        "If your laptop has stopped working, is running slow, or has a damaged screen, Door2fy offers complete laptop repair in Meerut with doorstep service and affordable pricing. Visit Door2fy.in and book your service today.",
+      conclusion: "If your laptop has stopped working, is running slow, or has a damaged screen, Door2fy offers complete laptop repair in Meerut with doorstep service and affordable pricing. Visit Door2fy.in and book your service today.",
     },
   },
+
+  // =========================================
+  // BLOG 2: NOIDA REPAIR
+  // =========================================
   {
     slug: "laptop-repair-noida",
-    metaTitle:
-      "Laptop Repair in Noida | Door2fy – Expert & Affordable Doorstep Laptop Service",
-    metaDescription:
-      "Need fast laptop repair in Noida? Door2fy offers professional and affordable laptop repair services at your doorstep for all major brands. Book your service online today!",
+    metaTitle: "Laptop Repair in Noida | Door2fy – Expert & Affordable Doorstep Laptop Service",
+    metaDescription: "Need fast laptop repair in Noida? Door2fy offers professional and affordable laptop repair services at your doorstep for all major brands. Book your service online today!",
     category: "Laptop Repair",
     city: "Noida",
     featuredImage: repairNoida,
-    title:
-      "Laptop Repair in Noida – Reliable, Affordable, and Doorstep Service by Door2fy",
+    title: "Laptop Repair in Noida – Reliable, Affordable, and Doorstep Service by Door2fy",
+    updatedAt: "2025-12-19",
     content: {
-      intro:
-        "Whether you use your laptop for work, study, or entertainment, it’s hard to imagine a day without it. But when your laptop starts showing problems like slow performance, broken screens, or battery failure, it can disrupt your routine completely. If you are searching for laptop repair in Noida, you need a service that is quick, affordable, and trustworthy. That’s exactly what Door2fy.in offers — professional doorstep laptop repair services across Noida. With experienced technicians, transparent pricing, and same-day repairs, Door2fy ensures that your device is restored to perfect condition without you having to step out of your home.",
+      intro: "Whether you use your laptop for work, study, or entertainment, it’s hard to imagine a day without it. But when your laptop starts showing problems like slow performance, broken screens, or battery failure, it can disrupt your routine completely. If you are searching for laptop repair in Noida, you need a service that is quick, affordable, and trustworthy. That’s exactly what Door2fy.in offers — professional doorstep laptop repair services across Noida. With experienced technicians, transparent pricing, and same-day repairs, Door2fy ensures that your device is restored to perfect condition without you having to step out of your home.",
       sections: [
         {
           heading: "Why Choose Door2fy for Laptop Repair in Noida",
           points: [
             {
               title: "Doorstep Laptop Repair Service",
-              description:
-                "Door2fy makes laptop repair easy and convenient. You don’t need to travel to a service center or wait for days. Book your service online, and a technician will visit your home or office at your preferred time.",
+              description: "Door2fy makes laptop repair easy and convenient. Book your service online and a technician will visit your home or office at your preferred time.",
             },
             {
               title: "Professional and Verified Technicians",
-              description:
-                "Every technician associated with Door2fy is trained and verified. They are capable of repairing laptops of all brands including HP, Dell, Lenovo, Acer, Asus, and Apple.",
+              description: "All Door2fy technicians are trained and verified to repair laptops of HP, Dell, Lenovo, Acer, Asus, and Apple.",
             },
             {
               title: "Transparent Pricing",
-              description:
-                "No hidden costs. Before starting any repair, Door2fy provides an upfront price estimate so you know exactly what you’re paying for.",
+              description: "No hidden costs. You receive an upfront price estimate before the repair starts.",
             },
             {
               title: "Genuine Parts and Warranty",
-              description:
-                "Door2fy uses original parts for replacements and provides warranty coverage on all repairs.",
+              description: "Only original spare parts are used, and warranty is provided on repairs.",
             },
             {
               title: "Data Privacy and Safety",
-              description:
-                "Your data and files are safe with Door2fy. Technicians ensure complete confidentiality and handle your device with care.",
+              description: "Your data is handled securely with complete confidentiality.",
             },
             {
               title: "Same-Day Service",
-              description:
-                "Most laptop repairs are completed on the same day, ensuring minimal downtime and quick convenience for customers in Noida.",
+              description: "Most laptop repairs in Noida are completed on the same day.",
             },
           ],
         },
@@ -216,44 +210,36 @@ export const blogs: Blog[] = [
           points: [
             {
               title: "Laptop Not Powering On",
-              description:
-                "A laptop that doesn’t turn on may have a faulty battery, adapter, or motherboard. Technicians diagnose the issue and replace the necessary components.",
+              description: "Issues related to battery, adapter, or motherboard are diagnosed and fixed efficiently.",
             },
             {
               title: "Slow or Hanging Laptop",
-              description:
-                "If your laptop is running slow or frequently hangs, Door2fy can upgrade your RAM, install SSD storage, and optimize the operating system for better performance.",
+              description: "Performance upgrades like RAM or SSD installation and OS optimization are provided.",
             },
             {
               title: "Cracked or Broken Screen",
-              description:
-                "Screen replacements for all brands are available with genuine displays and fast installation.",
+              description: "Screen replacements with genuine displays for all laptop brands.",
             },
             {
               title: "Battery and Charging Issues",
-              description:
-                "Door2fy replaces damaged batteries and chargers with original ones to restore proper charging.",
+              description: "Replacement of faulty batteries and charging adapters.",
             },
             {
               title: "Keyboard and Touchpad Problems",
-              description:
-                "Non-responsive keyboards or touchpads can be repaired or replaced quickly at your doorstep.",
+              description: "Quick repair or replacement of non-working keyboards and touchpads.",
             },
             {
               title: "Overheating Issues",
-              description:
-                "Technicians clean the cooling fans, replace thermal paste, and ensure proper ventilation to prevent overheating.",
+              description: "Fan cleaning, thermal paste replacement, and airflow optimization.",
             },
             {
-              title: "Software and Operating System Errors",
-              description:
-                "Whether it’s a corrupted OS, driver issue, or virus infection, Door2fy offers complete software troubleshooting and reinstallation.",
+              title: "Software and OS Errors",
+              description: "Virus removal, OS reinstallation, and driver fixes.",
             },
           ],
         },
         {
-          heading:
-            "Brands Covered Under Door2fy Laptop Repair Services in Noida",
+          heading: "Brands Covered Under Door2fy Laptop Repair Services in Noida",
           brands: [
             "HP Laptop Repair in Noida",
             "Dell Laptop Repair in Noida",
@@ -266,18 +252,9 @@ export const blogs: Blog[] = [
         {
           heading: "Areas Covered for Laptop Repair in Noida",
           areas: [
-            "Sector 18",
-            "Sector 15",
-            "Sector 62",
-            "Sector 63",
-            "Sector 37",
-            "Sector 44",
-            "Sector 76",
-            "Sector 93",
-            "Sector 101",
-            "Sector 120",
-            "Sector 137",
-            "Greater Noida Extension",
+            "Sector 18", "Sector 15", "Sector 62", "Sector 63",
+            "Sector 37", "Sector 44", "Sector 76", "Sector 93",
+            "Sector 101", "Sector 120", "Sector 137", "Greater Noida Extension",
           ],
         },
         {
@@ -293,91 +270,84 @@ export const blogs: Blog[] = [
           ],
         },
         {
-          heading:
-            "Benefits of Choosing Door2fy Over Local Repair Shops in Noida",
+          heading: "Benefits of Choosing Door2fy Over Local Repair Shops in Noida",
           list: [
-            "Doorstep repair service saves travel time.",
-            "Certified and professional technicians.",
-            "Transparent pricing and no hidden costs.",
-            "Warranty on every repair.",
-            "Secure handling of data and device.",
-            "Same-day or next-day repair services.",
+            "Doorstep repair service",
+            "Certified professionals",
+            "Transparent pricing",
+            "Warranty on repairs",
+            "Secure data handling",
+            "Fast same-day service",
           ],
         },
         {
           heading: "How to Book Laptop Repair in Noida via Door2fy",
           steps: [
-            "Visit Door2fy.in.",
-            "Select the “Laptop Repair” option from the service list.",
-            "Fill in your contact details and describe your laptop issue.",
-            "Choose your preferred date and time slot.",
-            "A Door2fy technician will visit your doorstep to inspect and repair your laptop.",
-            "You can also call Door2fy customer care for personalized assistance or urgent service requests.",
+            "Visit Door2fy.in",
+            "Select Laptop Repair service",
+            "Describe your laptop issue",
+            "Choose date and time slot",
+            "Technician visits your doorstep",
           ],
         },
         {
           heading: "Preventive Tips to Keep Your Laptop in Good Condition",
           tips: [
-            "Keep your laptop dust-free and clean regularly.",
-            "Avoid eating or drinking near your laptop to prevent liquid damage.",
-            "Use a cooling pad to avoid overheating.",
-            "Don’t overcharge your laptop battery.",
-            "Install antivirus software for data protection.",
-            "Update your operating system and drivers regularly.",
-            "Backup your important data frequently.",
+            "Keep laptop clean and dust-free",
+            "Avoid liquid spills",
+            "Use cooling pad",
+            "Do not overcharge battery",
+            "Install antivirus software",
+            "Update OS and drivers",
+            "Backup data regularly",
           ],
         },
         {
           heading: "Customer Satisfaction and Trust",
-          text: "Door2fy has earned the trust of hundreds of customers in Noida through its reliable and customer-friendly services. Most users appreciate the quick response, transparent pricing, and professional behavior of technicians. With every service, Door2fy focuses on one goal — customer satisfaction through quality and convenience.",
+          text: "Door2fy has earned the trust of hundreds of customers in Noida with fast service, transparent pricing, and professional technicians.",
         },
       ],
-      conclusion:
-        "If your laptop has stopped working, is running slow, or has a damaged screen, there’s no need to panic. Door2fy provides the most reliable laptop repair in Noida — offering doorstep service, trained experts, and affordable rates. From hardware replacements to software troubleshooting, Door2fy ensures that your laptop gets back to working perfectly without any hassle. Visit Door2fy.in today to book your laptop repair service in Noida and experience fast, transparent, and professional laptop repair at your doorstep. Keep your device running smoothly with Door2fy – your trusted partner for laptop repair in Noida.",
+      conclusion: "Door2fy offers the most reliable laptop repair in Noida with doorstep service, expert technicians, and affordable pricing. Book your service today at Door2fy.in and get your laptop repaired without hassle.",
     },
   },
+
+  // =========================================
+  // BLOG 3: GHAZIABAD REPAIR
+  // =========================================
   {
     slug: "laptop-repair-ghaziabad",
-    metaTitle:
-      "Best Laptop Repair in Ghaziabad | Door2fy Expert Laptop Services",
-    metaDescription:
-      "Looking for reliable laptop repair in Ghaziabad? Door2fy offers fast, affordable, and expert laptop repair services at your doorstep. Call now for same-day repair!",
+    metaTitle: "Best Laptop Repair in Ghaziabad | Door2fy Expert Laptop Services",
+    metaDescription: "Looking for reliable laptop repair in Ghaziabad? Door2fy offers fast, affordable, and expert laptop repair services at your doorstep. Call now for same-day repair!",
     category: "Laptop Repair",
     city: "Ghaziabad",
     featuredImage: repairGhaziabad,
-    title:
-      "Laptop Repair in Ghaziabad – Fast, Affordable & Reliable Services by Door2fy",
+    title: "Laptop Repair in Ghaziabad – Fast, Affordable & Reliable Services by Door2fy",
+    updatedAt: "2025-12-19",
     content: {
-      intro:
-        "In today’s digital world, a laptop is not just a gadget—it’s an essential part of our daily routine. Whether you use it for work, study, entertainment, or managing your business, any issue with your laptop can disrupt your schedule. That’s why having a trusted laptop repair service in Ghaziabad is crucial. Door2fy is your one-stop solution for all kinds of laptop problems. From software glitches to hardware replacements, we bring expert repair service right to your doorstep—saving your time and effort.",
+      intro: "In today’s digital world, a laptop is not just a gadget—it’s an essential part of our daily routine. Whether you use it for work, study, entertainment, or managing your business, any issue with your laptop can disrupt your schedule. That’s why having a trusted laptop repair service in Ghaziabad is crucial. Door2fy is your one-stop solution for all kinds of laptop problems. From software glitches to hardware replacements, we bring expert repair service right to your doorstep—saving your time and effort.",
       sections: [
         {
           heading: "Why Choose Door2fy for Laptop Repair in Ghaziabad?",
           points: [
             {
               title: "Doorstep Laptop Repair",
-              description:
-                "No more visiting service centers and waiting for hours. With Door2fy, you can book laptop repair online, and a technician will arrive at your location to diagnose and fix the issue quickly.",
+              description: "Book laptop repair online and get professional service at your home or office without visiting service centers.",
             },
             {
               title: "Expert Technicians",
-              description:
-                "Our certified experts have years of experience in repairing all major brands. They can handle everything from a broken screen to motherboard issues, ensuring your device gets professional care.",
+              description: "Certified professionals with experience in repairing all major laptop brands and models.",
             },
             {
               title: "Genuine Spare Parts",
-              description:
-                "We use only original and high-quality spare parts to ensure long-lasting performance and durability. Whether it’s a battery, keyboard, or SSD replacement, quality is never compromised.",
+              description: "Only original and high-quality spare parts are used to ensure durability and performance.",
             },
             {
               title: "Affordable Pricing",
-              description:
-                "Door2fy provides transparent and competitive pricing. There are no hidden charges—you only pay for the service you get.",
+              description: "Transparent pricing with no hidden charges—you pay only for what you need.",
             },
             {
               title: "Quick Turnaround Time",
-              description:
-                "We understand that your time is valuable. Most repairs are completed within the same day, and in case of major hardware issues, we provide updates throughout the repair process.",
+              description: "Most laptop repairs are completed on the same day with regular status updates.",
             },
           ],
         },
@@ -386,43 +356,35 @@ export const blogs: Blog[] = [
           points: [
             {
               title: "Laptop Screen Replacement",
-              description:
-                "If your screen is cracked, flickering, or completely black, we can replace it with a brand-new one compatible with your model.",
+              description: "Replacement of cracked, flickering, or black screens with genuine displays.",
             },
             {
               title: "Battery Replacement",
-              description:
-                "Is your laptop not holding a charge or shutting down frequently? A battery replacement can solve this issue and improve performance.",
+              description: "Fix battery draining or charging issues with original battery replacement.",
             },
             {
               title: "Keyboard Repair",
-              description:
-                "Sticky or non-responsive keys can be frustrating. We replace damaged keyboards with genuine ones that work smoothly.",
+              description: "Replacement of faulty or non-responsive keyboards with smooth-working originals.",
             },
             {
               title: "Motherboard Repair",
-              description:
-                "Our experts specialize in motherboard-level repairs, fixing power issues, BIOS errors, and component failures with precision.",
+              description: "Advanced motherboard-level repairs including power and BIOS issues.",
             },
             {
               title: "Overheating and Fan Issues",
-              description:
-                "Dust and poor ventilation can cause laptops to overheat. We clean the cooling system, apply thermal paste, and ensure smooth airflow.",
+              description: "Cooling system cleaning, thermal paste application, and fan repair.",
             },
             {
               title: "Data Recovery and Backup",
-              description:
-                "Lost important files? Our data recovery service helps restore deleted or corrupted data safely and securely.",
+              description: "Secure recovery of deleted or corrupted files with complete privacy.",
             },
             {
               title: "Virus and Malware Removal",
-              description:
-                "If your laptop has become slow or showing pop-ups, we provide complete virus removal and software optimization services.",
+              description: "Complete system cleanup to improve speed and security.",
             },
             {
               title: "Software Installation and OS Upgrades",
-              description:
-                "We install or upgrade your operating system, drivers, and other software to keep your laptop updated and secure.",
+              description: "Operating system installation, driver updates, and software setup.",
             },
           ],
         },
@@ -439,16 +401,16 @@ export const blogs: Blog[] = [
         },
         {
           heading: "Door2fy – The 10-Minute Doorstep Service App",
-          text: "One of the key benefits of choosing Door2fy is convenience. As India’s leading doorstep service app, Door2fy allows customers to book laptop repairs, AC servicing, mobile repairs, and more within minutes. Simply visit Door2fy.in or download the app, choose your service, and schedule a visit at your preferred time. Whether you’re in Indirapuram, Vaishali, Raj Nagar, Vasundhara, or Kaushambi, our laptop repair experts in Ghaziabad are available across all major localities.",
+          text: "Door2fy offers unmatched convenience with fast doorstep services. Customers can book laptop repair, AC servicing, mobile repair, and more within minutes using Door2fy.in or the app. Our technicians serve all major areas of Ghaziabad including Indirapuram, Vaishali, Raj Nagar, Vasundhara, and Kaushambi.",
         },
         {
           heading: "How to Book Laptop Repair in Ghaziabad with Door2fy",
           steps: [
-            "Visit the Website – Go to Door2fy.in.",
-            "Select Laptop Repair Service – Choose the issue or mention your laptop problem.",
-            "Schedule Appointment – Pick your preferred date and time for the technician visit.",
-            "Get Service at Home – A certified technician arrives, diagnoses, and repairs your laptop on-site.",
-            "Pay Securely – Make payment online or after service completion.",
+            "Visit Door2fy.in",
+            "Select Laptop Repair Service",
+            "Schedule date and time",
+            "Technician visits your home",
+            "Pay securely after service",
           ],
         },
         {
@@ -466,84 +428,70 @@ export const blogs: Blog[] = [
         {
           heading: "Why Doorstep Laptop Repair Is the Future",
           list: [
-            "Time-Saving: No more waiting at service centers.",
-            "Safe and Convenient: Repairs done at home mean your data stays secure.",
-            "Transparent Service: You can see the repair process in real-time.",
-            "Same-Day Delivery: Most issues fixed within hours.",
+            "Time-saving service",
+            "Safe and convenient repairs at home",
+            "Transparent repair process",
+            "Same-day service for most issues",
           ],
         },
         {
           heading: "Areas We Serve in Ghaziabad",
           areas: [
-            "Indirapuram",
-            "Raj Nagar Extension",
-            "Vaishali",
-            "Kaushambi",
-            "Vasundhara",
-            "Crossings Republik",
-            "Nehru Nagar",
-            "Mohan Nagar",
-            "Sahibabad",
-            "Shalimar Garden",
+            "Indirapuram", "Raj Nagar Extension", "Vaishali",
+            "Kaushambi", "Vasundhara", "Crossings Republik",
+            "Nehru Nagar", "Mohan Nagar", "Sahibabad", "Shalimar Garden",
           ],
         },
       ],
-      conclusion:
-        "If your laptop is acting up, don’t wait for the problem to worsen. Door2fy’s laptop repair services in Ghaziabad are designed to offer fast, reliable, and affordable solutions right at your doorstep. From hardware replacement to software troubleshooting, we take care of everything—so you can get back to your work without interruption. Visit Door2fy.in today and book your laptop repair in Ghaziabad with just a few clicks.",
+      conclusion: "Door2fy provides fast, affordable, and reliable laptop repair in Ghaziabad with doorstep convenience. Book your service today at Door2fy.in and get your laptop fixed by experts without any hassle.",
     },
   },
+
+  // =========================================
+  // BLOG 4: SLOW SYSTEM (NOIDA)
+  // =========================================
   {
     slug: "fix-laptop-system-slow-noida",
-    metaTitle:
-      "Fix Laptop System Slow in Noida | Door2fy Laptop Speed Repair Experts",
-    metaDescription:
-      "Is your laptop running slow? Door2fy provides expert laptop repair in Noida to fix slow system performance, software errors, and hardware issues. Book a doorstep repair today!",
+    metaTitle: "Fix Laptop System Slow in Noida | Door2fy Laptop Speed Repair Experts",
+    metaDescription: "Is your laptop running slow? Door2fy provides expert laptop repair in Noida to fix slow system performance, software errors, and hardware issues. Book a doorstep repair today!",
     category: "Laptop Repair",
     city: "Noida",
     featuredImage: systemSlow,
-    title:
-      "Fix Laptop System Slow in Noida – Get Fast, Reliable Service with Door2fy",
+    title: "Fix Laptop System Slow in Noida – Get Fast, Reliable Service with Door2fy",
+    updatedAt: "2025-12-19",
     content: {
-      intro:
-        "A slow laptop can be frustrating—especially when you have urgent work, online meetings, or study deadlines. If your system is freezing, lagging, or taking forever to start up, it’s time to seek professional help. At Door2fy, we specialize in diagnosing and fixing slow laptop systems in Noida. Whether the cause is a software issue, hardware failure, or virus infection, our expert technicians will restore your laptop’s speed and performance right at your doorstep.",
+      intro: "A slow laptop can be frustrating—especially when you have urgent work, online meetings, or study deadlines. If your system is freezing, lagging, or taking forever to start up, it’s time to seek professional help. At Door2fy, we specialize in diagnosing and fixing slow laptop systems in Noida. Whether the cause is a software issue, hardware failure, or virus infection, our expert technicians will restore your laptop’s speed and performance right at your doorstep.",
       sections: [
         {
           heading: "Common Reasons Why Your Laptop Is Running Slow",
           points: [
             {
               title: "Too Many Startup Programs",
-              description:
-                "Many apps automatically launch when you start your laptop. These unnecessary programs use up system memory and slow down boot time.",
+              description: "Unnecessary apps launching at startup consume memory and slow down boot time.",
             },
             {
               title: "Low RAM or Old Hard Drive",
-              description:
-                "If your laptop uses an HDD instead of an SSD or has limited RAM, it will struggle to handle modern software and multitasking.",
+              description: "Systems with HDDs or low RAM struggle with modern software and multitasking.",
             },
             {
               title: "Virus or Malware Infection",
-              description:
-                "Viruses, spyware, and malware often run in the background, consuming CPU resources and affecting performance.",
+              description: "Malicious programs run in the background and consume CPU resources.",
             },
             {
               title: "Outdated Software or Drivers",
-              description:
-                "Running outdated operating systems and drivers can cause lag and reduce compatibility with new applications.",
+              description: "Old operating systems and drivers reduce performance and stability.",
             },
             {
               title: "Overheating and Dust Build-Up",
-              description:
-                "When your laptop overheats, it slows down to protect internal components. Dust in the fan or vents is a common reason for overheating.",
+              description: "Overheating causes performance throttling to protect internal components.",
             },
             {
               title: "Too Many Background Processes",
-              description:
-                "Apps running in the background—like antivirus scans or updates—can take up memory and CPU, making your system slower.",
+              description: "Background apps like updates and scans slow the system significantly.",
             },
             {
-              title: "Corrupted Operating System or Disk Errors",
-              description:
-                "If your OS is corrupted or your hard drive has bad sectors, your system may crash or run very slowly.",
+              title: "Corrupted OS or Disk Errors",
+              description: "Corrupted operating systems or bad sectors cause crashes and lag.",
             },
           ],
         },
@@ -552,27 +500,23 @@ export const blogs: Blog[] = [
           points: [
             {
               title: "Doorstep Laptop Repair",
-              description:
-                "We come to your home or office and fix your laptop on-site.",
+              description: "On-site laptop repair at your home or office.",
             },
             {
               title: "Certified Technicians",
-              description:
-                "Skilled experts with experience in handling all laptop brands.",
+              description: "Experienced experts for all laptop brands.",
             },
             {
               title: "Transparent Pricing",
-              description:
-                "No hidden costs—only pay for the services you choose.",
+              description: "Clear pricing with no hidden charges.",
             },
             {
               title: "Fast Service",
-              description: "Most issues fixed within the same day.",
+              description: "Most laptop speed issues fixed the same day.",
             },
             {
               title: "Genuine Parts",
-              description:
-                "We use 100% original spare parts for replacements and upgrades.",
+              description: "Only original spare parts and upgrades used.",
             },
           ],
         },
@@ -581,169 +525,109 @@ export const blogs: Blog[] = [
           points: [
             {
               title: "Full System Diagnosis",
-              description:
-                "We perform a detailed analysis of your laptop’s software and hardware to identify the cause of the slowdown.",
+              description: "Complete hardware and software health check.",
             },
             {
               title: "Virus and Malware Removal",
-              description:
-                "Our experts use professional tools to remove viruses, spyware, and malicious programs safely—without losing your data.",
+              description: "Safe removal of malicious software without data loss.",
             },
             {
               title: "Hard Drive to SSD Upgrade",
-              description:
-                "Replacing your old HDD with an SSD can make your laptop up to 5x faster. We provide quick SSD installation and data transfer at home.",
+              description: "SSD upgrades that make laptops up to 5x faster.",
             },
             {
               title: "RAM Upgrade",
-              description:
-                "If your laptop has less than 8GB RAM, we recommend upgrading it to handle multitasking and heavy applications smoothly.",
+              description: "Improves multitasking and performance.",
             },
             {
               title: "System Cleanup and Optimization",
-              description:
-                "We remove unnecessary files, temporary data, and unused applications to free up space and speed up performance.",
+              description: "Removal of junk files and unused applications.",
             },
             {
               title: "Software and Driver Updates",
-              description:
-                "Our team ensures your OS and drivers are updated to the latest versions for better speed and stability.",
+              description: "Latest OS and driver installations for stability.",
             },
             {
               title: "Cooling System Maintenance",
-              description:
-                "We clean your laptop fan, vents, and apply fresh thermal paste to prevent overheating.",
+              description: "Fan cleaning and thermal paste application to prevent overheating.",
             },
           ],
         },
         {
           heading: "Brands We Service",
           brands: [
-            "HP",
-            "Dell",
-            "Lenovo",
-            "Acer",
-            "Asus",
-            "Apple MacBook",
-            "MSI",
-            "Samsung",
+            "HP", "Dell", "Lenovo", "Acer", "Asus",
+            "Apple MacBook", "MSI", "Samsung",
           ],
         },
         {
           heading: "Why Choose Door2fy in Noida?",
           list: [
-            "Fast doorstep response time",
-            "Same-day laptop repair",
+            "Fast doorstep response",
+            "Same-day repair service",
             "Trained local technicians",
-            "Affordable repair plans",
-            "Safe and secure service at home",
+            "Affordable pricing plans",
+            "Safe and secure home service",
+            "Warranty on all upgrades and repairs", // Completed entry
           ],
         },
         {
-          heading: "How to Book Doorstep Laptop Repair in Noida",
+          heading: "How to Book a Speed Up Service",
           steps: [
-            "Visit Door2fy.in",
-            "Select ‘Laptop Repair’ Service",
-            "Describe the Issue – Mention that your laptop is running slow.",
-            "Choose Your Time Slot – Pick a time that suits you.",
-            "Get Repair at Home – A technician visits your home to fix the issue.",
+            "Go to Door2fy.in",
+            "Select 'Laptop Repair' and choose Noida",
+            "Mention 'Slow System' in the issue description",
+            "Book a convenient slot",
+            "Get your laptop boosted at your doorstep",
           ],
         },
         {
-          heading: "Estimated Cost to Fix Laptop System Slow in Noida",
+          heading: "Cost of Speed Upgrades in Noida",
           table: [
-            {
-              service: "Full System Cleanup & Optimization",
-              cost: "₹700 – ₹1,200",
-            },
-            { service: "Virus & Malware Removal", cost: "₹800 – ₹1,500" },
-            { service: "HDD to SSD Upgrade", cost: "₹3,000 – ₹6,000" },
-            { service: "RAM Upgrade", cost: "₹1,500 – ₹3,000" },
-            { service: "Software/Driver Update", cost: "₹500 – ₹1,000" },
-            { service: "Fan Cleaning & Thermal Paste", cost: "₹600 – ₹1,200" },
-            {
-              service: "Complete Performance Tune-up",
-              cost: "₹1,000 – ₹2,500",
-            },
-          ],
-        },
-        {
-          heading:
-            "Benefits of Fixing a Slow Laptop Instead of Buying a New One",
-          list: [
-            "Save Money: A repair or upgrade costs much less than buying a new laptop.",
-            "Retain Data: Your files and settings remain safe.",
-            "Better Performance: SSD and RAM upgrades make your old laptop perform like new.",
-            "Eco-Friendly Choice: Repairing reduces electronic waste and helps the environment.",
-          ],
-        },
-        {
-          heading: "Areas We Serve in Noida",
-          areas: [
-            "Sector 15, 18, 22, 62, 63",
-            "Noida Extension",
-            "Greater Noida",
-            "Sector 50, 76, 137, 150",
-            "Gaur City",
-            "Atta Market Area",
-            "Film City and more",
-          ],
-        },
-        {
-          heading: "Customer Satisfaction Guarantee",
-          list: [
-            "Professional behavior and transparent communication.",
-            "Warranty on replaced parts.",
-            "No data loss during repair.",
-            "100% genuine components used.",
+            { service: "SSD Upgrade (256GB/512GB)", cost: "₹2,000 – ₹4,500" },
+            { service: "RAM Upgrade (4GB/8GB)", cost: "₹1,500 – ₹3,500" },
+            { service: "General Service (Cleaning)", cost: "₹500 – ₹800" },
+            { service: "OS Optimization/Format", cost: "₹500 – ₹1,000" },
           ],
         },
       ],
-      conclusion:
-        "If your laptop is taking forever to start, freezing frequently, or crashing mid-task, don’t ignore the signs. A slow laptop can often be fixed easily with expert help. Door2fy offers doorstep laptop repair services in Noida to fix slow systems, remove viruses, upgrade hardware, and optimize performance. Save your time, money, and energy—book a service with Door2fy.in today and experience the convenience of fast laptop repair in Noida from certified professionals.",
+      conclusion: "Don't let a slow laptop slow down your work. Door2fy provides the fastest and most affordable laptop speed optimization and repair services in Noida. Book an appointment today to make your laptop run like new again.",
     },
   },
   {
     slug: "lenovo-laptop-repair-near-me",
-    metaTitle:
-      "Lenovo Laptop Repair Near Me | Expert Doorstep Service by Door2fy",
-    metaDescription:
-      "Looking for “Lenovo laptop repair near me”? Door2fy offers fast, reliable, and affordable Lenovo laptop repair at your doorstep. Book online for same-day service!",
+    metaTitle: "Lenovo Laptop Repair Near Me | Expert Doorstep Service by Door2fy",
+    metaDescription: "Looking for “Lenovo laptop repair near me”? Door2fy offers fast, reliable, and affordable Lenovo laptop repair at your doorstep. Book online for same-day service!",
     category: "Laptop Repair",
     city: "NCR",
-    featuredImage: Urgent,
+    featuredImage: Urgent, // Ensure 'Urgent' is imported at the top of your file
     title: "Lenovo Laptop Repair Near Me – Fast & Reliable Service by Door2fy",
+    updatedAt: "2025-12-19",
     content: {
-      intro:
-        "Your Lenovo laptop is an essential part of your daily life—whether for work, studies, or entertainment. But when it suddenly stops working, overheats, or slows down, it can disrupt everything. Searching online for “Lenovo laptop repair near me” means you’re looking for a quick, trustworthy, and affordable solution. That’s where Door2fy comes in. We provide doorstep Lenovo laptop repair services handled by trained professionals—so you can get your laptop fixed without leaving your home.",
+      intro: "Your Lenovo laptop is an essential part of your daily life—whether for work, studies, or entertainment. But when it suddenly stops working, overheats, or slows down, it can disrupt everything. Searching online for “Lenovo laptop repair near me” means you’re looking for a quick, trustworthy, and affordable solution. That’s where Door2fy comes in. We provide doorstep Lenovo laptop repair services handled by trained professionals—so you can get your laptop fixed without leaving your home.",
       sections: [
         {
           heading: "Why Choose Door2fy for Lenovo Laptop Repair Near You?",
           points: [
             {
               title: "Doorstep Service",
-              description:
-                "No need to visit a service center or wait in long queues. Book your repair online, and our technician will arrive at your location to diagnose and fix your Lenovo laptop.",
+              description: "No need to visit a service center or wait in long queues. Book your repair online, and our technician will arrive at your location to diagnose and fix your Lenovo laptop.",
             },
             {
               title: "Certified Technicians",
-              description:
-                "Our professionals are trained to handle all Lenovo models—IdeaPad, ThinkPad, Yoga, Legion, and others. From software bugs to hardware issues, we fix everything.",
+              description: "Our professionals are trained to handle all Lenovo models—IdeaPad, ThinkPad, Yoga, Legion, and more.",
             },
             {
               title: "Genuine Spare Parts",
-              description:
-                "We use only authentic Lenovo components for replacements such as screens, keyboards, and batteries, ensuring long-lasting performance.",
+              description: "We use authentic Lenovo components for screens, keyboards, batteries, and other replacements.",
             },
             {
               title: "Transparent Pricing",
-              description:
-                "Door2fy believes in honest service. You’ll always receive a detailed quote before any repair begins—no hidden costs.",
+              description: "You receive a clear quote before repair—no hidden charges.",
             },
             {
               title: "Quick Turnaround Time",
-              description:
-                "Most issues are resolved on the same day. For complex repairs, we provide regular updates so you’re always informed.",
+              description: "Most Lenovo laptop issues are resolved the same day.",
             },
           ],
         },
@@ -751,60 +635,51 @@ export const blogs: Blog[] = [
           heading: "Common Lenovo Laptop Issues We Fix",
           points: [
             {
-              title: "Lenovo Laptop Not Turning On",
-              description:
-                "If your laptop won’t start, it could be a motherboard, battery, or power jack issue. We perform a quick diagnosis and repair it efficiently.",
+              title: "Laptop Not Turning On",
+              description: "Motherboard, battery, or power jack issues diagnosed and repaired quickly.",
             },
             {
               title: "Slow Performance or Freezing",
-              description:
-                "We optimize the software, clean unwanted files, or recommend RAM/SSD upgrades for better performance.",
+              description: "System optimization and RAM/SSD upgrades for smoother performance.",
             },
             {
               title: "Screen Replacement",
-              description:
-                "Cracked, flickering, or black screens can be replaced with genuine Lenovo screens to restore your display quality.",
+              description: "Cracked or flickering screens replaced with genuine Lenovo displays.",
             },
             {
               title: "Battery or Charging Issues",
-              description:
-                "If your laptop battery drains too fast or doesn’t charge, we replace it with a compatible Lenovo battery.",
+              description: "Battery replacements using compatible Lenovo batteries.",
             },
             {
-              title: "Keyboard or Touchpad Not Working",
-              description:
-                "We repair or replace faulty keyboards and touchpads so you can get back to work comfortably.",
+              title: "Keyboard or Touchpad Issues",
+              description: "Faulty keyboards or touchpads repaired or replaced.",
             },
             {
               title: "Overheating or Fan Noise",
-              description:
-                "Our experts clean the cooling system, apply new thermal paste, and fix fan-related issues to prevent overheating.",
+              description: "Cooling system cleaning and thermal paste replacement.",
             },
             {
-              title: "Software & Operating System Issues",
-              description:
-                "From Windows installation to Lenovo driver updates, we handle all software-related repairs.",
+              title: "Software & OS Problems",
+              description: "Windows installation, updates, and Lenovo driver fixes.",
             },
             {
-              title: "Virus and Malware Removal",
-              description:
-                "We clean your system from harmful software that may cause slow performance or data loss.",
+              title: "Virus & Malware Removal",
+              description: "Complete system cleaning without data loss.",
             },
             {
               title: "Data Recovery",
-              description:
-                "Accidentally deleted important files? We provide safe and secure data recovery for Lenovo laptops.",
+              description: "Secure recovery of deleted or lost files.",
             },
           ],
         },
         {
           heading: "Our Lenovo Laptop Repair Process",
           steps: [
-            "Book Online: Visit Door2fy.in and select “Laptop Repair” service.",
-            "Describe the Issue: Mention your Lenovo laptop model and the problem you’re facing.",
-            "Schedule a Time: Choose your preferred time slot for doorstep service.",
-            "Technician Visit: A certified technician arrives to diagnose and repair your laptop.",
-            "Repair & Testing: The laptop is repaired, tested, and delivered back to you in perfect condition.",
+            "Book Online via Door2fy.in",
+            "Mention Lenovo model and issue",
+            "Choose preferred time slot",
+            "Technician visits your location",
+            "Repair, testing, and handover",
           ],
         },
         {
@@ -814,7 +689,7 @@ export const blogs: Blog[] = [
             "Lenovo ThinkPad Series",
             "Lenovo Yoga Series",
             "Lenovo Legion Gaming Laptops",
-            "Lenovo V Series and Chromebook Models",
+            "Lenovo V Series & Chromebooks",
           ],
         },
         {
@@ -823,24 +698,21 @@ export const blogs: Blog[] = [
             { service: "Screen Replacement", cost: "₹2,500 – ₹6,000" },
             { service: "Battery Replacement", cost: "₹1,500 – ₹3,500" },
             { service: "Keyboard Replacement", cost: "₹800 – ₹2,000" },
-            { service: "RAM/SSD Upgrade", cost: "₹1,500 – ₹4,500" },
-            {
-              service: "Fan Cleaning & Overheating Fix",
-              cost: "₹500 – ₹1,500",
-            },
+            { service: "RAM / SSD Upgrade", cost: "₹1,500 – ₹4,500" },
+            { service: "Fan Cleaning & Overheating Fix", cost: "₹500 – ₹1,500" },
             { service: "Motherboard Repair", cost: "₹2,000 – ₹5,000" },
             { service: "Virus & Malware Removal", cost: "₹800 – ₹1,500" },
-            { service: "Software Installation/Windows", cost: "₹500 – ₹1,000" },
+            { service: "Windows / Software Installation", cost: "₹500 – ₹1,000" },
           ],
         },
         {
           heading: "Benefits of Choosing Door2fy Over Local Shops",
           list: [
-            "Trained Technicians: No trial-and-error approach. Our experts know Lenovo systems inside out.",
-            "On-Site Repairs: Most issues fixed at your home or office.",
-            "Data Safety: Your personal and work data remain safe and secure.",
-            "Warranty on Replacements: Genuine parts come with warranty coverage.",
-            "Nationwide Service: Available not only in Noida or Ghaziabad but across major Indian cities.",
+            "Expert Lenovo technicians",
+            "On-site doorstep repairs",
+            "Complete data safety",
+            "Warranty on genuine parts",
+            "Service across major Indian cities",
           ],
         },
         {
@@ -857,42 +729,38 @@ export const blogs: Blog[] = [
         {
           heading: "Tips to Maintain Your Lenovo Laptop",
           list: [
-            "Keep your laptop dust-free and clean the vents regularly.",
-            "Avoid overcharging your battery.",
-            "Update Windows and drivers on time.",
-            "Install antivirus software to protect against malware.",
-            "Use your laptop on a hard surface for proper ventilation.",
-            "Regularly back up your data.",
+            "Keep vents clean and dust-free",
+            "Avoid overcharging",
+            "Update Windows and drivers regularly",
+            "Install antivirus protection",
+            "Use laptop on a flat surface",
+            "Backup important data",
           ],
         },
         {
           heading: "Customer Satisfaction Guaranteed",
           list: [
-            "All repairs are handled by certified technicians.",
-            "We offer warranty support for replaced parts.",
-            "Your data and privacy are fully protected.",
-            "No hidden charges or unnecessary recommendations.",
+            "Certified technicians only",
+            "Warranty on replaced parts",
+            "Complete data privacy",
+            "Transparent pricing",
           ],
         },
       ],
-      conclusion:
-        "If you’re searching for “Lenovo laptop repair near me”, look no further than Door2fy. We provide fast, affordable, and professional repair services at your doorstep, ensuring your laptop works like new again. From screen and battery replacements to full system optimization, our experts handle everything with care and precision. Visit Door2fy.in today to book your Lenovo laptop repair service online and experience the convenience of doorstep laptop repair by professionals you can trust.",
+      conclusion: "If you’re searching for “Lenovo laptop repair near me”, Door2fy is your trusted solution. We provide fast, affordable, and professional Lenovo laptop repair services at your doorstep. Book your service today at Door2fy.in and get your Lenovo laptop fixed by experts without any hassle.",
     },
   },
   {
     slug: "urgent-laptop-repair-10-minutes",
-    metaTitle:
-      "Urgent Laptop Repair in 10 Minutes | Fast & Reliable Service Near You",
-    metaDescription:
-      "Need urgent laptop repair? Door2fy offers fast, reliable, and affordable laptop repair in just 10 minutes. Book online for doorstep or in-store service in Noida, Delhi, Meerut & Ghaziabad.",
+    metaTitle: "Urgent Laptop Repair in 10 Minutes | Fast & Reliable Service Near You",
+    metaDescription: "Need urgent laptop repair? Door2fy offers fast, reliable, and affordable laptop repair in just 10 minutes. Book online for doorstep or in-store service in Noida, Delhi, Meerut & Ghaziabad.",
     category: "Laptop Repair",
     city: "NCR",
-    featuredImage: repairNoida,
-    title:
-      "Urgent Laptop Repair in 10 Minutes – Fast, Reliable and Affordable Service Near You",
+    featuredImage: repairNoida, // Ensure 'repairNoida' is imported
+    title: "Urgent Laptop Repair in 10 Minutes – Fast, Reliable and Affordable Service Near You",
+    updatedAt: "2025-12-19",
     content: {
-      intro:
-        "When your laptop suddenly stops working, every minute matters. Whether you’re working from home, attending classes, or managing a business, a malfunctioning laptop can bring everything to a halt. Our urgent laptop repair in 10 minutes service, available across Noida, Delhi, Meerut, and Ghaziabad, ensures your device is back in action in record time. From quick software fixes to hardware adjustments, our skilled technicians handle it all efficiently.",
+      intro: "When your laptop suddenly stops working, every minute matters. Whether you’re working from home, attending classes, or managing a business, a malfunctioning laptop can bring everything to a halt. Our urgent laptop repair in 10 minutes service, available across Noida, Delhi, Meerut, and Ghaziabad, ensures your device is back in action in record time. From quick software fixes to hardware adjustments, our skilled technicians handle it all efficiently.",
       sections: [
         {
           heading: "What Makes Our 10-Minute Laptop Repair Service Different",
@@ -918,8 +786,7 @@ export const blogs: Blog[] = [
           ],
         },
         {
-          heading:
-            "Fast Laptop Repair Near You – Noida, Delhi, Meerut and Ghaziabad",
+          heading: "Fast Laptop Repair Near You – Noida, Delhi, Meerut and Ghaziabad",
           list: [
             "Laptop Repair in Noida: Get fast, affordable repair for all major brands with same-day service.",
             "Laptop Repair in Delhi: We offer urgent corporate and home laptop repair with doorstep pickup and delivery.",
@@ -957,22 +824,20 @@ export const blogs: Blog[] = [
           ],
         },
       ],
-      conclusion:
-        "Do not let a small issue stop your productivity. Contact our experts today for urgent laptop repair in Noida, Delhi, Meerut, or Ghaziabad. Whether at home, at work, or in our service center, we guarantee the fastest and most reliable laptop repair service near you. Call Now or Book Online for fast, affordable, and reliable laptop repair in just 10 minutes.",
+      conclusion: "Do not let a small issue stop your productivity. Contact our experts today for urgent laptop repair in Noida, Delhi, Meerut, or Ghaziabad. Whether at home, at work, or in our service center, we guarantee the fastest and most reliable laptop repair service near you. Call Now or Book Online for fast, affordable, and reliable laptop repair in just 10 minutes.",
     },
   },
   {
     slug: "fix-slow-laptop-in-5-steps",
     metaTitle: "How to Fix a Slow Laptop in 5 Steps | Door2fy IT Tips",
-    metaDescription:
-      "Learn 5 easy and effective ways to fix a slow laptop before the engineer arrives. Optimize performance, remove malware, and boost speed with Door2fy.",
+    metaDescription: "Learn 5 easy and effective ways to fix a slow laptop before the engineer arrives. Optimize performance, remove malware, and boost speed with Door2fy.",
     category: "Laptop Tips",
     city: "NCR",
-    featuredImage: slowLaptopImages, // replace with your imported image variable
+    featuredImage: slowLaptopImages, // Ensure 'slowLaptopImages' is imported
     title: "How to Fix a Slow Laptop in 5 Steps (Before the Engineer Arrives)",
+    updatedAt: "2025-12-19",
     content: {
-      intro:
-        "A slow laptop is one of the most frustrating tech problems — especially when you’re in the middle of important work. It takes longer to boot up, applications freeze, and even simple tasks like opening a browser can feel like a chore. In this guide, Door2fy - your trusted doorstep IT support and repair partner - walks you through five easy, safe, and effective ways to fix a slow laptop before the engineer arrives.",
+      intro: "A slow laptop is one of the most frustrating tech problems — especially when you’re in the middle of important work. It takes longer to boot up, applications freeze, and even simple tasks like opening a browser can feel like a chore. In this guide, Door2fy - your trusted doorstep IT support and repair partner - walks you through five easy, safe, and effective ways to fix a slow laptop before the engineer arrives.",
       sections: [
         {
           heading: "1. Close Background Apps and Startup Programs",
@@ -1048,30 +913,26 @@ export const blogs: Blog[] = [
           ],
         },
       ],
-      conclusion:
-        "A slow laptop doesn’t always mean it’s time for a replacement. Often, a bit of cleanup, optimization, and maintenance can restore speed. Follow these five steps to give your system a quick boost — and if things don’t improve, Door2fy’s professional doorstep IT repair service is ready to help. Keep your devices fast, safe, and reliable without visiting a service center.",
+      conclusion: "A slow laptop doesn’t always mean it’s time for a replacement. Often, a bit of cleanup, optimization, and maintenance can restore speed. Follow these five steps to give your system a quick boost — and if things don’t improve, Door2fy’s professional doorstep IT repair service is ready to help. Keep your devices fast, safe, and reliable without visiting a service center.",
     },
   },
-
   {
     slug: "top-7-signs-laptop-needs-repair",
-    metaTitle:
-      "Top 7 Signs Your Laptop Needs Professional Repair | Door2fy IT Tips",
-    metaDescription:
-      "Learn the top 7 signs your laptop needs professional repair. From overheating to slow performance, Door2fy doorstep technicians can fix it all.",
+    metaTitle: "Top 7 Signs Your Laptop Needs Professional Repair | Door2fy IT Tips",
+    metaDescription: "Learn the top 7 signs your laptop needs professional repair. From overheating to slow performance, Door2fy doorstep technicians can fix it all.",
     category: "Laptop Repair",
     city: "NCR",
-    featuredImage: ProfessionalRepair, // replace with your imported image variable
+    featuredImage: ProfessionalRepair, // Ensure this variable is imported
     title: "Top 7 Signs Your Laptop Needs Professional Repair",
+    updatedAt: "2025-12-19",
     content: {
-      intro:
-        "Your laptop is more than just a device — it’s your work partner, study tool, and entertainment hub. But even the best machines show signs of trouble over time. While minor issues can often be fixed at home, certain problems indicate it’s time to call in the experts. Here are the top seven signs your laptop needs professional repair, brought to you by Door2fy, your reliable doorstep IT support service.",
+      intro: "Your laptop is more than just a device — it’s your work partner, study tool, and entertainment hub. But even the best machines show signs of trouble over time. While minor issues can often be fixed at home, certain problems indicate it’s time to call in the experts. Here are the top seven signs your laptop needs professional repair, brought to you by Door2fy, your reliable doorstep IT support service.",
       sections: [
         {
           heading: "1. Overheating or Sudden Shutdowns",
           list: [
             "Laptop feels unusually hot or shuts down unexpectedly.",
-            "Cooling fan or heat sink may be malfunctioning.",
+            "Cooling fan or heat sink may be malfunctioning. ",
             "Door2fy technicians can clean cooling system and reapply thermal paste to prevent long-term damage.",
           ],
         },
@@ -1129,137 +990,86 @@ export const blogs: Blog[] = [
           ],
         },
       ],
-      conclusion:
-        "Ignoring early warning signs can lead to bigger, more expensive problems. If you notice any of these issues, don’t wait — book a Door2fy doorstep IT service today. Our professionals diagnose, repair, and optimize your laptop without you ever having to leave your desk.",
+      conclusion: "Ignoring early warning signs can lead to bigger, more expensive problems. If you notice any of these issues, don’t wait — book a Door2fy doorstep IT service today. Our professionals diagnose, repair, and optimize your laptop without you ever having to leave your desk.",
     },
   },
   {
     slug: "common-laptop-problems-doorstep-repair",
     metaTitle: "Top Laptop Problems & Best Doorstep Repair Solutions in 2026",
-    metaDescription:
-      "Discover the most common laptop problems and how doorstep repair services fix them quickly. Save time, data, and money with professional laptop technicians at home.",
+    metaDescription: "Discover the most common laptop problems and how doorstep repair services fix them quickly. Save time, data, and money with professional laptop technicians at home.",
     category: "Laptop Repair",
     city: "India",
-    featuredImage: Repair,
-    title:
-      "Top 10 Common Laptop Problems & How Doorstep Repair Services Save Time & Money",
+    featuredImage: Repair, // Ensure this variable is imported
+    title: "Top 10 Common Laptop Problems & How Doorstep Repair Services Save Time & Money",
+    updatedAt: "2025-12-19",
     content: {
-      intro:
-        "Laptops are essential for work, study, entertainment, and business. So when a laptop suddenly stops working, it can disrupt your entire day. Small issues like slow performance or a loose charging port can quickly turn into major problems if ignored. The good news? Doorstep laptop repair services make it easy to get fast, professional repairs without visiting a service center. Below are the top 10 most common laptop problems faced by users—and how doorstep experts like Door2fy solve them efficiently.",
+      intro: "Laptops are essential for work, study, entertainment, and business. So when a laptop suddenly stops working, it can disrupt your entire day. Small issues like slow performance or a loose charging port can quickly turn into major problems if ignored. The good news? Doorstep laptop repair services make it easy to get fast, professional repairs without visiting a service center. Below are the top 10 most common laptop problems faced by users—and how doorstep experts like Door2fy solve them efficiently.",
       sections: [
         {
           heading: "Top 10 Laptop Issues & Smart Doorstep Solutions",
           list: [
             {
               title: "1. Slow or Hanging Laptop",
-              description:
-                "Usually caused by overloaded software, low RAM, or a full hard drive. Doorstep solutions include SSD upgrades, RAM upgrades, OS cleanup, and virus removal.",
+              description: "Usually caused by overloaded software, low RAM, or a full hard drive. Doorstep solutions include SSD upgrades, RAM upgrades, OS cleanup, and virus removal. ",
             },
             {
               title: "2. Broken or Flickering Screen",
-              description:
-                "Often due to accidental drops, pressure damage, or dead pixels. Doorstep screen replacement is done at home without depositing your device.",
+              description: "Often due to accidental drops, pressure damage, or dead pixels. Doorstep screen replacement is done at home without depositing your device.",
             },
             {
               title: "3. Battery Draining Quickly",
-              description:
-                "Caused by battery aging, faulty adapters, or background apps. The fix includes original battery replacement with warranty.",
+              description: "Caused by battery aging, faulty adapters, or background apps. The fix includes original battery replacement with warranty.",
             },
             {
               title: "4. Laptop Not Turning On",
-              description:
-                "Can result from power issues or motherboard failure. Professionals provide doorstep diagnosis and chip-level repairs.",
+              description: "Can result from power issues or motherboard failure. Professionals provide doorstep diagnosis and chip-level repairs.",
             },
             {
               title: "5. Overheating & Loud Fan Noise",
-              description:
-                "Dust buildup restricts airflow. Solutions include internal cleaning and thermal paste replacement.",
+              description: "Dust buildup restricts airflow. Solutions include internal cleaning and thermal paste replacement.",
             },
             {
               title: "6. Keyboard Keys Not Working",
-              description:
-                "Usually caused by liquid spills, dust, or connector faults. Full keyboard replacement can be done quickly at home.",
+              description: "Usually caused by liquid spills, dust, or connector faults. Full keyboard replacement can be done quickly at home.",
             },
             {
               title: "7. Charging or Adapter Port Issues",
-              description:
-                "Loose or damaged DC jacks cause charging interruptions. Experts repair or replace charging ports with precision soldering.",
+              description: "Loose or damaged DC jacks cause charging interruptions. Experts repair or replace charging ports with precision soldering.",
             },
             {
               title: "8. Hard Disk Failure or Data Loss",
-              description:
-                "Common signs include clicking noises and frequent crashes. Solutions include data recovery and SSD upgrades for better performance.",
+              description: "Common signs include clicking noises and frequent crashes. Solutions include data recovery and SSD upgrades for better performance.",
             },
             {
               title: "9. Wi-Fi or Bluetooth Not Connecting",
-              description:
-                "Often due to driver issues or faulty network cards. Fixes include software repair or hardware replacement.",
+              description: "Often due to driver issues or faulty network cards. Fixes include software repair or hardware replacement.",
             },
             {
               title: "10. Software Errors & OS Crashes",
-              description:
-                "Includes Windows crashes, BSOD errors, or virus infections. Solutions include OS reinstallation, formatting, and licensed software setup.",
+              description: "Includes Windows crashes, BSOD errors, or virus infections. Solutions include OS reinstallation, formatting, and licensed software setup.",
             },
           ],
         },
         {
           heading: "Why You Shouldn’t Delay Laptop Repairs",
           table: [
-            {
-              issue: "Overheating",
-              effect: "Internal hardware damage",
-              result: "Costly motherboard repair",
-            },
-            {
-              issue: "Battery swelling",
-              effect: "Screen or body damage",
-              result: "Serious safety risk",
-            },
-            {
-              issue: "Hard disk errors",
-              effect: "Frequent crashes",
-              result: "Permanent data loss",
-            },
-            {
-              issue: "Charger problems",
-              effect: "Short circuits",
-              result: "Laptop failure",
-            },
-            {
-              issue: "Cracked screen",
-              effect: "Worsening damage",
-              result: "Higher replacement cost",
-            },
+            { issue: "Overheating", effect: "Internal hardware damage", result: "Costly motherboard repair" },
+            { issue: "Battery swelling", effect: "Screen or body damage", result: "Serious safety risk" },
+            { issue: "Hard disk errors", effect: "Frequent crashes", result: "Permanent data loss" },
+            { issue: "Charger problems", effect: "Short circuits", result: "Laptop failure" },
+            { issue: "Cracked screen", effect: "Worsening damage", result: "Higher replacement cost" },
           ],
           note: "Early repairs mean lower costs and a longer laptop lifespan.",
         },
         {
           heading: "How Doorstep Laptop Repair Services Help",
           points: [
-            {
-              title: "Service at home",
-              description: "No shop visits and no long waiting times.",
-            },
-            {
-              title: "Verified technicians",
-              description: "Safe, professional, and trustworthy repairs.",
-            },
-            {
-              title: "Transparent pricing",
-              description: "No hidden charges or surprises.",
-            },
-            {
-              title: "Original spare parts",
-              description: "Ensures durability and performance.",
-            },
-            {
-              title: "Repair warranty",
-              description: "Peace of mind after service.",
-            },
-            {
-              title: "Quick turnaround",
-              description: "Minimal downtime for your laptop.",
-            },
+            { title: "Service at home", description: "No shop visits and no long waiting times." },
+            { title: "Verified technicians", description: "Safe, professional, and trustworthy repairs." },
+            { title: "Transparent pricing", description: "No hidden charges or surprises." },
+            { title: "Original spare parts", description: "Ensures durability and performance." },
+            { title: "Repair warranty", description: "Peace of mind after service." },
+            { title: "Quick turnaround", description: "Minimal downtime for your laptop." },
           ],
           note: "Doorstep repair means convenience, security, and time savings.",
         },
@@ -1296,52 +1106,154 @@ export const blogs: Blog[] = [
           ],
         },
       ],
-      conclusion:
-        "Laptop problems are common, but delaying repairs can lead to higher costs and permanent damage. Door2fy helps keep your laptop fast, safe, and reliable without you ever leaving home. Simply book a service and relax—we fix your laptop at your doorstep. Door2fy is the smart solution for every laptop repair need.",
+      conclusion: "Laptop problems are common, but delaying repairs can lead to higher costs and permanent damage. Door2fy helps keep your laptop fast, safe, and reliable without you ever leaving home. Simply book a service and relax—we fix your laptop at your doorstep. Door2fy is the smart solution for every laptop repair need.",
+    },
+  },
+  {
+    slug: "choose-doorstep-laptop-repair-service",
+    metaTitle: "How to Choose Doorstep Laptop Repair Service in 2026 | Expert Guide",
+    metaDescription: "Learn how to choose reliable doorstep laptop repair services near you. Checklist, tips & benefits for screen replacement, battery issues, software problems & more.",
+    category: "Laptop Repair",
+    tags: [
+      "doorstep laptop repair",
+      "laptop repair service",
+      "laptop screen replacement",
+      "battery repair",
+      "keyboard repair",
+      "software troubleshooting",
+      "Door2fy",
+    ],
+    title: "How to Choose the Best Doorstep Laptop Repair Service in 2026 – A Complete Guide",
+    updatedAt: "2025-12-19",
+    content: {
+      intro: "Laptops are an essential part of daily life, from office work to online study and entertainment. When a laptop suddenly stops working, finding a skilled and trustworthy technician can be stressful. Doorstep laptop repair services in India are growing rapidly, offering professional technicians who repair laptops at home with convenience and transparency. This guide will help you choose the best and most reliable doorstep laptop repair service in 2026.",
+      sections: [
+        {
+          heading: "What to Check Before Hiring a Doorstep Laptop Service",
+          points: [
+            {
+              title: "Qualifications & Experience",
+              description: "Choose services with trained and certified laptop experts who have experience in your laptop brand/model, understand motherboard & IC-level repairs, and provide proper diagnosis and invoices.",
+            },
+            {
+              title: "Reviews & Ratings",
+              description: "Customer feedback indicates service quality. Check Google reviews, website feedback, and verified user ratings. Services with consistent 4★–5★ ratings are more trustworthy.",
+            },
+            {
+              title: "Transparent Pricing",
+              description: "Look for clear pricing without hidden charges, including inspection/diagnosis, repair cost, and spare parts (OEM/compatible options). Transparent pricing ensures stress-free service.",
+            },
+            {
+              title: "Service Speed & Availability",
+              description: "Prefer services that offer same-day repairs, multiple time-slot options, and fast customer support for urgent laptop issues.",
+            },
+            {
+              title: "Warranty & Safety",
+              description: "Professional companies provide warranties on repairs and spare parts, use genuine components, and ensure verified technicians handle your device safely.",
+            },
+          ],
+        },
+        {
+          heading: "Types of Doorstep Laptop Repair Services You Can Choose",
+          table: [
+            { serviceType: "Screen Replacement", commonIssues: "Cracked display, flickering", benefit: "No need to visit store — fast replacement" },
+            { serviceType: "Keyboard Replacement", commonIssues: "Keys not working, liquid damage", benefit: "Original or compatible keyboard fit on-site" },
+            { serviceType: "Battery & Charger", commonIssues: "Fast draining, not charging", benefit: "Genuine batteries improve performance" },
+            { serviceType: "Software Issues", commonIssues: "Hang, slow, virus", benefit: "System optimization improves speed" },
+            { serviceType: "SSD/RAM Upgrade", commonIssues: "Low storage, slow boot", benefit: "Boosts laptop performance" },
+            { serviceType: "Motherboard Repair", commonIssues: "No power, auto shutdown", benefit: "Advanced chip-level repair support" },
+            { serviceType: "Overheating", commonIssues: "Fan noise, shutdown", benefit: "Cooling repair increases lifetime" },
+          ],
+        },
+        {
+          heading: "8 Questions to Ask Before Booking Laptop Doorstep Service",
+          list: [
+            "What is the total repair cost (including parts)?",
+            "Is there a service or visiting charge?",
+            "Do you give a warranty on repair & parts?",
+            "Are spare parts original/OEM compatible?",
+            "How long will the repair take?",
+            "Will I get a bill/invoice?",
+            "Is data privacy guaranteed?",
+            "What is the replacement/refund policy?",
+          ],
+        },
+        {
+          heading: "Checklist After Laptop Repair is Completed",
+          table: [
+            { checkpoint: "Device tested properly", importance: "Ensure the issue is fully resolved" },
+            { checkpoint: "Data safety confirmed", importance: "Protects your files & privacy" },
+            { checkpoint: "Warranty & spare details shared", importance: "Helpful for future claims" },
+            { checkpoint: "No hidden charges on bill", importance: "Clear transparency" },
+          ],
+        },
+        {
+          heading: "Why Doorstep Laptop Services Are Better in 2026",
+          comparisonTable: [
+            { traditional: "Long waiting time", doorstep: "Service at home" },
+            { traditional: "No transparency in repairs", doorstep: "Live repair in front of you" },
+            { traditional: "Risk of data misuse", doorstep: "Full data safety" },
+            { traditional: "Limited support", doorstep: "Dedicated customer care" },
+            { traditional: "No warranty assurance", doorstep: "Service & parts warranty" },
+          ],
+          summary: "Doorstep service = Faster • Safer • More Transparent",
+        },
+        {
+          heading: "Choose a Trusted Partner for Your Laptop Service",
+          list: [
+            "Certified laptop technicians",
+            "Transparent pricing",
+            "Live repair at home",
+            "Warranty & genuine parts",
+          ],
+          services: [
+            "Screen replacement",
+            "Battery & charging issues",
+            "Keyboard repair",
+            "SSD/RAM upgrade",
+            "Overheating solutions",
+            "Software troubleshooting",
+            "Motherboard repair",
+          ],
+          description: "Door2fy is your trusted doorstep laptop repair partner, providing all essential laptop repair services conveniently at your home.",
+        },
+      ],
+      conclusion: "Laptop issues shouldn’t stop your work. Choose a professional doorstep laptop repair service to get high-quality repair, quick support, and complete transparency. Let Door2fy take care of your laptop — so you can stay productive and stress-free. Book your laptop repair with Door2fy today for a smart solution for every laptop need!",
     },
   },
   {
     slug: "hp-dell-laptop-repair-at-home",
-    metaTitle:
-      "HP Laptop Repair at Home & Dell Laptop Service at Home | Fast & Affordable Doorstep Repair",
-    metaDescription:
-      "Get HP laptop repair at home and Dell laptop service at home with Door2Fy. Fast, affordable, and professional doorstep laptop repair services.",
+    metaTitle: "HP Laptop Repair at Home & Dell Laptop Service at Home | Fast & Affordable Doorstep Repair",
+    metaDescription: "Get HP laptop repair at home and Dell laptop service at home with Door2Fy. Fast, affordable, and professional doorstep laptop repair services.",
     category: "Laptop Repair",
     city: "All Cities",
-    featuredImage: repairNoida, // change if needed
-    title:
-      "HP Laptop Repair at Home & Dell Laptop Service at Home – Fast, Reliable, and Convenient",
+    featuredImage: repairNoida, // Ensure this variable is imported
+    title: "HP Laptop Repair at Home & Dell Laptop Service at Home – Fast, Reliable, and Convenient",
+    updatedAt: "2025-12-19",
     content: {
-      intro:
-        "Laptops are essential tools for work, study, and entertainment. HP and Dell are among the most trusted brands, but like all devices, they face issues over time. Traditionally, users had to visit service centers for repairs — a process that is often inconvenient and time-consuming. With Door2Fy, you can now get fast and reliable HP laptop repair at home and Dell laptop service at home without any hassle.",
-
+      intro: "Laptops are essential tools for work, study, and entertainment. HP and Dell are among the most trusted brands, but like all devices, they face issues over time. Traditionally, users had to visit service centers for repairs — a process that is often inconvenient and time-consuming. With Door2Fy, you can now get fast and reliable HP laptop repair at home and Dell laptop service at home without any hassle.",
       sections: [
         {
           heading: "Why Home Laptop Repair Services Are a Game-Changer",
           points: [
             {
               title: "Convenience at Your Doorstep",
-              description:
-                "Technicians arrive at your home, diagnose the problem, and fix the laptop on-site. No more long queues or travel.",
+              description: "Technicians arrive at your home, diagnose the problem, and fix the laptop on-site. No more long queues or travel.",
             },
             {
               title: "Cost-Effective Solutions",
-              description:
-                "Door2Fy provides affordable HP and Dell laptop repair at home without any hidden charges.",
+              description: "Door2Fy provides affordable HP and Dell laptop repair at home without any hidden charges.",
             },
             {
               title: "Fast and Efficient Service",
-              description:
-                "Most issues like slow performance, battery faults, and screen replacement are fixed within a single visit.",
+              description: "Most issues like slow performance, battery faults, and screen replacement are fixed within a single visit.",
             },
             {
               title: "Skilled and Certified Technicians",
-              description:
-                "Door2Fy employs trained professionals who specialize in HP and Dell laptop repairs.",
+              description: "Door2Fy employs trained professionals who specialize in HP and Dell laptop repairs.",
             },
           ],
         },
-
         {
           heading: "Common HP Laptop Issues Fixed at Home",
           list: [
@@ -1352,7 +1264,6 @@ export const blogs: Blog[] = [
             "Virus removal and system optimization",
           ],
         },
-
         {
           heading: "Common Dell Laptop Issues Fixed at Home",
           list: [
@@ -1363,34 +1274,16 @@ export const blogs: Blog[] = [
             "Keyboard and port repairs",
           ],
         },
-
         {
           heading: "Why Choose Door2Fy for HP and Dell Laptops",
           points: [
-            {
-              title: "Certified Technicians",
-              description: "Experts specialized in HP and Dell laptop repair.",
-            },
-            {
-              title: "Transparent Pricing",
-              description: "Affordable repair charges with no hidden fees.",
-            },
-            {
-              title: "Fast Turnaround",
-              description: "Most repairs are completed in a single visit.",
-            },
-            {
-              title: "Convenient Booking",
-              description: "Easy online scheduling via website or app.",
-            },
-            {
-              title: "Support for All Major Brands",
-              description:
-                "Door2Fy also repairs Lenovo, Acer, Asus, and other laptop brands.",
-            },
+            { title: "Certified Technicians", description: "Experts specialized in HP and Dell laptop repair." },
+            { title: "Transparent pricing", description: "Affordable repair charges with no hidden fees." },
+            { title: "Fast Turnaround", description: "Most repairs are completed in a single visit." },
+            { title: "Convenient Booking", description: "Easy online scheduling via website or app." },
+            { title: "Support for All Major Brands", description: "Door2Fy also repairs Lenovo, Acer, Asus, and other laptop brands." },
           ],
         },
-
         {
           heading: "How HP & Dell Laptop Repair at Home Works",
           steps: [
@@ -1401,7 +1294,6 @@ export const blogs: Blog[] = [
             "Make payment after the repair is completed.",
           ],
         },
-
         {
           heading: "Benefits of Choosing Home Laptop Repair",
           list: [
@@ -1412,28 +1304,23 @@ export const blogs: Blog[] = [
             "Eco-friendly (less travel required)",
           ],
         },
-
         {
           heading: "Common Misconceptions About Home Laptop Repair",
           points: [
             {
               title: "Myth 1: Home Repairs Are Expensive",
-              description:
-                "Reality: Door2Fy offers low-cost HP and Dell laptop repair at home, often cheaper than service centers.",
+              description: "Reality: Door2Fy offers low-cost HP and Dell laptop repair at home, often cheaper than service centers.",
             },
             {
               title: "Myth 2: Technicians at Home Are Less Skilled",
-              description:
-                "Reality: Door2Fy employs certified experts with years of experience.",
+              description: "Reality: Door2Fy employs certified experts with years of experience.",
             },
             {
               title: "Myth 3: Repairs Take Longer at Home",
-              description:
-                "Reality: Most repairs like battery, screen, and software fixes are completed within hours.",
+              description: "Reality: Most repairs like battery, screen, and software fixes are completed within hours.",
             },
           ],
         },
-
         {
           heading: "Tips to Maintain Your HP or Dell Laptop",
           tips: [
@@ -1445,9 +1332,897 @@ export const blogs: Blog[] = [
           ],
         },
       ],
-
-      conclusion:
-        "Technical issues don’t have to disrupt your daily routine. With Door2Fy’s HP laptop repair at home and Dell laptop service at home, you get fast, affordable, and expert doorstep repair services. From hardware issues to software troubleshooting, Door2Fy ensures reliable and convenient laptop repair right at your home.",
+      conclusion: "Technical issues don’t have to disrupt your daily routine. With Door2Fy’s HP laptop repair at home and Dell laptop service at home, you get fast, affordable, and expert doorstep repair services. From hardware issues to software troubleshooting, Door2Fy ensures reliable and convenient laptop repair right at your home.",
+    },
+  },
+  {
+    slug: "affordable-laptop-repair-at-home-low-cost",
+    metaTitle: "Affordable Laptop Repair at Home | Low-Cost Doorstep Laptop Repair by Door2Fy",
+    metaDescription: "Get your laptop repaired at home with affordable and low-cost services by Door2Fy. Fast, reliable, and professional doorstep laptop repair for all major brands.",
+    category: "Laptop Repair",
+    tags: [
+      "laptop repair",
+      "affordable laptop repair",
+      "low-cost laptop repair",
+      "home laptop service",
+      "Door2Fy",
+      "laptop screen repair",
+      "battery replacement",
+    ],
+    title: "Affordable Laptop Repair at Home – Low-Cost & Reliable Doorstep Solutions by Door2Fy",
+    updatedAt: "2025-12-19",
+    content: {
+      intro: "In today’s digital age, a laptop is no longer just a device—it’s a lifeline. From working professionals and students to freelancers and home entrepreneurs, everyone depends on laptops for daily tasks. When a laptop suddenly stops working, slows down, or develops technical issues, it disrupts productivity. Door2Fy offers affordable laptop repair at home, providing low-cost, professional repair services right at your doorstep.",
+      sections: [
+        {
+          heading: "Why Home Laptop Repair Is a Game-Changer",
+          points: [
+            {
+              title: "Convenience at Your Doorstep",
+              description: "No more visiting service centers or waiting in long queues. Certified technicians visit your home and repair your laptop while you relax or continue working.",
+            },
+            {
+              title: "Low-Cost & Budget-Friendly",
+              description: "Door2Fy provides affordable laptop repair at home with transparent pricing and no hidden charges.",
+            },
+            {
+              title: "Fast Turnaround Time",
+              description: "Common issues like slow performance, virus problems, battery replacement, or screen repairs are often fixed within a few hours.",
+            },
+            {
+              title: "Certified & Trusted Technicians",
+              description: "All repairs are handled by skilled and experienced professionals using genuine spare parts when required.",
+            },
+          ],
+        },
+        {
+          heading: "Common Laptop Problems That Can Be Fixed at Home",
+          points: [
+            {
+              title: "Screen & Display Issues",
+              description: "Cracked screens, flickering displays, black screens, or color distortion repaired or replaced at home.",
+            },
+            {
+              title: "Battery & Charging Problems",
+              description: "Battery draining, charging issues, or sudden shutdown problems fixed with affordable battery replacement. ",
+            },
+            {
+              title: "Slow Performance & Virus Removal",
+              description: "Complete system optimization, malware removal, and speed improvement services.",
+            },
+            {
+              title: "Keyboard & Hardware Repairs",
+              description: "Repair or replacement of faulty keyboards, touchpads, and internal hardware components.",
+            },
+            {
+              title: "Software Installation & Troubleshooting",
+              description: "Windows/macOS installation, software updates, and system error troubleshooting at home.",
+            },
+          ],
+        },
+        {
+          heading: "Why Choose Door2Fy for Laptop Repair at Home?",
+          points: [
+            { title: "Experienced Professionals", description: "Door2Fy ensures only certified technicians handle your laptop safely." },
+            { title: "Transparent Pricing Policy", description: "Clear pricing with no hidden or surprise charges." },
+            { title: "Same-Day Repair Service", description: "Most laptop repairs are completed on the same day." },
+            { title: "Easy Online Booking", description: "Book laptop repair services easily via Door2Fy website or mobile app." },
+            { title: "All Major Laptop Brands Supported", description: "Dell, HP, Lenovo, Acer, Asus, Apple MacBook, and many more." },
+          ],
+        },
+        {
+          heading: "How to Book Affordable Laptop Repair at Home",
+          steps: [
+            "Visit Door2Fy website or mobile app",
+            "Select your laptop repair issue",
+            "Choose a convenient date and time",
+            "Technician visits your home",
+            "Pay securely after service completion",
+          ],
+        },
+        {
+          heading: "Benefits of Choosing Laptop Repair at Home",
+          list: [
+            "Saves travel time and effort",
+            "Affordable and transparent pricing",
+            "Safe repairs in your home environment",
+            "Professional and certified technicians",
+            "Eco-friendly with reduced carbon footprint",
+          ],
+        },
+        {
+          heading: "Common Myths About Home Laptop Repair",
+          points: [
+            {
+              title: "Home Laptop Repair Is Expensive",
+              description: "Door2Fy offers low-cost services that are often cheaper than traditional service centers.",
+            },
+            {
+              title: "Technicians Are Not Skilled",
+              description: "All technicians are professionally trained and certified.",
+            },
+            {
+              title: "Repairs Take Longer at Home",
+              description: "Most minor laptop issues are resolved within a few hours.",
+            },
+          ],
+        },
+        {
+          heading: "Tips to Keep Your Laptop Healthy",
+          list: [
+            "Clean your laptop regularly to avoid overheating",
+            "Install trusted antivirus software",
+            "Avoid overcharging the battery",
+            "Handle your laptop carefully",
+            "Keep operating system and software updated",
+          ],
+        },
+      ],
+      conclusion: "With Door2Fy’s affordable laptop repair at home, laptop issues no longer need to disrupt your daily routine. From screen replacement and battery issues to virus removal and hardware repairs, Door2Fy provides fast, low-cost, and reliable doorstep laptop repair services. Book today and enjoy stress-free laptop repair without leaving your home.",
     },
   },
 ];
+ 
+
+//   {
+//     slug: "top-7-signs-laptop-needs-repair",
+//     metaTitle:
+//       "Top 7 Signs Your Laptop Needs Professional Repair | Door2fy IT Tips",
+//     metaDescription:
+//       "Learn the top 7 signs your laptop needs professional repair. From overheating to slow performance, Door2fy doorstep technicians can fix it all.",
+//     category: "Laptop Repair",
+//     city: "NCR",
+//     featuredImage: ProfessionalRepair, // replace with your imported image variable
+//     title: "Top 7 Signs Your Laptop Needs Professional Repair",
+//     updatedAt: "2025-12-19",
+//     content: {
+//       intro:
+//         "Your laptop is more than just a device — it’s your work partner, study tool, and entertainment hub. But even the best machines show signs of trouble over time. While minor issues can often be fixed at home, certain problems indicate it’s time to call in the experts. Here are the top seven signs your laptop needs professional repair, brought to you by Door2fy, your reliable doorstep IT support service.",
+//       sections: [
+//         {
+//           heading: "1. Overheating or Sudden Shutdowns",
+//           list: [
+//             "Laptop feels unusually hot or shuts down unexpectedly.",
+//             "Cooling fan or heat sink may be malfunctioning.",
+//             "Door2fy technicians can clean cooling system and reapply thermal paste to prevent long-term damage.",
+//           ],
+//         },
+//         {
+//           heading: "2. Slow Performance and Freezes",
+//           list: [
+//             "Lagging system, slow boot, or freezes during basic tasks may indicate failing hardware, corrupted files, or outdated software.",
+//             "Schedule a doorstep laptop repair to run diagnostics and restore smooth performance.",
+//           ],
+//         },
+//         {
+//           heading: "3. Strange Noises from Inside",
+//           list: [
+//             "Grinding or clicking noises often indicate a dying hard drive or faulty fan.",
+//             "Mechanical parts require professional inspection and potential replacement to avoid data loss.",
+//           ],
+//         },
+//         {
+//           heading: "4. Battery Problems",
+//           list: [
+//             "Battery drains faster than usual or refuses to charge.",
+//             "May indicate failing battery, charger, or power circuit.",
+//             "Door2fy offers on-site battery replacement and genuine accessories.",
+//           ],
+//         },
+//         {
+//           heading: "5. Flickering or Dim Display",
+//           list: [
+//             "Dim, flickering, or black screens caused by damaged cable, backlight, or graphics card.",
+//             "Display repairs involve delicate internal components — best handled by certified engineers.",
+//           ],
+//         },
+//         {
+//           heading: "6. Unresponsive Keyboard or Touchpad",
+//           list: [
+//             "Keyboard stops responding or touchpad behaves erratically.",
+//             "Could be due to dust, water damage, or internal wiring faults.",
+//             "Professional cleaning or component replacement restores function.",
+//           ],
+//         },
+//         {
+//           heading: "7. Virus Infections or Pop-ups",
+//           list: [
+//             "Constant pop-ups, unknown software, or random browser redirects indicate malware infection.",
+//             "Door2fy malware removal service cleans your system and installs trusted security updates.",
+//           ],
+//         },
+//         {
+//           heading: "Why Choose Door2fy?",
+//           list: [
+//             "Certified technicians repair devices at your home or office.",
+//             "Transparent pricing with no hidden costs.",
+//             "Same-day service for most issues.",
+//             "Genuine parts and service warranty.",
+//           ],
+//         },
+//       ],
+//       conclusion:
+//         "Ignoring early warning signs can lead to bigger, more expensive problems. If you notice any of these issues, don’t wait — book a Door2fy doorstep IT service today. Our professionals diagnose, repair, and optimize your laptop without you ever having to leave your desk.",
+//     },
+//   },
+//   {
+//     slug: "common-laptop-problems-doorstep-repair",
+//     metaTitle: "Top Laptop Problems & Best Doorstep Repair Solutions in 2026",
+//     metaDescription:
+//       "Discover the most common laptop problems and how doorstep repair services fix them quickly. Save time, data, and money with professional laptop technicians at home.",
+//     category: "Laptop Repair",
+//     city: "India",
+//     featuredImage: Repair,
+//     title:
+//       "Top 10 Common Laptop Problems & How Doorstep Repair Services Save Time & Money",
+//     updatedAt: "2025-12-19",
+//     content: {
+//       intro:
+//         "Laptops are essential for work, study, entertainment, and business. So when a laptop suddenly stops working, it can disrupt your entire day. Small issues like slow performance or a loose charging port can quickly turn into major problems if ignored. The good news? Doorstep laptop repair services make it easy to get fast, professional repairs without visiting a service center. Below are the top 10 most common laptop problems faced by users—and how doorstep experts like Door2fy solve them efficiently.",
+//       sections: [
+//         {
+//           heading: "Top 10 Laptop Issues & Smart Doorstep Solutions",
+//           list: [
+//             {
+//               title: "1. Slow or Hanging Laptop",
+//               description:
+//                 "Usually caused by overloaded software, low RAM, or a full hard drive. Doorstep solutions include SSD upgrades, RAM upgrades, OS cleanup, and virus removal.",
+//             },
+//             {
+//               title: "2. Broken or Flickering Screen",
+//               description:
+//                 "Often due to accidental drops, pressure damage, or dead pixels. Doorstep screen replacement is done at home without depositing your device.",
+//             },
+//             {
+//               title: "3. Battery Draining Quickly",
+//               description:
+//                 "Caused by battery aging, faulty adapters, or background apps. The fix includes original battery replacement with warranty.",
+//             },
+//             {
+//               title: "4. Laptop Not Turning On",
+//               description:
+//                 "Can result from power issues or motherboard failure. Professionals provide doorstep diagnosis and chip-level repairs.",
+//             },
+//             {
+//               title: "5. Overheating & Loud Fan Noise",
+//               description:
+//                 "Dust buildup restricts airflow. Solutions include internal cleaning and thermal paste replacement.",
+//             },
+//             {
+//               title: "6. Keyboard Keys Not Working",
+//               description:
+//                 "Usually caused by liquid spills, dust, or connector faults. Full keyboard replacement can be done quickly at home.",
+//             },
+//             {
+//               title: "7. Charging or Adapter Port Issues",
+//               description:
+//                 "Loose or damaged DC jacks cause charging interruptions. Experts repair or replace charging ports with precision soldering.",
+//             },
+//             {
+//               title: "8. Hard Disk Failure or Data Loss",
+//               description:
+//                 "Common signs include clicking noises and frequent crashes. Solutions include data recovery and SSD upgrades for better performance.",
+//             },
+//             {
+//               title: "9. Wi-Fi or Bluetooth Not Connecting",
+//               description:
+//                 "Often due to driver issues or faulty network cards. Fixes include software repair or hardware replacement.",
+//             },
+//             {
+//               title: "10. Software Errors & OS Crashes",
+//               description:
+//                 "Includes Windows crashes, BSOD errors, or virus infections. Solutions include OS reinstallation, formatting, and licensed software setup.",
+//             },
+//           ],
+//         },
+//         {
+//           heading: "Why You Shouldn’t Delay Laptop Repairs",
+//           table: [
+//             {
+//               issue: "Overheating",
+//               effect: "Internal hardware damage",
+//               result: "Costly motherboard repair",
+//             },
+//             {
+//               issue: "Battery swelling",
+//               effect: "Screen or body damage",
+//               result: "Serious safety risk",
+//             },
+//             {
+//               issue: "Hard disk errors",
+//               effect: "Frequent crashes",
+//               result: "Permanent data loss",
+//             },
+//             {
+//               issue: "Charger problems",
+//               effect: "Short circuits",
+//               result: "Laptop failure",
+//             },
+//             {
+//               issue: "Cracked screen",
+//               effect: "Worsening damage",
+//               result: "Higher replacement cost",
+//             },
+//           ],
+//           note: "Early repairs mean lower costs and a longer laptop lifespan.",
+//         },
+//         {
+//           heading: "How Doorstep Laptop Repair Services Help",
+//           points: [
+//             {
+//               title: "Service at home",
+//               description: "No shop visits and no long waiting times.",
+//             },
+//             {
+//               title: "Verified technicians",
+//               description: "Safe, professional, and trustworthy repairs.",
+//             },
+//             {
+//               title: "Transparent pricing",
+//               description: "No hidden charges or surprises.",
+//             },
+//             {
+//               title: "Original spare parts",
+//               description: "Ensures durability and performance.",
+//             },
+//             {
+//               title: "Repair warranty",
+//               description: "Peace of mind after service.",
+//             },
+//             {
+//               title: "Quick turnaround",
+//               description: "Minimal downtime for your laptop.",
+//             },
+//           ],
+//           note: "Doorstep repair means convenience, security, and time savings.",
+//         },
+//         {
+//           heading: "Pro Tips to Avoid Frequent Laptop Repairs",
+//           tips: [
+//             "Use a cooling pad during long working hours.",
+//             "Install and update antivirus software.",
+//             "Avoid overcharging the battery.",
+//             "Clean air vents regularly.",
+//             "Keep your OS and drivers updated.",
+//             "Never ignore unusual sounds or overheating.",
+//             "Proper care today means fewer repairs tomorrow.",
+//           ],
+//         },
+//         {
+//           heading: "Book Trusted Doorstep Laptop Repair with Door2fy",
+//           points: [
+//             "Laptop screen replacement",
+//             "Battery replacement",
+//             "Keyboard replacement",
+//             "SSD and RAM upgrades",
+//             "Laptop not turning on issues",
+//             "Software problems and OS installation",
+//             "Heating and fan issues",
+//             "Data recovery services",
+//             "Advanced chip-level repairs",
+//           ],
+//           benefits: [
+//             "Affordable and transparent pricing",
+//             "Fast doorstep service",
+//             "Warranty on repairs",
+//             "Experienced and verified technicians",
+//           ],
+//         },
+//       ],
+//       conclusion:
+//         "Laptop problems are common, but delaying repairs can lead to higher costs and permanent damage. Door2fy helps keep your laptop fast, safe, and reliable without you ever leaving home. Simply book a service and relax—we fix your laptop at your doorstep. Door2fy is the smart solution for every laptop repair need.",
+//     },
+//   },
+//   {
+//   slug: "choose-doorstep-laptop-repair-service",
+
+//   metaTitle:
+//     "How to Choose Doorstep Laptop Repair Service in 2026 | Expert Guide",
+
+//   metaDescription:
+//     "Learn how to choose reliable doorstep laptop repair services near you. Checklist, tips & benefits for screen replacement, battery issues, software problems & more.",
+
+//   category: "Laptop Repair",
+
+//   tags: [
+//     "doorstep laptop repair",
+//     "laptop repair service",
+//     "laptop screen replacement",
+//     "battery repair",
+//     "keyboard repair",
+//     "software troubleshooting",
+//     "Door2fy",
+//   ],
+
+//   title:
+//     "How to Choose the Best Doorstep Laptop Repair Service in 2026 – A Complete Guide",
+
+//   updatedAt: "2025-12-19",
+
+//   content: {
+//     intro:
+//       "Laptops are an essential part of daily life, from office work to online study and entertainment. When a laptop suddenly stops working, finding a skilled and trustworthy technician can be stressful. Doorstep laptop repair services in India are growing rapidly, offering professional technicians who repair laptops at home with convenience and transparency. This guide will help you choose the best and most reliable doorstep laptop repair service in 2026.",
+
+//     sections: [
+//       {
+//         heading: "What to Check Before Hiring a Doorstep Laptop Service",
+//         points: [
+//           {
+//             title: "Qualifications & Experience",
+//             description:
+//               "Choose services with trained and certified laptop experts who have experience in your laptop brand/model, understand motherboard & IC-level repairs, and provide proper diagnosis and invoices.",
+//           },
+//           {
+//             title: "Reviews & Ratings",
+//             description:
+//               "Customer feedback indicates service quality. Check Google reviews, website feedback, and verified user ratings. Services with consistent 4★–5★ ratings are more trustworthy.",
+//           },
+//           {
+//             title: "Transparent Pricing",
+//             description:
+//               "Look for clear pricing without hidden charges, including inspection/diagnosis, repair cost, and spare parts (OEM/compatible options). Transparent pricing ensures stress-free service.",
+//           },
+//           {
+//             title: "Service Speed & Availability",
+//             description:
+//               "Prefer services that offer same-day repairs, multiple time-slot options, and fast customer support for urgent laptop issues.",
+//           },
+//           {
+//             title: "Warranty & Safety",
+//             description:
+//               "Professional companies provide warranties on repairs and spare parts, use genuine components, and ensure verified technicians handle your device safely.",
+//           },
+//         ],
+//       },
+
+//       {
+//         heading: "Types of Doorstep Laptop Repair Services You Can Choose",
+//         table: [
+//           {
+//             serviceType: "Screen Replacement",
+//             commonIssues: "Cracked display, flickering",
+//             benefit: "No need to visit store — fast replacement",
+//           },
+//           {
+//             serviceType: "Keyboard Replacement",
+//             commonIssues: "Keys not working, liquid damage",
+//             benefit: "Original or compatible keyboard fit on-site",
+//           },
+//           {
+//             serviceType: "Battery & Charger",
+//             commonIssues: "Fast draining, not charging",
+//             benefit: "Genuine batteries improve performance",
+//           },
+//           {
+//             serviceType: "Software Issues",
+//             commonIssues: "Hang, slow, virus",
+//             benefit: "System optimization improves speed",
+//           },
+//           {
+//             serviceType: "SSD/RAM Upgrade",
+//             commonIssues: "Low storage, slow boot",
+//             benefit: "Boosts laptop performance",
+//           },
+//           {
+//             serviceType: "Motherboard Repair",
+//             commonIssues: "No power, auto shutdown",
+//             benefit: "Advanced chip-level repair support",
+//           },
+//           {
+//             serviceType: "Overheating",
+//             commonIssues: "Fan noise, shutdown",
+//             benefit: "Cooling repair increases lifetime",
+//           },
+//         ],
+//       },
+
+//       {
+//         heading: "8 Questions to Ask Before Booking Laptop Doorstep Service",
+//         list: [
+//           "What is the total repair cost (including parts)?",
+//           "Is there a service or visiting charge?",
+//           "Do you give a warranty on repair & parts?",
+//           "Are spare parts original/OEM compatible?",
+//           "How long will the repair take?",
+//           "Will I get a bill/invoice?",
+//           "Is data privacy guaranteed?",
+//           "What is the replacement/refund policy?",
+//         ],
+//       },
+
+//       {
+//         heading: "Checklist After Laptop Repair is Completed",
+//         table: [
+//           { checkpoint: "Device tested properly", importance: "Ensure the issue is fully resolved" },
+//           { checkpoint: "Data safety confirmed", importance: "Protects your files & privacy" },
+//           { checkpoint: "Warranty & spare details shared", importance: "Helpful for future claims" },
+//           { checkpoint: "No hidden charges on bill", importance: "Clear transparency" },
+//         ],
+//       },
+
+//       {
+//         heading: "Why Doorstep Laptop Services Are Better in 2026",
+//         comparisonTable: [
+//           {
+//             traditional: "Long waiting time",
+//             doorstep: "Service at home",
+//           },
+//           {
+//             traditional: "No transparency in repairs",
+//             doorstep: "Live repair in front of you",
+//           },
+//           {
+//             traditional: "Risk of data misuse",
+//             doorstep: "Full data safety",
+//           },
+//           {
+//             traditional: "Limited support",
+//             doorstep: "Dedicated customer care",
+//           },
+//           {
+//             traditional: "No warranty assurance",
+//             doorstep: "Service & parts warranty",
+//           },
+//         ],
+//         summary:
+//           "Doorstep service = Faster • Safer • More Transparent",
+//       },
+
+//       {
+//         heading: "Choose a Trusted Partner for Your Laptop Service",
+//         list: [
+//           "Certified laptop technicians",
+//           "Transparent pricing",
+//           "Live repair at home",
+//           "Warranty & genuine parts",
+//         ],
+//         services: [
+//           "Screen replacement",
+//           "Battery & charging issues",
+//           "Keyboard repair",
+//           "SSD/RAM upgrade",
+//           "Overheating solutions",
+//           "Software troubleshooting",
+//           "Motherboard repair",
+//         ],
+//         description:
+//           "Door2fy is your trusted doorstep laptop repair partner, providing all essential laptop repair services conveniently at your home.",
+//       },
+//     ],
+
+//     conclusion:
+//       "Laptop issues shouldn’t stop your work. Choose a professional doorstep laptop repair service to get high-quality repair, quick support, and complete transparency. Let Door2fy take care of your laptop — so you can stay productive and stress-free. Book your laptop repair with Door2fy today for a smart solution for every laptop need!",
+//   },
+// },
+
+//   {
+//     slug: "hp-dell-laptop-repair-at-home",
+//     metaTitle:
+//       "HP Laptop Repair at Home & Dell Laptop Service at Home | Fast & Affordable Doorstep Repair",
+//     metaDescription:
+//       "Get HP laptop repair at home and Dell laptop service at home with Door2Fy. Fast, affordable, and professional doorstep laptop repair services.",
+//     category: "Laptop Repair",
+//     city: "All Cities",
+//     featuredImage: repairNoida, // change if needed
+//     title:
+//       "HP Laptop Repair at Home & Dell Laptop Service at Home – Fast, Reliable, and Convenient",
+//     updatedAt: "2025-12-19",
+//     content: {
+//       intro:
+//         "Laptops are essential tools for work, study, and entertainment. HP and Dell are among the most trusted brands, but like all devices, they face issues over time. Traditionally, users had to visit service centers for repairs — a process that is often inconvenient and time-consuming. With Door2Fy, you can now get fast and reliable HP laptop repair at home and Dell laptop service at home without any hassle.",
+
+//       sections: [
+//         {
+//           heading: "Why Home Laptop Repair Services Are a Game-Changer",
+//           points: [
+//             {
+//               title: "Convenience at Your Doorstep",
+//               description:
+//                 "Technicians arrive at your home, diagnose the problem, and fix the laptop on-site. No more long queues or travel.",
+//             },
+//             {
+//               title: "Cost-Effective Solutions",
+//               description:
+//                 "Door2Fy provides affordable HP and Dell laptop repair at home without any hidden charges.",
+//             },
+//             {
+//               title: "Fast and Efficient Service",
+//               description:
+//                 "Most issues like slow performance, battery faults, and screen replacement are fixed within a single visit.",
+//             },
+//             {
+//               title: "Skilled and Certified Technicians",
+//               description:
+//                 "Door2Fy employs trained professionals who specialize in HP and Dell laptop repairs.",
+//             },
+//           ],
+//         },
+
+//         {
+//           heading: "Common HP Laptop Issues Fixed at Home",
+//           list: [
+//             "Battery and charging problems",
+//             "Cracked or flickering screen issues",
+//             "Slow performance or system lag",
+//             "Keyboard and touchpad problems",
+//             "Virus removal and system optimization",
+//           ],
+//         },
+
+//         {
+//           heading: "Common Dell Laptop Issues Fixed at Home",
+//           list: [
+//             "Battery replacement and charging issues",
+//             "Screen repair or replacement",
+//             "Faulty RAM or hard drive replacement",
+//             "Software troubleshooting and OS crashes",
+//             "Keyboard and port repairs",
+//           ],
+//         },
+
+//         {
+//           heading: "Why Choose Door2Fy for HP and Dell Laptops",
+//           points: [
+//             {
+//               title: "Certified Technicians",
+//               description: "Experts specialized in HP and Dell laptop repair.",
+//             },
+//             {
+//               title: "Transparent Pricing",
+//               description: "Affordable repair charges with no hidden fees.",
+//             },
+//             {
+//               title: "Fast Turnaround",
+//               description: "Most repairs are completed in a single visit.",
+//             },
+//             {
+//               title: "Convenient Booking",
+//               description: "Easy online scheduling via website or app.",
+//             },
+//             {
+//               title: "Support for All Major Brands",
+//               description:
+//                 "Door2Fy also repairs Lenovo, Acer, Asus, and other laptop brands.",
+//             },
+//           ],
+//         },
+
+//         {
+//           heading: "How HP & Dell Laptop Repair at Home Works",
+//           steps: [
+//             "Visit the Door2Fy website or app.",
+//             "Select HP or Dell laptop and choose the issue.",
+//             "Schedule a convenient time slot.",
+//             "A certified technician arrives at your home for repair.",
+//             "Make payment after the repair is completed.",
+//           ],
+//         },
+
+//         {
+//           heading: "Benefits of Choosing Home Laptop Repair",
+//           list: [
+//             "Save time with doorstep service",
+//             "Affordable compared to service centers",
+//             "Certified and reliable technicians",
+//             "Repairs done in the comfort of your home",
+//             "Eco-friendly (less travel required)",
+//           ],
+//         },
+
+//         {
+//           heading: "Common Misconceptions About Home Laptop Repair",
+//           points: [
+//             {
+//               title: "Myth 1: Home Repairs Are Expensive",
+//               description:
+//                 "Reality: Door2Fy offers low-cost HP and Dell laptop repair at home, often cheaper than service centers.",
+//             },
+//             {
+//               title: "Myth 2: Technicians at Home Are Less Skilled",
+//               description:
+//                 "Reality: Door2Fy employs certified experts with years of experience.",
+//             },
+//             {
+//               title: "Myth 3: Repairs Take Longer at Home",
+//               description:
+//                 "Reality: Most repairs like battery, screen, and software fixes are completed within hours.",
+//             },
+//           ],
+//         },
+
+//         {
+//           heading: "Tips to Maintain Your HP or Dell Laptop",
+//           tips: [
+//             "Keep the laptop dust-free.",
+//             "Use trusted antivirus software.",
+//             "Avoid overcharging the battery.",
+//             "Handle your laptop with care.",
+//             "Regularly update OS and software.",
+//           ],
+//         },
+//       ],
+
+//       conclusion:
+//         "Technical issues don’t have to disrupt your daily routine. With Door2Fy’s HP laptop repair at home and Dell laptop service at home, you get fast, affordable, and expert doorstep repair services. From hardware issues to software troubleshooting, Door2Fy ensures reliable and convenient laptop repair right at your home.",
+//     },
+//   },
+// {
+//   slug: "affordable-laptop-repair-at-home-low-cost",
+
+//   metaTitle:
+//     "Affordable Laptop Repair at Home | Low-Cost Doorstep Laptop Repair by Door2Fy",
+
+//   metaDescription:
+//     "Get your laptop repaired at home with affordable and low-cost services by Door2Fy. Fast, reliable, and professional doorstep laptop repair for all major brands.",
+
+//   category: "Laptop Repair",
+
+//   tags: [
+//     "laptop repair",
+//     "affordable laptop repair",
+//     "low-cost laptop repair",
+//     "home laptop service",
+//     "Door2Fy",
+//     "laptop screen repair",
+//     "battery replacement",
+//   ],
+
+//   title:
+//     "Affordable Laptop Repair at Home – Low-Cost & Reliable Doorstep Solutions by Door2Fy",
+
+//   updatedAt: "2025-12-19",
+
+//   content: {
+//     intro:
+//       "In today’s digital age, a laptop is no longer just a device—it’s a lifeline. From working professionals and students to freelancers and home entrepreneurs, everyone depends on laptops for daily tasks. When a laptop suddenly stops working, slows down, or develops technical issues, it disrupts productivity. Door2Fy offers affordable laptop repair at home, providing low-cost, professional repair services right at your doorstep.",
+
+//     sections: [
+//       {
+//         heading: "Why Home Laptop Repair Is a Game-Changer",
+//         points: [
+//           {
+//             title: "Convenience at Your Doorstep",
+//             description:
+//               "No more visiting service centers or waiting in long queues. Certified technicians visit your home and repair your laptop while you relax or continue working.",
+//           },
+//           {
+//             title: "Low-Cost & Budget-Friendly",
+//             description:
+//               "Door2Fy provides affordable laptop repair at home with transparent pricing and no hidden charges.",
+//           },
+//           {
+//             title: "Fast Turnaround Time",
+//             description:
+//               "Common issues like slow performance, virus problems, battery replacement, or screen repairs are often fixed within a few hours.",
+//           },
+//           {
+//             title: "Certified & Trusted Technicians",
+//             description:
+//               "All repairs are handled by skilled and experienced professionals using genuine spare parts when required.",
+//           },
+//         ],
+//       },
+
+//       {
+//         heading: "Common Laptop Problems That Can Be Fixed at Home",
+//         points: [
+//           {
+//             title: "Screen & Display Issues",
+//             description:
+//               "Cracked screens, flickering displays, black screens, or color distortion repaired or replaced at home.",
+//           },
+//           {
+//             title: "Battery & Charging Problems",
+//             description:
+//               "Battery draining, charging issues, or sudden shutdown problems fixed with affordable battery replacement.",
+//           },
+//           {
+//             title: "Slow Performance & Virus Removal",
+//             description:
+//               "Complete system optimization, malware removal, and speed improvement services.",
+//           },
+//           {
+//             title: "Keyboard & Hardware Repairs",
+//             description:
+//               "Repair or replacement of faulty keyboards, touchpads, and internal hardware components.",
+//           },
+//           {
+//             title: "Software Installation & Troubleshooting",
+//             description:
+//               "Windows/macOS installation, software updates, and system error troubleshooting at home.",
+//           },
+//         ],
+//       },
+
+//       {
+//         heading: "Why Choose Door2Fy for Laptop Repair at Home?",
+//         points: [
+//           {
+//             title: "Experienced Professionals",
+//             description:
+//               "Door2Fy ensures only certified technicians handle your laptop safely.",
+//           },
+//           {
+//             title: "Transparent Pricing Policy",
+//             description:
+//               "Clear pricing with no hidden or surprise charges.",
+//           },
+//           {
+//             title: "Same-Day Repair Service",
+//             description:
+//               "Most laptop repairs are completed on the same day.",
+//           },
+//           {
+//             title: "Easy Online Booking",
+//             description:
+//               "Book laptop repair services easily via Door2Fy website or mobile app.",
+//           },
+//           {
+//             title: "All Major Laptop Brands Supported",
+//             description:
+//               "Dell, HP, Lenovo, Acer, Asus, Apple MacBook, and many more.",
+//           },
+//         ],
+//       },
+
+//       {
+//         heading: "How to Book Affordable Laptop Repair at Home",
+//         steps: [
+//           "Visit Door2Fy website or mobile app",
+//           "Select your laptop repair issue",
+//           "Choose a convenient date and time",
+//           "Technician visits your home",
+//           "Pay securely after service completion",
+//         ],
+//       },
+
+//       {
+//         heading: "Benefits of Choosing Laptop Repair at Home",
+//         list: [
+//           "Saves travel time and effort",
+//           "Affordable and transparent pricing",
+//           "Safe repairs in your home environment",
+//           "Professional and certified technicians",
+//           "Eco-friendly with reduced carbon footprint",
+//         ],
+//       },
+
+//       {
+//         heading: "Common Myths About Home Laptop Repair",
+//         points: [
+//           {
+//             title: "Home Laptop Repair Is Expensive",
+//             description:
+//               "Door2Fy offers low-cost services that are often cheaper than traditional service centers.",
+//           },
+//           {
+//             title: "Technicians Are Not Skilled",
+//             description:
+//               "All technicians are professionally trained and certified.",
+//           },
+//           {
+//             title: "Repairs Take Longer at Home",
+//             description:
+//               "Most minor laptop issues are resolved within a few hours.",
+//           },
+//         ],
+//       },
+
+//       {
+//         heading: "Tips to Keep Your Laptop Healthy",
+//         list: [
+//           "Clean your laptop regularly to avoid overheating",
+//           "Install trusted antivirus software",
+//           "Avoid overcharging the battery",
+//           "Handle your laptop carefully",
+//           "Keep operating system and software updated",
+//         ],
+//       },
+//     ],
+
+//     conclusion:
+//       "With Door2Fy’s affordable laptop repair at home, laptop issues no longer need to disrupt your daily routine. From screen replacement and battery issues to virus removal and hardware repairs, Door2Fy provides fast, low-cost, and reliable doorstep laptop repair services. Book today and enjoy stress-free laptop repair without leaving your home.",
+//   },
+// }
+
+// ];

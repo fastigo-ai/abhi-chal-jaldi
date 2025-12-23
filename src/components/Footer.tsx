@@ -122,13 +122,13 @@ const Footer = () => {
           </div>
           <div className="text-cyan-400 font-semibold">Download Our App</div>
           <div className="flex gap-3 items-end">
-  <a
+  {/* <a
     href="https://play.google.com/store/apps/details?id=com.Door2fy&pli=1"
     target="_blank"
     rel="noopener noreferrer"
   >
     <img src={App} alt="App Store" className="h-10 cursor-pointer" />
-  </a>
+  </a> */}
 
   <a
     href="https://play.google.com/store/apps/details?id=com.Door2fy&pli=1"

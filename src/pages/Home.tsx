@@ -93,10 +93,10 @@ export default function Home() {
           <p className="text-lg text-gray-600">
             Door2fy — fast doorstep repair & support
           </p>
-          <p className="text-base text-gray-500 pt-4">
+          {/* <p className="text-base text-gray-500 pt-4">
             Download the app or call{" "}
             <span className="font-semibold text-gray-800">+91 9599094941</span>
-          </p>
+          </p> */}
           <div className="flex flex-col sm:flex-row gap-4 pt-6 justify-center md:justify-start">
             <a
               href="https://play.google.com/store/apps/details?id=com.Door2fy&pli=1"
@@ -112,7 +112,7 @@ export default function Home() {
               </Button>
             </a>
 
-            <a
+            {/* <a
               href="https://play.google.com/store/apps/details?id=com.Door2fy&pli=1"
               target="_blank"
               rel="noopener noreferrer"
@@ -124,7 +124,7 @@ export default function Home() {
                 Get it on Google Play
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
-            </a>
+            </a> */}
           </div>
         </div>
 
@@ -256,7 +256,7 @@ export default function Home() {
     </Button>
   </a>
 
-  <a
+  {/* <a
     href="https://play.google.com/store/apps/details?id=com.Door2fy&pli=1"
     target="_blank"
     rel="noopener noreferrer"
@@ -265,7 +265,7 @@ export default function Home() {
       Get it on Google Play
       <ArrowRight className="ml-2 h-5 w-5" />
     </Button>
-  </a>
+  </a> */}
 
 </div>
 

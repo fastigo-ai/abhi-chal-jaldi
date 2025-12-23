@@ -1,189 +1,214 @@
-import React from "react";
-import { Blog } from "../data/blogs";
+import { useParams } from "react-router-dom";
+import { blogs } from "@/data/blogs";
 
-interface BlogDetailProps {
-  blog?: Blog;
-}
+const BlogDetail = () => {
+  const { slug } = useParams<{ slug: string }>();
+  // Ensure the data source matches your export (e.g., blogPosts or blogs)
+  const blog = blogs.find((b) => b.slug === slug);
 
-const BlogDetail: React.FC<BlogDetailProps> = ({ blog }) => {
   if (!blog) {
-    return <p className="text-center text-gray-600 py-20">Blog not found!</p>;
+    return (
+      <div className="container mx-auto py-20 text-center">
+        <h2 className="text-2xl font-semibold">Blog not found</h2>
+      </div>
+    );
   }
 
   return (
-    <main className="max-w-5xl mx-auto px-4 py-28">
-      {/* Title */}
-      <h1 className="text-3xl md:text-4xl font-bold mb-4">
-        {blog.title}
-      </h1>
+    <div className="bg-white max-w-6xl px-4 py-20 mx-auto">
+      {/* ================= HEADER ================= */}
+      <div className="container mx-auto px-4 pt-10 pb-6">
+        <p className="text-sm text-primary font-medium mb-2 uppercase tracking-wide">
+          {blog.category} {blog.city && `• ${blog.city}`}
+        </p>
 
-      {/* Meta Description */}
-      <p className="text-gray-600 mb-6">{blog.metaDescription}</p>
+        <h1 className="text-3xl md:text-5xl font-bold leading-tight mb-4 text-gray-900">
+          {blog.title}
+        </h1>
 
-      {/* Featured Image */}
-      <img
-        src={blog.featuredImage}
-        alt={blog.title}
-        className="w-full h-96 object-cover rounded-md mb-8"
-      />
-
-      {/* Intro */}
-      <p className="text-lg text-gray-700 mb-10">
-        {blog.content.intro}
-      </p>
-
-      {/* Sections */}
-      {blog.content.sections.map((section, index) => (
-        <section key={index} className="mb-12">
-          {/* Heading */}
-          <h2 className="text-2xl font-semibold text-blue-600 mb-4">
-            {section.heading}
-          </h2>
-
-          {/* LIST (title + description) */}
-          {section.list && (
-            <div className="space-y-4">
-              {section.list.map((item, i) => (
-                <div key={i}>
-                  <p className="font-semibold text-gray-800">
-                    {item.title}
-                  </p>
-                  <p className="text-gray-700">
-                    {item.description}
-                  </p>
-                </div>
-              ))}
-            </div>
-          )}
-
-          {/* POINTS (title + description OR string) */}
-          {section.points && (
-            <ul className="space-y-3 mt-4">
-              {section.points.map((point: any, i: number) => (
-                <li key={i} className="text-gray-700">
-                  {typeof point === "string" ? (
-                    point
-                  ) : (
-                    <>
-                      <strong>{point.title}:</strong> {point.description}
-                    </>
-                  )}
-                </li>
-              ))}
-            </ul>
-          )}
-
-          {/* BENEFITS (string list) */}
-          {section.benefits && (
-            <ul className="list-disc pl-6 space-y-2 mt-4 text-gray-700">
-              {section.benefits.map((benefit: string, i: number) => (
-                <li key={i}>{benefit}</li>
-              ))}
-            </ul>
-          )}
-
-          {/* TABLE (Dynamic columns) */}
-          {section.table && section.table.length > 0 && (
-            <div className="overflow-x-auto mt-6">
-              <table className="w-full border border-gray-300 border-collapse">
-                <thead className="bg-gray-100">
-                  <tr>
-                    {Object.keys(section.table[0]).map((key) => (
-                      <th
-                        key={key}
-                        className="border p-2 text-left capitalize"
-                      >
-                        {key.replace(/_/g, " ")}
-                      </th>
-                    ))}
-                  </tr>
-                </thead>
-                <tbody>
-                  {section.table.map((row: any, i: number) => (
-                    <tr key={i}>
-                      {Object.values(row).map((value: any, j: number) => (
-                        <td key={j} className="border p-2 text-gray-700">
-                          {value}
-                        </td>
-                      ))}
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-          )}
-
-          {/* STEPS */}
-          {section.steps && (
-            <ol className="list-decimal pl-6 space-y-2 mt-4 text-gray-700">
-              {section.steps.map((step: string, i: number) => (
-                <li key={i}>{step}</li>
-              ))}
-            </ol>
-          )}
-
-          {/* TIPS */}
-          {section.tips && (
-            <ul className="list-disc pl-6 space-y-2 mt-4 text-gray-700">
-              {section.tips.map((tip: string, i: number) => (
-                <li key={i}>{tip}</li>
-              ))}
-            </ul>
-          )}
-
-          {/* BRANDS */}
-          {section.brands && (
-            <div className="flex flex-wrap gap-2 mt-4">
-              {section.brands.map((brand: string, i: number) => (
-                <span
-                  key={i}
-                  className="bg-gray-100 border px-3 py-1 rounded text-sm"
-                >
-                  {brand}
-                </span>
-              ))}
-            </div>
-          )}
-
-          {/* AREAS */}
-          {section.areas && (
-            <div className="flex flex-wrap gap-2 mt-4">
-              {section.areas.map((area: string, i: number) => (
-                <span
-                  key={i}
-                  className="bg-blue-50 text-blue-700 px-3 py-1 rounded text-sm"
-                >
-                  {area}
-                </span>
-              ))}
-            </div>
-          )}
-
-          {/* TEXT */}
-          {section.text && (
-            <p className="text-gray-700 mt-4">
-              {section.text}
-            </p>
-          )}
-
-          {/* NOTE */}
-          {section.note && (
-            <div className="bg-yellow-50 border-l-4 border-yellow-400 p-3 mt-5 rounded">
-              <p className="text-sm text-gray-800">
-                {section.note}
-              </p>
-            </div>
-          )}
-        </section>
-      ))}
-
-      {/* Conclusion */}
-      <div className="bg-blue-50 border-l-4 border-blue-500 p-5 mt-12 rounded">
-        <p className="text-lg text-gray-800 font-medium">
-          {blog.content.conclusion}
+        <p className="text-gray-500 text-sm italic">
+          Last Updated: {blog.updatedAt}
         </p>
       </div>
-    </main>
+
+      {/* ================= FEATURED IMAGE ================= */}
+      <div className="container mx-auto px-4">
+        <img
+          src={blog.featuredImage}
+          alt={blog.title}
+          className="w-full h-[250px] md:h-[500px] object-cover rounded-2xl shadow-lg"
+        />
+      </div>
+
+      {/* ================= CONTENT ================= */}
+      <div className="container mx-auto px-4 py-10 grid grid-cols-1 lg:grid-cols-12 gap-10">
+        <article className="lg:col-span-8">
+          {/* Intro */}
+          <p className="text-xl text-gray-700 mb-10 leading-relaxed font-light">
+            {blog.content.intro}
+          </p>
+
+          {/* Dynamic Sections */}
+          {blog.content.sections.map((section: any, index: number) => (
+            <div key={index} className="mb-12">
+              {section.heading && (
+                <h2 className="text-2xl md:text-3xl font-bold mb-6 text-gray-800 border-b pb-2">
+                  {section.heading}
+                </h2>
+              )}
+
+              {/* 1. Points with Title/Description */}
+              {section.points && (
+                <div className="space-y-6">
+                  {section.points.map((p: any, i: number) => (
+                    <div key={i} className="bg-white border-l-4 border-primary p-5 shadow-sm rounded-r-lg">
+                      <h4 className="font-bold text-lg text-gray-900 mb-1">{p.title}</h4>
+                      <p className="text-gray-600 leading-relaxed">{p.description}</p>
+                    </div>
+                  ))}
+                </div>
+              )}
+
+              {/* 2. Simple List */}
+              {section.list && (
+                <ul className="list-disc pl-6 space-y-3 text-gray-700 text-lg">
+                  {section.list.map((item: string, i: number) => (
+                    <li key={i} className="pl-2">{item}</li>
+                  ))}
+                </ul>
+              )}
+
+              {/* 3. Steps (Ordered List) */}
+              {section.steps && (
+                <ol className="space-y-4">
+                  {section.steps.map((step: string, i: number) => (
+                    <li key={i} className="flex gap-4 items-start">
+                      <span className="flex-shrink-0 w-8 h-8 bg-primary text-white rounded-full flex items-center justify-center font-bold">
+                        {i + 1}
+                      </span>
+                      <p className="text-gray-700 text-lg pt-1">{step}</p>
+                    </li>
+                  ))}
+                </ol>
+              )}
+
+              {/* 4. Comparison Table (Custom for your data) */}
+              {section.comparisonTable && (
+                <div className="overflow-x-auto my-6">
+                  <table className="w-full border-collapse border border-gray-200 shadow-sm">
+                    <thead>
+                      <tr className="bg-gray-100">
+                        <th className="border p-4 text-left font-bold text-gray-700">Traditional Repair</th>
+                        <th className="border p-4 text-left font-bold text-primary">Doorstep Repair</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {section.comparisonTable.map((row: any, i: number) => (
+                        <tr key={i} className="hover:bg-gray-50">
+                          <td className="border p-4 text-gray-600">{row.traditional}</td>
+                          <td className="border p-4 font-medium text-gray-800">{row.doorstep}</td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              )}
+
+              {/* 5. Generic/Issue Table */}
+              {section.table && (
+                <div className="overflow-x-auto my-6">
+                  <table className="w-full border-collapse border border-gray-200 shadow-md rounded-lg overflow-hidden">
+                    <thead className="bg-gray-800 text-white">
+                      <tr>
+                        {Object.keys(section.table[0]).map((key) => (
+                          <th key={key} className="border border-gray-700 p-4 text-left capitalize">
+                            {key.replace(/([A-Z])/g, ' $1')}
+                          </th>
+                        ))}
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {section.table.map((row: any, i: number) => (
+                        <tr key={i} className={i % 2 === 0 ? "bg-white" : "bg-gray-50"}>
+                          {Object.values(row).map((val: any, j: number) => (
+                            <td key={j} className="border p-4 text-gray-700">{val}</td>
+                          ))}
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              )}
+
+              {/* 6. Tips */}
+              {section.tips && (
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
+                  {section.tips.map((tip: string, i: number) => (
+                    <div key={i} className="flex items-center gap-3 bg-green-50 border-l-4 border-green-500 p-4 rounded-r-lg shadow-sm">
+                      <span className="text-green-600 font-bold">✓</span>
+                      <span className="text-gray-700 font-medium">{tip}</span>
+                    </div>
+                  ))}
+                </div>
+              )}
+
+              {/* Notes or Summary */}
+              {(section.note || section.summary) && (
+                <p className="mt-4 p-4 bg-yellow-50 border border-yellow-200 rounded text-yellow-800 italic">
+                  <strong>Note:</strong> {section.note || section.summary}
+                </p>
+              )}
+            </div>
+          ))}
+
+          {/* Conclusion */}
+          <div className="bg-primary/5 p-8 rounded-2xl mt-16 border border-primary/10">
+            <h3 className="text-2xl font-bold mb-4 text-primary">Final Thoughts</h3>
+            <p className="text-gray-800 leading-relaxed text-lg">
+              {blog.content.conclusion}
+            </p>
+          </div>
+        </article>
+
+        {/* SIDEBAR */}
+        <aside className="lg:col-span-4">
+          <div className="sticky top-24 space-y-6">
+            <div className="bg-gray-900 text-white p-8 rounded-2xl shadow-xl">
+              <h4 className="text-xl font-bold mb-4">Need Laptop Repair?</h4>
+              <p className="text-gray-400 mb-6 leading-relaxed">
+                Don't let tech issues slow you down. Book professional doorstep laptop repair with verified technicians in your city.
+              </p>
+              <ul className="text-sm space-y-3 mb-8 text-gray-300">
+                <li>• Certified Technicians</li>
+                <li>• Transparent Pricing</li>
+                <li>• Service at Home/Office</li>
+                <li>• Warranty on Repairs</li>
+              </ul>
+              <a
+                href="https://www.door2fy.in"
+                className="block text-center bg-primary hover:bg-primary/90 text-white py-3 rounded-xl font-bold transition-all transform hover:scale-105"
+              >
+                Book Your Repair Now
+              </a>
+            </div>
+
+            {/* Tags Section */}
+            {blog.tags && (
+               <div className="bg-gray-50 p-6 rounded-2xl border">
+                 <h4 className="font-bold mb-4">Related Topics</h4>
+                 <div className="flex flex-wrap gap-2">
+                   {blog.tags.map((tag: string, i: number) => (
+                     <span key={i} className="px-3 py-1 bg-white border text-gray-600 text-xs rounded-full">
+                       #{tag}
+                     </span>
+                   ))}
+                 </div>
+               </div>
+            )}
+          </div>
+        </aside>
+      </div>
+    </div>
   );
 };
 

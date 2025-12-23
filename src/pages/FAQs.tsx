@@ -192,7 +192,7 @@ export default function FAQs() {
           </div>
 
           <div className="grid md:grid-cols-3 gap-6">
-            <Card className="p-6 text-center space-y-4 hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+            {/* <Card className="p-6 text-center space-y-4 hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
               <div className="h-16 w-16 rounded-full bg-blue-50 flex items-center justify-center mx-auto">
                 <Phone className="h-8 w-8 text-blue-400" />
               </div>
@@ -205,7 +205,7 @@ export default function FAQs() {
                   +91 9599094941
                 </Button>
               </div>
-            </Card>
+            </Card> */}
 
             <Card className="p-6 text-center space-y-4 hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
               <div className="h-16 w-16 rounded-full bg-blue-50 flex items-center justify-center mx-auto">

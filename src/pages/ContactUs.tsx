@@ -121,14 +121,14 @@ const Contact = () => {
                 <div className="mr-6 flex h-[60px] w-[60px] items-center justify-center rounded bg-primary/5 text-primary">
                   📞
                 </div>
-                <div>
+                {/* <div>
                   <h4 className="text-xl font-bold text-dark dark:text-white">
                     Phone Number
                   </h4>
                   <p className="text-base text-body-color dark:text-dark-6">
                     (+91) 9599094941
                   </p>
-                </div>
+                </div> */}
               </div>
 
               <div className="mb-8 flex w-full max-w-[370px]">

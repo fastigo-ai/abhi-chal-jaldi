@@ -6,6 +6,13 @@ interface BlogCardProps {
 }
 
 const BlogCard: React.FC<BlogCardProps> = ({ blog }) => {
+  // updatedAt ko readable format me convert karna
+  const formattedDate = new Date(blog.updatedAt).toLocaleDateString("en-IN", {
+    day: "2-digit",
+    month: "short",
+    year: "numeric",
+  });
+
   return (
     <div className="group bg-white rounded-xl shadow-sm hover:shadow-xl overflow-hidden border border-gray-100 transition-all duration-300 hover:-translate-y-1">
       <div className="relative">
@@ -21,6 +28,11 @@ const BlogCard: React.FC<BlogCardProps> = ({ blog }) => {
         <h2 className="text-xl font-semibold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors duration-200 line-clamp-2">
           {blog.title}
         </h2>
+
+        {/* Updated date */}
+        <p className="text-gray-400 text-xs mb-2">
+          Updated on {formattedDate}
+        </p>
 
         <p className="text-gray-600 text-sm mb-4 line-clamp-3">
           {blog.metaDescription.slice(0, 140)}...
