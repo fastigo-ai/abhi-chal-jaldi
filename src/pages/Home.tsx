@@ -241,7 +241,7 @@ export default function Home() {
                 className="p-8 space-y-4 hover:shadow-xl transition-all duration-300 hover:-translate-y-2"
               >
                 <div className="h-16 w-16 rounded-full bg-blue-50 flex items-center justify-center">
-                  <feature.icon className="h-8 w-8 text-blue-500" />
+                  <feature.icon className="h-8 w-8 text-[#53BED1]" />
                 </div>
                 <h3 className="text-2xl font-bold">{feature.title}</h3>
                 <p className="text-muted-foreground">{feature.description}</p>
