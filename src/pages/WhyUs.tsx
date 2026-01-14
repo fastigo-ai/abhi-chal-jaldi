@@ -127,7 +127,7 @@ export default function WhyUs() {
                 className="p-8 space-y-4 hover:shadow-xl transition-all duration-300 hover:-translate-y-2"
               >
                 <div className="h-16 w-16 rounded-full bg-blue-50 flex items-center justify-center">
-                  <reason.icon className="h-8 w-8 text-blue-400 " />
+                  <reason.icon className="h-8 w-8 text-[#53BED1] " />
                 </div>
                 <h3 className="text-2xl font-bold">{reason.title}</h3>
                 <p className="text-muted-foreground leading-relaxed">
