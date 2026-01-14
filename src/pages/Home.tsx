@@ -88,7 +88,7 @@ export default function Home() {
         {/* Left: Text Content */}
         <div className="w-full md:w-1/2 space-y-6 text-center md:text-left">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-gray-900">
-            India's 10 minute Doorstep Service App
+            Relax we"re 10 minutes away
           </h1>
           <p className="text-lg text-gray-600">
             Door2fy — fast doorstep repair & support
@@ -107,7 +107,7 @@ export default function Home() {
                 size="lg"
                 className="bg-[#53BED1] hover:bg-[#53BED1] text-white w-full sm:w-auto"
               >
-                Download on App Store
+                Download on App
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
             </a>
@@ -154,54 +154,72 @@ export default function Home() {
       </section>
 
       {/* Services Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-blue-50">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-blue-50 overflow-hidden">
         <div className="max-w-7xl mx-auto">
+          {/* Header */}
           <div className="text-center space-y-4 mb-16">
-            <div className="inline-block px-4 py-2 bg-[#53BED1] rounded-full text-sm font-semibold text-white">
+            <span className="inline-block px-5 py-2 bg-[#53BED1] rounded-full text-sm font-semibold text-white">
               Our Services
-            </div>
+            </span>
+
             <h2 className="text-4xl md:text-5xl font-bold">Trusted support</h2>
+
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
               just a click away — that’s Door2fy
             </p>
           </div>
 
-          <div className="overflow-hidden">
-            <div
-              className="flex gap-6 w-max"
-              style={{ animation: "scroll-left 30s linear infinite" }}
-            >
+          {/* Scrolling Services */}
+          <div className="relative">
+            <div className="marquee flex gap-6 w-max">
               {[...services, ...services].map((service, index) => (
-                <Card
+                <div
                   key={index}
-                  className="group min-w-[200px] max-w-[200px] p-6 flex-shrink-0 hover:shadow-xl transition-all duration-300 hover:-translate-y-2 cursor-pointer bg-gradient-to-br from-card to-accent/20"
+                  className="group min-w-[220px] max-w-[220px] bg-white rounded-2xl p-2 shadow-md
+                       hover:shadow-xl transition-all duration-300 hover:-translate-y-2 cursor-pointer"
                 >
-                  <div className="aspect-square mb-4 rounded-xl overflow-hidden bg-accent/30 flex items-center justify-center">
+                  {/* Image */}
+                  <div className="relative h-40 rounded-xl overflow-hidden bg-blue-100">
                     <img
                       src={service.image}
                       alt={service.name}
-                      className="h-24 w-24 object-contain group-hover:scale-110 transition-transform duration-300"
+                      className="absolute inset-0 h-full w-full object-cover
+                           transition-transform duration-500 ease-in-out
+                           group-hover:scale-110"
                     />
                   </div>
-                  <h3 className="text-center font-semibold">{service.name}</h3>
-                </Card>
+
+                  {/* Title */}
+                  <h3 className="mt-4 text-center font-semibold text-gray-800">
+                    {service.name}
+                  </h3>
+                </div>
               ))}
             </div>
           </div>
-
-          <style>
-            {`
-              @keyframes scroll-left {
-                0% { transform: translateX(0%); }
-                100% { transform: translateX(-50%); }
-              }
-
-              div[style*="scroll-left"]:hover {
-                animation-play-state: paused;
-              }
-            `}
-          </style>
         </div>
+
+        {/* CSS */}
+        <style>
+          {`
+      .marquee {
+        animation: scroll-left 30s linear infinite;
+      }
+
+      .marquee:hover {
+        animation-play-state: paused;
+      }
+
+      @keyframes scroll-left {
+        0% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translateX(-50%);
+        }
+      }
+    `}
+        </style>
       </section>
 
       {/* Features Section */}
@@ -244,19 +262,18 @@ export default function Home() {
             Service in under a minute{" "}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="https://play.google.com/store/apps/details?id=com.Door2fy&pli=1"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button size="lg" className="bg-[#53BED1] hover:bg-[#53BED1]">
+                Download on App Store
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Button>
+            </a>
 
-  <a
-    href="https://play.google.com/store/apps/details?id=com.Door2fy&pli=1"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    <Button size="lg" className="bg-[#53BED1] hover:bg-[#53BED1]">
-      Download on App Store
-      <ArrowRight className="ml-2 h-5 w-5" />
-    </Button>
-  </a>
-
-  {/* <a
+            {/* <a
     href="https://play.google.com/store/apps/details?id=com.Door2fy&pli=1"
     target="_blank"
     rel="noopener noreferrer"
@@ -266,9 +283,7 @@ export default function Home() {
       <ArrowRight className="ml-2 h-5 w-5" />
     </Button>
   </a> */}
-
-</div>
-
+          </div>
         </div>
       </section>
     </div>

@@ -133,29 +133,34 @@ export default function HowItWorks() {
       </section>
 
       {/* Steps Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {steps.map((step, index) => (
-              <Card
-                key={index}
-                className="p-8 space-y-4 hover:shadow-xl transition-all duration-300 hover:-translate-y-2 relative overflow-hidden"
-              >
-                <div className="h-16 w-16 rounded-full bg-blue-50 flex items-center justify-center relative z-10">
-                  <step.icon className="h-8 w-8 text-blue-400" />
-                </div>
-                <div className="space-y-2 relative z-10">
-                  <div className="text-sm font-semibold text-blue-400">
-                    Step {step.number}
-                  </div>
-                  <h3 className="text-2xl font-bold">{step.title}</h3>
-                  <p className="text-muted-foreground">{step.description}</p>
-                </div>
-              </Card>
-            ))}
+      
+<section className="py-20 px-4 sm:px-6 lg:px-8">
+  <div className="max-w-7xl mx-auto">
+    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {steps.map((step, index) => (
+        <Card
+          key={index}
+          className="p-8 space-y-4 hover:shadow-xl transition-all duration-300 hover:-translate-y-2 relative overflow-hidden"
+        >
+          {/* Icon */}
+          <div className="h-16 w-16 rounded-full bg-[#53BED1]/15 flex items-center justify-center relative z-10">
+            <step.icon className="h-8 w-8 text-[#53BED1]" />
           </div>
-        </div>
-      </section>
+
+          {/* Content */}
+          <div className="space-y-2 relative z-10">
+            <div className="text-sm font-semibold text-[#53BED1]">
+              Step {step.number}
+            </div>
+            <h3 className="text-2xl font-bold">{step.title}</h3>
+            <p className="text-muted-foreground">{step.description}</p>
+          </div>
+        </Card>
+      ))}
+    </div>
+  </div>
+</section>
+
 
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-[#53BED1] text-primary-foreground">
@@ -173,7 +178,7 @@ export default function HowItWorks() {
             {features.map((feature, index) => (
               <div key={index} className="text-center space-y-4">
                 <div className="h-16 w-16 rounded-full bg-blue-50 flex items-center justify-center mx-auto">
-                  <feature.icon className="h-8 w-8 text-blue-400" />
+                  <feature.icon className="h-8 w-8 text-[#53BED1]" />
                 </div>
                 <h3 className="text-2xl font-bold">{feature.title}</h3>
                 <p className="opacity-90">{feature.description}</p>

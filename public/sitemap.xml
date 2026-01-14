@@ -33,6 +33,12 @@
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://partner.door2fy.in/</loc>
+    <lastmod>2025-10-22</lastmod>
+    <changefreq>Partner Door2fy</changefreq>
+    <priority>0.8</priority>
+  </url>
 
   <url>
     <loc>https://www.door2fy.in/faqs</loc>

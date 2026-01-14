@@ -9,6 +9,8 @@ import Urgent from "../assets/data5.jpeg";
 import ProfessionalRepair from "../assets/data8.png";
 import slowLaptopImages from "../assets/data7.png";
 import slowLaptopImage from "../assets/data9.png";
+import BlogsPage from '../assets/abcnew.jpg'
+import BlogsPage2 from '../assets/bolgsnew.jpg'
 
 // Interface for individual sections within the blog content
 export interface BlogSection {
@@ -1114,6 +1116,7 @@ export const blogs: Blog[] = [
     metaTitle: "How to Choose Doorstep Laptop Repair Service in 2026 | Expert Guide",
     metaDescription: "Learn how to choose reliable doorstep laptop repair services near you. Checklist, tips & benefits for screen replacement, battery issues, software problems & more.",
     category: "Laptop Repair",
+    featuredImage: BlogsPage, // Ensure 'Guide' is imported
     tags: [
       "doorstep laptop repair",
       "laptop repair service",
@@ -1340,6 +1343,7 @@ export const blogs: Blog[] = [
     metaTitle: "Affordable Laptop Repair at Home | Low-Cost Doorstep Laptop Repair by Door2Fy",
     metaDescription: "Get your laptop repaired at home with affordable and low-cost services by Door2Fy. Fast, reliable, and professional doorstep laptop repair for all major brands.",
     category: "Laptop Repair",
+    featuredImage: BlogsPage2,
     tags: [
       "laptop repair",
       "affordable laptop repair",

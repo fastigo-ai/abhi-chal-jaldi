@@ -15,3 +15,4 @@ Allow: /
 
 
 Sitemap: https://www.door2fy.in/sitemap.xml
+Sitemap: https://partner.door2fy.in/sitemap.xml

@@ -1,5 +1,4 @@
-import { Card } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
+import { Helmet } from "react-helmet-async";
 
 import physical from "@/assets/banner/physical-damage.png";
 import system from "@/assets/banner/my system is slow.png";
@@ -12,169 +11,163 @@ import hanging from "@/assets/quickSupport/laptop hanging or freezing.png";
 import macbook from "@/assets/quickSupport/macbook starting slowly.png";
 import macos from "@/assets/quickSupport/macos update no installing.png";
 import problem from "@/assets/quickSupport/not sure about the problem.png";
-import { Helmet } from "react-helmet-async";
 
 export default function Services() {
   const services = [
     {
-      name: "Excel not working",
+      id: 1,
+      title: "Excel Not Working",
       image: excel,
-      description:
-        "5-10 minutes,our experts will diagnose the problem and provide the best possible solution",
+      description: "Quick diagnosis & solution within 5–10 minutes",
     },
     {
-      name: "Laptop Hanging/Freezing",
+      id: 2,
+      title: "Laptop Hanging / Freezing",
       image: hanging,
-      description:
-        "5-10 minutes,our experts will diagnose the problem and provide the best possible solution",
+      description: "Performance optimization & instant fix",
     },
     {
-      name: "Macbook rebooting slowly",
+      id: 3,
+      title: "MacBook Starting Slowly",
       image: macbook,
-      description:
-        "5-10 minutes,our experts will diagnose the problem and provide the best possible solution",
+      description: "Speed boost & system cleanup",
     },
     {
-      name: "Macos update not installing",
+      id: 4,
+      title: "MacOS Update Not Installing",
       image: macos,
-      description:
-        "5-10 minutes,our experts will diagnose the problem and provide the best possible solution",
+      description: "Update & OS troubleshooting",
     },
     {
-      name: "Not sure about the problem",
+      id: 5,
+      title: "Not Sure About the Problem",
       image: problem,
-      description:
-        "5-10 minutes,our experts will diagnose the problem and provide the best possible solution",
+      description: "Expert diagnosis for any issue",
     },
     {
-      name: "Software not opening",
+      id: 6,
+      title: "Software Not Opening",
       image: Software,
-      description:
-        "5-10 minutes,our experts will diagnose the problem and provide the best possible solution",
+      description: "Crash & compatibility fixes",
     },
-
     {
-      name: "My System is Slow",
+      id: 7,
+      title: "My System is Slow",
       image: system,
-      description:
-        "5-10 minutes,our experts will diagnose the problem and provide the best possible solution",
+      description: "System speed & health optimization",
     },
     {
-      name: "Physical Damage",
+      id: 8,
+      title: "Physical Damage",
       image: physical,
-      description:
-        "5-10 minutes,our experts will diagnose the problem and provide the best possible solution",
+      description: "Screen & hardware repair",
     },
     {
-      name: "Port Issue",
+      id: 9,
+      title: "Port Issue",
       image: port,
-      description:
-        "5-10 minutes,our experts will diagnose the problem and provide the best possible solution",
+      description: "Charging & USB port fixes",
     },
     {
-      name: "Speaker/Camera Issue",
+      id: 10,
+      title: "Speaker / Camera Issue",
       image: speaker,
-      description:
-        "5-10 minutes,our experts will diagnose the problem and provide the best possible solution",
+      description: "Audio & camera troubleshooting",
     },
   ];
 
+  // Same masonry layout logic
+  const layout = [
+    "col-span-2 row-span-3",
+    "col-span-1 row-span-2",
+    "col-span-1 row-span-2",
+    "col-span-2 row-span-2",
+    "col-span-1 row-span-2",
+    "col-span-1 row-span-1",
+    "col-span-1 row-span-1",
+    "col-span-2 row-span-2",
+  ];
+
   return (
-    <div className="min-h-screen pt-20">
-       <Helmet>
-        <title>Our Services | Door2fy - Fast Doorstep Repair & Tech Support</title>
+    <div className="min-h-screen bg-gray-50 pt-20">
+      <Helmet>
+        <title>Our Services | Door2fy</title>
         <meta
           name="description"
-          content="Explore Door2fy's range of doorstep and quick tech support services. From slow systems to software crashes, our experts fix it all in just 10 minutes."
+          content="Fast doorstep laptop & tech support services. Expert diagnosis in 5–10 minutes."
         />
-        <meta
-          name="keywords"
-          content="laptop repair services, screen replacement, battery replacement, motherboard repair, laptop maintenance, software troubleshooting, laptop cleaning, computer repair India"
-        />
-        <meta property="og:title" content="Door2fy Services | Quick Doorstep Tech Support" />
-        <meta
-          property="og:description"
-          content="Our experts diagnose and fix laptop, MacBook, and software problems within minutes — at your doorstep."
-        />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://door2fy.com/services" />
       </Helmet>
-      {/* Hero Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-blue-50 ">
-        <div className="max-w-4xl mx-auto text-center space-y-6">
-          <h1 className="text-5xl md:text-6xl font-bold">Our Services</h1>
-          <p className="text-xl md:text-2xl text-muted-foreground">
-            Doorstep Services
-          </p>
-        </div>
-      </section>
 
-      {/* Services List */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {services.map((service, index) => (
-              <Card
-                key={index}
-                className="overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-2"
+      {/* Header */}
+      <div className="text-center mb-20 px-6">
+        <h1 className="text-6xl md:text-8xl font-black mb-4">
+          services
+        </h1>
+        <p className="text-gray-600 tracking-wide">
+          Door2fy • Quick Tech Support
+        </p>
+      </div>
+
+      {/* Masonry Grid */}
+      <div className="max-w-7xl mx-auto px-6">
+        <div
+          className="
+            grid grid-cols-1 md:grid-cols-4
+            auto-rows-[180px]
+            gap-6
+            mb-32
+          "
+        >
+          {services.map((service, index) => (
+            <div
+              key={service.id}
+              className={`${layout[index % layout.length]}
+                group relative overflow-hidden rounded-xl shadow-lg cursor-pointer`}
+            >
+              {/* Image */}
+              <img
+                src={service.image}
+                alt={service.title}
+                className="
+                  w-full h-full object-cover
+                  transition-transform duration-700 ease-out
+                  group-hover:scale-110
+                "
+              />
+
+              {/* Hover Overlay */}
+              <div
+                className="
+                  absolute inset-0
+                  bg-gradient-to-t from-black/90 via-black/50 to-transparent
+                  opacity-0 group-hover:opacity-100
+                  transition-opacity duration-500
+                  flex items-end
+                "
               >
-                <div className="aspect-square bg-accent/20 flex items-center justify-center p-8">
-                  <img
-                    src={service.image}
-                    alt={service.name}
-                    className="h-32 w-32 object-contain"
-                  />
+                <div
+                  className="
+                    p-6 text-white
+                    translate-y-6 group-hover:translate-y-0
+                    transition-transform duration-500
+                  "
+                >
+                  <h3 className="text-xl font-bold mb-1">
+                    {service.title}
+                  </h3>
+                  <p className="text-sm text-gray-200">
+                    {service.description}
+                  </p>
+
+                  <span className="inline-block mt-4 text-sm font-medium border border-white px-4 py-2 rounded-full hover:bg-white hover:text-black transition">
+                    Get Support →
+                  </span>
                 </div>
-                <div className="p-6 space-y-4">
-                  <div className="space-y-2">
-                    <h3 className="text-2xl font-bold">{service.name}</h3>
-                    <p className="text-muted-foreground text-sm">
-                      {service.description}
-                    </p>
-                  </div>
-                </div>
-              </Card>
-            ))}
-          </div>
+              </div>
+            </div>
+          ))}
         </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center space-y-8">
-          <h2 className="text-4xl md:text-5xl font-bold">
-            Need a Custom Package?
-          </h2>
-          <p className="text-xl text-muted-foreground">
-            Contact us to create a personalize Bulk Doorstep & Quick support
-            plan that fits your specific needs{" "}
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-
-  {/* <a
-    href="https://play.google.com/store/apps/details?id=com.Door2fy&pli=1"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    <Button size="lg" className=" bg-[#53BED1] hover:bg-[#53BED1]">
-      Download for iOS
-    </Button>
-  </a> */}
-
-  <a
-    href="https://play.google.com/store/apps/details?id=com.Door2fy&pli=1"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    <Button size="lg" className=" bg-[#53BED1] hover:bg-[#53BED1]">
-      Download for Android
-    </Button>
-  </a>
-
-</div>
-
-        </div>
-      </section>
+      </div>
     </div>
   );
 }
