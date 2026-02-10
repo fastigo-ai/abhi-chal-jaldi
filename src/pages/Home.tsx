@@ -114,10 +114,17 @@ function ScrollStory() {
             {/* Text Left */}
             <motion.div style={{ y: textY, opacity: textOpacity }}>
               <div className="order-2 lg:order-1 space-y-4 text-center lg:text-right">
-              <span className="text-primary font-serif tracking-widest uppercase text-xs">Step 02</span>
-              <h2 className="text-4xl md:text-6xl font-serif text-navy leading-tight">Expert <br/><span className="text-[#53BED1]">Matched.</span></h2>
-              <p className="text-lg text-slate-600  max-w-md mx-auto lg:ml-auto lg:mr-0 font-serif">Instantly assigning the best-rated engineer in your vicinity.</p>
-            </div>
+                <span className="text-primary font-serif tracking-widest uppercase text-xs">
+                  Step 02
+                </span>
+                <h2 className="text-4xl md:text-6xl font-serif text-navy leading-tight">
+                  Expert <br />
+                  <span className="text-[#53BED1]">Matched.</span>
+                </h2>
+                <p className="text-lg text-slate-600  max-w-md mx-auto lg:ml-auto lg:mr-0 font-serif">
+                  Instantly assigning the best-rated engineer in your vicinity.
+                </p>
+              </div>
             </motion.div>
 
             {/* Image Right */}
@@ -158,8 +165,10 @@ function ScrollStory() {
                 />
               ))}
             </motion.div>
-            <h2 className="text-3xl md:text-4xl  font-serif text-slate-600
-">
+            <h2
+              className="text-3xl md:text-4xl  font-serif text-slate-600
+"
+            >
               On the way to you
             </h2>
           </motion.div>
@@ -292,15 +301,14 @@ export default function Home() {
           </p>
 
           <a
-  href="https://play.google.com/store/apps/details?id=com.Door2fy&pli=1"
-  target="_blank"
-  rel="noopener noreferrer"
->
-  <button className="mt-8 bg-gradient-to-r from-[#2ea6c1] to-[#7cd5e4] text-white font-semibold text-lg px-10 h-14 rounded-full shadow-lg hover:scale-105 transition inline-flex items-center gap-3">
-    Download App →
-  </button>
-</a>
-
+            href="https://play.google.com/store/apps/details?id=com.Door2fy&pli=1"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <button className="mt-8 bg-gradient-to-r from-[#2ea6c1] to-[#7cd5e4] text-white font-semibold text-lg px-10 h-14 rounded-full shadow-lg hover:scale-105 transition inline-flex items-center gap-3">
+              Download App →
+            </button>
+          </a>
 
           <p className="mt-4 text-slate-500 font-medium">
             Instant Expert Assistance
@@ -440,121 +448,117 @@ export default function Home() {
         </div>
       </section>
 
-
       {/* 6. DOOR2FY VS OTHERS */}
-<section className="py-18 bg-white border-t border-slate-100">
-  <div className="max-w-5xl mx-auto px-6">
-    <div className="text-center mb-16">
-      <span className="inline-block px-4 py-1 mb-4 text-xs font-serif bg-[#53BED1]/10 text-[#53BED1] rounded-full uppercase tracking-widest">
-        Comparison
-      </span>
-      <h2 className="text-5xl lg:text-6xl font-serif font-black text-slate-900">
-        Door2fy vs Others
-      </h2>
-      <p className="text-slate-500 text-xl mt-4">
-        See the difference before you choose
-      </p>
-    </div>
-
-    <div className="overflow-hidden rounded-[2.5rem] border border-slate-100 shadow-sm">
-      <div className="grid grid-cols-3 bg-[#53BED1] text-white font-bold text-lg">
-        <div className="p-6">Feature</div>
-        <div className="p-6 text-center">Door2fy ⚡</div>
-        <div className="p-6 text-center opacity-70">Others</div>
-      </div>
-
-      {[
-        ["Response Time", "10 Minutes", "1–2 Days"],
-        ["Doorstep Service", "Always", "Rare"],
-        ["Verified Engineers", "100%", "Not Assured"],
-        ["Live Tracking", "Available", "Not Available"],
-        ["Pricing", "Transparent", "Hidden Charges"],
-        ["Guarantee", "Money-Back", "None"],
-      ].map((row, i) => (
-        <div
-          key={i}
-          className={`grid grid-cols-3 text-lg ${
-            i % 2 === 0 ? "bg-white" : "bg-slate-50"
-          }`}
-        >
-          <div className="p-6 font-semibold">{row[0]}</div>
-          <div className="p-6 text-center font-bold text-[#53BED1]">
-            {row[1]}
+      <section className="py-18 bg-white border-t border-slate-100">
+        <div className="max-w-5xl mx-auto px-6">
+          <div className="text-center mb-16">
+            <span className="inline-block px-4 py-1 mb-4 text-xs font-serif bg-[#53BED1]/10 text-[#53BED1] rounded-full uppercase tracking-widest">
+              Comparison
+            </span>
+            <h2 className="text-5xl lg:text-6xl font-serif font-black text-slate-900">
+              Door2fy vs Others
+            </h2>
+            <p className="text-slate-500 text-xl mt-4">
+              See the difference before you choose
+            </p>
           </div>
-          <div className="p-6 text-center text-slate-500">
-            {row[2]}
-          </div>
-        </div>
-      ))}
-    </div>
-  </div>
-</section>
-<div className="h-24 bg-gradient-to-b from-white to-slate-50" />
-{/* 7. TRUSTED BY THOUSANDS */}
-<section className="-py-8 bg-slate-50">
-  <div className="max-w-6xl mx-auto px-6">
-    <div className="text-center mb-16">
-      <span className="inline-block px-4 py-1 mb-4 text-xs font-serif text-[#53BED1] rounded-full uppercase tracking-widest">
-        Customer
-      </span>
-      <h2 className="text-5xl lg:text-6xl font-serif font-black text-slate-900">
-        Trusted by Clients
-      </h2>
-      <p className="text-slate-500 text-xl mt-4">
-        Real people. Real experiences.
-      </p>
-    </div>
 
-    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-      {[
-        {
-          name: "Rahul Sharma",
-          city: "Delhi",
-          text: "Engineer reached in 8 minutes. Laptop fixed at home. Super smooth experience.",
-        },
-        {
-          name: "Priya Patel",
-          city: "Mumbai",
-          text: "MacBook was extremely slow. Door2fy fixed it in one visit. Loved it!",
-        },
-        {
-          name: "Amit Kumar",
-          city: "Bangalore",
-          text: "No shop visits, no delays. Very professional service.",
-        },
-      ].map((t, i) => (
-        <Card
-          key={i}
-          className="p-8 rounded-[2.5rem] border-none shadow-sm bg-white"
-        >
-          <div className="flex gap-1 mb-4">
-            {Array.from({ length: 5 }).map((_, j) => (
-              <Star
-                key={j}
-                className="w-4 h-4 fill-amber-400 text-amber-400"
-              />
+          <div className="overflow-hidden rounded-[2.5rem] border border-slate-100 shadow-sm">
+            <div className="grid grid-cols-3 bg-[#53BED1] text-white font-bold text-lg">
+              <div className="p-6">Feature</div>
+              <div className="p-6 text-center">Door2fy ⚡</div>
+              <div className="p-6 text-center opacity-70">Others</div>
+            </div>
+
+            {[
+              ["Response Time", "10 Minutes", "1–2 Days"],
+              ["Doorstep Service", "Always", "Rare"],
+              ["Verified Engineers", "100%", "Not Assured"],
+              ["Live Tracking", "Available", "Not Available"],
+              ["Pricing", "Transparent", "Hidden Charges"],
+              
+            ].map((row, i) => (
+              <div
+                key={i}
+                className={`grid grid-cols-3 text-lg ${
+                  i % 2 === 0 ? "bg-white" : "bg-slate-50"
+                }`}
+              >
+                <div className="p-6 font-semibold">{row[0]}</div>
+                <div className="p-6 text-center font-bold text-[#53BED1]">
+                  {row[1]}
+                </div>
+                <div className="p-6 text-center text-slate-500">{row[2]}</div>
+              </div>
             ))}
           </div>
-
-          <p className="text-slate-700 text-lg leading-relaxed mb-6">
-            “{t.text}”
-          </p>
-
-          <div className="flex items-center gap-3">
-            <div className="w-12 h-12 rounded-full bg-[#53BED1] text-white flex items-center justify-center font-bold">
-              {t.name[0]}
-            </div>
-            <div>
-              <p className="font-semibold">{t.name}</p>
-              <p className="text-sm text-slate-500">{t.city}</p>
-            </div>
+        </div>
+      </section>
+      <div className="h-24 bg-gradient-to-b from-white to-slate-50" />
+      {/* 7. TRUSTED BY THOUSANDS */}
+      <section className="-py-8 bg-slate-50 pb-4">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="text-center mb-16">
+            <span className="inline-block px-4 py-1 mb-4 text-xs font-serif text-[#53BED1] rounded-full uppercase tracking-widest">
+              Customer
+            </span>
+            <h2 className="text-5xl lg:text-6xl font-serif font-black text-slate-900">
+              Trusted by Clients
+            </h2>
+            <p className="text-slate-500 text-xl mt-4">
+              Real people. Real experiences.
+            </p>
           </div>
-        </Card>
-      ))}
-    </div>
-  </div>
-</section>
 
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[
+              {
+                name: "Rahul Sharma",
+                city: "Delhi",
+                text: "Engineer reached in 8 minutes. Laptop fixed at home. Super smooth experience.",
+              },
+              {
+                name: "Priya Patel",
+                city: "Mumbai",
+                text: "MacBook was extremely slow. Door2fy fixed it in one visit. Loved it!",
+              },
+              {
+                name: "Amit Kumar",
+                city: "Bangalore",
+                text: "No shop visits, no delays. Very professional service.",
+              },
+            ].map((t, i) => (
+              <Card
+                key={i}
+                className="p-8 rounded-[2.5rem] border-none shadow-sm bg-white"
+              >
+                <div className="flex gap-1 mb-4">
+                  {Array.from({ length: 5 }).map((_, j) => (
+                    <Star
+                      key={j}
+                      className="w-4 h-4 fill-amber-400 text-amber-400"
+                    />
+                  ))}
+                </div>
+
+                <p className="text-slate-700 text-lg leading-relaxed mb-6">
+                  “{t.text}”
+                </p>
+
+                <div className="flex items-center gap-3">
+                  <div className="w-12 h-12 rounded-full bg-[#53BED1] text-white flex items-center justify-center font-bold">
+                    {t.name[0]}
+                  </div>
+                  <div>
+                    <p className="font-semibold">{t.name}</p>
+                    <p className="text-sm text-slate-500">{t.city}</p>
+                  </div>
+                </div>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
 
       <style>{`
         @keyframes marquee {
