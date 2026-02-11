@@ -33,6 +33,7 @@ import engineerTraveling from "@/assets/engineer-traveling.png";
 import problemSolved from "@/assets/problem-solved.png";
 import Banner1 from "../assets/bgimage.jpeg";
 import Phone from "@/assets/phone.png";
+import EngineerReviews from "./EngineerReviews";
 
 /* ================= SCROLL STORY COMPONENT ================= */
 
@@ -496,7 +497,7 @@ export default function Home() {
       </section>
       <div className="h-24 bg-gradient-to-b from-white to-slate-50" />
       {/* 7. TRUSTED BY THOUSANDS */}
-      <section className="-py-8 bg-slate-50 pb-4">
+      {/* <section className="-py-8 bg-slate-50 pb-4">
         <div className="max-w-6xl mx-auto px-6">
           <div className="text-center mb-16">
             <span className="inline-block px-4 py-1 mb-4 text-xs font-serif text-[#53BED1] rounded-full uppercase tracking-widest">
@@ -558,8 +559,9 @@ export default function Home() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
+      <EngineerReviews/>
       <style>{`
         @keyframes marquee {
           0% { transform: translateX(0); }
