@@ -11,6 +11,9 @@ import slowLaptopImages from "../assets/data7.png";
 import slowLaptopImage from "../assets/data9.png";
 import BlogsPage from '../assets/abcnew.jpg'
 import BlogsPage2 from '../assets/bolgsnew.jpg'
+import pmActivityImages from '../assets/pmActivityImages.png'
+import laptopRepairCostDelhi from '../assets/pm.png'
+import laptopOverheatingDelhi from '../assets/laptopOverheatingDelhi.png'
 
 // Interface for individual sections within the blog content
 export interface BlogSection {
@@ -1465,6 +1468,377 @@ export const blogs: Blog[] = [
       conclusion: "With Door2Fy’s affordable laptop repair at home, laptop issues no longer need to disrupt your daily routine. From screen replacement and battery issues to virus removal and hardware repairs, Door2Fy provides fast, low-cost, and reliable doorstep laptop repair services. Book today and enjoy stress-free laptop repair without leaving your home.",
     },
   },
+  {
+  slug: "preventive-maintenance-pm-activity-it-support",
+  metaTitle: "What is Preventive Maintenance (PM) Activity in IT? | Door2fy Proactive IT Support",
+  metaDescription: "Learn what Preventive Maintenance (PM) activity is and how Door2fy provides proactive IT maintenance services to prevent system failures, improve performance, and reduce downtime.",
+  category: "IT Support & Maintenance",
+  city: "India",
+  featuredImage: pmActivityImages,
+  title: "What is Preventive Maintenance (PM) Activity and How Door2fy Provides It to Clients",
+  updatedAt: "2025-12-19",
+  content: {
+    intro: "In today’s digital environment, waiting for systems to fail before fixing them can lead to downtime, productivity loss, and higher repair costs. That’s where Preventive Maintenance (PM) activity plays a critical role. Door2fy provides structured and professional PM activities to homes, startups, and businesses to ensure systems run smoothly without unexpected breakdowns. In this guide, we explain what PM activity is and how Door2fy delivers proactive IT maintenance support to clients.",
+    sections: [
+      {
+        heading: "What is Preventive Maintenance (PM) Activity in IT?",
+        list: [
+          "Preventive Maintenance (PM) is a proactive IT support process designed to prevent system failures before they occur.",
+          "It involves scheduled inspection, cleaning, optimization, and performance checks of IT systems.",
+          "PM helps reduce unexpected breakdowns and emergency repairs.",
+          "It improves hardware lifespan and system performance.",
+          "PM is commonly used by businesses under IT AMC (Annual Maintenance Contracts)."
+        ]
+      },
+      {
+        heading: "Why Preventive Maintenance is Important",
+        list: [
+          "Reduces unexpected downtime in offices and home setups.",
+          "Prevents data loss due to hardware failure.",
+          "Improves system speed and overall performance.",
+          "Enhances cybersecurity by identifying vulnerabilities early.",
+          "Extends the life of laptops, desktops, servers, and network devices."
+        ]
+      },
+      {
+        heading: "How Door2fy Provides PM Activity to Clients",
+        list: [
+          "Scheduled on-site visits by trained IT technicians.",
+          "Complete hardware inspection of laptops and desktops.",
+          "Dust cleaning and internal component check.",
+          "Hard disk and SSD health monitoring.",
+          "RAM usage and performance optimization.",
+          "Operating system updates and patch management.",
+          "Antivirus scan and malware removal.",
+          "Network and router health checks.",
+          "Backup verification and data security assessment."
+        ]
+      },
+      {
+        heading: "PM Activity for Businesses and Offices",
+        list: [
+          "Network performance monitoring.",
+          "Server health and storage checks.",
+          "Firewall and security configuration review.",
+          "User access and permission audits.",
+          "System performance reports for management.",
+          "Preventive checks for printers and office peripherals."
+        ]
+      },
+      {
+        heading: "PM Activity for Home Users",
+        list: [
+          "Laptop and desktop performance optimization.",
+          "WiFi and router inspection.",
+          "Removal of junk files and temporary data.",
+          "Driver and software updates.",
+          "Battery and hardware condition check.",
+          "Advice on upgrades such as SSD or RAM."
+        ]
+      },
+      {
+        heading: "Benefits of Choosing Door2fy for PM Services",
+        list: [
+          "Doorstep preventive maintenance service.",
+          "Experienced and verified IT technicians.",
+          "Structured PM checklist and reporting.",
+          "Affordable AMC and maintenance plans.",
+          "Improved system reliability and reduced repair costs.",
+          "Easy booking and scheduling through Door2fy.in."
+        ]
+      },
+      {
+        heading: "How Often Should PM Activity Be Done?",
+        list: [
+          "For home users: Every 3 to 6 months.",
+          "For small businesses: Quarterly maintenance recommended.",
+          "For larger offices: Monthly or bi-monthly checks.",
+          "After major software updates or infrastructure changes.",
+          "Before peak business seasons to avoid disruptions."
+        ]
+      },
+      {
+        heading: "When to Consider Professional PM Support",
+        list: [
+          "Frequent system slowdowns.",
+          "Recurring virus or malware issues.",
+          "Network connectivity instability.",
+          "Hardware overheating problems.",
+          "Multiple devices used in office environments."
+        ]
+      }
+    ],
+    conclusion: "Preventive Maintenance (PM) activity is a proactive approach to keeping your IT systems reliable, secure, and efficient. Instead of waiting for problems to arise, Door2fy helps clients prevent them through scheduled maintenance visits and structured IT checks. Whether you are a home user, startup, or established business, Door2fy’s PM services ensure your systems remain optimized and protected. Visit Door2fy.in to learn more about our preventive maintenance and IT support solutions."
+  }
+},
+{
+  slug: "laptop-repair-cost-in-delhi-2026",
+  metaTitle: "Laptop Repair Cost in Delhi – 2026 Complete Price Guide | Door2fy",
+  metaDescription: "Wondering about laptop repair cost in Delhi? Check 2025 updated pricing for screen replacement, battery, SSD, motherboard & more. Book doorstep repair at https://Door2fy.in.",
+  category: "Laptop Tips",
+  city: "Delhi",
+  featuredImage: laptopRepairCostDelhi,
+  title: "Laptop Repair Cost in Delhi – 2026 Complete Price Guide | Door2fy",
+  updatedAt: "2026-01-27",
+  content: {
+    intro: "Understanding laptop repair cost in Delhi is important before making a repair decision. Whether your device has a broken screen, battery issue, performance lag, or motherboard damage, pricing depends on the laptop model and the severity of the issue. This 2026 updated guide explains estimated repair costs in Delhi so you can plan better. Professional service providers like Door2fy ensure transparent pricing and proper diagnosis before beginning any repair work.",
+    sections: [
+      {
+        heading: "Average Laptop Repair Cost in Delhi (2026)",
+        list: [
+          "Laptop Diagnosis Charges: Starting from ₹149*",
+          "Screen Replacement: Starting from ₹1,999*",
+          "Battery Replacement: Starting from ₹1,299*",
+          "Keyboard Replacement: Starting from ₹699*",
+          "SSD Upgrade: Starting from ₹1,899*",
+          "RAM Upgrade: Starting from ₹1,299*",
+          "Motherboard Repair: Starting from ₹2,499*",
+          "Operating System Installation: Starting from ₹399*"
+        ]
+      },
+      {
+        heading: "What Affects Laptop Repair Cost in Delhi?",
+        list: [
+          "Laptop brand (HP, Dell, Lenovo, Asus, Apple, etc.)",
+          "Availability and type of spare parts required",
+          "Level of internal hardware damage",
+          "Whether the issue requires full replacement or component-level repair",
+          "Urgency of service and doorstep visit requirements"
+        ]
+      },
+      {
+        heading: "Screen Replacement Cost in Delhi",
+        list: [
+          "Standard HD screens cost less compared to Full HD or IPS panels.",
+          "Touchscreen displays are generally more expensive.",
+          "Premium devices like MacBooks require higher-cost panels.",
+          "Using reliable service providers ensures correct installation and warranty coverage."
+        ]
+      },
+      {
+        heading: "Motherboard & Major Hardware Repair Cost",
+        list: [
+          "Motherboard repair is among the higher-cost laptop services.",
+          "Liquid damage increases repair complexity and cost.",
+          "Power IC or chipset repairs vary based on severity.",
+          "Professional inspection helps determine whether repair or replacement is more economical."
+        ]
+      },
+      {
+        heading: "Is Doorstep Laptop Repair in Delhi More Expensive?",
+        list: [
+          "Doorstep repair eliminates the hassle of visiting service centers.",
+          "It reduces the risk of damage during transportation.",
+          "Most minor and moderate issues are resolved in one visit.",
+          "Choosing a professional doorstep service like Door2fy ensures transparent pricing and proper warranty support."
+        ]
+      },
+      {
+        heading: "How to Reduce Laptop Repair Cost",
+        list: [
+          "Address minor issues early before they escalate.",
+          "Clean the laptop periodically to prevent overheating.",
+          "Use surge protectors to prevent electrical damage.",
+          "Upgrade SSD or RAM instead of replacing the entire device.",
+          "Book reliable doorstep repair services through https://Door2fy.in for accurate estimates."
+        ]
+      },
+      {
+        heading: "Professional Doorstep Laptop Repair in Delhi",
+        list: [
+          "Verified and experienced technicians.",
+          "Genuine spare parts with service warranty.",
+          "Transparent cost confirmation before repair begins.",
+          "Fast and reliable doorstep support across Delhi NCR.",
+          "Easy booking available at https://Door2fy.in."
+        ]
+      }
+    ],
+    conclusion: "Laptop repair cost in Delhi depends on the issue type and device configuration. While minor software services are affordable, hardware repairs such as screen or motherboard replacement may require a higher budget. Instead of estimating blindly, it is always advisable to get a professional diagnosis. Door2fy provides structured, transparent, and doorstep laptop repair services across Delhi. Visit https://Door2fy.in to schedule your inspection and receive a clear repair estimate."
+  },
+  faqSchema: {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How much does laptop repair cost in Delhi in 2025?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Laptop repair in Delhi typically starts from ₹149 for diagnosis and ₹399 for basic software services. Hardware repairs such as screen or motherboard replacement may start from ₹1,999 depending on the laptop model."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Why are prices mentioned as 'starting from'?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Repair pricing varies depending on laptop brand, spare part type, and severity of the issue. 'Starting from' pricing provides a base estimate while final costs are confirmed after proper inspection."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is doorstep laptop repair available across Delhi?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, professional doorstep laptop repair services are available across Delhi NCR. Door2fy allows customers to book an engineer easily through https://Door2fy.in."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is it better to repair or replace a laptop?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Repairing is generally cost-effective for minor to moderate issues. If repair cost exceeds 50–60% of the price of a new device, replacement may be considered."
+        }
+      }
+    ]
+  }
+},
+{
+  slug: "why-laptops-overheat-in-delhi-summers",
+  metaTitle: "Why Laptops Overheat in Delhi Summers | Causes, Fixes & Prevention | Door2fy",
+  metaDescription: "Delhi heat causing laptop overheating? Learn real causes, prevention tips, and professional solutions. Book doorstep laptop repair in Delhi at https://Door2fy.in.",
+  category: "Laptop Tips",
+  city: "Delhi",
+  featuredImage: laptopOverheatingDelhi,
+  title: "Why Laptops Overheat in Delhi Summers? Causes, Solutions & Prevention Guide",
+  updatedAt: "2026-02-19",
+  content: {
+    intro: "Delhi summers are known for extreme heat, rising well above 40°C. While we feel uncomfortable in such temperatures, electronic devices like laptops suffer even more. If your laptop becomes unusually hot, slows down, hangs frequently, or shuts off automatically during summer, overheating is likely the cause. In Delhi’s climate, high ambient temperature, dust pollution, and heavy daily usage together create the perfect environment for overheating issues. In this detailed guide, we explain why laptops overheat in Delhi summers and what practical steps you can take to protect your device from long-term damage.",
+    sections: [
+      {
+        heading: "1. Extreme Ambient Temperature in Delhi",
+        list: [
+          "Laptops are built to operate within safe temperature ranges.",
+          "When room temperature is already 38–45°C, internal cooling becomes less effective.",
+          "Using laptops in non-AC rooms increases internal heat buildup.",
+          "High heat forces CPU and GPU to throttle performance to prevent damage.",
+          "Repeated exposure to high temperature reduces hardware lifespan."
+        ]
+      },
+      {
+        heading: "2. Dust and Air Pollution in Delhi",
+        list: [
+          "Delhi has high levels of dust and airborne particles.",
+          "Dust accumulates inside laptop vents and cooling fans.",
+          "Blocked vents restrict airflow and trap heat inside.",
+          "Internal dust buildup can cause fan malfunction.",
+          "Without periodic cleaning, overheating becomes frequent."
+        ]
+      },
+      {
+        heading: "3. Heavy Workload and Continuous Usage",
+        list: [
+          "Long office hours increase processor load.",
+          "Video conferencing, gaming, and editing generate excessive heat.",
+          "Multiple browser tabs and background apps increase RAM and CPU usage.",
+          "Continuous operation without breaks intensifies overheating.",
+          "Corporate and work-from-home setups in Delhi increase usage hours."
+        ]
+      },
+      {
+        heading: "4. Dried Thermal Paste and Cooling Fan Wear",
+        list: [
+          "Thermal paste transfers heat from processor to heatsink.",
+          "Over time, thermal paste dries and loses efficiency.",
+          "Old cooling fans may rotate slowly or irregularly.",
+          "Improper heat transfer leads to rapid temperature spikes.",
+          "Professional servicing can restore proper cooling performance."
+        ]
+      },
+      {
+        heading: "5. Voltage Fluctuations in Certain Areas",
+        list: [
+          "Power fluctuations can stress internal components.",
+          "Low-quality adapters may cause battery overheating.",
+          "Sudden voltage spikes impact motherboard stability.",
+          "Using surge protectors reduces overheating risk."
+        ]
+      },
+      {
+        heading: "How to Prevent Laptop Overheating in Delhi",
+        list: [
+          "Keep your laptop in a cool, ventilated space.",
+          "Use air conditioning during peak summer hours if possible.",
+          "Clean vents and internal dust every 3–6 months.",
+          "Use a cooling pad during long working sessions.",
+          "Avoid placing laptop on beds, cushions, or soft surfaces.",
+          "Close unused applications to reduce CPU load.",
+          "Schedule preventive maintenance before peak summer season."
+        ]
+      },
+      {
+        heading: "When to Seek Professional Help in Delhi",
+        list: [
+          "Laptop shuts down automatically due to heat.",
+          "You hear loud or abnormal fan noise.",
+          "Keyboard surface becomes extremely hot.",
+          "System performance drops drastically.",
+          "Warning messages or overheating alerts appear frequently."
+        ]
+      },
+      {
+        heading: "Doorstep Laptop Repair in Delhi by Door2fy",
+        list: [
+          "Complete internal dust cleaning and inspection.",
+          "Thermal paste replacement service.",
+          "Cooling fan repair or replacement.",
+          "Hardware diagnostics and optimization.",
+          "Quick and reliable doorstep service across Delhi.",
+          "Book your service easily at https://Door2fy.in."
+        ]
+      }
+    ],
+    conclusion: "Laptop overheating during Delhi summers is common but should never be ignored. High temperature, dust, heavy usage, and aging components together create serious risks for your device. Regular cleaning, proper ventilation, and preventive servicing can significantly extend your laptop’s lifespan. If the issue persists, professional inspection is the safest solution. Book reliable doorstep laptop repair in Delhi today at https://Door2fy.in and protect your device from permanent damage."
+  },
+  faqSchema: {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Why do laptops overheat more during Delhi summers?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Laptops overheat more during Delhi summers because ambient temperatures often exceed 40°C, reducing internal cooling efficiency. Combined with dust accumulation and heavy usage, this leads to trapped heat and performance throttling."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can overheating permanently damage my laptop?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Continuous overheating can damage internal components such as the processor, motherboard, battery, and hard drive. It may also shorten the overall lifespan of your laptop if not addressed in time."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How often should I clean my laptop in Delhi?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Due to Delhi’s high dust levels, internal cleaning is recommended every 3 to 6 months to maintain proper airflow and prevent overheating issues."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is using a cooling pad effective in Delhi heat?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. A cooling pad improves airflow beneath the laptop and helps reduce temperature during extended usage, especially in non-AC environments."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does Door2fy provide doorstep laptop repair across Delhi?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Door2fy provides professional doorstep laptop repair services across major areas in Delhi. You can easily book an engineer at https://Door2fy.in."
+        }
+      }
+    ]
+  }
+},
 ];
  
 

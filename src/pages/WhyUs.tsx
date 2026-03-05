@@ -87,7 +87,7 @@ export default function WhyUs() {
 
   return (
     <div className="min-h-screen pt-20">
-       <Helmet>
+      <Helmet>
         <title>Why Choose Door2fy? | Trusted Laptop Repair Service</title>
         <meta
           name="description"
@@ -97,7 +97,10 @@ export default function WhyUs() {
           name="keywords"
           content="why choose door2fy, trusted laptop repair service, professional laptop technicians, reliable computer service India, doorstep repair experts, certified laptop engineers"
         />
-        <meta property="og:title" content="Why Choose Door2fy? | Trusted Laptop Repair Service" />
+        <meta
+          property="og:title"
+          content="Why Choose Door2fy? | Trusted Laptop Repair Service"
+        />
         <meta
           property="og:description"
           content="Door2fy is India's most trusted doorstep laptop repair service. Get professional, certified technicians and reliable computer service at your convenience."
@@ -205,26 +208,25 @@ export default function WhyUs() {
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-accent/30">
         <div className="max-w-4xl mx-auto text-center space-y-8">
-  <h2 className="text-4xl md:text-5xl font-bold">
-    Experience the Door2fy Difference
-  </h2>
+          <h2 className="text-4xl md:text-5xl font-bold">
+            Experience the Door2fy Difference
+          </h2>
 
-  <p className="text-xl text-muted-foreground">
-    Join thousands of satisfied customers who trust Door2fy for their
-    Doorstep & quick support.
-  </p>
+          <p className="text-xl text-muted-foreground">
+            Join thousands of satisfied customers who trust Door2fy for their
+            Doorstep & quick support.
+          </p>
 
-  <a
-    href="https://play.google.com/store/apps/details?id=com.Door2fy&pli=1"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    <Button size="lg" className="bg-[#53BED1] hover:bg-[#53BED1] mt-6">
-      Download the App Now
-    </Button>
-  </a>
-</div>
-
+          <a
+            href="https://play.google.com/store/apps/details?id=com.Door2fy&pli=1"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Button size="lg" className="bg-[#53BED1] hover:bg-[#53BED1] mt-6">
+              Download the App Now
+            </Button>
+          </a>
+        </div>
       </section>
     </div>
   );
