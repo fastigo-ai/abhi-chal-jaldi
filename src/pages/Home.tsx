@@ -467,7 +467,7 @@ export default function Home() {
           <div className="overflow-hidden rounded-[2.5rem] border border-slate-100 shadow-sm">
             <div className="grid grid-cols-3 bg-[#53BED1] text-white font-bold text-lg">
               <div className="p-6">Feature</div>
-              <div className="p-6 text-center">Door2fy ⚡</div>
+              <div className="p-6 text-center">Door2fy</div>
               <div className="p-6 text-center opacity-70">Others</div>
             </div>
 
@@ -477,13 +477,12 @@ export default function Home() {
               ["Verified Engineers", "100%", "Not Assured"],
               ["Live Tracking", "Available", "Not Available"],
               ["Pricing", "Transparent", "Hidden Charges"],
-              
+
             ].map((row, i) => (
               <div
                 key={i}
-                className={`grid grid-cols-3 text-lg ${
-                  i % 2 === 0 ? "bg-white" : "bg-slate-50"
-                }`}
+                className={`grid grid-cols-3 text-lg ${i % 2 === 0 ? "bg-white" : "bg-slate-50"
+                  }`}
               >
                 <div className="p-6 font-semibold">{row[0]}</div>
                 <div className="p-6 text-center font-bold text-[#53BED1]">
@@ -561,7 +560,7 @@ export default function Home() {
         </div>
       </section> */}
 
-      <EngineerReviews/>
+      <EngineerReviews showForm={false} />
       <style>{`
         @keyframes marquee {
           0% { transform: translateX(0); }

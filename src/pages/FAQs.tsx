@@ -7,6 +7,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { Phone, Mail, MessageCircle } from "lucide-react";
+import EngineerReviews from "./EngineerReviews";
 
 export default function FAQs() {
   const faqCategories = [
@@ -239,6 +240,9 @@ export default function FAQs() {
           </div>
         </div>
       </section>
+
+      {/* Leave a Review Section */}
+      <EngineerReviews showList={false} />
 
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
