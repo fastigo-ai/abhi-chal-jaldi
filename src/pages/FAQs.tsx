@@ -141,12 +141,12 @@ export default function FAQs() {
   return (
     <div className="min-h-screen pt-20">
       {/* Hero Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-blue-50">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-50">
         <div className="max-w-4xl mx-auto text-center space-y-6">
-          <h1 className="text-5xl md:text-6xl font-bold">
+          <h1 className="text-4xl md:text-6xl font-serif font-semibold text-slate-900 leading-snug">
             Frequently Asked Questions
           </h1>
-          <p className="text-xl md:text-2xl text-muted-foreground">
+          <p className="text-xl md:text-2xl text-slate-600 font-medium italic">
             Find answers to common questions about Door2fy services
           </p>
         </div>
@@ -157,7 +157,7 @@ export default function FAQs() {
         <div className="max-w-4xl mx-auto space-y-12">
           {faqCategories.map((category, categoryIndex) => (
             <div key={categoryIndex} className="space-y-6">
-              <h2 className="text-3xl font-bold text-[#53BED1]">
+              <h2 className="text-2xl md:text-3xl font-serif font-semibold text-[#53BED1]">
                 {category.category}
               </h2>
 
@@ -168,10 +168,10 @@ export default function FAQs() {
                     value={`${categoryIndex}-${index}`}
                     className="border rounded-lg px-6"
                   >
-                    <AccordionTrigger className="text-left text-lg font-semibold hover:text-[#53BED1]">
+                    <AccordionTrigger className="text-left text-lg font-serif font-semibold hover:text-[#53BED1] transition-colors">
                       {faq.question}
                     </AccordionTrigger>
-                    <AccordionContent className="text-muted-foreground pt-2 pb-4">
+                    <AccordionContent className="text-slate-500 pt-2 pb-4 leading-relaxed font-medium">
                       {faq.answer}
                     </AccordionContent>
                   </AccordionItem>
@@ -183,11 +183,11 @@ export default function FAQs() {
       </section>
 
       {/* Contact Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-accent/30">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-100/50">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold mb-4">Still Have Questions?</h2>
-            <p className="text-xl text-muted-foreground">
+            <h2 className="text-3xl md:text-4xl font-serif font-semibold text-slate-900 mb-4">Still Have Questions?</h2>
+            <p className="text-xl text-slate-500 font-medium">
               Our support team is here to help you 24x7
             </p>
           </div>
@@ -247,7 +247,7 @@ export default function FAQs() {
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center space-y-8">
-          <h2 className="text-4xl md:text-5xl font-bold">
+          <h2 className="text-3xl md:text-5xl font-serif font-semibold text-slate-900 leading-snug">
             Ready to Get Started?
           </h2>
 

@@ -102,12 +102,12 @@ export default function CityService() {
       </Helmet>
 
       {/* Hero Section */}
-      <section className="flex flex-col bg-[#EFF6FF] md:flex-row justify-between items-center px-8 md:px-20 py-24">
+      <section className="flex flex-col bg-slate-50 md:flex-row justify-between items-center px-8 md:px-20 py-24">
         <div className="max-w-4xl">
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-            Get expert IT support and device repair at your doorstep in {formattedCity}
+          <h1 className="text-4xl md:text-6xl font-serif font-bold text-slate-900 leading-[1.1] mb-6">
+            Get expert IT support and device repair at your doorstep in <span className="text-[#53BED1]">{formattedCity}</span>
           </h1>
-          <p className="text-gray-700 mb-6 text-xl md:text-2xl max-w-3xl mx-auto">
+          <p className="text-slate-600 mb-6 text-xl md:text-2xl max-w-3xl font-medium italic">
             Quick support for MacBooks, desktops, hardware installation & more.
           </p>
         </div>
@@ -128,10 +128,10 @@ export default function CityService() {
             className="w-24 mx-auto mb-4 h-24"
             loading="lazy"
           />
-          <h3 className="font-bold text-lg mb-2">MacBook Support</h3>
-          <p className="text-gray-600">
-            On-site or remote support for macOS issues & repairs
-          </p>
+          <h3 className="font-serif font-semibold text-xl text-slate-900 mb-2">MacBook Support</h3>
+            <p className="text-slate-500 leading-relaxed">
+              On-site or remote support for macOS issues & repairs
+            </p>
         </div>
         <div className="bg-white rounded-2xl shadow p-6 text-center">
           <img
@@ -140,10 +140,10 @@ export default function CityService() {
             className="w-24 mx-auto mb-4 h-24"
             loading="lazy"
           />
-          <h3 className="font-bold text-lg mb-2">Hardware Installation</h3>
-          <p className="text-gray-600">
-            RAM, SSD upgrades, screen replacements, peripherals
-          </p>
+          <h3 className="font-serif font-semibold text-xl text-slate-900 mb-2">Hardware Installation</h3>
+            <p className="text-slate-500 leading-relaxed">
+              RAM, SSD upgrades, screen replacements, peripherals
+            </p>
         </div>
         <div className="bg-white rounded-2xl shadow p-6 text-center">
           <img
@@ -152,14 +152,14 @@ export default function CityService() {
             className="w-24 mx-auto mb-4 h-24"
             loading="lazy"
           />
-          <h3 className="font-bold text-lg mb-2">Quick Support</h3>
-          <p className="text-gray-600">Instant Quick Support within 10 minutes</p>
+          <h3 className="font-serif font-semibold text-xl text-slate-900 mb-2">Quick Support</h3>
+            <p className="text-slate-500 leading-relaxed">Instant Quick Support within 10 minutes</p>
         </div>
       </section>
 
       {/* How It Works */}
       <section className="text-center py-10 px-8 md:px-20">
-        <h2 className="text-3xl font-bold mb-10">How It Works</h2>
+        <h2 className="text-3xl md:text-5xl font-serif font-bold text-slate-900 mb-12 leading-snug">How It Works</h2>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
           <div>
             <img
@@ -201,9 +201,9 @@ export default function CityService() {
       </section>
 
       {/* Why Choose Us */}
-      <section className="bg-white py-10 px-8 md:px-20">
-        <h2 className="text-3xl font-bold mb-6">Why Choose Us</h2>
-        <ul className="space-y-3 text-gray-700 mb-8 list-inside list-disc">
+      <section className="bg-slate-50 py-10 px-8 md:px-20">
+        <h2 className="text-3xl md:text-5xl font-serif font-bold text-slate-900 mb-8 leading-snug">Why Choose Us</h2>
+        <ul className="space-y-3 text-slate-600 mb-8 list-inside list-disc font-medium">
           <li>Fast & convenient DoorStep Service</li>
           <li>Verified engineers</li>
           <li>Trusted by local customers</li>

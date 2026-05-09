@@ -47,9 +47,9 @@ export default function EngineerReviews({ showList = true, showForm = true }: { 
         <>
           {/* Title */}
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-slate-800">
+            <h2 className="text-4xl md:text-5xl font-serif font-bold text-slate-800">
               What Engineers Say
-        </h2>
+            </h2>
         <p className="text-slate-500 mt-3">
           Real feedback from real professionals
         </p>
@@ -76,7 +76,7 @@ export default function EngineerReviews({ showList = true, showForm = true }: { 
                       <div className="flex items-center gap-4">
                         <img src={`https://ui-avatars.com/api/?name=${r.fields.Name}&background=random&color=fff`} alt={r.fields.Name} className="w-12 h-12 rounded-full object-cover shadow-sm" />
                         <div>
-                          <h4 className="font-bold text-slate-800">{r.fields.Name}</h4>
+                          <h4 className="font-semibold text-slate-800">{r.fields.Name}</h4>
                           <span className="text-yellow-500 text-xs">
                             {Array(r.fields.Rating).fill("⭐").join("")}
                           </span>
@@ -106,7 +106,7 @@ export default function EngineerReviews({ showList = true, showForm = true }: { 
                       <div className="flex items-center gap-4">
                         <img src={`https://ui-avatars.com/api/?name=${r.fields.Name}&background=random&color=fff`} alt={r.fields.Name} className="w-12 h-12 rounded-full object-cover shadow-sm" />
                         <div>
-                          <h4 className="font-bold text-slate-800">{r.fields.Name}</h4>
+                          <h4 className="font-semibold text-slate-800">{r.fields.Name}</h4>
                           <span className="text-yellow-500 text-xs">
                             {Array(r.fields.Rating).fill("⭐").join("")}
                           </span>
@@ -135,9 +135,9 @@ export default function EngineerReviews({ showList = true, showForm = true }: { 
 
           {/* Form Title */}
           <div className="text-center mb-8">
-            <h3 className="text-2xl font-semibold text-slate-800">
-            Leave a Review
-          </h3>
+            <h3 className="text-2xl font-serif font-semibold text-slate-800">
+              Leave a Review
+            </h3>
         </div>
 
         {/* Submit Form */}

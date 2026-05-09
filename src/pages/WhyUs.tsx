@@ -108,12 +108,13 @@ export default function WhyUs() {
         <meta property="og:type" content="website" />
       </Helmet>
       {/* Hero Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-blue-50">
-        <div className="max-w-4xl mx-auto text-center space-y-6">
-          <h1 className="text-5xl md:text-6xl font-bold">
-            Why Choose Door2fy?
+      <section className=" pt-12 px-4 sm:px-6 lg:px-8 bg-[#53BED1]/5 relative overflow-hidden">
+        <div className="absolute top-0 right-0 w-96 h-96 bg-[#53BED1]/10 rounded-full blur-[100px] -mr-48 -mt-48" />
+        <div className="max-w-4xl mx-auto text-center space-y-8 relative z-10">
+          <h1 className="text-3xl md:text-6xl font-serif font-semibold text-slate-900 leading-snug">
+            Why Choose <br className="hidden md:block" /> Door2fy?
           </h1>
-          <p className="text-xl md:text-2xl text-muted-foreground">
+          <p className="text-md md:text-xl text-slate-600 font-medium italic max-w-2xl mx-auto">
             India's most trusted DoorStep service platform, built on
             reliability, quality, and trust
           </p>
@@ -121,21 +122,23 @@ export default function WhyUs() {
       </section>
 
       {/* Main Reasons Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {reasons.map((reason, index) => (
               <Card
                 key={index}
-                className="p-8 space-y-4 hover:shadow-xl transition-all duration-300 hover:-translate-y-2"
+                className="p-8 space-y-6 hover:shadow-premium transition-all duration-500 hover:-translate-y-2 border border-slate-100 rounded-[2.5rem] relative overflow-hidden group bg-white"
               >
-                <div className="h-16 w-16 rounded-full bg-blue-50 flex items-center justify-center">
-                  <reason.icon className="h-8 w-8 text-[#53BED1] " />
+                <div className="h-16 w-16 rounded-2xl bg-[#53BED1]/10 flex items-center justify-center transition-colors group-hover:bg-[#53BED1] group-hover:text-white">
+                  <reason.icon className="h-8 w-8 text-[#53BED1] group-hover:text-white transition-colors" />
                 </div>
-                <h3 className="text-2xl font-bold">{reason.title}</h3>
-                <p className="text-muted-foreground leading-relaxed">
-                  {reason.description}
-                </p>
+                <div className="space-y-4">
+                  <h3 className="text-lg md:text-xl font-serif font-semibold mb-1">{reason.title}</h3>
+                  <p className="text-sm text-slate-500">
+                    {reason.description}
+                  </p>
+                </div>
               </Card>
             ))}
           </div>
@@ -143,24 +146,25 @@ export default function WhyUs() {
       </section>
 
       {/* Stats Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-[#53BED1] text-primary-foreground">
-        <div className="max-w-7xl mx-auto">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-[#53BED1] text-white relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-emerald-600/20 to-transparent opacity-50" />
+        <div className="relative max-w-7xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">Our Impact</h2>
-            <p className="text-lg opacity-90">
+            <h2 className="text-3xl md:text-5xl font-serif font-semibold text-white mb-2 leading-snug">Our Impact</h2>
+            <p className="text-lg md-text-xl opacity-90 font-serif font-medium max-w-2xl mx-auto">
               Numbers that speak for themselves
             </p>
           </div>
-          <div className="grid md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-12 lg:gap-20">
             {[
               { number: "10,000+", label: "Happy Customers" },
               { number: "9000+", label: "Hours Saved" },
               { number: "5000+", label: "Professionals" },
               { number: "4.9/5", label: "Average Rating" },
             ].map((stat, index) => (
-              <div key={index} className="text-center space-y-2">
-                <div className="text-5xl font-bold">{stat.number}</div>
-                <div className="text-lg opacity-90">{stat.label}</div>
+              <div key={index} className="text-center space-y-4 group">
+                <div className="text-3xl md:text-5xl font-serif font-semibold transition-transform group-hover:scale-110">{stat.number}</div>
+                <div className="text-md md:text-lg opacity-90 font-serif font-semibold tracking-widest uppercase">{stat.label}</div>
               </div>
             ))}
           </div>
@@ -168,34 +172,33 @@ export default function WhyUs() {
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-50/50">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-5xl font-serif font-semibold text-slate-900 mb-6 leading-snug">
               What Our Customers Say
             </h2>
-            <p className="text-xl text-muted-foreground">
-              Real experiences from real people
+            <p className="text-md md:text-lg text-slate-500 font-medium italic max-w-2xl mx-auto">
+              Real experiences from real people who trust Door2fy
             </p>
           </div>
-
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
               <Card
                 key={index}
-                className="p-8 space-y-4 hover:shadow-xl transition-all duration-300"
+                className="p-6 md:p-4 space-y-6 hover:shadow-premium transition-all duration-500 rounded-[2rem] bg-white border border-slate-100 group"
               >
-                <div className="flex items-center space-x-1 text-secondary">
+                <div className="flex items-center space-x-1 text-yellow-400">
                   {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} className="h-5 w-5 fill-current" />
+                    <Star key={i} className="h-4 w-4 fill-current" />
                   ))}
                 </div>
-                <p className="text-muted-foreground italic">
+                <p className="text-slate-600 italic text-md md:text-lg leading-relaxed font-medium">
                   "{testimonial.text}"
                 </p>
-                <div>
-                  <div className="font-semibold">{testimonial.name}</div>
-                  <div className="text-sm text-muted-foreground">
+                <div className="pt-6 border-t border-slate-50">
+                  <div className="font-serif font-semibold text-slate-900 text-md md:text-lg">{testimonial.name}</div>
+                  <div className="text-xs md:text-sm text-[#53BED1] font-semibold uppercase tracking-wider">
                     {testimonial.location}
                   </div>
                 </div>
@@ -206,23 +209,23 @@ export default function WhyUs() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-accent/30">
-        <div className="max-w-4xl mx-auto text-center space-y-8">
-          <h2 className="text-4xl md:text-5xl font-bold">
-            Experience the Door2fy Difference
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-[#53BED1] text-white relative overflow-hidden">
+        <div className="absolute top-0 right-0 w-96 h-96 bg-white/10 rounded-full blur-[120px] -mr-48 -mt-48" />
+        <div className="max-w-4xl mx-auto text-center space-y-10 relative z-10">
+          <h2 className="text-4xl md:text-6xl font-serif font-semibold text-white leading-snug">
+            Experience the <br className="hidden md:block" /> Door2fy Difference
           </h2>
-
-          <p className="text-xl text-muted-foreground">
-            Join thousands of satisfied customers who trust Door2fy for their
-            Doorstep & quick support.
+          <p className="text-md md:text-lg text-white/90 leading-relaxed max-w-2xl mx-auto font-medium">
+            Join thousands of satisfied customers who trust us for their IT
+            needs. Download the app today and experience instant support.
           </p>
-
           <a
             href="https://play.google.com/store/apps/details?id=com.Door2fy&pli=1"
             target="_blank"
             rel="noopener noreferrer"
+            className="inline-block"
           >
-            <Button size="lg" className="bg-[#53BED1] hover:bg-[#53BED1] mt-6">
+            <Button size="lg" className="bg-white text-[#53BED1] hover:bg-slate-50 font-serif font-semibold px-12 py-8 rounded-full text-2xl shadow-2xl transition hover:scale-[1.02] active:scale-[0.98]">
               Download the App Now
             </Button>
           </a>

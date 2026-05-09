@@ -99,11 +99,11 @@ export default function Services() {
       </Helmet>
 
       {/* Header */}
-      <div className="text-center mb-20 px-6">
-        <h1 className="text-6xl md:text-8xl font-black mb-4">
-          services
-        </h1>
-        <p className="text-gray-600 tracking-wide">
+      <div className="text-center mb-20  pt-12 px-4 sm:px-6 lg:px-8 bg-[#53BED1]/5 relative overflow-hidden">
+          <h1 className="text-3xl md:text-6xl font-serif font-semibold text-slate-900 leading-snug">
+            Professional <br /> Engineering Services
+          </h1>
+        <p className="text-md md:text-xl text-slate-600 font-medium italic max-w-2xl mx-auto mt-4">
           Door2fy • Quick Tech Support
         </p>
       </div>
@@ -152,7 +152,7 @@ export default function Services() {
                     transition-transform duration-500
                   "
                 >
-                  <h3 className="text-xl font-bold mb-1">
+                  <h3 className="text-xl md:text-2xl font-serif font-semibold mb-1">
                     {service.title}
                   </h3>
                   <p className="text-sm text-gray-200">

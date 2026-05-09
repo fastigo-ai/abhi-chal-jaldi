@@ -97,7 +97,7 @@ function ScrollStory() {
               <p className="text-sm font-semibold text-[#53BED1] uppercase tracking-widest mb-2">
                 Step 01
               </p>
-              <h2 className="text-[40px] md:text-[56px] lg:text-[64px] font-serif tracking-tight leading-[1.1] text-[#0f172a]">
+              <h2 className="text-[32px] md:text-[48px] lg:text-[56px] font-serif font-semibold leading-snug text-[#0f172a] mb-6">
                 Suddenly work <br />
                 <span className="text-[#53BED1]">Stops.</span>
               </h2>
@@ -188,7 +188,7 @@ function ScrollStory() {
                 <CheckCircle2 size={18} /> Success
               </div>
 
-              <h2 className="text-[40px] md:text-[56px] lg:text-[64px]  font-serif tracking-tight leading-[1.1] text-[#0f172a]">
+              <h2 className="text-[32px] md:text-[48px] lg:text-[56px] font-serif font-semibold leading-snug text-[#0f172a] mb-6">
                 Back in <span className="text-[#53BED1]">Action</span>
               </h2>
               <p className="mt-6 text-xl text-slate-600">
@@ -246,7 +246,7 @@ function CountUp({ end, label }) {
 
   return (
     <div ref={ref} className="space-y-2 text-center">
-      <h3 className="text-6xl font-black">{count.toLocaleString()}+</h3>
+      <h3 className="text-6xl font-bold">{count.toLocaleString()}+</h3>
       <p className="text-lg font-bold opacity-90">{label}</p>
     </div>
   );
@@ -289,7 +289,7 @@ export default function Home() {
 
         {/* CONTENT */}
         <div className="relative z-10 max-w-5xl text-center px-6">
-          <h1 className="text-5xl md:text-7xl lg:text-7xl font-serif leading-tight text-slate-900">
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-serif leading-snug text-slate-900">
             Relax, We're <span className="text-[#53BED1]">10</span>
             <br />
             <span className="bg-gradient-to-r from-[#1f3c88] via-[#2ea6c1] to-[#7cd5e4] bg-clip-text text-transparent">
@@ -373,7 +373,7 @@ export default function Home() {
           <div className="inline-block px-4 py-1 mb-4 text-xs font-serif bg-[#53BED1]/10 text-[#53BED1] rounded-full uppercase tracking-widest">
             Our Services
           </div>
-          <h2 className="text-5xl lg:text-6xl  font-serif font-black text-slate-900 mb-4">
+          <h2 className="text-3xl md:text-5xl font-serif font-semibold text-slate-900 mb-4 leading-snug">
             Trusted Support
           </h2>
           <p className="text-slate-400 text-xl italic font-medium">
@@ -405,7 +405,7 @@ export default function Home() {
       {/* 5. WHY CHOOSE */}
       <section className="py-24 bg-slate-50/50">
         <div className="max-w-6xl mx-auto px-6 text-center">
-          <h2 className="text-5xl lg:text-6xl font-black  font-serif text-slate-900 mb-2">
+          <h2 className="text-3xl md:text-5xl font-serif font-semibold text-slate-900 mb-2 leading-snug">
             Why choose Door2fy?
           </h2>
           <p className="text-slate-500 text-xl font-medium mb-20">
@@ -437,7 +437,7 @@ export default function Home() {
                 <div className="w-16 h-16 bg-blue-50 rounded-2xl flex items-center justify-center mb-8 group-hover:bg-white/20">
                   <f.icon className="h-8 w-8 text-[#53BED1] group-hover:text-white" />
                 </div>
-                <h3 className="text-2xl font-black mb-4 group-hover:text-white">
+                <h3 className="text-2xl font-bold mb-4 group-hover:text-white">
                   {f.title}
                 </h3>
                 <p className="text-slate-500 group-hover:text-white/80 leading-relaxed text-lg">
@@ -456,7 +456,7 @@ export default function Home() {
             <span className="inline-block px-4 py-1 mb-4 text-xs font-serif bg-[#53BED1]/10 text-[#53BED1] rounded-full uppercase tracking-widest">
               Comparison
             </span>
-            <h2 className="text-5xl lg:text-6xl font-serif font-black text-slate-900">
+            <h2 className="text-3xl md:text-5xl font-serif font-semibold text-slate-900 leading-snug">
               Door2fy vs Others
             </h2>
             <p className="text-slate-500 text-xl mt-4">

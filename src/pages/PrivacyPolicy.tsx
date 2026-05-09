@@ -3,30 +3,30 @@ import React from "react";
 
 const PrivacyPolicy = () => {
   return (
-    <div className="bg-gray-50 min-h-screen py-12 px-4 sm:px-6 lg:px-20">
+    <div className="bg-slate-50 min-h-screen py-12 px-4 sm:px-6 lg:px-20">
       <div className="max-w-4xl mx-auto rounded-lg p-8">
-        <h1 className="text-3xl font-bold text-gray-900 mb-4">
+        <h1 className="text-3xl md:text-5xl font-serif font-bold text-slate-900 mb-6 uppercase tracking-tight leading-snug">
           Privacy Policy
         </h1>
-        <p className="text-gray-700 mb-6">
-          <span className="font-semibold">Effective Date:</span> 01-10-2025
+        <p className="text-slate-600 mb-8 font-medium italic">
+          <span className="font-bold text-slate-900 not-italic">Effective Date:</span> 01-10-2025
         </p>
 
-        <p className="text-gray-700 mb-6">
-          Door2fy (“we,” “our,” or “us”) respects your privacy and is committed
-          to protecting your personal information. This Privacy Policy explains
-          how we collect, use, and safeguard your data when you use our website,
-          mobile app, and related services.
+        <p className="text-slate-600 mb-6 leading-relaxed">
+          At <span className="font-bold text-slate-900">Door2fy</span>, we value
+          your privacy. This Privacy Policy explains how we collect, use, and
+          protect your personal information when you use our website, mobile app,
+          and related services.
         </p>
 
         {/* 1. Information We Collect */}
-        <h2 className="text-2xl font-semibold text-gray-900 mb-3">
+        <h2 className="text-2xl md:text-3xl font-serif font-semibold text-slate-900 mb-4 mt-8">
           1. Information We Collect
         </h2>
-        <p className="text-gray-700 mb-3">
+        <p className="text-slate-600 mb-3 leading-relaxed">
           We may collect the following types of information:
         </p>
-        <ul className="list-disc list-inside text-gray-700 mb-6 space-y-1">
+        <ul className="list-disc list-inside text-slate-700 mb-6 space-y-1">
           <li>
             <strong>Location Data (Including Background Location):</strong> We
             collect your device’s precise location, including background
@@ -54,20 +54,20 @@ const PrivacyPolicy = () => {
         </ul>
 
         {/* 1.1 Background Location Usage */}
-        <h2 className="text-2xl font-semibold text-gray-900 mb-3">
+        <h2 className="text-2xl md:text-3xl font-serif font-semibold text-slate-900 mb-4 mt-8">
           1.1 Location Data & Background Location Access
         </h2>
-        <p className="text-gray-700 mb-3">
+        <p className="text-slate-700 mb-3">
           Door2fy collects and uses your device’s location, including background
           location (location collected even when the app is closed or not in
           use), to ensure accurate and reliable service delivery between users
           and our field engineers.
         </p>
-        <p className="text-gray-700 mb-3">
-          We use background location data strictly for service-related purposes,
-          including:
+        <p className="text-slate-600 mb-3 leading-relaxed">
+          Our app collects location data to provide and improve our services,
+          even when the app is closed or not in use. Specifically:
         </p>
-        <ul className="list-disc list-inside text-gray-700 mb-6 space-y-1">
+        <ul className="list-disc list-inside text-slate-700 mb-6 space-y-1">
           <li>
             Fetching your real-time location so that our assigned engineer can
             navigate to your address.

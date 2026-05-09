@@ -11,7 +11,7 @@ const ContactInputBox = ({ type, name, placeholder, value, onChange }) => (
       value={value}
       onChange={onChange}
       required
-      className="w-full rounded border border-gray-300 bg-transparent p-3 text-base text-body-color outline-none transition focus:border-primary dark:border-dark-3 dark:text-white dark:placeholder:text-dark-6"
+      className="w-full rounded-xl border border-slate-200 bg-white p-3 text-base text-slate-600 outline-none transition focus:border-primary focus:ring-1 focus:ring-primary dark:border-slate-800 dark:bg-slate-900 dark:text-slate-400"
     />
   </div>
 );
@@ -25,7 +25,7 @@ const ContactTextArea = ({ name, placeholder, row, value, onChange }) => (
       value={value}
       onChange={onChange}
       required
-      className="w-full rounded border border-gray-300 bg-transparent p-3 text-base text-body-color outline-none transition focus:border-primary dark:border-dark-3 dark:text-white dark:placeholder:text-dark-6"
+      className="w-full rounded-xl border border-slate-200 bg-white p-3 text-base text-slate-600 outline-none transition focus:border-primary focus:ring-1 focus:ring-primary dark:border-slate-800 dark:bg-slate-900 dark:text-slate-400"
     />
   </div>
 );
@@ -83,7 +83,7 @@ const Contact = () => {
   };
 
   return (
-    <section className="relative z-10 overflow-hidden bg-white py-20 dark:bg-dark lg:py-[120px]">
+    <section className="relative z-10 overflow-hidden bg-slate-50 py-20 dark:bg-slate-950 lg:py-[120px]">
       <Helmet>
         <title>Contact Door2fy | 10-Minute Doorstep Laptop Support</title>
         <meta
@@ -109,10 +109,10 @@ const Contact = () => {
           <div className="w-full px-4 lg:w-1/2 xl:w-6/12">
             <div className="mb-12 max-w-[570px] lg:mb-0">
               
-              <h2 className="mb-6 text-[32px] font-bold uppercase text-dark dark:text-white">
-                GET IN TOUCH WITH US
-              </h2>
-              <p className="mb-9 text-base leading-relaxed text-body-color dark:text-dark-6">
+              <h1 className="mb-6 text-4xl md:text-6xl font-serif font-bold uppercase text-slate-900 leading-snug dark:text-white">
+                Get in touch
+              </h1>
+              <p className="mb-9 text-lg leading-relaxed text-slate-600 dark:text-slate-400">
                 Have questions or ideas? Drop us a message and we’ll get back to
                 you soon.
               </p>
@@ -136,10 +136,10 @@ const Contact = () => {
                   📧
                 </div>
                 <div>
-                  <h4 className="text-xl font-bold text-dark dark:text-white">
+                  <h4 className="text-xl md:text-2xl font-serif font-semibold text-slate-900 dark:text-white">
                     Email Address
                   </h4>
-                  <p className="text-base text-body-color dark:text-dark-6">
+                  <p className="text-base text-slate-600 dark:text-slate-400">
                     support@Door2fy.in
                   </p>
                 </div>
@@ -149,7 +149,7 @@ const Contact = () => {
 
           {/* RIGHT SIDE FORM */}
           <div className="w-full px-4 lg:w-1/2 xl:w-5/12">
-            <div className="rounded-lg bg-white p-8 shadow-lg dark:bg-dark-2 sm:p-12">
+            <div className="rounded-[2rem] bg-white p-8 shadow-premium dark:bg-slate-900 sm:p-12 border border-slate-100">
               <form onSubmit={handleSubmit}>
                 <ContactInputBox
                   type="text"
