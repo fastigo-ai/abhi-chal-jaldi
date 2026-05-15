@@ -36,8 +36,6 @@ import Phone from "@/assets/phone.png";
 import EngineerReviews from "./EngineerReviews";
 
 /* ================= SCROLL STORY COMPONENT ================= */
-
-/* ================= SCROLL STORY COMPONENT ================= */
 function ScrollStory() {
   const containerRef = useRef<HTMLDivElement>(null);
 
@@ -90,6 +88,7 @@ function ScrollStory() {
               src={womanProblem}
               style={{ scale: imageScale, x: x1 }}
               className="rounded-[2.5rem] w-full max-h-[450px] object-cover"
+              loading="lazy"
             />
 
             {/* Text Right */}
@@ -133,6 +132,7 @@ function ScrollStory() {
               src={engineerReceiving}
               style={{ scale: imageScale, x: x2 }}
               className="rounded-[2.5rem] w-full max-h-[450px] object-fill shadow-2xl"
+              loading="lazy"
             />
           </motion.div>
 
@@ -151,6 +151,7 @@ function ScrollStory() {
                 src={engineerTraveling}
                 className="rounded-2xl border border-border max-w-2xl lg:max-w-3xl"
                 alt="Traveling"
+                loading="lazy"
               />
               {[...Array(3)].map((_, i) => (
                 <motion.div
@@ -201,6 +202,7 @@ function ScrollStory() {
               src={problemSolved}
               style={{ scale: imageScale, x: x4 }}
               className="rounded-[2.5rem] w-full max-h-[450px] object-cover shadow-2xl"
+              loading="lazy"
             />
           </motion.div>
         </div>
@@ -269,7 +271,7 @@ export default function Home() {
   ];
 
   return (
-    <div className="min-h-screen bg-white font-sans antialiased text-slate-900">
+    <div className="relative min-h-screen bg-white font-sans antialiased text-slate-900">
       <Helmet>
         <title>Door2fy | 10-Minute Doorstep Service App</title>
       </Helmet>
@@ -339,6 +341,7 @@ export default function Home() {
         <img
           src={Phone}
           alt="phone"
+          loading="lazy"
           className="
       absolute
       bottom-2
@@ -392,6 +395,7 @@ export default function Home() {
                   src={s.image}
                   className="h-60 w-full object-cover group-hover:scale-110 transition-transform duration-500"
                   alt={s.name}
+                  loading="lazy"
                 />
               </div>
               <p className="py-6 text-center  font-serif text-xl text-slate-800">

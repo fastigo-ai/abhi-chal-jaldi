@@ -1,5 +1,6 @@
 import { useParams } from "react-router-dom";
 import { blogs } from "@/data/blogs";
+import { Helmet } from "react-helmet-async";
 
 const BlogDetail = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -15,6 +16,11 @@ const BlogDetail = () => {
 
   return (
     <div className="bg-white max-w-6xl px-4 py-20 mx-auto">
+      <Helmet>
+        <title>{blog.metaTitle}</title>
+        <meta name="description" content={blog.metaDescription} />
+        <link rel="canonical" href={`https://www.door2fy.in/blog/${blog.slug}`} />
+      </Helmet>
       {/* ================= HEADER ================= */}
       <div className="container mx-auto px-4 pt-10 pb-6">
         <p className="text-sm text-[#53BED1] font-medium mb-2 uppercase tracking-wide">
@@ -36,6 +42,7 @@ const BlogDetail = () => {
           src={blog.featuredImage}
           alt={blog.title}
           className="w-full h-[250px] md:h-[500px] object-cover rounded-2xl shadow-lg"
+          loading="lazy"
         />
       </div>
 

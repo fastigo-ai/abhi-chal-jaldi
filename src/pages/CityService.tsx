@@ -1,10 +1,24 @@
 import React from "react";
 import { useParams } from "react-router-dom";
+import { motion } from "framer-motion";
+import { 
+  Clock, 
+  Shield, 
+  Star, 
+  CheckCircle2, 
+  ArrowRight, 
+  Settings, 
+  Smartphone, 
+  MapPin, 
+  CheckCircle
+} from "lucide-react";
 import Banner from "../assets/WhatsApp Image 2025-10-16 at 3.58.29 PM.jpeg";
 import support from "../assets/support-removebg-preview.png";
 import MACBOOK from "../assets/mac-removebg-preview.png";
 import install from "../assets/install-removebg-preview.png";
 import { Helmet } from "react-helmet-async";
+import { Button } from "@/components/ui/button";
+import { Card } from "@/components/ui/card";
 
 // Capitalize first letter of each word in city
 const formatCityName = (city: string | undefined): string => {
@@ -13,7 +27,7 @@ const formatCityName = (city: string | undefined): string => {
   return decodeURIComponent(city)
     .replace(/-/g, " ")
     .split(" ")
-    .map((word) => word.charAt(0).toLowerCase() + word.slice(1).toLowerCase())
+    .map((word) => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase())
     .join(" ");
 };
 
@@ -69,7 +83,6 @@ const cityKeywords: Record<string, string> = {
   vijayawada: "laptop repair Vijayawada, laptop service Vijayawada, computer repair Vijayawada, best laptop service Vijayawada, laptop home repair Vijayawada, laptop technician Vijayawada",
   zirakpur: "laptop repair Zirakpur, laptop service Zirakpur, computer repair Zirakpur, best laptop service Zirakpur, doorstep laptop repair Zirakpur, laptop technician Zirakpur",
   NewDelhi: "laptop repair New Delhi, laptop service New Delhi, computer repair New Delhi, best laptop service New Delhi, doorstep laptop repair New Delhi, laptop technician New Delhi"
-  
 };
 
 export default function CityService() {
@@ -78,7 +91,7 @@ export default function CityService() {
 
   if (!city) {
     return (
-      <div className="font-sans bg-[#e9f6f8] min-h-screen flex items-center justify-center">
+      <div className="font-sans bg-slate-50 min-h-screen flex items-center justify-center">
         <h2 className="text-2xl font-semibold text-gray-700">
           City not specified in URL
         </h2>
@@ -86,129 +99,193 @@ export default function CityService() {
     );
   }
 
+  // Animation variants
+  const fadeIn = {
+    initial: { opacity: 0, y: 20 },
+    animate: { opacity: 1, y: 0 },
+    transition: { duration: 0.5 }
+  };
+
+  const staggerContainer = {
+    animate: {
+      transition: {
+        staggerChildren: 0.1
+      }
+    }
+  };
+
   return (
-    <div className="font-sans min-h-screen">
+    <div className="font-sans min-h-screen bg-white">
       {/* Dynamic SEO */}
       <Helmet>
-        <title>Laptop Repair & IT Services in {formattedCity}</title>
+        <title>Laptop Repair & IT Services in {formattedCity} | Door2fy</title>
         <meta
           name="description"
-          content={`Expert laptop repair, IT support, MacBook servicing, and hardware installation in ${formattedCity}. Doorstep service available.`}
+          content={`Expert laptop repair, IT support, MacBook servicing, and hardware installation in ${formattedCity}. Doorstep service available in 10 minutes.`}
         />
         <meta
           name="keywords"
           content={cityKeywords[city.toLowerCase()] || "laptop repair, computer repair, IT support"}
         />
+        <link rel="canonical" href={`https://www.door2fy.in/best-laptop-service-in/${city.toLowerCase()}`} />
       </Helmet>
 
-      {/* Hero Section */}
-      <section className="flex flex-col bg-slate-50 md:flex-row justify-between items-center px-8 md:px-20 py-24">
-        <div className="max-w-4xl">
-          <h1 className="text-4xl md:text-6xl font-serif font-bold text-slate-900 leading-[1.1] mb-6">
-            Get expert IT support and device repair at your doorstep in <span className="text-[#53BED1]">{formattedCity}</span>
-          </h1>
-          <p className="text-slate-600 mb-6 text-xl md:text-2xl max-w-3xl font-medium italic">
-            Quick support for MacBooks, desktops, hardware installation & more.
-          </p>
-        </div>
-        <img
-          src={Banner}
-          alt="Engineer with Laptop"
-          className="h-64 md:h-80 mt-8 md:mt-0 object-contain"
-          loading="lazy"
-        />
-      </section>
-
-      {/* Services Section */}
-      <section id="services" className="grid grid-cols-1 md:grid-cols-3 gap-6 px-8 md:px-20 py-10">
-        <div className="bg-white rounded-2xl shadow p-6 text-center">
-          <img
-            src={MACBOOK}
-            alt="MacBook Support"
-            className="w-24 mx-auto mb-4 h-24"
-            loading="lazy"
-          />
-          <h3 className="font-serif font-semibold text-xl text-slate-900 mb-2">MacBook Support</h3>
-            <p className="text-slate-500 leading-relaxed">
-              On-site or remote support for macOS issues & repairs
+      {/* 1. Hero Section */}
+      <section className="relative pt-32 pb-20 px-6 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-slate-50 to-white -z-10" />
+        <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
+          <motion.div 
+            initial={{ opacity: 0, x: -30 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6 }}
+          >
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#53BED1]/10 text-[#53BED1] text-sm font-semibold mb-6">
+              <Star size={16} fill="currentColor" />
+              Top Rated in {formattedCity}
+            </div>
+            <h1 className="text-4xl md:text-6xl font-serif font-bold text-slate-900 leading-tight mb-6">
+              Reliable Laptop Repair in <span className="text-[#53BED1]">{formattedCity}</span>
+            </h1>
+            <p className="text-slate-600 text-lg md:text-xl mb-8 leading-relaxed">
+              Experience the fastest doorstep IT support. We reach you in just <span className="font-bold text-slate-900">10 minutes</span> to fix your MacBook, Laptop, or Desktop.
             </p>
+            <div className="flex flex-wrap gap-4">
+              <a href="https://play.google.com/store/apps/details?id=com.Door2fy&pli=1" target="_blank" rel="noopener noreferrer">
+                <Button size="lg" className="bg-[#53BED1] hover:bg-[#42a9bc] text-white rounded-full px-8 h-14 text-lg">
+                  Download App <ArrowRight className="ml-2 h-5 w-5" />
+                </Button>
+              </a>
+              <div className="flex items-center gap-2 text-slate-500 font-medium px-4">
+                <CheckCircle2 className="text-green-500" />
+                Verified Engineers
+              </div>
+            </div>
+          </motion.div>
+
+          <motion.div 
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="relative"
+          >
+            <div className="absolute inset-0 bg-[#53BED1]/5 rounded-3xl -rotate-3 -z-10" />
+            <img
+              src={Banner}
+              alt="Professional Engineer"
+              className="w-full h-auto object-contain rounded-2xl drop-shadow-2xl"
+              loading="lazy"
+            />
+          </motion.div>
         </div>
-        <div className="bg-white rounded-2xl shadow p-6 text-center">
-          <img
-            src={install}
-            alt="Hardware Installation"
-            className="w-24 mx-auto mb-4 h-24"
-            loading="lazy"
-          />
-          <h3 className="font-serif font-semibold text-xl text-slate-900 mb-2">Hardware Installation</h3>
-            <p className="text-slate-500 leading-relaxed">
-              RAM, SSD upgrades, screen replacements, peripherals
+      </section>
+
+      {/* 2. Features/Stats Row */}
+      <section className="py-12 border-y border-slate-100 bg-white">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            {[
+              { icon: Clock, label: "10 Min Response", sub: "Fastest Service" },
+              { icon: Shield, label: "30-Day Warranty", sub: "Secure Repairs" },
+              { icon: Star, label: "4.8/5 Rating", sub: "Happy Customers" },
+              { icon: Settings, label: "All Brands", sub: "Expert Support" },
+            ].map((stat, i) => (
+              <div key={i} className="flex flex-col items-center text-center">
+                <stat.icon className="h-8 w-8 text-[#53BED1] mb-3" />
+                <div className="font-bold text-slate-900">{stat.label}</div>
+                <div className="text-sm text-slate-500">{stat.sub}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+      {/* 3. Services Section */}
+      <section className="py-24 bg-slate-50/50">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-5xl font-serif font-bold text-slate-900 mb-4">Our Specialized Services</h2>
+            <p className="text-slate-600 text-lg">Professional solutions for all your technical needs in {formattedCity}</p>
+          </div>
+
+          <motion.div 
+            variants={staggerContainer}
+            initial="initial"
+            whileInView="animate"
+            viewport={{ once: true }}
+            className="grid grid-cols-1 md:grid-cols-3 gap-8"
+          >
+            {[
+              { 
+                title: "MacBook Support", 
+                img: MACBOOK, 
+                desc: "Expert on-site and remote support for all macOS issues, hardware repairs, and optimizations." 
+              },
+              { 
+                title: "Hardware Installation", 
+                img: install, 
+                desc: "RAM & SSD upgrades, screen replacements, and professional peripherals setup at your home." 
+              },
+              { 
+                title: "Quick Support", 
+                img: support, 
+                desc: "Facing sudden crashes or slow performance? Our engineers reach you within 10 minutes." 
+              },
+            ].map((service, i) => (
+              <motion.div key={i} variants={fadeIn}>
+                <Card className="p-8 h-full bg-white border-none shadow-sm hover:shadow-xl transition-all duration-300 rounded-[2rem] group">
+                  <div className="mb-6 bg-slate-50 rounded-2xl p-4 inline-block group-hover:scale-110 transition-transform duration-300">
+                    <img src={service.img} alt={service.title} className="w-20 h-20 object-contain" loading="lazy" />
+                  </div>
+                  <h3 className="text-2xl font-serif font-bold text-slate-900 mb-4">{service.title}</h3>
+                  <p className="text-slate-600 leading-relaxed">{service.desc}</p>
+                </Card>
+              </motion.div>
+            ))}
+          </motion.div>
+        </div>
+      </section>
+
+      {/* 4. How It Works */}
+      <section className="py-24 bg-white">
+        <div className="max-w-6xl mx-auto px-6 text-center">
+          <h2 className="text-3xl md:text-5xl font-serif font-bold text-slate-900 mb-16">How It Works</h2>
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-12 relative">
+            {/* Connector Line (Desktop) */}
+            <div className="hidden md:block absolute top-1/4 left-1/4 right-1/4 h-[2px] bg-[#53BED1]/20 -z-10" />
+            
+            {[
+              { icon: Smartphone, title: "Book Slot", desc: "Select your service and preferred time on the app." },
+              { icon: Settings, title: "Engineer Assigned", desc: "Our best-rated local technician is matched to you." },
+              { icon: MapPin, title: "Doorstep Service", desc: "The engineer reaches your location in 10 minutes." },
+              { icon: CheckCircle, title: "Issue Resolved", desc: "Get your device fixed and pay after satisfaction." },
+            ].map((step, i) => (
+              <div key={i} className="flex flex-col items-center">
+                <div className="w-16 h-16 rounded-full bg-[#53BED1] text-white flex items-center justify-center mb-6 shadow-lg shadow-[#53BED1]/30 text-2xl font-bold">
+                  {i + 1}
+                </div>
+                <h4 className="text-xl font-bold text-slate-900 mb-2">{step.title}</h4>
+                <p className="text-slate-500 text-sm leading-relaxed">{step.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 5. Final CTA Section */}
+      <section className="py-20 px-6">
+        <div className="max-w-5xl mx-auto bg-[#0f172a] rounded-[3rem] p-12 md:p-20 text-center relative overflow-hidden text-white">
+          <div className="absolute top-0 right-0 w-64 h-64 bg-[#53BED1]/20 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
+          <div className="relative z-10">
+            <h2 className="text-3xl md:text-5xl font-serif font-bold mb-6">Ready to fix your device?</h2>
+            <p className="text-slate-400 text-lg md:text-xl mb-10 max-w-2xl mx-auto">
+              Join thousands of happy customers in {formattedCity}. Get your laptop fixed at your doorstep today.
             </p>
-        </div>
-        <div className="bg-white rounded-2xl shadow p-6 text-center">
-          <img
-            src={support}
-            alt="Quick Support"
-            className="w-24 mx-auto mb-4 h-24"
-            loading="lazy"
-          />
-          <h3 className="font-serif font-semibold text-xl text-slate-900 mb-2">Quick Support</h3>
-            <p className="text-slate-500 leading-relaxed">Instant Quick Support within 10 minutes</p>
-        </div>
-      </section>
-
-      {/* How It Works */}
-      <section className="text-center py-10 px-8 md:px-20">
-        <h2 className="text-3xl md:text-5xl font-serif font-bold text-slate-900 mb-12 leading-snug">How It Works</h2>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-          <div>
-            <img
-              src="https://cdn-icons-png.flaticon.com/512/2921/2921222.png"
-              alt="Book slot"
-              className="w-12 mx-auto mb-2"
-              loading="lazy"
-            />
-            <p className="font-medium">Book your slot</p>
-          </div>
-          <div>
-            <img
-              src="https://cdn-icons-png.flaticon.com/512/1946/1946429.png"
-              alt="Engineer assigned"
-              className="w-12 mx-auto mb-2"
-              loading="lazy"
-            />
-            <p className="font-medium">Engineer gets assigned</p>
-          </div>
-          <div>
-            <img
-              src="https://cdn-icons-png.flaticon.com/512/684/684908.png"
-              alt="Service at doorstep"
-              className="w-12 mx-auto mb-2"
-              loading="lazy"
-            />
-            <p className="font-medium">Service at your doorstep</p>
-          </div>
-          <div>
-            <img
-              src="https://cdn-icons-png.flaticon.com/512/845/845646.png"
-              alt="Issue resolved"
-              className="w-12 mx-auto mb-2"
-              loading="lazy"
-            />
-            <p className="font-medium">Issue resolved</p>
+            <a href="https://play.google.com/store/apps/details?id=com.Door2fy&pli=1" target="_blank" rel="noopener noreferrer">
+              <Button size="lg" className="bg-[#53BED1] hover:bg-[#42a9bc] text-white rounded-full px-12 h-16 text-xl font-bold">
+                Get Started Now
+              </Button>
+            </a>
           </div>
         </div>
-      </section>
-
-      {/* Why Choose Us */}
-      <section className="bg-slate-50 py-10 px-8 md:px-20">
-        <h2 className="text-3xl md:text-5xl font-serif font-bold text-slate-900 mb-8 leading-snug">Why Choose Us</h2>
-        <ul className="space-y-3 text-slate-600 mb-8 list-inside list-disc font-medium">
-          <li>Fast & convenient DoorStep Service</li>
-          <li>Verified engineers</li>
-          <li>Trusted by local customers</li>
-          <li>Available 24/7</li>
-        </ul>
       </section>
     </div>
   );

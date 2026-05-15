@@ -21,6 +21,7 @@ const BlogCard: React.FC<BlogCardProps> = ({ blog }) => {
             src={blog.featuredImage}
             alt={blog.title}
             className="w-full h-52 object-cover transition-transform duration-500 group-hover:scale-105"
+            loading="lazy"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
         </div>
@@ -40,9 +41,8 @@ const BlogCard: React.FC<BlogCardProps> = ({ blog }) => {
           </p>
 
           <div>
-            <Link
-              to={`/blog/${blog.slug}`}
-              className="inline-flex items-center text-blue-600 font-medium hover:text-blue-800 transition-colors duration-200"
+            <span
+              className="inline-flex items-center text-blue-600 font-medium group-hover:text-blue-800 transition-colors duration-200"
             >
               Read More
               <svg
@@ -59,7 +59,7 @@ const BlogCard: React.FC<BlogCardProps> = ({ blog }) => {
                   d="M9 5l7 7-7 7"
                 />
               </svg>
-            </Link>
+            </span>
           </div>
         </div>
       </div>

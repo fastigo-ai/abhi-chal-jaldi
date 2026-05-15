@@ -1,5 +1,5 @@
-import { useEffect } from "react"; // ✅ Import useEffect
-import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom"; // ✅ Add useLocation
+import { useEffect, lazy, Suspense } from "react"; 
+import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom"; 
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { Toaster } from "@/components/ui/toaster";
@@ -11,18 +11,25 @@ import { Navbar } from "./components/Navbar";
 import Footer from "./components/Footer";
 import { ScrollToTop } from "./components/ScrollToTop";
 
-// 🏠 Pages
-import Home from "./pages/Home";
-import WhyUs from "./pages/WhyUs";
-import Services from "./pages/Services";
-import HowItWorks from "./pages/HowItWorks";
-import FAQs from "./pages/FAQs";
-import PrivacyPolicy from "./pages/PrivacyPolicy";
-import CityService from "./pages/CityService";
-import NotFound from "./pages/NotFound";
-import BlogList from "./pages/BlogList";
-import BlogPage from "./pages/BlogPage";
-import Contact from "./pages/ContactUs";
+// 🏠 Pages (Lazy Loaded)
+const Home = lazy(() => import("./pages/Home"));
+const WhyUs = lazy(() => import("./pages/WhyUs"));
+const Services = lazy(() => import("./pages/Services"));
+const HowItWorks = lazy(() => import("./pages/HowItWorks"));
+const FAQs = lazy(() => import("./pages/FAQs"));
+const PrivacyPolicy = lazy(() => import("./pages/PrivacyPolicy"));
+const CityService = lazy(() => import("./pages/CityService"));
+const NotFound = lazy(() => import("./pages/NotFound"));
+const BlogList = lazy(() => import("./pages/BlogList"));
+const BlogPage = lazy(() => import("./pages/BlogPage"));
+const Contact = lazy(() => import("./pages/ContactUs"));
+
+// Loading Fallback Component
+const PageLoader = () => (
+  <div className="flex items-center justify-center min-h-[60vh]">
+    <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-[#53BED1]"></div>
+  </div>
+);
 
 // ⚙️ Meta Pixel Tracker Component
 // This component listens to URL changes and fires the Pixel event
@@ -49,26 +56,28 @@ const App = () => {
         <Sonner />
 
         <HelmetProvider>
-          <BrowserRouter>
+          <BrowserRouter future={{ v7_startTransition: true, v7_relativeSplatPath: true }}>
             {/* ✅ Add the tracker inside BrowserRouter so it can use useLocation */}
             <MetaPixelTracker />
             
             <ScrollToTop />
             <Navbar />
 
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/why-us" element={<WhyUs />} />
-              <Route path="/services" element={<Services />} />
-              <Route path="/how-it-works" element={<HowItWorks />} />
-              <Route path="/faqs" element={<FAQs />} />
-              <Route path="/contact-us" element={<Contact />} />
-              <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-              <Route path="/blogs" element={<BlogList />} />
-              <Route path="/blog/:slug" element={<BlogPage />} />
-              <Route path="/best-laptop-service-in/:city" element={<CityService />} />
-              <Route path="*" element={<NotFound />} />
-            </Routes>
+            <Suspense fallback={<PageLoader />}>
+              <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/why-us" element={<WhyUs />} />
+                <Route path="/services" element={<Services />} />
+                <Route path="/how-it-works" element={<HowItWorks />} />
+                <Route path="/faqs" element={<FAQs />} />
+                <Route path="/contact-us" element={<Contact />} />
+                <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+                <Route path="/blogs" element={<BlogList />} />
+                <Route path="/blog/:slug" element={<BlogPage />} />
+                <Route path="/best-laptop-service-in/:city" element={<CityService />} />
+                <Route path="*" element={<NotFound />} />
+              </Routes>
+            </Suspense>
 
             <Footer />
           </BrowserRouter>

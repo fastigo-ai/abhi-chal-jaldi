@@ -145,7 +145,7 @@ const Footer = () => {
         </div>
 
         <p className="text-center mt-6 text-gray-400 text-xs border-t border-gray-700 pt-4">
-          © Copyright 2025 Door2fy. All rights reserved.
+          © Copyright 2025 <a href="https://www.door2fy.in/" className="hover:text-cyan-400 underline">Door2fy</a>. All rights reserved.
         </p>
       </div>
     </footer>

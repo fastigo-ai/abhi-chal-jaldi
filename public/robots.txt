@@ -1,18 +1,6 @@
-User-agent: Googlebot
-Allow: /
-
-User-agent: Bingbot
-Allow: /
-
-User-agent: Twitterbot
-Allow: /
-
-User-agent: facebookexternalhit
-Allow: /
-
 User-agent: *
 Allow: /
 
-
+# Sitemaps
 Sitemap: https://www.door2fy.in/sitemap.xml
 Sitemap: https://partner.door2fy.in/sitemap.xml
