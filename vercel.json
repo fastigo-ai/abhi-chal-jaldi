@@ -1,20 +1,10 @@
 {
+  "cleanUrls": true,
+  "trailingSlash": false,
   "rewrites": [
     {
-      "source": "/robots.txt",
-      "destination": "/robots.txt"
-    },
-    {
-      "source": "/sitemap.xml",
-      "destination": "/sitemap.xml"
-    },
-    {
-      "source": "/BingSiteAuth.xml",
-      "destination": "/BingSiteAuth.xml"
-    },
-    {
-      "source": "/(.*)",
-      "destination": "/"
+      "source": "/((?!api|static|.*\\..*).*)",
+      "destination": "/index.html"
     }
   ]
 }
