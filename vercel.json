@@ -9,6 +9,10 @@
       "destination": "/sitemap.xml"
     },
     {
+      "source": "/BingSiteAuth.xml",
+      "destination": "/BingSiteAuth.xml"
+    },
+    {
       "source": "/(.*)",
       "destination": "/"
     }
