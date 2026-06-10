@@ -58,7 +58,7 @@ const cities = [
 
 const Footer = () => {
   return (
-    <footer className="text-black text-sm px-4 pt-8 pb-4">
+    <footer id="footer" className="text-black text-sm px-4 pt-8 pb-4">
       <div className="max-w-6xl mx-auto">
         <p className="mb-2 font-semibold">100% Purely Bhartiya Brand </p>
         <h2 className="text-lg font-bold mb-2">We Are Live In 48 Cities</h2>

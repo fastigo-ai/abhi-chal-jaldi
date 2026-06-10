@@ -86,7 +86,7 @@ export default function WhyUs() {
   ];
 
   return (
-    <div className="min-h-screen pt-20">
+    <div className="min-h-screen pt-20 font-sans antialiased text-slate-900">
       <Helmet>
         <title>Why Choose Door2fy? | Trusted Laptop Repair Service</title>
         <meta
@@ -111,7 +111,7 @@ export default function WhyUs() {
       <section className=" pt-12 px-4 sm:px-6 lg:px-8 bg-[#53BED1]/5 relative overflow-hidden">
         <div className="absolute top-0 right-0 w-96 h-96 bg-[#53BED1]/10 rounded-full blur-[100px] -mr-48 -mt-48" />
         <div className="max-w-4xl mx-auto text-center space-y-8 relative z-10">
-          <h1 className="text-3xl md:text-6xl font-serif font-semibold text-slate-900 leading-snug">
+          <h1 className="text-3xl md:text-6xl font-semibold text-slate-900 leading-snug">
             Why Choose <br className="hidden md:block" /> Door2fy?
           </h1>
           <p className="text-md md:text-xl text-slate-600 font-medium italic max-w-2xl mx-auto">
@@ -134,7 +134,7 @@ export default function WhyUs() {
                   <reason.icon className="h-8 w-8 text-[#53BED1] group-hover:text-white transition-colors" />
                 </div>
                 <div className="space-y-4">
-                  <h3 className="text-lg md:text-xl font-serif font-semibold mb-1">{reason.title}</h3>
+                  <h3 className="text-lg md:text-xl font-semibold mb-1">{reason.title}</h3>
                   <p className="text-sm text-slate-500">
                     {reason.description}
                   </p>
@@ -150,8 +150,8 @@ export default function WhyUs() {
         <div className="absolute inset-0 bg-gradient-to-br from-emerald-600/20 to-transparent opacity-50" />
         <div className="relative max-w-7xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-5xl font-serif font-semibold text-white mb-2 leading-snug">Our Impact</h2>
-            <p className="text-lg md-text-xl opacity-90 font-serif font-medium max-w-2xl mx-auto">
+            <h2 className="text-3xl md:text-5xl font-semibold text-white mb-2 leading-snug">Our Impact</h2>
+            <p className="text-lg md-text-xl opacity-90 font-medium max-w-2xl mx-auto">
               Numbers that speak for themselves
             </p>
           </div>
@@ -163,8 +163,8 @@ export default function WhyUs() {
               { number: "4.9/5", label: "Average Rating" },
             ].map((stat, index) => (
               <div key={index} className="text-center space-y-4 group">
-                <div className="text-3xl md:text-5xl font-serif font-semibold transition-transform group-hover:scale-110">{stat.number}</div>
-                <div className="text-md md:text-lg opacity-90 font-serif font-semibold tracking-widest uppercase">{stat.label}</div>
+                <div className="text-3xl md:text-5xl font-semibold transition-transform group-hover:scale-110">{stat.number}</div>
+                <div className="text-md md:text-lg opacity-90 font-semibold tracking-widest uppercase">{stat.label}</div>
               </div>
             ))}
           </div>
@@ -175,7 +175,7 @@ export default function WhyUs() {
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-50/50">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-5xl font-serif font-semibold text-slate-900 mb-6 leading-snug">
+            <h2 className="text-3xl md:text-5xl font-semibold text-slate-900 mb-6 leading-snug">
               What Our Customers Say
             </h2>
             <p className="text-md md:text-lg text-slate-500 font-medium italic max-w-2xl mx-auto">
@@ -197,7 +197,7 @@ export default function WhyUs() {
                   "{testimonial.text}"
                 </p>
                 <div className="pt-6 border-t border-slate-50">
-                  <div className="font-serif font-semibold text-slate-900 text-md md:text-lg">{testimonial.name}</div>
+                  <div className="font-semibold text-slate-900 text-md md:text-lg">{testimonial.name}</div>
                   <div className="text-xs md:text-sm text-[#53BED1] font-semibold uppercase tracking-wider">
                     {testimonial.location}
                   </div>
@@ -212,7 +212,7 @@ export default function WhyUs() {
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-[#53BED1] text-white relative overflow-hidden">
         <div className="absolute top-0 right-0 w-96 h-96 bg-white/10 rounded-full blur-[120px] -mr-48 -mt-48" />
         <div className="max-w-4xl mx-auto text-center space-y-10 relative z-10">
-          <h2 className="text-4xl md:text-6xl font-serif font-semibold text-white leading-snug">
+          <h2 className="text-4xl md:text-6xl font-semibold text-white leading-snug">
             Experience the <br className="hidden md:block" /> Door2fy Difference
           </h2>
           <p className="text-md md:text-lg text-white/90 leading-relaxed max-w-2xl mx-auto font-medium">
@@ -225,7 +225,7 @@ export default function WhyUs() {
             rel="noopener noreferrer"
             className="inline-block"
           >
-            <Button size="lg" className="bg-white text-[#53BED1] hover:bg-slate-50 font-serif font-semibold px-12 py-8 rounded-full text-2xl shadow-2xl transition hover:scale-[1.02] active:scale-[0.98]">
+            <Button size="lg" className="bg-white text-[#53BED1] hover:bg-slate-50 font-semibold px-12 py-8 rounded-full text-2xl shadow-2xl transition hover:scale-[1.02] active:scale-[0.98]">
               Download the App Now
             </Button>
           </a>

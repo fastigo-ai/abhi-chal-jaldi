@@ -17,85 +17,51 @@ export default function FAQs() {
         {
           question: "What is Door2fy?",
           answer:
-            "Door2fy is India's fastest Doorstep service & Quick Support  platform that connects you with verified professional Engineers who can arrive at your doorstep within 10 minutes of booking.",
+            "Door2fy is India's fastest doorstep service and quick support platform that connects you with verified professional engineers who can arrive at your location within minutes of booking.",
         },
         {
-          question: "Where is Door2fy available?",
+          question: "How do I book a service on Door2fy?",
           answer:
-            "Door2fy is currently available in major metro cities including Delhi NCR, Mumbai, Bangalore, Hyderabad, Pune, and Chennai. We're rapidly expanding to more cities.",
+            "You can easily book a service through the Door2fy app by selecting the service you need, choosing a convenient time slot, and confirming your booking.",
         },
         {
-          question: "What are your service hours?",
+          question: "How quickly can a technician reach my location?",
           answer:
-            "Door2fy services are available 24x7, 365 days a year. You can book a service anytime that suits your schedule.",
+            "Response times may vary based on your location and technician availability, but Door2fy aims to provide fast and convenient doorstep support as quickly as possible.",
         },
         {
-          question: "How do I download the Door2fy app?",
+          question: "Are Door2fy technicians verified?",
           answer:
-            "You can download the Door2fy app from Google Play Store for Android devices or Apple App Store for iOS devices. Simply search for 'Door2fy' and install.",
+            "Yes, all Door2fy technicians undergo a verification process to ensure professionalism, reliability, and quality service.",
+        },
+        {
+          question: "Can Door2fy repair both laptops and desktop computers?",
+          answer:
+            "Yes, Door2fy offers repair and support services for laptops, desktop PCs, and MacBook devices.",
+        },
+        {
+          question: "What if my issue cannot be fixed during the visit?",
+          answer:
+            "If the issue requires additional diagnostics, replacement parts, or advanced repair, the technician will guide you on the next steps and available solutions.",
+        },
+        {
+          question: "How much do Door2fy services cost?",
+          answer:
+            "Service charges depend on the type of issue and the work required. Pricing details are shared transparently before any major repair work begins.",
+        },
+        {
+          question: "Can I schedule a service for my office or business?",
+          answer:
+            "Yes, Door2fy provides tech support services for both residential customers and businesses requiring computer and IT assistance.",
+        },
+        {
+          question: "How can I contact Door2fy support?",
+          answer:
+            "You can reach Door2fy support through the Android or iOS app.",
         },
       ],
     },
-    {
-      category: "Booking & Pricing",
-      questions: [
-        {
-          question: "How do I book a service?",
-          answer:
-            "Download the app, sign up with your phone number, select your desired service, choose a time slot, and confirm your booking. A professional will be assigned immediately.",
-        },
-        {
-          question: "Can I schedule services in advance?",
-          answer:
-            "Yes! You can schedule services up to 7 days in advance through the app. We also support recurring bookings for Quick support.",
-        },
-        {
-          question: "What payment methods do you accept?",
-          answer:
-            "We accept all major payment methods including credit/debit cards, UPI, net banking, and popular mobile wallets. Payment is processed securely through the app.",
-        },
-        {
-          question: "Are there any hidden charges?",
-          answer:
-            "No, we believe in transparent pricing. The price you see in the app is the final price you pay. There are no hidden charges or surprise fees.",
-        },
-        {
-          question: "Do you offer discounts or promotions?",
-          answer:
-            "Yes! We regularly offer discounts for first-time users, bundle packages, and seasonal promotions. Check the app for current offers.",
-        },
-      ],
-    },
-    {
-      category: "Service & Quality",
-      questions: [
-        {
-          question: "Are your professionals verified?",
-          answer:
-            "Absolutely! Every Door2fy professional undergoes rigorous background verification, police clearance, and skill training before joining our platform.",
-        },
-        {
-          question: "Do I need to provide laptop hardware essentials?",
-          answer:
-            "No, our professionals come fully equipped with all necessary Laptop hardware essentials, equipment, and eco-friendly products.",
-        },
-        {
-          question: "What if I'm not satisfied with the service?",
-          answer:
-            "We offer a 100% satisfaction guarantee. If you're not happy with the service, contact us immediately and we'll either send another professional or provide a full refund.",
-        },
-        {
-          question: "Can I request the same professional for future bookings?",
-          answer:
-            "Yes! If you're happy with a particular professional, you can save them as a favorite and request them for future bookings through the app.",
-        },
-        {
-          question: "What hardware products do you use?",
-          answer:
-            "We use only certified, brand hardware as respect to the user requirements.",
-        },
-      ],
-    },
+
     {
       category: "Safety & Security",
       questions: [
@@ -139,11 +105,11 @@ export default function FAQs() {
   ];
 
   return (
-    <div className="min-h-screen pt-20">
+    <div className="min-h-screen pt-20 font-sans antialiased text-slate-900">
       {/* Hero Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-50">
         <div className="max-w-4xl mx-auto text-center space-y-6">
-          <h1 className="text-4xl md:text-6xl font-serif font-semibold text-slate-900 leading-snug">
+          <h1 className="text-4xl md:text-6xl font-semibold text-slate-900 leading-snug">
             Frequently Asked Questions
           </h1>
           <p className="text-xl md:text-2xl text-slate-600 font-medium italic">
@@ -157,7 +123,7 @@ export default function FAQs() {
         <div className="max-w-4xl mx-auto space-y-12">
           {faqCategories.map((category, categoryIndex) => (
             <div key={categoryIndex} className="space-y-6">
-              <h2 className="text-2xl md:text-3xl font-serif font-semibold text-[#53BED1]">
+              <h2 className="text-2xl md:text-3xl font-semibold text-[#53BED1]">
                 {category.category}
               </h2>
 
@@ -168,7 +134,7 @@ export default function FAQs() {
                     value={`${categoryIndex}-${index}`}
                     className="border rounded-lg px-6"
                   >
-                    <AccordionTrigger className="text-left text-lg font-serif font-semibold hover:text-[#53BED1] transition-colors">
+                    <AccordionTrigger className="text-left text-lg font-semibold hover:text-[#53BED1] transition-colors">
                       {faq.question}
                     </AccordionTrigger>
                     <AccordionContent className="text-slate-500 pt-2 pb-4 leading-relaxed font-medium">
@@ -186,7 +152,9 @@ export default function FAQs() {
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-100/50">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-serif font-semibold text-slate-900 mb-4">Still Have Questions?</h2>
+            <h2 className="text-3xl md:text-4xl font-semibold text-slate-900 mb-4">
+              Still Have Questions?
+            </h2>
             <p className="text-xl text-slate-500 font-medium">
               Our support team is here to help you 24x7
             </p>
@@ -247,7 +215,7 @@ export default function FAQs() {
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center space-y-8">
-          <h2 className="text-3xl md:text-5xl font-serif font-semibold text-slate-900 leading-snug">
+          <h2 className="text-3xl md:text-5xl font-semibold text-slate-900 leading-snug">
             Ready to Get Started?
           </h2>
 
