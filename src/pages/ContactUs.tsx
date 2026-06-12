@@ -118,9 +118,9 @@ const Contact = () => {
               </p>
 
               <div className="mb-8 flex w-full max-w-[370px]">
-                <div className="mr-6 flex h-[60px] w-[60px] items-center justify-center rounded bg-primary/5 text-primary">
+                {/* <div className="mr-6 flex h-[60px] w-[60px] items-center justify-center rounded bg-primary/5 text-primary">
                   📞
-                </div>
+                </div> */}
                 {/* <div>
                   <h4 className="text-xl font-bold text-dark dark:text-white">
                     Phone Number

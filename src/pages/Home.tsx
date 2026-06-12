@@ -10,14 +10,14 @@ import phone1 from "@/assets/phone1.png";
 /* ================= HERO SECTION ================= */
 const HeroSection = () => {
   return (
-    <section className="w-full bg-[#f0fbff] overflow-hidden relative min-h-[600px] flex flex-col -mt-8 -mb-8 bg-[#F0FBFF]">
+    <section className="w-full bg-[#F0FBFF] overflow-hidden relative min-h-[80dvh] lg:min-h-[800px] flex flex-col">
       {/* Background Shapes */}
-      <div className="absolute top-[-10%] right-[-10%] w-[60%] aspect-square bg-[#F0FBFF] rounded-full -z-10 blur-3xl opacity-50"></div>
-      <div className="absolute bottom-[10%] left-[-5%] w-[40%] aspect-square bg-[#E8F8FB] rounded-full -z-10 blur-3xl opacity-30"></div>
+      <div className="absolute top-[-10%] right-[-10%] w-[60%] aspect-square bg-[#F0FBFF] rounded-full -z-10 blur-3xl opacity-50 transform-gpu"></div>
+      <div className="absolute bottom-[10%] left-[-5%] w-[40%] aspect-square bg-[#E8F8FB] rounded-full -z-10 blur-3xl opacity-30 transform-gpu"></div>
 
       {/* Focus Lights - Bottom Corners */}
-      <div className="absolute -bottom-24 -left-24 w-[500px] h-[500px] bg-[#4FB7D4]/10 rounded-full -z-10 blur-[120px]"></div>
-      <div className="absolute -bottom-24 -right-24 w-[500px] h-[500px] bg-blue-400/10 rounded-full -z-10 blur-[120px]"></div>
+      <div className="absolute -bottom-24 -left-24 w-[500px] h-[500px] bg-[#4FB7D4]/10 rounded-full -z-10 blur-[120px] transform-gpu"></div>
+      <div className="absolute -bottom-24 -right-24 w-[500px] h-[500px] bg-blue-400/10 rounded-full -z-10 blur-[120px] transform-gpu"></div>
       
       {/* Top Header Row - Full Width Border */}
       <div className="max-w-7xl mx-auto px-6 lg:px-8 w-full flex flex-col flex-grow pt-10 lg:pt-24">
@@ -47,28 +47,28 @@ const HeroSection = () => {
 
             {/* Buttons */}
             <div className="space-y-6">
-              <div className="flex flex-col sm:flex-row flex-wrap gap-4 justify-center lg:justify-start items-center mt-2">
+              <div className="flex flex-row gap-3 justify-center lg:justify-start items-center mt-2">
                 <a
                   href="https://play.google.com/store/apps/details?id=com.Door2fy&pli=1"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="transition-all hover:scale-105 active:scale-95 block shadow-lg rounded-xl overflow-hidden"
+                  className="transition-all hover:scale-105 active:scale-95 block rounded-xl overflow-hidden shadow-lg"
                 >
                   <img
                     src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
                     alt="Google Play"
-                    className="h-[48px] lg:h-[56px] w-auto"
+                    className="h-[44px] md:h-[48px] lg:h-[56px] w-auto"
                   />
                 </a>
 
                 <a
                   href="#"
-                  className="transition-all hover:scale-105 active:scale-95 block shadow-lg rounded-xl overflow-hidden"
+                  className="transition-all hover:scale-105 active:scale-95 block rounded-xl overflow-hidden shadow-lg"
                 >
                   <img
                     src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Download_on_the_App_Store_Badge.svg"
                     alt="App Store"
-                    className="h-[48px] lg:h-[56px] w-auto"
+                    className="h-[44px] md:h-[48px] lg:h-[56px] w-auto"
                   />
                 </a>
               </div>
@@ -129,7 +129,7 @@ const HeroSection = () => {
           </div>
 
           {/* Right Image Section */}
-          <div className="lg:col-span-5 relative flex justify-center items-center lg:justify-end order-1 lg:order-2">
+          <div className="lg:col-span-5 relative flex justify-center items-center lg:justify-end order-1 lg:order-2 mt-12 lg:mt-0">
             {/* Background Shape */}
             <div className="absolute w-[100%] lg:w-[110%] h-[100%] lg:h-[110%] bg-blue-50/50 rounded-[30px] lg:rounded-[40px] rotate-3 -z-10 -right-10"></div>
 
@@ -138,12 +138,12 @@ const HeroSection = () => {
               <img
                 src={heroTechnician}
                 alt="IT Support"
-                className="relative z-10 w-full h-[750px] drop-shadow-[0_30px_60px_rgba(0,0,0,0.12)] object-contain select-none"
+                className="relative z-10 w-full h-[630px] drop-shadow-[0_30px_60px_rgba(0,0,0,0.12)] object-contain select-none"
                 style={{ imageRendering: "-webkit-optimize-contrast" }}
               />
 
               {/* Floating Card 1 */}
-              <div className="absolute top-[35%] -left-12 bg-white shadow-2xl rounded-2xl lg:rounded-3xl p-2 lg:p-3 z-20 border border-gray-50 flex items-center gap-3 lg:gap-4 animate-bounce-slow">
+              <div className="absolute top-[35%] lg:-left-12 bg-white shadow-2xl rounded-2xl lg:rounded-3xl p-2 lg:p-3 z-20 border border-gray-50 flex items-center gap-3 lg:gap-4 animate-bounce-slow">
                 <div className="w-8 h-8 lg:w-10 lg:h-14 bg-blue-50 rounded-lg lg:rounded-xl flex items-center justify-center text-blue-500 text-sm lg:text-base">
                   🕒
                 </div>
@@ -158,7 +158,7 @@ const HeroSection = () => {
               </div>
 
               {/* Floating Card 2 */}
-              <div className="absolute top-4 -right-1 bg-white shadow-2xl rounded-2xl lg:rounded-3xl p-2 lg:p-3 z-20 border border-gray-50 flex items-center gap-3 lg:gap-4">
+              <div className="absolute top-16 -right-1 bg-white shadow-2xl rounded-2xl lg:rounded-3xl p-2 lg:p-3 z-20 border border-gray-50 flex items-center gap-3 lg:gap-4">
                 <div className="w-8 h-8 lg:w-10 lg:h-10 bg-blue-50 rounded-lg lg:rounded-xl flex items-center justify-center text-blue-500 text-xs lg:text-lg">
                   24
                 </div>
@@ -208,7 +208,7 @@ const ServicesSection = () => {
   return (
     <section className="bg-white py-8 md:py-12">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
-        <div className="mb-12 md:mb-20 text-center lg:text-left">
+        <div className="mb-12 md:mb-20 text-left">
           <span className="text-[#4FB7D4] font-bold text-[14px] md:text-[15px] mb-3 md:mb-4 pl-1 block">Skip the tech stress.</span>
           <h2 className="text-3xl md:text-4xl lg:text-5xl lg:text-[4.5rem] font-bold mb-4 text-gray-900 tracking-tight leading-[1.2]">
             Expert tech support <br /> delivered fast
@@ -216,29 +216,29 @@ const ServicesSection = () => {
           <p className="text-gray-500 text-[15px] md:text-sm font-medium leading-relaxed">Our team of verified Door2fy Professionals are always on time</p>
         </div>
         {/* Responsive Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+        <div className="grid grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-6 md:gap-8">
           {services.map((service, i) => (
             <a 
               key={i} 
               href="#form-section"
-              className="reveal group p-6 bg-[#F8FDFF] rounded-[2.5rem] border border-[#E1F7F9] hover:border-[#4FB7D4] hover:bg-white transition-all duration-300 text-left flex flex-col justify-between space-y-6 shadow-sm hover:shadow-[0_25px_50px_rgba(79,183,212,0.1)] hover:-translate-y-1.5"
+              className="reveal group p-4 sm:p-6 bg-[#F8FDFF] rounded-3xl sm:rounded-[2.5rem] border border-[#E1F7F9] hover:border-[#4FB7D4] hover:bg-white transition-all duration-300 text-left flex flex-col justify-between space-y-4 sm:space-y-6 shadow-sm hover:shadow-[0_25px_50px_rgba(79,183,212,0.1)] hover:-translate-y-1.5"
             >
               {/* Service Image Container */}
-              <div className="w-full h-48 rounded-[1.8rem] bg-[#F0FAFC] flex items-center justify-center p-6 overflow-hidden relative group-hover:bg-[#E8F7FA] transition-colors duration-300">
+              <div className="w-full h-24 sm:h-48 rounded-2xl sm:rounded-[1.8rem] bg-[#F0FAFC] flex items-center justify-center p-3 sm:p-6 overflow-hidden relative group-hover:bg-[#E8F7FA] transition-colors duration-300">
                 <img 
                   src={macbookSupportImg} 
                   alt={service.title} 
-                  className="max-h-full max-w-full object-contain transition-transform duration-500 group-hover:scale-108 group-hover:-translate-y-1 drop-shadow-[0_8px_16px_rgba(0,0,0,0.06)]" 
+                  className="max-h-full max-w-full object-contain transition-transform duration-500 group-hover:scale-105 group-hover:-translate-y-1 drop-shadow-[0_8px_16px_rgba(0,0,0,0.06)]" 
                 />
               </div>
               
               {/* Content Container */}
               <div className="flex flex-col flex-grow w-full justify-between">
-                <h3 className="text-xl md:text-2xl font-bold mb-4 text-gray-900 tracking-tight group-hover:text-[#4FB7D4] transition-colors duration-300">{service.title}</h3>
+                <h3 className="text-[13px] sm:text-xl md:text-2xl font-bold mb-2 sm:mb-4 text-gray-900 tracking-tight group-hover:text-[#4FB7D4] transition-colors duration-300 leading-snug">{service.title}</h3>
                 <div className="flex items-center justify-between pt-2 border-t border-gray-50 group-hover:border-[#E1F7F9] transition-colors duration-300">
-                  <span className="text-sm font-bold text-gray-500 group-hover:text-gray-900 transition-colors duration-300">Click here</span>
-                  <div className="w-10 h-10 rounded-full bg-[#E1F7F9] text-[#4FB7D4] flex items-center justify-center transition-all duration-300 group-hover:bg-[#4FB7D4] group-hover:text-white transform group-hover:translate-x-1">
-                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <span className="text-[10px] sm:text-sm font-bold text-gray-500 group-hover:text-gray-900 transition-colors duration-300 hidden sm:block">Click here</span>
+                  <div className="w-6 h-6 sm:w-10 sm:h-10 rounded-full bg-[#E1F7F9] text-[#4FB7D4] flex items-center justify-center transition-all duration-300 group-hover:bg-[#4FB7D4] group-hover:text-white transform group-hover:translate-x-1 ml-auto">
+                    <svg className="w-3 h-3 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3" />
                     </svg>
                   </div>
@@ -304,32 +304,32 @@ const WhyChooseUsSection = () => {
 
       <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
         {/* Top Header Section */}
-        <div className="mb-16 md:mb-20 text-center lg:text-left">
+        <div className="mb-16 md:mb-20 text-left">
           <span className="text-[#4FB7D4] font-bold text-[14px] md:text-[15px] mb-3 md:mb-4 pl-1 block">Why Choose Door2fy?</span>
           <h2 className="text-3xl md:text-4xl lg:text-5xl lg:text-[4.5rem] font-bold mb-4 text-gray-900 tracking-tight leading-[1.2]">
             Trusted Technology <br /> Solutions for Every Need
           </h2>
-          <p className="text-gray-500 text-base lg:text-lg max-w-[60%] mt-4 mx-auto lg:mx-0 leading-relaxed font-normal">
+          <p className="text-gray-500 text-base lg:text-lg max-w-full lg:max-w-[60%] mt-4 leading-relaxed font-normal">
             <span className="text-[#45afcb] font-bold">Door2fy</span> provides laptop repair with tech support to restore performance and maximize productivity.
           </p>
         </div>
 
         {/* 3D Stats Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 mb-12 lg:mb-14">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6 md:gap-8 mb-12 lg:mb-14">
           {stats.map((item, index) => (
             <div
               key={index}
-              className="group relative bg-white rounded-[2.5rem] p-8 md:p-10 text-center transition-all duration-500 border border-gray-100 shadow-[0_10px_30px_rgba(0,0,0,0.02)] hover:shadow-[0_30px_60px_rgba(79,183,212,0.12)] flex flex-col items-center justify-center overflow-hidden"
+              className="group relative bg-white rounded-3xl sm:rounded-[2.5rem] p-4 sm:p-8 md:p-10 text-center transition-all duration-500 border border-gray-100 shadow-[0_10px_30px_rgba(0,0,0,0.02)] hover:shadow-[0_30px_60px_rgba(79,183,212,0.12)] flex flex-col items-center justify-center overflow-hidden"
             >
-              <div className="w-14 h-14 rounded-2xl bg-[#E1F7F9] text-[#4FB7D4] flex items-center justify-center mb-6 shadow-lg transform group-hover:scale-110 group-hover:rotate-6 transition-all duration-500">
-                {item.icon}
+              <div className="w-10 h-10 sm:w-14 sm:h-14 rounded-xl sm:rounded-2xl bg-[#E1F7F9] text-[#4FB7D4] flex items-center justify-center mb-3 sm:mb-6 shadow-lg transform group-hover:scale-110 group-hover:rotate-6 transition-all duration-500">
+                <div className="scale-75 sm:scale-100">{item.icon}</div>
               </div>
 
-              <h3 className="text-3xl md:text-4xl font-extrabold text-gray-900 mb-2 tracking-tight">
+              <h3 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-gray-900 mb-1 sm:mb-2 tracking-tight">
                 {item.num}
               </h3>
 
-              <p className="text-gray-500 text-[10px] md:text-[11px] font-bold uppercase tracking-widest leading-tight">
+              <p className="text-gray-500 text-[8px] sm:text-[10px] md:text-[11px] font-bold uppercase tracking-widest leading-tight">
                 {item.label}
               </p>
             </div>
@@ -436,7 +436,7 @@ const TestimonialsSection = () => {
 
   const ReviewCard = ({ r }: { r: Review }) => (
     <div
-      className="w-[320px] md:w-[400px] h-[220px] md:h-[240px] p-6 md:p-8 rounded-[2.5rem] bg-white border border-gray-100 relative overflow-hidden flex-shrink-0 mx-4 transition-all duration-500 hover:shadow-[0_20px_50px_rgba(0,0,0,0.05)] flex flex-col justify-between"
+      className="w-[280px] sm:w-[320px] md:w-[400px] h-[190px] sm:h-[220px] md:h-[240px] p-5 md:p-8 rounded-3xl md:rounded-[2.5rem] bg-white border border-gray-100 relative overflow-hidden flex-shrink-0 mx-3 sm:mx-4 transition-all duration-500 hover:shadow-[0_20px_50px_rgba(0,0,0,0.05)] flex flex-col justify-between"
     >
       {/* Radial Dot Pattern Background */}
       <div className="absolute inset-0 opacity-[0.05]" style={{ backgroundImage: "radial-gradient(circle, #4FB7D4 1.5px, transparent 1.5px)", backgroundSize: "20px 20px" }} />
@@ -557,7 +557,7 @@ const PartnerSection = () => {
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
           {/* LEFT: Content */}
-          <div className="flex flex-col items-start text-left">
+          <div className="flex flex-col items-start text-left pl-4 lg:pl-0">
             <span className="uppercase tracking-[0.4em] text-[#4FB7D4] text-[10px] md:text-[11px] font-bold block mb-6">
               Partner With Us
             </span>
@@ -569,7 +569,7 @@ const PartnerSection = () => {
               Join our network of elite experts and grow your business with the most trusted IT brand in the region.
             </p>
             {/* Bullet Points */}
-            <div className="space-y-8 w-full">
+            <div className="space-y-8 w-full pr-4 lg:pr-0">
               {[
                 "Get more high-quality leads and grow your business",
                 "Flexible work schedules and higher earnings",
