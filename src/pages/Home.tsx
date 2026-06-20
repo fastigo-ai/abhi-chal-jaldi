@@ -1,5 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { Helmet } from "react-helmet-async";
+import { Link } from "react-router-dom";
+import { services as allServices } from "@/data/services";
+import toast from "react-hot-toast";
 
 // Assets
 import heroTechnician from "@/assets/hero-section.png";
@@ -196,14 +199,7 @@ const HeroSection = () => {
 
 /* ================= SERVICES SECTION ================= */
 const ServicesSection = () => {
-  const services = [
-    { title: "Macbook Support" },
-    { title: "Windows Support" },
-    { title: "Networking" },
-    { title: "Hardware Repair" },
-    { title: "Data Recovery" },
-    { title: "IT AMC" },
-  ];
+  const services = allServices.slice(0, 6);
 
   return (
     <section className="bg-white py-8 md:py-12">
@@ -217,18 +213,18 @@ const ServicesSection = () => {
         </div>
         {/* Responsive Grid */}
         <div className="grid grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-6 md:gap-8">
-          {services.map((service, i) => (
-            <a 
-              key={i} 
-              href="#form-section"
+          {services.map((service) => (
+            <Link 
+              key={service.id} 
+              to={`/service/${service.slug}`}
               className="reveal group p-4 sm:p-6 bg-[#F8FDFF] rounded-3xl sm:rounded-[2.5rem] border border-[#E1F7F9] hover:border-[#4FB7D4] hover:bg-white transition-all duration-300 text-left flex flex-col justify-between space-y-4 sm:space-y-6 shadow-sm hover:shadow-[0_25px_50px_rgba(79,183,212,0.1)] hover:-translate-y-1.5"
             >
               {/* Service Image Container */}
-              <div className="w-full h-24 sm:h-48 rounded-2xl sm:rounded-[1.8rem] bg-[#F0FAFC] flex items-center justify-center p-3 sm:p-6 overflow-hidden relative group-hover:bg-[#E8F7FA] transition-colors duration-300">
+              <div className="w-full h-32 sm:h-48 rounded-2xl sm:rounded-[1.8rem] overflow-hidden relative">
                 <img 
-                  src={macbookSupportImg} 
+                  src={service.image} 
                   alt={service.title} 
-                  className="max-h-full max-w-full object-contain transition-transform duration-500 group-hover:scale-105 group-hover:-translate-y-1 drop-shadow-[0_8px_16px_rgba(0,0,0,0.06)]" 
+                  className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-110" 
                 />
               </div>
               
@@ -244,7 +240,7 @@ const ServicesSection = () => {
                   </div>
                 </div>
               </div>
-            </a>
+            </Link>
           ))}
         </div>
       </div>
@@ -535,18 +531,53 @@ const PartnerSection = () => {
     category: "",
     message: ""
   });
+  const [loading, setLoading] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("Partner registration:", formData);
-    alert("Thank you for your interest! We will contact you soon.");
-    setFormData({
-      fullName: "",
-      email: "",
-      phone: "",
-      category: "",
-      message: ""
-    });
+
+    if (!formData.fullName || !formData.email || !formData.phone || !formData.category) {
+      toast.error("Please fill in all required fields.");
+      return;
+    }
+
+    setLoading(true);
+
+    const formDataToSend = new FormData();
+    formDataToSend.append("access_key", "54f10e46-15c3-4574-aac3-09f539865286");
+    formDataToSend.append("subject", "New Partner Registration");
+    formDataToSend.append("from_name", "Partner Register Form");
+    formDataToSend.append("name", formData.fullName);
+    formDataToSend.append("email", formData.email);
+    formDataToSend.append("phone", formData.phone);
+    formDataToSend.append("category", formData.category);
+    formDataToSend.append("message", formData.message);
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formDataToSend,
+      });
+
+      const data = await response.json();
+
+      if (data.success) {
+        toast.success("Partnership request sent successfully! ✅");
+        setFormData({
+          fullName: "",
+          email: "",
+          phone: "",
+          category: "",
+          message: ""
+        });
+      } else {
+        toast.error("Something went wrong ❌");
+      }
+    } catch (error) {
+      toast.error("Network error. Please try again later.");
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -672,9 +703,10 @@ const PartnerSection = () => {
 
               <button
                 type="submit"
-                className="w-full h-16 md:h-20 rounded-2xl bg-[#3EA2BE] hover:bg-[#3EA2BE] text-white text-sm md:text-base font-extrabold uppercase tracking-widest shadow-[0_15px_40px_rgba(79,183,212,0.35)] transition-all duration-300 hover:-translate-y-1 active:scale-[0.98]"
+                disabled={loading}
+                className={`w-full h-16 md:h-20 rounded-2xl bg-[#3EA2BE] hover:bg-[#3EA2BE] text-white text-sm md:text-base font-extrabold uppercase tracking-widest shadow-[0_15px_40px_rgba(79,183,212,0.35)] transition-all duration-300 hover:-translate-y-1 active:scale-[0.98] ${loading ? "opacity-70 cursor-not-allowed" : ""}`}
               >
-                Send Partnership Request
+                {loading ? "Sending..." : "Send Partnership Request"}
               </button>
             </form>
           </div>

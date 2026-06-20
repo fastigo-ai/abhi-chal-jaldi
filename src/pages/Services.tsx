@@ -1,91 +1,19 @@
 import { Helmet } from "react-helmet-async";
 
-import physical from "@/assets/banner/physical-damage.png";
-import system from "@/assets/banner/my system is slow.png";
-import port from "@/assets/banner/port issue.png";
-import speaker from "@/assets/banner/speaker,camera.png";
-
-import Software from "@/assets/quickSupport/Software not opening or crashing.png";
-import excel from "@/assets/quickSupport/excel not working.png";
-import hanging from "@/assets/quickSupport/laptop hanging or freezing.png";
-import macbook from "@/assets/quickSupport/macbook starting slowly.png";
-import macos from "@/assets/quickSupport/macos update no installing.png";
-import problem from "@/assets/quickSupport/not sure about the problem.png";
+import { Link } from "react-router-dom";
+import { services } from "@/data/services";
 
 export default function Services() {
-  const services = [
-    {
-      id: 1,
-      title: "Excel Not Working",
-      image: excel,
-      description: "Quick diagnosis & solution within 5–10 minutes",
-    },
-    {
-      id: 2,
-      title: "Laptop Hanging / Freezing",
-      image: hanging,
-      description: "Performance optimization & instant fix",
-    },
-    {
-      id: 3,
-      title: "MacBook Starting Slowly",
-      image: macbook,
-      description: "Speed boost & system cleanup",
-    },
-    {
-      id: 4,
-      title: "MacOS Update Not Installing",
-      image: macos,
-      description: "Update & OS troubleshooting",
-    },
-    {
-      id: 5,
-      title: "Not Sure About the Problem",
-      image: problem,
-      description: "Expert diagnosis for any issue",
-    },
-    {
-      id: 6,
-      title: "Software Not Opening",
-      image: Software,
-      description: "Crash & compatibility fixes",
-    },
-    {
-      id: 7,
-      title: "My System is Slow",
-      image: system,
-      description: "System speed & health optimization",
-    },
-    {
-      id: 8,
-      title: "Physical Damage",
-      image: physical,
-      description: "Screen & hardware repair",
-    },
-    {
-      id: 9,
-      title: "Port Issue",
-      image: port,
-      description: "Charging & USB port fixes",
-    },
-    {
-      id: 10,
-      title: "Speaker / Camera Issue",
-      image: speaker,
-      description: "Audio & camera troubleshooting",
-    },
-  ];
-
   // Same masonry layout logic
   const layout = [
-    "col-span-2 row-span-3",
-    "col-span-1 row-span-2",
-    "col-span-1 row-span-2",
-    "col-span-2 row-span-2",
-    "col-span-1 row-span-2",
-    "col-span-1 row-span-1",
-    "col-span-1 row-span-1",
-    "col-span-2 row-span-2",
+    "md:col-span-2 md:row-span-3 h-[250px] md:h-auto",
+    "md:col-span-1 md:row-span-2 h-[250px] md:h-auto",
+    "md:col-span-1 md:row-span-2 h-[250px] md:h-auto",
+    "md:col-span-2 md:row-span-2 h-[250px] md:h-auto",
+    "md:col-span-1 md:row-span-2 h-[250px] md:h-auto",
+    "md:col-span-1 md:row-span-1 h-[250px] md:h-auto",
+    "md:col-span-1 md:row-span-1 h-[250px] md:h-auto",
+    "md:col-span-2 md:row-span-2 h-[250px] md:h-auto",
   ];
 
   return (
@@ -113,16 +41,17 @@ export default function Services() {
         <div
           className="
             grid grid-cols-1 md:grid-cols-4
-            auto-rows-[180px]
+            md:auto-rows-[180px]
             gap-6
             mb-32
           "
         >
           {services.map((service, index) => (
-            <div
+            <Link
+              to={`/service/${service.slug}`}
               key={service.id}
               className={`${layout[index % layout.length]}
-                group relative overflow-hidden rounded-xl shadow-lg cursor-pointer`}
+                group relative overflow-hidden rounded-xl shadow-lg cursor-pointer block`}
             >
               {/* Image */}
               <img
@@ -140,7 +69,7 @@ export default function Services() {
                 className="
                   absolute inset-0
                   bg-gradient-to-t from-black/90 via-black/50 to-transparent
-                  opacity-0 group-hover:opacity-100
+                  opacity-100 md:opacity-0 group-hover:opacity-100
                   transition-opacity duration-500
                   flex items-end
                 "
@@ -148,7 +77,7 @@ export default function Services() {
                 <div
                   className="
                     p-6 text-white
-                    translate-y-6 group-hover:translate-y-0
+                    translate-y-0 md:translate-y-6 group-hover:translate-y-0
                     transition-transform duration-500
                   "
                 >
@@ -164,7 +93,7 @@ export default function Services() {
                   </span>
                 </div>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </div>
