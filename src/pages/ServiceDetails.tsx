@@ -90,7 +90,7 @@ export default function ServiceDetails() {
 
           <div className="pt-8 border-t border-gray-100 flex flex-col sm:flex-row gap-4">
             <Link
-              to="/contact-us"
+              to="https://play.google.com/store/apps/details?id=com.Door2fy&pli=1"
               className="inline-flex justify-center items-center px-8 py-4 bg-[#53BED1] text-white text-lg font-semibold rounded-full hover:bg-[#3FA4B5] transition-all duration-300 shadow-lg shadow-[#53BED1]/30 hover:shadow-[#53BED1]/50 transform hover:-translate-y-1"
             >
               Book Service Now
