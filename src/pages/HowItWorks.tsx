@@ -1,249 +1,492 @@
-import { Card } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import { SEOHead } from "@/components/SEOHead";
 import {
-  Download,
+  Smartphone,
   MapPin,
-  Calendar,
-  UserCheck,
-  Sparkles,
-  Star,
-  Clock,
-  CreditCard,
+  Wrench,
   CheckCircle2,
+  Clock,
+  ShieldCheck,
+  Zap,
+  Sparkles,
+  ArrowRight,
+  ChevronDown,
+  Award,
+  Star,
+  Users,
+  BadgeCheck,
+  CreditCard,
 } from "lucide-react";
-import { Helmet } from "react-helmet-async";
+
+// Assets
+import phone1 from "@/assets/phone1.png";
+import door2fyTechLabEngineers from "@/assets/door2fy-tech-lab-engineers.png";
 
 export default function HowItWorks() {
+  const [openFaq, setOpenFaq] = useState<number | null>(0);
+
   const steps = [
     {
-      number: "1",
-      icon: Download,
-      title: "Download the App",
+      number: "01",
+      icon: Smartphone,
+      title: "Book in 60 Seconds",
+      subtitle: "Online or via App",
       description:
-        "Get the Pronto app from Google Play Store or Apple App Store. Sign up in less than a minute with your phone number.",
+        "Select your laptop brand and describe the issue (cracked display, battery failure, slow OS, or water damage). Choose your location and preferred time slot in under 1 minute.",
+      badge: "Step 1",
     },
     {
-      number: "2",
-      icon: MapPin,
-      title: "Set Your Location",
+      number: "02",
+      icon: UserCheckIcon,
+      title: "Verified Engineer Assigned",
+      subtitle: "Background Checked Pro",
       description:
-        "Enter your address and let us know where you need Quick Support services. We serve across metro cities in India.",
+        "Our system instantly matches you with a certified nearby Door2fy technician. You receive the engineer's photo, verified ID, and real-time GPS tracking details.",
+      badge: "Step 2",
     },
     {
-      number: "3",
-      icon: Calendar,
-      title: "Choose Your Service",
+      number: "03",
+      icon: Clock,
+      title: "10–30 Min Doorstep Arrival",
+      subtitle: "Fully Equipped at Your Door",
       description:
-        "Select from our range of Quick Support services. Pick a time that works best for you - we're available 24x7.",
+        "The technician arrives at your home or office equipped with professional diagnostic kits and genuine OEM spare parts for instant on-site troubleshooting.",
+      badge: "Step 3",
     },
     {
-      number: "4",
-      icon: UserCheck,
-      title: "Professional Assigned",
+      number: "04",
+      icon: Wrench,
+      title: "Live On-Site Repair & Testing",
+      subtitle: "100% Data Safe & Transparent",
       description:
-        "A verified professional Engineer near you is automatically assigned. Track their arrival in real-time on the app.",
+        "Your device is diagnosed and repaired right in front of your eyes. Complete hardware testing is conducted to verify performance before you pay.",
+      badge: "Step 4",
     },
     {
-      number: "5",
-      icon: Sparkles,
-      title: "Service Completed",
+      number: "05",
+      icon: Award,
+      title: "Warranty & Digital Invoice",
+      subtitle: "Up to 90 Days Protection",
       description:
-        "Our professional arrives within 10 minutes and completes the job to perfection. All materials and equipment included.",
+        "Receive an official digital tax invoice and up to 90 days comprehensive warranty on all replaced spare parts and repair services.",
+      badge: "Step 5",
     },
     {
-      number: "6",
+      number: "06",
       icon: Star,
-      title: "Rate & Review",
+      title: "Pay After Satisfaction",
+      subtitle: "Multiple Payment Modes",
       description:
-        "Share your experience and help us maintain our high standards. Your feedback helps us serve you better.",
+        "Pay securely via UPI, credit/debit card, net banking, or cash only when your laptop is running at peak performance and you are 100% satisfied.",
+      badge: "Step 6",
     },
   ];
 
   const features = [
     {
-      icon: Clock,
-      title: "Real-Time Tracking",
+      icon: Zap,
+      title: "Live GPS Technician Tracking",
       description:
-        "Know exactly when your professional will arrive with live GPS tracking",
+        "Know exactly when your engineer arrives with real-time map tracking and instant ETA alerts.",
+    },
+    {
+      icon: ShieldCheck,
+      title: "Zero Data Risk (Live Repair)",
+      description:
+        "No black-box laboratory drops. Everything is repaired right in front of your desk with complete privacy.",
     },
     {
       icon: CreditCard,
-      title: "Cashless Payments",
-      description: "Pay securely through the app with multiple payment options",
+      title: "Transparent Upfront Pricing",
+      description:
+        "Exact price estimates provided before starting work with zero hidden diagnosis or visiting charges.",
+    },
+  ];
+
+  const stats = [
+    {
+      num: "60 Sec",
+      label: "Average Booking Time",
+      icon: <Clock className="w-5 h-5 text-[#04B6EA]" />,
     },
     {
-      icon: CheckCircle2,
-      title: "Quality Checks",
-      description:
-        "Every service is quality-checked to ensure your complete satisfaction",
+      num: "10-30m",
+      label: "Rapid Doorstep Arrival",
+      icon: <Zap className="w-5 h-5 text-[#04B6EA]" />,
+    },
+    {
+      num: "100%",
+      label: "Verified & Certified Techs",
+      icon: <ShieldCheck className="w-5 h-5 text-[#04B6EA]" />,
+    },
+    {
+      num: "90 Days",
+      label: "Comprehensive Warranty",
+      icon: <Award className="w-5 h-5 text-emerald-500" />,
     },
   ];
 
   const faqs = [
     {
-      question: "How quickly can I get service?",
-      answer:
-        "Our professionals typically arrive within 10 minutes of booking, depending on your location and time of day.",
+      q: "How fast can a Door2fy engineer reach my location?",
+      a: "Our certified engineers arrive at your home or office within 10 to 30 minutes in Delhi NCR, Mumbai, Bengaluru, Pune, and 50+ supported cities across India.",
     },
     {
-      question: "Are the professionals background verified?",
-      answer:
-        "Yes, every professional Engineer goes through rigorous background verification and police clearance before joining our team.",
+      q: "Are the technicians background-verified and certified?",
+      a: "Yes, 100%. Every Door2fy engineer undergoes police verification, strict background checks, and rigorous hands-on technical training for Apple MacBook, Dell, HP, Lenovo, ASUS, and Acer systems.",
     },
     {
-      question: "What if I'm not satisfied with the service?",
-      answer:
-        "We offer a 100% satisfaction guarantee. If you're not happy, we'll send someone else or provide a full refund.",
+      q: "Do I need to leave my laptop at a service center?",
+      a: "No! 95% of hardware and software issues are repaired right at your doorstep in front of your eyes, ensuring total privacy and zero data leakage.",
     },
     {
-      question: "Do I need to provide Laptop Hardware?",
-      answer:
-        "No, our professionals come fully equipped with all necessary Laptop materials and equipment.",
+      q: "What if the issue is not fixed or recurs later?",
+      a: "All our repairs and genuine replacement parts are backed by up to 90 days service warranty. If an issue reoccurs within the warranty period, we fix it with zero hassle.",
+    },
+    {
+      q: "What payment methods are supported?",
+      a: "We accept Google Pay, PhonePe, Paytm, UPI, Credit Cards, Debit Cards, Net Banking, and Cash on Service. You pay only after you are completely satisfied with the repair.",
     },
   ];
 
+  function UserCheckIcon(props: React.SVGProps<SVGSVGElement>) {
+    return (
+      <svg
+        {...props}
+        className="w-7 h-7"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="2"
+          d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
+        />
+      </svg>
+    );
+  }
+
   return (
-    <div className="min-h-screen pt-20 bg-slate-50 font-sans antialiased text-slate-900">
-      <Helmet>
-        <title>How It Works | Door2fy - 10 Minute Doorstep Service</title>
-        <meta
-          name="description"
-          content="Learn how Door2fy works — from booking to doorstep repair in 10 minutes. Quick, professional, and guaranteed tech support made simple."
-        />
-        <meta
-          name="keywords"
-          content="door2fy repair process, laptop repair booking, doorstep repair service, laptop pickup and drop, easy repair steps, how laptop repair works"
-        />
-        <meta property="og:title" content="How Door2fy Works | Quick Doorstep Tech Support" />
-        <meta
-          property="og:description"
-          content="Book a verified engineer, track in real-time, and get tech support at your doorstep within 10 minutes. Learn how it works!"
-        />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://door2fy.com/how-it-works" />
-      </Helmet>
-      {/* Hero Section */}
-      <section className="pt-12 px-4 sm:px-6 lg:px-8 bg-[#53BED1]/5 relative overflow-hidden">
-        <div className="absolute top-0 right-0 w-96 h-96 bg-[#53BED1]/10 rounded-full blur-[100px] -mr-48 -mt-48" />
-        <div className="max-w-4xl mx-auto text-center space-y-8 relative z-10">
-          <h1 className="text-4xl md:text-6xl font-semibold text-slate-900 leading-snug">
-            HOW IT <span className="text-[#53BED1] text-gradient">WORKS</span>
-          </h1>
-          <p className="text-md md:text-lg text-slate-600 leading-relaxed max-w-2xl mx-auto font-medium">
-            Premium Engineering support at your doorstep in 6 seamless steps. No waiting, no friction, just results.
-          </p>
-        </div>
-      </section>
+    <div className="min-h-screen bg-white font-sans antialiased text-slate-900">
+      <SEOHead
+        title="How It Works | Door2fy - Doorstep Laptop Repair in 10-30 Mins"
+        description="Learn how Door2fy works: 1. Book in 60s, 2. Certified technician assigned, 3. Fast doorstep arrival, 4. Tested & guaranteed repair with 90-day warranty."
+        canonicalUrl="https://www.door2fy.in/how-it-works"
+        keywords="door2fy repair process, laptop repair booking, doorstep repair service, laptop pickup and drop, easy repair steps, how laptop repair works"
+      />
 
-      {/* Steps Section */}
-      <section className=" pb-10 pt-8  px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {steps.map((step, index) => (
-              <Card
-                key={index}
-                className="p-6 md:p-4 space-y-6 hover:shadow-premium transition-all duration-500 hover:-translate-y-2 border border-slate-100 rounded-[2rem] relative overflow-hidden group bg-white"
-              >
-                {/* Step Number Overlay */}
-                <div className="absolute -top-10 -right-10 text-[120px] font-semibold text-slate-50 group-hover:text-[#53BED1]/5 transition-colors select-none">
-                  {step.number}
-                </div>
+      {/* ================= HERO SECTION ================= */}
+      <section className="w-full bg-[#F0FBFF] overflow-hidden relative min-h-[60dvh] lg:min-h-[560px] flex flex-col justify-center">
+        {/* Background Shapes & Focus Lights matching Home */}
+        <div className="absolute top-[-10%] right-[-10%] w-[60%] aspect-square bg-[#F0FBFF] rounded-full -z-10 blur-3xl opacity-50 transform-gpu"></div>
+        <div className="absolute bottom-[10%] left-[-5%] w-[40%] aspect-square bg-[#E8F8FB] rounded-full -z-10 blur-3xl opacity-30 transform-gpu"></div>
+        <div className="absolute -bottom-24 -left-24 w-[500px] h-[500px] bg-[#04B6EA]/10 rounded-full -z-10 blur-[120px] transform-gpu"></div>
+        <div className="absolute -bottom-24 -right-24 w-[500px] h-[500px] bg-blue-400/10 rounded-full -z-10 blur-[120px] transform-gpu"></div>
 
-                {/* Icon */}
-                <div className="h-16 w-16 rounded-2xl bg-[#53BED1]/10 flex items-center justify-center relative z-10 transition-colors group-hover:bg-[#53BED1] group-hover:text-white">
-                  <step.icon className="h-6 w-6 text-[#53BED1] group-hover:text-white transition-colors" />
-                </div>
+        <div className="max-w-7xl mx-auto px-6 lg:px-8 w-full pt-24 pb-14 lg:pt-28 lg:pb-16 relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-12 items-center gap-10 lg:gap-12">
+            {/* Left Content */}
+            <div className="lg:col-span-6 space-y-5 text-center lg:text-left">
+              {/* Trust Badge */}
+              <div className="inline-flex items-center gap-2.5 px-4 py-1.5 bg-white border border-gray-100 rounded-full shadow-sm mx-auto lg:mx-0 w-fit">
+                <span className="relative flex h-2 w-2">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                  <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+                </span>
+                <span className="text-xs font-semibold text-gray-700 tracking-wide">
+                  Simple 4-Step Process <span className="text-gray-300">·</span> 10–30 Min Arrival
+                </span>
+              </div>
 
-                {/* Content */}
-                <div className="space-y-4 relative z-10">
-                  <div className="text-sm font-semibold text-[#53BED1] uppercase tracking-widest">
-                    Step {step.number}
-                  </div>
-                  <h3 className="text-lg md:text-xl font-semibold mb-1">{step.title}</h3>
-                  <p className="text-sm text-slate-500">{step.description}</p>
+              <h1 className="text-4xl sm:text-5xl lg:text-[4.2rem] font-extrabold leading-[1.12] text-gray-900 tracking-tight">
+                How Door2fy <br />
+                <span className="text-[#04B6EA]">Works for You</span>
+              </h1>
+
+              <p className="text-gray-600 text-base lg:text-lg max-w-xl mx-auto lg:mx-0 leading-relaxed font-normal">
+                Experience hassle-free doorstep laptop repair and tech support. Book in under 60 seconds, track your certified technician in real time, and get your device fixed right in front of your eyes.
+              </p>
+
+              {/* Highlights Chips */}
+              <div className="flex flex-wrap items-center justify-center lg:justify-start gap-2.5 pt-1">
+                <div className="flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/90 shadow-sm border border-slate-100 text-xs font-bold text-slate-800">
+                  <span className="text-emerald-500">✓</span> 60s Fast Booking
                 </div>
-              </Card>
-            ))}
+                <div className="flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/90 shadow-sm border border-slate-100 text-xs font-bold text-slate-800">
+                  <span className="text-[#04B6EA]">⚡</span> 10-Min Response
+                </div>
+                <div className="flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/90 shadow-sm border border-slate-100 text-xs font-bold text-slate-800">
+                  <span className="text-amber-500">★</span> 90-Day Warranty
+                </div>
+              </div>
+
+              {/* Action Buttons */}
+              <div className="pt-2 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+                <Link
+                  to="/services"
+                  className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full bg-[#04B6EA] text-white font-bold text-sm hover:bg-[#039ecc] transition-all duration-300 shadow-lg shadow-[#04B6EA]/25 hover:scale-105 active:scale-95 w-full sm:w-auto"
+                >
+                  <span>Book a Repair Now</span>
+                  <ArrowRight className="w-4 h-4" />
+                </Link>
+                <a
+                  href="https://play.google.com/store/apps/details?id=com.Door2fy&pli=1"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full bg-white text-gray-800 font-bold text-sm hover:bg-gray-50 transition-all border border-gray-200 shadow-sm hover:border-[#04B6EA]/40 w-full sm:w-auto"
+                >
+                  <span>Download App</span>
+                </a>
+              </div>
+            </div>
+
+            {/* Right Visual Graphic Card */}
+            <div className="lg:col-span-6 relative flex justify-center items-center lg:justify-end mt-8 lg:mt-0">
+              <div className="relative w-full flex justify-center items-center group">
+                <img
+                  src={door2fyTechLabEngineers}
+                  alt="Door2fy Rapid Laptop Service"
+                  className="w-full h-auto max-h-[460px] object-contain drop-shadow-[0_20px_50px_rgba(4,182,234,0.2)] transform transition-transform duration-700 ease-out group-hover:scale-105 select-none pointer-events-none"
+                  style={{ imageRendering: "-webkit-optimize-contrast" }}
+                />
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* App Features Section */}
-      <section className="pt-12 pb-8 px-4 sm:px-6 lg:px-8 bg-[#53BED1] text-white relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-[#53BED1]/20 to-transparent opacity-50" />
-        <div className="relative max-w-7xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-2xl md:text-4xl font-semibold text-center text-white mb-2 leading-snug">
-              ULTIMATE <span className="opacity-80">ADVANTAGE</span>
+      {/* ================= 6-STEP WORKFLOW CARDS ================= */}
+      <section className="py-16 md:py-24 bg-white relative overflow-hidden">
+        {/* Dynamic Glow */}
+        <div className="absolute top-1/2 right-1/4 -translate-y-1/2 w-[500px] h-[350px] bg-[#04B6EA]/5 rounded-full blur-[140px] pointer-events-none -z-10" />
+
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <div className="text-center max-w-3xl mx-auto mb-14 md:mb-18">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#E1F7F9] text-[#04B6EA] text-xs font-bold mb-3 shadow-sm border border-[#04B6EA]/20">
+              <Sparkles className="w-3.5 h-3.5 text-[#04B6EA] animate-pulse" />
+              <span>Effortless Process</span>
+            </div>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-gray-900 tracking-tight leading-[1.15]">
+              Seamless Laptop Care in <br />
+              <span className="text-[#04B6EA]">6 Simple Steps</span>
             </h2>
-            <p className="text-xl opacity-90 font-medium max-w-2xl mx-auto">
-              A frictionless experience built into every line of code. Everything you need for hassle-free booking.
+            <p className="text-gray-500 text-base md:text-lg leading-relaxed mt-4 font-normal">
+              From instant booking to live testing and warranty activation, experience complete convenience without stepping out of your home.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-16">
-            {features.map((feature, index) => (
-              <div key={index} className="text-center space-y-6 group">
-                <div className="h-20 w-20 rounded-2xl bg-white/10 backdrop-blur-xl border border-white/20 flex items-center justify-center mx-auto transition-transform group-hover:scale-110 shadow-2xl">
-                  <feature.icon className="h-10 w-10 text-white" />
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+            {steps.map((step, index) => {
+              const IconComponent = step.icon;
+              return (
+                <div
+                  key={index}
+                  className="group p-6 sm:p-8 bg-[#F8FDFF] rounded-3xl sm:rounded-[2.5rem] border border-[#E1F7F9] hover:border-[#04B6EA] hover:bg-white transition-all duration-500 text-left flex flex-col justify-between shadow-sm hover:shadow-[0_25px_50px_rgba(4,182,234,0.1)] hover:-translate-y-1.5 relative overflow-hidden"
+                >
+                  {/* Step Number Big Watermark */}
+                  <div className="absolute -top-6 -right-4 text-7xl font-extrabold text-[#04B6EA]/5 group-hover:text-[#04B6EA]/10 transition-colors select-none">
+                    {step.number}
+                  </div>
+
+                  <div className="relative z-10 space-y-5">
+                    <div className="flex items-center justify-between">
+                      <div className="w-14 h-14 rounded-2xl bg-[#E1F7F9] text-[#04B6EA] flex items-center justify-center transition-all duration-500 group-hover:bg-[#04B6EA] group-hover:text-white group-hover:scale-110 shadow-sm">
+                        <IconComponent className="w-7 h-7" />
+                      </div>
+                      <span className="text-[11px] font-bold uppercase tracking-wider text-[#04B6EA] bg-white px-3 py-1 rounded-full border border-[#E1F7F9] shadow-xs">
+                        {step.badge}
+                      </span>
+                    </div>
+
+                    <div>
+                      <h3 className="text-xl sm:text-2xl font-bold text-gray-900 group-hover:text-[#04B6EA] transition-colors leading-snug mb-1">
+                        {step.title}
+                      </h3>
+                      <p className="text-xs font-semibold text-[#04B6EA] uppercase tracking-wider mb-2.5">
+                        {step.subtitle}
+                      </p>
+                      <p className="text-gray-600 text-sm sm:text-base leading-relaxed font-normal">
+                        {step.description}
+                      </p>
+                    </div>
+                  </div>
                 </div>
-                <h3 className="text-xl md:text-2xl font-semibold">{feature.title}</h3>
-                <p className="opacity-90 text-sm md:text-base leading-relaxed font-medium">{feature.description}</p>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* ================= 3D STATS COUNTERS ================= */}
+      <section className="py-12 md:py-16 bg-[#F8FDFF] border-y border-[#E1F7F9] relative overflow-hidden">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 md:gap-8">
+            {stats.map((item, index) => (
+              <div
+                key={index}
+                className="group relative bg-white rounded-3xl sm:rounded-[2.5rem] p-5 sm:p-8 text-center transition-all duration-500 border border-gray-100 shadow-[0_10px_30px_rgba(0,0,0,0.02)] hover:shadow-[0_30px_60px_rgba(4,182,234,0.12)] flex flex-col items-center justify-center overflow-hidden hover:-translate-y-1"
+              >
+                <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-[#E1F7F9] text-[#04B6EA] flex items-center justify-center mb-3 sm:mb-4 shadow-sm transform group-hover:scale-110 group-hover:rotate-6 transition-all duration-500">
+                  {item.icon}
+                </div>
+
+                <h3 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-gray-900 mb-1 tracking-tight">
+                  {item.num}
+                </h3>
+
+                <p className="text-gray-500 text-[10px] sm:text-xs font-bold uppercase tracking-wider leading-tight">
+                  {item.label}
+                </p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* FAQ Section */}
-      <section className="pt-12 px-4 sm:px-6 lg:px-8 bg-slate-50">
-        <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-5xl font-semibold text-slate-900 mb-8 leading-snug">
-              QUICK <span className="text-[#53BED1] text-gradient">ANSWERS</span>
+      {/* ================= ULTIMATE ADVANTAGES (MATCHING HOME) ================= */}
+      <section className="py-16 md:py-24 bg-white relative overflow-hidden">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <div className="text-center max-w-3xl mx-auto mb-14">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#E1F7F9] text-[#04B6EA] text-xs font-bold mb-3 shadow-sm border border-[#04B6EA]/20">
+              <BadgeCheck className="w-3.5 h-3.5 text-[#04B6EA]" />
+              <span>The Door2fy Edge</span>
+            </div>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-gray-900 tracking-tight leading-[1.15]">
+              Built for Safety, <br />
+              <span className="text-[#04B6EA]">Convenience & Speed</span>
             </h2>
-            <p className="text-xl text-slate-500 font-medium">
-              Clarity is the first step to a great service experience.
+            <p className="text-gray-500 text-base md:text-lg mt-3 font-normal">
+              A frictionless tech care experience designed for home users, freelancers, and businesses.
             </p>
           </div>
 
-          <div className="grid gap-8 pb-10">
-            {faqs.map((faq, index) => (
-              <Card
-                key={index}
-                className="p-6 md:p-4 border-none shadow-sm rounded-[2rem] bg-white transition-all hover:shadow-premium group"
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+            {features.map((feature, index) => {
+              const IconComp = feature.icon;
+              return (
+                <div
+                  key={index}
+                  className="p-6 sm:p-8 bg-[#F8FDFF] rounded-3xl border border-[#E1F7F9] hover:border-[#04B6EA] hover:bg-white transition-all duration-300 text-left shadow-sm hover:shadow-[0_20px_40px_rgba(4,182,234,0.08)] flex flex-col justify-between group"
+                >
+                  <div className="w-14 h-14 rounded-2xl bg-[#E1F7F9] text-[#04B6EA] flex items-center justify-center mb-6 group-hover:bg-[#04B6EA] group-hover:text-white transition-colors">
+                    <IconComp className="w-7 h-7" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-[#04B6EA] transition-colors">
+                      {feature.title}
+                    </h3>
+                    <p className="text-gray-600 text-sm sm:text-base leading-relaxed font-normal">
+                      {feature.description}
+                    </p>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* ================= INTERACTIVE FAQS ================= */}
+      <section className="py-16 md:py-20 bg-[#F8FDFF] border-t border-[#E1F7F9]">
+        <div className="max-w-4xl mx-auto px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <span className="text-[#04B6EA] font-bold uppercase tracking-widest text-xs mb-2 block">
+              Frequently Asked Questions
+            </span>
+            <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 tracking-tight">
+              Got Questions? We Have Answers.
+            </h2>
+          </div>
+
+          <div className="space-y-4">
+            {faqs.map((faq, idx) => (
+              <div
+                key={idx}
+                className="bg-white rounded-2xl md:rounded-3xl border border-gray-100 shadow-sm overflow-hidden transition-all"
               >
-                <h3 className="text-lg md:text-xl font-semibold mb-2 group-hover:text-[#53BED1] transition-colors">{faq.question}</h3>
-                <p className="text-slate-500 text-sm leading-relaxed font-medium">{faq.answer}</p>
-              </Card>
+                <button
+                  onClick={() => setOpenFaq(openFaq === idx ? null : idx)}
+                  className="w-full p-5 sm:p-6 text-left flex items-center justify-between gap-4 font-bold text-base sm:text-lg text-gray-900 hover:text-[#04B6EA] transition-colors"
+                >
+                  <span>{faq.q}</span>
+                  <ChevronDown
+                    className={`w-5 h-5 text-[#04B6EA] shrink-0 transition-transform duration-300 ${openFaq === idx ? "rotate-180" : ""
+                      }`}
+                  />
+                </button>
+                {openFaq === idx && (
+                  <div className="px-5 pb-5 sm:px-6 sm:pb-6 text-sm sm:text-base text-gray-600 font-normal leading-relaxed border-t border-gray-50 pt-3">
+                    {faq.a}
+                  </div>
+                )}
+              </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="pt-12 pb-10 px-4 sm:px-6 lg:px-8 bg-[#53BED1] text-white relative overflow-hidden">
-        <div className="absolute top-0 right-0 w-96 h-96 bg-[#53BED1]/20 rounded-full blur-[120px] -mr-48 -mt-48" />
-        <div className="absolute bottom-0 left-0 w-96 h-96 bg-secondary/10 rounded-full blur-[120px] -ml-48 -mb-48" />
-        
-        <div className="max-w-4xl mx-auto text-center space-y-12 relative z-10">
-          <h2 className="text-3xl md:text-5xl font-semibold leading-snug">
-            READY TO MOBILIZE?
-          </h2>
-          <p className="text-md md:text-lg text-white/90 leading-relaxed max-w-2xl mx-auto font-medium">
-            Join thousands of users who have revolutionized how they handle tech emergencies. Download the app and book in seconds.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-8 justify-center ">
-            <a
-              href="https://play.google.com/store/apps/details?id=com.Door2fy&pli=1"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block"
-            >
-              <Button size="lg" className="bg-white hover:bg-white text-[#3da9bb] font-semibold px-12 py-8 rounded-2xl text-2xl shadow-2xl transition rounded-full">
-                Download for Android
-              </Button>
-            </a>
+      {/* ================= APP DOWNLOAD & ON-THE-GO BANNER ================= */}
+      <section className="py-12 lg:py-16 bg-white overflow-hidden">
+        <div className="max-w-6xl mx-auto px-6 lg:px-8">
+          <div className="relative group">
+            <div className="absolute inset-4 bg-[#04B6EA]/10 blur-3xl rounded-[4rem] group-hover:opacity-60 transition-opacity"></div>
+
+            <div className="relative bg-[#F8FDFF] rounded-[2.5rem] md:rounded-[3.5rem] px-8 lg:px-16 py-8 lg:py-12 flex flex-col lg:flex-row items-center justify-between border border-[#E1F7F9] shadow-[0_20px_50px_rgba(79,183,212,0.06)] overflow-hidden">
+              {/* Phones Image */}
+              <div className="relative w-full lg:w-[50%] flex justify-center lg:justify-start transform transition-transform duration-700 group-hover:scale-105 pb-8 lg:pb-0">
+                <img
+                  src={phone1}
+                  alt="Door2fy Mobile App"
+                  className="w-full max-w-[260px] lg:max-w-[420px] drop-shadow-[0_25px_50px_rgba(79,183,212,0.18)] select-none pointer-events-none"
+                  style={{ imageRendering: "-webkit-optimize-contrast" }}
+                />
+              </div>
+
+              {/* Content */}
+              <div className="w-full lg:w-[48%] text-center lg:text-left space-y-5">
+                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#E1F7F9] text-[#04B6EA] text-xs font-bold">
+                  <Sparkles className="w-3.5 h-3.5" />
+                  <span>On-Demand Tech Assistance</span>
+                </div>
+
+                <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-gray-900 leading-[1.15] tracking-tight">
+                  Book Repairs in <br />
+                  <span className="text-[#04B6EA]">Under 60 Seconds</span>
+                </h2>
+
+                <p className="text-gray-600 text-sm md:text-base leading-relaxed max-w-md mx-auto lg:mx-0 font-normal">
+                  Download the Door2fy app to book certified technicians, track GPS arrival live, and get digital warranty certificates.
+                </p>
+
+                <div className="flex flex-wrap items-center justify-center lg:justify-start gap-3 pt-2">
+                  <a
+                    href="https://play.google.com/store/apps/details?id=com.Door2fy&pli=1"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="transform transition-all hover:scale-105 active:scale-95 shadow-md rounded-xl overflow-hidden block"
+                  >
+                    <img
+                      src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
+                      alt="Google Play"
+                      className="h-11 md:h-12 w-auto"
+                    />
+                  </a>
+                  <a
+                    href="#"
+                    className="transform transition-all hover:scale-105 active:scale-95 shadow-md rounded-xl overflow-hidden block"
+                  >
+                    <img
+                      src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Download_on_the_App_Store_Badge.svg"
+                      alt="App Store"
+                      className="h-11 md:h-12 w-auto"
+                    />
+                  </a>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>

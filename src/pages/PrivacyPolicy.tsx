@@ -1,9 +1,14 @@
-// src/components/PrivacyPolicy.jsx
 import React from "react";
+import { SEOHead } from "@/components/SEOHead";
 
 const PrivacyPolicy = () => {
   return (
-    <div className="bg-slate-50 min-h-screen py-12 px-4 sm:px-6 lg:px-20">
+    <div className="bg-slate-50 min-h-screen py-12 px-4 sm:px-6 lg:px-20 pt-28">
+      <SEOHead
+        title="Privacy Policy | Door2fy"
+        description="Read Door2fy's Privacy Policy to understand how we collect, protect, and handle your data and privacy when using our doorstep repair services."
+        canonicalUrl="https://www.door2fy.in/privacy-policy"
+      />
       <div className="max-w-4xl mx-auto rounded-lg p-8">
         <h1 className="text-3xl md:text-5xl font-serif font-bold text-slate-900 mb-6 uppercase tracking-tight leading-snug">
           Privacy Policy

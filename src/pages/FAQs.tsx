@@ -1,210 +1,394 @@
-import { Card } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
+import React, { useState, useMemo } from "react";
+import { Link } from "react-router-dom";
+import { SEOHead } from "@/components/SEOHead";
 import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
-import { Phone, Mail, MessageCircle } from "lucide-react";
+  Search,
+  ChevronDown,
+  Phone,
+  Mail,
+  Sparkles,
+  ShieldCheck,
+  Zap,
+  Award,
+  Clock,
+  CheckCircle2,
+  ArrowRight,
+  HelpCircle,
+} from "lucide-react";
 import EngineerReviews from "./EngineerReviews";
 
+// Assets
+import phone1 from "@/assets/phone1.png";
+import faqNamasteImg from "@/assets/door2fy-faq-namaste-engineer.png";
+
 export default function FAQs() {
+  const [searchQuery, setSearchQuery] = useState("");
+  const [openItems, setOpenItems] = useState<Record<string, boolean>>({
+    "0-0": true, // First FAQ opened by default
+  });
+
   const faqCategories = [
     {
-      category: "General",
+      category: "General & Booking",
+      icon: Zap,
       questions: [
         {
           question: "What is Door2fy?",
           answer:
-            "Door2fy is India's fastest doorstep service and quick support platform that connects you with verified professional engineers who can arrive at your location within minutes of booking.",
+            "Door2fy is India's leading on-demand doorstep laptop repair and tech support platform. We connect you with certified, background-verified computer engineers who reach your home or office within 10 to 30 minutes in Delhi NCR, Mumbai, Bengaluru, Pune, and 50+ cities across India.",
         },
         {
-          question: "How do I book a service on Door2fy?",
+          question: "How do I book a laptop repair on Door2fy?",
           answer:
-            "You can easily book a service through the Door2fy app by selecting the service you need, choosing a convenient time slot, and confirming your booking.",
+            "You can book online through Door2fy.in or via our mobile app in under 60 seconds. Simply select your laptop brand (MacBook, Dell, HP, Lenovo, ASUS, Acer, etc.), describe the problem (screen, battery, speed boost, OS crash), choose your location, and select an instant or scheduled time slot.",
         },
         {
           question: "How quickly can a technician reach my location?",
           answer:
-            "Response times may vary based on your location and technician availability, but Door2fy aims to provide fast and convenient doorstep support as quickly as possible.",
+            "Our certified engineers arrive at your doorstep in 10 to 30 minutes on average. You can track your assigned technician's live GPS location and ETA directly in real time.",
         },
         {
-          question: "Are Door2fy technicians verified?",
+          question: "Which laptop brands and devices do you repair?",
           answer:
-            "Yes, all Door2fy technicians undergo a verification process to ensure professionalism, reliability, and quality service.",
-        },
-        {
-          question: "Can Door2fy repair both laptops and desktop computers?",
-          answer:
-            "Yes, Door2fy offers repair and support services for laptops, desktop PCs, and MacBook devices.",
-        },
-        {
-          question: "What if my issue cannot be fixed during the visit?",
-          answer:
-            "If the issue requires additional diagnostics, replacement parts, or advanced repair, the technician will guide you on the next steps and available solutions.",
-        },
-        {
-          question: "How much do Door2fy services cost?",
-          answer:
-            "Service charges depend on the type of issue and the work required. Pricing details are shared transparently before any major repair work begins.",
+            "We provide certified doorstep service for Apple MacBook (Air/Pro, M1/M2/M3), Dell (XPS, Inspiron, Alienware), HP (Pavilion, Spectre, Envy), Lenovo (ThinkPad, IdeaPad, Legion), ASUS (ROG, ZenBook), Acer, MSI, Samsung laptops, and custom desktop PCs.",
         },
         {
           question: "Can I schedule a service for my office or business?",
           answer:
-            "Yes, Door2fy provides tech support services for both residential customers and businesses requiring computer and IT assistance.",
-        },
-        {
-          question: "How can I contact Door2fy support?",
-          answer:
-            "You can reach Door2fy support through the Android or iOS app.",
-        },
-      ],
-    },
-
-    {
-      category: "Safety & Security",
-      questions: [
-        {
-          question: "How do you ensure my safety?",
-          answer:
-            "All professionals are background-verified with police clearance. We also have real-time tracking, and you can share your service details with family members through the app.",
-        },
-        {
-          question: "What COVID-19 precautions do you take?",
-          answer:
-            "All our professionals are vaccinated, wear masks, maintain social distancing, and follow strict hygiene protocols. Equipment is sanitized before and after each service.",
-        },
-        {
-          question: "Is my personal information secure?",
-          answer:
-            "Yes, we take data privacy very seriously. All personal information is encrypted and stored securely. We never share your data with third parties without consent.",
+            "Yes! Door2fy provides corporate IT support, Annual Maintenance Contracts (AMC), workstation speed optimizations, and urgent multi-device repair for startups, corporate offices, and co-working spaces.",
         },
       ],
     },
     {
-      category: "Cancellation & Refunds",
+      category: "Safety & Data Privacy",
+      icon: ShieldCheck,
       questions: [
         {
-          question: "Can I cancel or reschedule a booking?",
+          question: "How do you ensure my security and safety during home visits?",
           answer:
-            "Yes, you can cancel or reschedule bookings through the app. Cancellations made more than 2 hours before the scheduled time are free. Late cancellations may incur a small fee.",
+            "All Door2fy professionals undergo rigorous police verification, government ID verification, and comprehensive technical skill assessment. You receive the engineer's photo, verified ID card, and live tracking before they arrive.",
         },
         {
-          question: "How long do refunds take?",
+          question: "Is my personal data safe during the repair?",
           answer:
-            "Refunds are processed within 24 hours of approval and typically reflect in your account within 5-7 business days, depending on your bank.",
+            "Yes, 100%! Unlike traditional service centers where you leave your laptop for days, Door2fy performs diagnosis and repairs right in front of your eyes at your home or desk. No unauthorized access or copying of your files is ever possible.",
         },
         {
-          question: "What is your refund policy?",
+          question: "What hygiene and safety protocols do engineers follow?",
           answer:
-            "If you're not satisfied with the service, contact us within 24 hours. After reviewing your case, we'll either send another professional or process a full refund.",
+            "Our engineers carry sanitized diagnostic toolkits, wear clean professional attire, and use anti-static ESD safety mats to protect your device and your workspace.",
+        },
+      ],
+    },
+    {
+      category: "Pricing & Warranty",
+      icon: Award,
+      questions: [
+        {
+          question: "How much do Door2fy laptop repairs cost?",
+          answer:
+            "We provide 100% transparent upfront pricing with zero hidden charges. You receive an exact price quote after the initial 5–10 minute diagnostic check, and you pay only after the repair is completed and verified.",
+        },
+        {
+          question: "What is the diagnostic fee if I decide not to proceed?",
+          answer:
+            "We charge a nominal inspection fee of ₹199 for doorstep diagnosis and troubleshooting. If you proceed with the suggested repair, the diagnostic fee is completely waived off!",
+        },
+        {
+          question: "What warranty do you provide on repairs and spare parts?",
+          answer:
+            "All hardware replacements (screens, batteries, keyboards, SSDs, charging ports) and major repairs include up to 90 days comprehensive Door2fy warranty with digital invoice support.",
+        },
+        {
+          question: "Are the replacement spare parts genuine OEM?",
+          answer:
+            "Yes, 100%. We only source factory-certified OEM genuine spare parts compatible with your specific model to ensure maximum lifespan and original performance.",
+        },
+      ],
+    },
+    {
+      category: "Cancellation & Payment",
+      icon: Clock,
+      questions: [
+        {
+          question: "Can I cancel or reschedule my booking?",
+          answer:
+            "Yes, you can easily cancel or reschedule your booking at any time with zero penalty before the technician arrives.",
+        },
+        {
+          question: "What payment methods are supported?",
+          answer:
+            "We support all secure payment methods including UPI (Google Pay, PhonePe, Paytm), Credit Cards, Debit Cards, Net Banking, and Cash on Service. You pay only after you are completely satisfied with the repair.",
+        },
+        {
+          question: "What is your satisfaction and refund policy?",
+          answer:
+            "We offer a 100% satisfaction guarantee. If an issue is not resolved to your satisfaction or reoccurs within the warranty period, we will send an expert technician to re-diagnose and fix it with zero extra charges.",
         },
       ],
     },
   ];
 
+  // Filter FAQs based on Search
+  const filteredFaqCategories = useMemo(() => {
+    return faqCategories
+      .map((cat) => {
+        const matchingQuestions = cat.questions.filter((q) => {
+          if (!searchQuery) return true;
+          const query = searchQuery.toLowerCase();
+          return (
+            q.question.toLowerCase().includes(query) ||
+            q.answer.toLowerCase().includes(query)
+          );
+        });
+
+        if (matchingQuestions.length === 0) return null;
+
+        return {
+          ...cat,
+          questions: matchingQuestions,
+        };
+      })
+      .filter(Boolean) as typeof faqCategories;
+  }, [searchQuery]);
+
+  const toggleAccordion = (key: string) => {
+    setOpenItems((prev) => ({
+      ...prev,
+      [key]: !prev[key],
+    }));
+  };
+
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqCategories.flatMap((cat) =>
+      cat.questions.map((q) => ({
+        "@type": "Question",
+        name: q.question,
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: q.answer,
+        },
+      }))
+    ),
+  };
+
   return (
-    <div className="min-h-screen pt-20 font-sans antialiased text-slate-900">
-      {/* Hero Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-50">
-        <div className="max-w-4xl mx-auto text-center space-y-6">
-          <h1 className="text-4xl md:text-6xl font-semibold text-slate-900 leading-snug">
-            Frequently Asked Questions
-          </h1>
-          <p className="text-xl md:text-2xl text-slate-600 font-medium italic">
-            Find answers to common questions about Door2fy services
-          </p>
-        </div>
-      </section>
+    <div className="min-h-screen bg-white font-sans antialiased text-slate-900">
+      <SEOHead
+        title="Frequently Asked Questions (FAQs) | Door2fy"
+        description="Find answers to common questions about Door2fy's doorstep laptop repair, MacBook services, pricing, warranty, response times, and technician verification."
+        canonicalUrl="https://www.door2fy.in/faqs"
+        keywords="door2fy faqs, laptop repair questions, doorstep service pricing, laptop repair warranty, Door2fy"
+        schema={faqSchema}
+      />
 
-      {/* FAQs Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto space-y-12">
-          {faqCategories.map((category, categoryIndex) => (
-            <div key={categoryIndex} className="space-y-6">
-              <h2 className="text-2xl md:text-3xl font-semibold text-[#53BED1]">
-                {category.category}
-              </h2>
+      {/* ================= HERO SECTION ================= */}
+      <section className="w-full bg-[#F0FBFF] overflow-hidden relative flex flex-col justify-end">
+        {/* Background Glow Orbs */}
+        <div className="absolute top-[-10%] right-[-10%] w-[60%] aspect-square bg-[#F0FBFF] rounded-full -z-10 blur-3xl opacity-50 transform-gpu"></div>
+        <div className="absolute bottom-[10%] left-[-5%] w-[40%] aspect-square bg-[#E8F8FB] rounded-full -z-10 blur-3xl opacity-30 transform-gpu"></div>
+        <div className="absolute -bottom-24 -left-24 w-[500px] h-[500px] bg-[#04B6EA]/10 rounded-full -z-10 blur-[120px] transform-gpu"></div>
+        <div className="absolute -bottom-24 -right-24 w-[500px] h-[500px] bg-blue-400/10 rounded-full -z-10 blur-[120px] transform-gpu"></div>
 
-              <Accordion type="single" collapsible className="space-y-4">
-                {category.questions.map((faq, index) => (
-                  <AccordionItem
-                    key={index}
-                    value={`${categoryIndex}-${index}`}
-                    className="border rounded-lg px-6"
-                  >
-                    <AccordionTrigger className="text-left text-lg font-semibold hover:text-[#53BED1] transition-colors">
-                      {faq.question}
-                    </AccordionTrigger>
-                    <AccordionContent className="text-slate-500 pt-2 pb-4 leading-relaxed font-medium">
-                      {faq.answer}
-                    </AccordionContent>
-                  </AccordionItem>
-                ))}
-              </Accordion>
+        <div className="max-w-7xl mx-auto px-6 lg:px-8 w-full pt-20 lg:pt-24 pb-0 relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-end">
+            {/* Left Column: Text & Search (6/12) */}
+            <div className="lg:col-span-6 text-left space-y-6 order-2 lg:order-1 pb-10 lg:pb-16 pt-2 lg:pt-6">
+              {/* Live Status Pill */}
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-gray-100 shadow-sm">
+                <span className="relative flex h-2 w-2">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                  <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+                </span>
+                <span className="text-xs font-semibold text-gray-700 tracking-wide">
+                  Help & Knowledge Base <span className="text-gray-300">·</span> 24/7 Doorstep Support
+                </span>
+              </div>
+
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-slate-900 tracking-tight leading-[1.12]">
+                Frequently Asked <br />
+                <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#04B6EA] to-[#0284c7]">
+                  Questions
+                </span>
+              </h1>
+
+              <p className="text-slate-600 text-base sm:text-lg leading-relaxed font-normal max-w-xl">
+                Everything you need to know about Door2fy's 10–30 minute doorstep laptop repair, spare parts warranty, data privacy, and pricing.
+              </p>
+
+              {/* Live Search Input */}
+              <div className="pt-2 max-w-lg">
+                <div className="relative flex items-center shadow-sm rounded-full">
+                  <Search className="absolute left-4 w-5 h-5 text-[#04B6EA] pointer-events-none" />
+                  <input
+                    type="text"
+                    placeholder="Search a question (e.g. warranty, arrival time, pricing)..."
+                    value={searchQuery}
+                    onChange={(e) => setSearchQuery(e.target.value)}
+                    className="w-full pl-12 pr-14 py-3.5 sm:py-4 rounded-full bg-white border border-slate-200/90 text-sm font-medium text-slate-800 focus:outline-none focus:border-[#04B6EA] focus:ring-4 focus:ring-[#04B6EA]/15 transition-all placeholder:text-slate-400"
+                  />
+                  {searchQuery && (
+                    <button
+                      onClick={() => setSearchQuery("")}
+                      className="absolute right-3.5 px-2.5 py-1 text-xs font-bold text-slate-400 hover:text-slate-700 bg-slate-100 rounded-full transition-colors cursor-pointer"
+                    >
+                      Clear
+                    </button>
+                  )}
+                </div>
+              </div>
             </div>
-          ))}
+
+            {/* Right Column: Namaste Engineer Image (6/12) Full Top-to-Bottom */}
+            <div className="lg:col-span-6 flex justify-center lg:justify-end items-end relative order-1 lg:order-2 self-end">
+              <div className="relative w-full max-w-[440px] sm:max-w-[560px] lg:max-w-[680px] xl:max-w-[760px] flex items-end justify-center lg:justify-end">
+                {/* Ambient floor glow */}
+                <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 w-[380px] sm:w-[540px] h-[180px] bg-[#04B6EA]/30 rounded-full blur-3xl pointer-events-none -z-10" />
+                <img
+                  src={faqNamasteImg}
+                  alt="Door2fy Verified Laptop Technician"
+                  className="w-full h-auto max-h-[550px] sm:max-h-[640px] lg:max-h-[720px] object-contain object-bottom select-none pointer-events-none drop-shadow-[0_25px_50px_rgba(4,182,234,0.2)] block"
+                  style={{ imageRendering: "-webkit-optimize-contrast" }}
+                />
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
-      {/* Contact Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-100/50">
-        <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-semibold text-slate-900 mb-4">
+      {/* ================= ACCORDION FAQS SECTION ================= */}
+      <section className="pt-8 sm:pt-10 pb-16 md:pb-20 bg-white">
+        <div className="max-w-4xl mx-auto px-6 lg:px-8 space-y-12">
+          {filteredFaqCategories.length === 0 ? (
+            <div className="text-center py-20 bg-[#F8FDFF] rounded-3xl border border-[#E1F7F9] p-8">
+              <HelpCircle className="w-12 h-12 text-[#04B6EA] mx-auto mb-3 opacity-60" />
+              <h3 className="text-xl font-bold text-gray-900 mb-1">No matching questions found</h3>
+              <p className="text-gray-500 text-sm mb-4">
+                Try searching for terms like "warranty", "MacBook", "cost", or "arrival time".
+              </p>
+              <button
+                onClick={() => setSearchQuery("")}
+                className="px-5 py-2 rounded-full bg-[#04B6EA] text-white font-bold text-xs hover:bg-[#039ecc] transition-colors"
+              >
+                Reset Search
+              </button>
+            </div>
+          ) : (
+            filteredFaqCategories.map((categoryGroup, catIdx) => {
+              const CategoryIcon = categoryGroup.icon;
+              return (
+                <div key={catIdx} className="space-y-5">
+                  <div className="flex items-center gap-3 pb-2 border-b border-gray-100">
+                    <div className="w-9 h-9 rounded-xl bg-[#E1F7F9] text-[#04B6EA] flex items-center justify-center shrink-0">
+                      <CategoryIcon className="w-5 h-5" />
+                    </div>
+                    <h2 className="text-2xl sm:text-3xl font-extrabold text-gray-900 tracking-tight">
+                      {categoryGroup.category}
+                    </h2>
+                  </div>
+
+                  <div className="space-y-3.5">
+                    {categoryGroup.questions.map((faq, qIdx) => {
+                      const itemKey = `${catIdx}-${qIdx}`;
+                      const isOpen = !!openItems[itemKey];
+
+                      return (
+                        <div
+                          key={qIdx}
+                          className={`rounded-2xl sm:rounded-3xl border transition-all duration-300 overflow-hidden ${
+                            isOpen
+                              ? "bg-[#F8FDFF] border-[#04B6EA]/40 shadow-sm"
+                              : "bg-white border-gray-100 hover:border-[#E1F7F9] hover:bg-[#F8FDFF]/50"
+                          }`}
+                        >
+                          <button
+                            onClick={() => toggleAccordion(itemKey)}
+                            className="w-full p-5 sm:p-6 text-left flex items-center justify-between gap-4 font-bold text-base sm:text-lg text-gray-900 hover:text-[#04B6EA] transition-colors"
+                          >
+                            <span className="leading-snug">{faq.question}</span>
+                            <div
+                              className={`w-7 h-7 rounded-full flex items-center justify-center shrink-0 transition-transform duration-300 ${
+                                isOpen
+                                  ? "bg-[#04B6EA] text-white rotate-180"
+                                  : "bg-[#E1F7F9] text-[#04B6EA]"
+                              }`}
+                            >
+                              <ChevronDown className="w-4 h-4" />
+                            </div>
+                          </button>
+
+                          {isOpen && (
+                            <div className="px-5 pb-5 sm:px-6 sm:pb-6 text-sm sm:text-base text-gray-600 font-normal leading-relaxed border-t border-[#E1F7F9]/60 pt-3.5">
+                              {faq.answer}
+                            </div>
+                          )}
+                        </div>
+                      );
+                    })}
+                  </div>
+                </div>
+              );
+            })
+          )}
+        </div>
+      </section>
+
+      {/* ================= 24/7 SUPPORT CONTACT CHANNELS ================= */}
+      <section className="py-16 md:py-20 bg-[#F8FDFF] border-t border-[#E1F7F9]">
+        <div className="max-w-6xl mx-auto px-6 lg:px-8">
+          <div className="text-center max-w-2xl mx-auto mb-12">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#E1F7F9] text-[#04B6EA] text-xs font-bold mb-3 shadow-sm border border-[#04B6EA]/20">
+              <Sparkles className="w-3.5 h-3.5 text-[#04B6EA]" />
+              <span>We're Here to Help</span>
+            </div>
+            <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 tracking-tight">
               Still Have Questions?
             </h2>
-            <p className="text-xl text-slate-500 font-medium">
-              Our support team is here to help you 24x7
+            <p className="text-gray-500 text-sm sm:text-base mt-2 font-normal">
+              Speak directly with our technical support team available around the clock.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-6">
-            {/* <Card className="p-6 text-center space-y-4 hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
-              <div className="h-16 w-16 rounded-full bg-blue-50 flex items-center justify-center mx-auto">
-                <Phone className="h-8 w-8 text-blue-400" />
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-3xl mx-auto">
+            {/* Phone Card */}
+            <div className="p-6 sm:p-8 bg-white rounded-3xl border border-gray-100 shadow-sm hover:shadow-[0_20px_40px_rgba(4,182,234,0.08)] hover:border-[#04B6EA]/40 transition-all duration-300 text-center space-y-4 group">
+              <div className="w-14 h-14 rounded-2xl bg-[#E1F7F9] text-[#04B6EA] flex items-center justify-center mx-auto group-hover:bg-[#04B6EA] group-hover:text-white transition-colors">
+                <Phone className="w-6 h-6" />
               </div>
               <div>
-                <h3 className="font-bold text-lg mb-2">Call Us</h3>
-                <p className="text-muted-foreground text-sm mb-4">
-                  Speak with our customer support team
+                <h3 className="font-bold text-lg text-gray-900 mb-1">Call Support</h3>
+                <p className="text-gray-500 text-xs sm:text-sm mb-4">
+                  Speak directly with an IT coordinator
                 </p>
-                <Button className="bg-[#53BED1] hover:bg-[#53BED1]" size="sm">
-                  +91 9599094941
-                </Button>
+                <a
+                  href="tel:+919217759006"
+                  className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#04B6EA] text-white font-bold text-xs hover:bg-[#039ecc] transition-all shadow-sm shadow-[#04B6EA]/20"
+                >
+                  <span>+91 9217759006</span>
+                </a>
               </div>
-            </Card> */}
+            </div>
 
-            <Card className="p-6 text-center space-y-4 hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
-              <div className="h-16 w-16 rounded-full bg-blue-50 flex items-center justify-center mx-auto">
-                <Mail className="h-8 w-8 text-blue-400" />
+            {/* Email Card */}
+            <div className="p-6 sm:p-8 bg-white rounded-3xl border border-gray-100 shadow-sm hover:shadow-[0_20px_40px_rgba(4,182,234,0.08)] hover:border-[#04B6EA]/40 transition-all duration-300 text-center space-y-4 group">
+              <div className="w-14 h-14 rounded-2xl bg-[#E1F7F9] text-[#04B6EA] flex items-center justify-center mx-auto group-hover:bg-[#04B6EA] group-hover:text-white transition-colors">
+                <Mail className="w-6 h-6" />
               </div>
               <div>
-                <h3 className="font-bold text-lg mb-2">Email Us</h3>
-                <p className="text-muted-foreground text-sm mb-4">
-                  We'll respond within 24 hours
+                <h3 className="font-bold text-lg text-gray-900 mb-1">Email Us</h3>
+                <p className="text-gray-500 text-xs sm:text-sm mb-4">
+                  Response within 24 hours guaranteed
                 </p>
-                <Button className="bg-[#53BED1] hover:bg-[#53BED1]" size="sm">
-                  support@Door2fy.in
-                </Button>
+                <a
+                  href="mailto:support@door2fy.in"
+                  className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#04B6EA] text-white font-bold text-xs hover:bg-[#039ecc] transition-all shadow-sm shadow-[#04B6EA]/20"
+                >
+                  <span>support@door2fy.in</span>
+                </a>
               </div>
-            </Card>
-
-            <Card className="p-6 text-center space-y-4 hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
-              <div className="h-16 w-16 rounded-full bg-blue-50  flex items-center justify-center mx-auto">
-                <MessageCircle className="h-8 w-8 text-blue-400" />
-              </div>
-              <div>
-                <h3 className="font-bold text-lg mb-2">Live Chat</h3>
-                <p className="text-muted-foreground text-sm mb-4">
-                  Chat with us in the app
-                </p>
-                <Button className="bg-[#53BED1] hover:bg-[#53BED1]" size="sm">
-                  Open App Chat
-                </Button>
-              </div>
-            </Card>
+            </div>
           </div>
         </div>
       </section>
@@ -212,27 +396,62 @@ export default function FAQs() {
       {/* Leave a Review Section */}
       <EngineerReviews showList={false} />
 
-      {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center space-y-8">
-          <h2 className="text-3xl md:text-5xl font-semibold text-slate-900 leading-snug">
-            Ready to Get Started?
-          </h2>
+      {/* ================= APP DOWNLOAD & CTA BANNER ================= */}
+      <section className="py-12 lg:py-16 bg-white overflow-hidden border-t border-gray-100">
+        <div className="max-w-6xl mx-auto px-6 lg:px-8">
+          <div className="relative group">
+            <div className="absolute inset-4 bg-[#04B6EA]/10 blur-3xl rounded-[4rem] group-hover:opacity-60 transition-opacity"></div>
 
-          <p className="text-xl  text-muted-foreground">
-            Download the app and book your first Doorstep & Quick support
-            Service in under a minute
-          </p>
+            <div className="relative bg-[#F8FDFF] rounded-[2.5rem] md:rounded-[3.5rem] px-8 lg:px-16 py-8 lg:py-12 flex flex-col lg:flex-row items-center justify-between border border-[#E1F7F9] shadow-[0_20px_50px_rgba(79,183,212,0.06)] overflow-hidden">
+              {/* Phones Image */}
+              <div className="relative w-full lg:w-[50%] flex justify-center lg:justify-start transform transition-transform duration-700 group-hover:scale-105 pb-8 lg:pb-0">
+                <img
+                  src={phone1}
+                  alt="Door2fy Mobile App"
+                  className="w-full max-w-[260px] lg:max-w-[420px] drop-shadow-[0_25px_50px_rgba(79,183,212,0.18)] select-none pointer-events-none"
+                  style={{ imageRendering: "-webkit-optimize-contrast" }}
+                />
+              </div>
 
-          <a
-            href="https://play.google.com/store/apps/details?id=com.Door2fy&pli=1"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Button size="lg" className="bg-[#53BED1] hover:bg-[#53BED1] my-6">
-              Download for Android
-            </Button>
-          </a>
+              {/* Right Content */}
+              <div className="w-full lg:w-[48%] text-center lg:text-left space-y-5">
+                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#E1F7F9] text-[#04B6EA] text-xs font-bold">
+                  <Sparkles className="w-3.5 h-3.5" />
+                  <span>Doorstep Tech Support</span>
+                </div>
+
+                <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-gray-900 leading-[1.15] tracking-tight">
+                  Ready to Book an <br />
+                  <span className="text-[#04B6EA]">Expert Engineer?</span>
+                </h2>
+
+                <p className="text-gray-600 text-sm md:text-base leading-relaxed max-w-md mx-auto lg:mx-0 font-normal">
+                  Download the Door2fy app and get background-verified computer technicians at your home or office in 10 to 30 minutes.
+                </p>
+
+                <div className="flex flex-wrap items-center justify-center lg:justify-start gap-3 pt-2">
+                  <Link
+                    to="/services"
+                    className="px-6 py-3.5 rounded-full bg-[#04B6EA] text-white font-bold text-xs sm:text-sm hover:bg-[#039ecc] transition-all shadow-md shadow-[#04B6EA]/25 hover:scale-105"
+                  >
+                    Book Online Now
+                  </Link>
+                  <a
+                    href="https://play.google.com/store/apps/details?id=com.Door2fy&pli=1"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="transform transition-all hover:scale-105 active:scale-95 shadow-md rounded-xl overflow-hidden block"
+                  >
+                    <img
+                      src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
+                      alt="Google Play"
+                      className="h-11 md:h-12 w-auto"
+                    />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
     </div>

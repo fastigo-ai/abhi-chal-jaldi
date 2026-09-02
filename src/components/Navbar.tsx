@@ -28,15 +28,15 @@ export const Navbar = () => {
               key={link.path}
               to={link.path}
               className={`text-base font-medium transition-colors ${
-                isActive(link.path) ? "text-[#53BED1]" : "text-gray-800"
-              } hover:text-[#53BED1]`}
+                isActive(link.path) ? "text-[#04B6EA]" : "text-gray-800"
+              } hover:text-[#04B6EA]`}
             >
               {link.name}
             </Link>
           ))}
 
           {/* Center Logo */}
-          <Link to="/" className="text-[#53BED1] h-full flex items-center">
+          <Link to="/" className="text-[#04B6EA] h-full flex items-center">
             <img src={Logo} alt="Logo" className="h-7 w-auto" />
           </Link>
 
@@ -46,8 +46,8 @@ export const Navbar = () => {
               key={link.path}
               to={link.path}
               className={`text-base font-medium transition-colors ${
-                isActive(link.path) ? "text-[#53BED1]" : "text-gray-800"
-              } hover:text-[#53BED1]`}
+                isActive(link.path) ? "text-[#04B6EA]" : "text-gray-800"
+              } hover:text-[#04B6EA]`}
             >
               {link.name}
             </Link>
@@ -59,13 +59,13 @@ export const Navbar = () => {
       <nav className="fixed top-4 left-0 right-0 z-50 px-4 md:hidden">
         <div className="flex items-center justify-between bg-white rounded-full shadow-md border border-gray-200 px-6 py-3 backdrop-blur-md">
           {/* Left-aligned logo */}
-          <Link to="/" className="text-[#53BED1] h-full flex items-center">
+          <Link to="/" className="text-[#04B6EA] h-full flex items-center">
             <img src={Logo} alt="Logo" className="h-7 w-auto" />
           </Link>
 
           {/* Green Circular Hamburger Button */}
           <button
-            className="bg-[#53BED1] p-2 rounded-full"
+            className="bg-[#04B6EA] p-2 rounded-full"
             onClick={() => setIsOpen(true)}
             aria-label="Open Menu"
           >
@@ -82,7 +82,7 @@ export const Navbar = () => {
       >
         {/* Header */}
         <div className="flex items-center justify-between px-4 py-4 border-b">
-          <span className="text-xl font-semibold text-[#53BED1]">Menu</span>
+          <span className="text-xl font-semibold text-[#04B6EA]">Menu</span>
           <button
             onClick={() => setIsOpen(false)}
             className="text-gray-600"
@@ -100,8 +100,8 @@ export const Navbar = () => {
               to={link.path}
               onClick={() => setIsOpen(false)}
               className={`text-base font-medium transition-colors ${
-                isActive(link.path) ? "text-green-600" : "text-gray-800"
-              } hover:text-green-600`}
+                isActive(link.path) ? "text-[#04B6EA]" : "text-gray-800"
+              } hover:text-[#04B6EA]`}
             >
               {link.name}
             </Link>

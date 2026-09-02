@@ -1,14 +1,14 @@
-import physical from "@/assets/banner/physical-damage.png";
-import system from "@/assets/banner/my system is slow.png";
-import port from "@/assets/banner/port issue.png";
-import speaker from "@/assets/banner/speaker,camera.png";
+import physical from "@/assets/quickSupport/physical_damage_clean.jpg";
+import system from "@/assets/quickSupport/system_slow_clean.jpg";
+import port from "@/assets/quickSupport/port_issue_clean.jpg";
+import speaker from "@/assets/quickSupport/speaker_camera_clean.jpg";
 
-import Software from "@/assets/quickSupport/Software not opening or crashing.png";
-import excel from "@/assets/quickSupport/excel not working.png";
-import hanging from "@/assets/quickSupport/laptop hanging or freezing.png";
-import macbook from "@/assets/quickSupport/macbook starting slowly.png";
-import macos from "@/assets/quickSupport/macos update no installing.png";
-import problem from "@/assets/quickSupport/not sure about the problem.png";
+import Software from "@/assets/quickSupport/software_crash_clean.jpg";
+import excel from "@/assets/quickSupport/excel_clean.jpg";
+import hanging from "@/assets/quickSupport/freezing_clean.jpg";
+import macbook from "@/assets/quickSupport/macbook_slow_clean.jpg";
+import macos from "@/assets/quickSupport/macos_update_clean.jpg";
+import problem from "@/assets/quickSupport/not_sure_clean.jpg";
 import macbookSupportImg from "@/assets/macbook-support.jpeg";
 
 export interface ServiceType {

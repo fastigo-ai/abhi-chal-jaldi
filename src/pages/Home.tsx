@@ -1,33 +1,38 @@
 import React, { useEffect, useState } from "react";
-import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
+import { SEOHead } from "@/components/SEOHead";
 import { services as allServices } from "@/data/services";
 import toast from "react-hot-toast";
+import { CylindricalServicesScroller } from "@/components/CylindricalServicesScroller";
+import { Orbit, LayoutGrid, ArrowRight, Zap, ShieldCheck, Sparkles, CheckCircle2, Award, Clock, Star, Quote, MapPin } from "lucide-react";
+import { useReviews, ReviewItem } from "@/utils/reviews";
 
 // Assets
 import heroTechnician from "@/assets/hero-section.png";
 import partnerHandshake from "@/assets/partner_handshake.png";
 import macbookSupportImg from "@/assets/macbook-support.jpeg";
 import phone1 from "@/assets/phone1.png";
+import door2fyTechLabEngineers from "@/assets/door2fy-tech-lab-engineers.png";
 
 /* ================= HERO SECTION ================= */
 const HeroSection = () => {
   return (
-    <section className="w-full bg-[#F0FBFF] overflow-hidden relative min-h-[80dvh] lg:min-h-[800px] flex flex-col">
+    <section className="w-full bg-[#F0FBFF] overflow-hidden relative min-h-[70dvh] lg:min-h-[680px] flex flex-col">
       {/* Background Shapes */}
       <div className="absolute top-[-10%] right-[-10%] w-[60%] aspect-square bg-[#F0FBFF] rounded-full -z-10 blur-3xl opacity-50 transform-gpu"></div>
       <div className="absolute bottom-[10%] left-[-5%] w-[40%] aspect-square bg-[#E8F8FB] rounded-full -z-10 blur-3xl opacity-30 transform-gpu"></div>
 
       {/* Focus Lights - Bottom Corners */}
-      <div className="absolute -bottom-24 -left-24 w-[500px] h-[500px] bg-[#4FB7D4]/10 rounded-full -z-10 blur-[120px] transform-gpu"></div>
+      <div className="absolute -bottom-24 -left-24 w-[500px] h-[500px] bg-[#04B6EA]/10 rounded-full -z-10 blur-[120px] transform-gpu"></div>
       <div className="absolute -bottom-24 -right-24 w-[500px] h-[500px] bg-blue-400/10 rounded-full -z-10 blur-[120px] transform-gpu"></div>
       
       {/* Top Header Row - Full Width Border */}
-      <div className="max-w-7xl mx-auto px-6 lg:px-8 w-full flex flex-col flex-grow pt-10 lg:pt-24">
+      <div className="max-w-7xl mx-auto px-6 lg:px-8 w-full flex flex-col pt-20 lg:pt-20">
         {/* Main Hero Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 items-center gap-12 lg:gap-8 flex-grow pb-16 lg:pb-12">
+        <div className="grid grid-cols-1 lg:grid-cols-12 items-center gap-10 lg:gap-8 pb-10 lg:pb-6">
           {/* Left Content */}
-          <div className="lg:col-span-7 space-y-6 lg:space-y-8 text-center lg:text-left z-10 order-2 lg:order-1 pt-4 lg:pt-10">
+          <div className="lg:col-span-7 space-y-4 lg:space-y-5 text-center lg:text-left z-10 order-2 lg:order-1 pt-0">
             {/* Trust Badge */}
             <div className="inline-flex items-center gap-3 px-4 py-2 bg-white border border-gray-100 rounded-full shadow-sm mx-auto lg:mx-0 w-fit mb-2">
               <span className="relative flex h-2 w-2">
@@ -45,7 +50,7 @@ const HeroSection = () => {
               Expert Laptop Repair & Tech Support 
             </h1>
             <p className="text-gray-500 text-base lg:text-lg -mt-4 max-w-lg mx-auto lg:mx-0 leading-relaxed font-normal">
-              <span className="text-[#45afcb] font-bold">Door2fy</span> delivers fast IT support & device care services across India.
+              <span className="text-[#04B6EA] font-bold">Door2fy</span> delivers fast IT support & device care services across India.
             </p>
 
             {/* Buttons */}
@@ -77,7 +82,7 @@ const HeroSection = () => {
               </div>
               {/* Ratings */}
               <div className="flex items-center gap-3 justify-center lg:justify-start">
-                <div className="flex gap-0.5 text-[#45afcb]">
+                <div className="flex gap-0.5 text-[#04B6EA]">
                   {[...Array(5)].map((_, i) => (
                     <svg
                       key={i}
@@ -95,40 +100,7 @@ const HeroSection = () => {
               </div>
             </div>
 
-            {/* Live In Cities */}
-            <div className="space-y-4">
-              <div className="flex flex-col gap-3">
-                <span className="text-[11px] font-extrabold tracking-[0.2em] text-gray-400 uppercase text-center lg:text-left">
-                  Live In
-                </span>
-                <div className="flex flex-wrap gap-2 justify-center lg:justify-start">
-                  {[
-                    "Bengaluru",
-                    "Delhi",
-                    "Noida",
-                    "Gurgaon",
-                    "Mumbai",
-                    "Pune",
-                    "Hyderabad",
-                  ].map((city) => (
-                    <span
-                      key={city}
-                      className="px-5 py-2 bg-white border border-gray-100 rounded-full text-[13px] font-semibold text-gray-700 shadow-sm hover:border-[#45afcb]/30 transition-colors cursor-default"
-                    >
-                      {city}
-                    </span>
-                  ))}
-                  <span
-                    onClick={() => {
-                      document.getElementById("footer")?.scrollIntoView({ behavior: "smooth" });
-                    }}
-                    className="px-5 py-2 text-[#45afcb] font-bold text-[13px] cursor-pointer hover:underline underline-offset-4"
-                  >
-                    + 8 more cities →
-                  </span>
-                </div>
-              </div>
-            </div>
+
           </div>
 
           {/* Right Image Section */}
@@ -137,11 +109,11 @@ const HeroSection = () => {
             <div className="absolute w-[100%] lg:w-[110%] h-[100%] lg:h-[110%] bg-blue-50/50 rounded-[30px] lg:rounded-[40px] rotate-3 -z-10 -right-10"></div>
 
             {/* Main Image */}
-            <div className="relative w-full max-w-[450px] lg:max-w-[500px]">
+            <div className="relative w-full max-w-[480px] lg:max-w-[560px]">
               <img
                 src={heroTechnician}
                 alt="IT Support"
-                className="relative z-10 w-full h-[630px] drop-shadow-[0_30px_60px_rgba(0,0,0,0.12)] object-contain select-none"
+                className="relative z-10 w-full h-[660px] lg:h-[720px] drop-shadow-[0_30px_60px_rgba(0,0,0,0.12)] object-contain select-none"
                 style={{ imageRendering: "-webkit-optimize-contrast" }}
               />
 
@@ -199,50 +171,172 @@ const HeroSection = () => {
 
 /* ================= SERVICES SECTION ================= */
 const ServicesSection = () => {
-  const services = allServices.slice(0, 6);
+  const [viewMode, setViewMode] = useState<"cylinder" | "grid">("cylinder");
+  const services = allServices;
 
   return (
-    <section className="bg-white py-8 md:py-12">
+    <section className="bg-white py-8 md:py-14 overflow-hidden relative">
+      {/* Dynamic Background Glow */}
+      <div className="absolute top-1/2 right-1/4 -translate-y-1/2 w-[500px] h-[350px] bg-[#04B6EA]/10 rounded-full blur-[140px] pointer-events-none -z-10" />
+
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
-        <div className="mb-12 md:mb-20 text-left">
-          <span className="text-[#4FB7D4] font-bold text-[14px] md:text-[15px] mb-3 md:mb-4 pl-1 block">Skip the tech stress.</span>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl lg:text-[4.5rem] font-bold mb-4 text-gray-900 tracking-tight leading-[1.2]">
-            Expert tech support <br /> delivered fast
-          </h2>
-          <p className="text-gray-500 text-[15px] md:text-sm font-medium leading-relaxed">Our team of verified Door2fy Professionals are always on time</p>
-        </div>
-        {/* Responsive Grid */}
-        <div className="grid grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-6 md:gap-8">
-          {services.map((service) => (
-            <Link 
-              key={service.id} 
-              to={`/service/${service.slug}`}
-              className="reveal group p-4 sm:p-6 bg-[#F8FDFF] rounded-3xl sm:rounded-[2.5rem] border border-[#E1F7F9] hover:border-[#4FB7D4] hover:bg-white transition-all duration-300 text-left flex flex-col justify-between space-y-4 sm:space-y-6 shadow-sm hover:shadow-[0_25px_50px_rgba(79,183,212,0.1)] hover:-translate-y-1.5"
-            >
-              {/* Service Image Container */}
-              <div className="w-full h-32 sm:h-48 rounded-2xl sm:rounded-[1.8rem] overflow-hidden relative">
-                <img 
-                  src={service.image} 
-                  alt={service.title} 
-                  className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-110" 
-                />
+        {viewMode === "cylinder" ? (
+          /* Split 2-Column Layout: Left (Heading & CTA), Right (Compact 3D Cylinder Scroller) */
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
+            {/* Left Column (5/12) */}
+            <div className="lg:col-span-5 text-left space-y-6">
+              <div>
+                {/* Skip the tech stress Pill */}
+                <motion.div
+                  initial={{ opacity: 0, y: -15, scale: 0.95 }}
+                  whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, ease: "easeOut" }}
+                  className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#E1F7F9] text-[#04B6EA] text-xs font-extrabold mb-3.5 shadow-xs border border-[#04B6EA]/20"
+                >
+                  <span className="w-2 h-2 rounded-full bg-[#04B6EA]"></span>
+                  <span>Skip the tech stress</span>
+                </motion.div>
+
+                {/* Main Heading */}
+                <motion.h2
+                  initial={{ opacity: 0, y: 25 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
+                  className="text-4xl sm:text-5xl lg:text-[3.25rem] font-black text-slate-900 tracking-tight leading-[1.12]"
+                >
+                  Expert tech support <br />
+                  <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#04B6EA] to-[#0284c7]">
+                    delivered fast
+                  </span>
+                </motion.h2>
+
+                {/* Subtitle Description */}
+                <motion.p
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
+                  className="text-slate-600 text-sm sm:text-base font-normal leading-relaxed mt-4 max-w-lg"
+                >
+                  Our team of verified Door2fy Professionals diagnose and resolve your device issues in{" "}
+                  <span className="text-[#04B6EA] font-bold">5–10 minutes</span>. On-demand doorstep care.
+                </motion.p>
               </div>
-              
-              {/* Content Container */}
-              <div className="flex flex-col flex-grow w-full justify-between">
-                <h3 className="text-[13px] sm:text-xl md:text-2xl font-bold mb-2 sm:mb-4 text-gray-900 tracking-tight group-hover:text-[#4FB7D4] transition-colors duration-300 leading-snug">{service.title}</h3>
-                <div className="flex items-center justify-between pt-2 border-t border-gray-50 group-hover:border-[#E1F7F9] transition-colors duration-300">
-                  <span className="text-[10px] sm:text-sm font-bold text-gray-500 group-hover:text-gray-900 transition-colors duration-300 hidden sm:block">Click here</span>
-                  <div className="w-6 h-6 sm:w-10 sm:h-10 rounded-full bg-[#E1F7F9] text-[#4FB7D4] flex items-center justify-center transition-all duration-300 group-hover:bg-[#4FB7D4] group-hover:text-white transform group-hover:translate-x-1 ml-auto">
-                    <svg className="w-3 h-3 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                    </svg>
+
+              {/* Trust & Guarantee Highlights */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.3, ease: "easeOut" }}
+                className="space-y-4 pt-1"
+              >
+                <div className="flex items-center gap-3.5 group">
+                  <div className="w-10 h-10 rounded-full bg-[#E1F7F9] text-[#04B6EA] flex items-center justify-center shrink-0 shadow-xs group-hover:scale-110 transition-transform">
+                    <Zap className="w-4 h-4 fill-[#04B6EA]" />
+                  </div>
+                  <div>
+                    <h4 className="text-sm font-extrabold text-slate-900 leading-snug">5–10 Min Quick Diagnosis</h4>
+                    <p className="text-xs text-slate-500 font-medium">Fast doorstep & remote troubleshooting</p>
                   </div>
                 </div>
+
+                <div className="flex items-center gap-3.5 group">
+                  <div className="w-10 h-10 rounded-full bg-[#E1F7F9] text-[#04B6EA] flex items-center justify-center shrink-0 shadow-xs group-hover:scale-110 transition-transform">
+                    <ShieldCheck className="w-4 h-4 text-[#04B6EA]" />
+                  </div>
+                  <div>
+                    <h4 className="text-sm font-extrabold text-slate-900 leading-snug">Verified & Certified Engineers</h4>
+                    <p className="text-xs text-slate-500 font-medium">100% background checked professionals</p>
+                  </div>
+                </div>
+              </motion.div>
+
+              {/* Actions & Switcher */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.4, ease: "easeOut" }}
+                className="flex flex-wrap items-center gap-3 pt-2"
+              >
+                <Link
+                  to="/services"
+                  className="inline-flex items-center gap-2 px-6 py-3.5 rounded-2xl bg-[#04B6EA] hover:bg-[#039ecc] text-white font-bold text-xs sm:text-sm transition-all duration-300 shadow-md shadow-[#04B6EA]/25 hover:scale-105"
+                >
+                  <span>Explore All Services</span>
+                  <ArrowRight className="w-4 h-4" />
+                </Link>
+
+                <button
+                  onClick={() => setViewMode("grid")}
+                  className="inline-flex items-center gap-2 px-5 py-3.5 rounded-2xl bg-white hover:bg-slate-50 border border-slate-200 text-slate-700 font-bold text-xs sm:text-sm transition-all shadow-xs"
+                >
+                  <LayoutGrid className="w-4 h-4 text-slate-500" />
+                  <span>Grid View</span>
+                </button>
+              </motion.div>
+            </div>
+
+            {/* Right Column (7/12) - Compact 3D Cylindrical Scroller covering only half the section */}
+            <div className="lg:col-span-7 relative w-full flex justify-center items-center overflow-visible">
+              <CylindricalServicesScroller services={services} compact={true} />
+            </div>
+          </div>
+        ) : (
+          /* Grid View Mode */
+          <div className="space-y-8">
+            <div className="flex flex-col md:flex-row md:items-end justify-between gap-4">
+              <div className="text-left">
+                <span className="text-[#04B6EA] font-bold text-[14px] md:text-[15px] mb-2 block">
+                  Skip the tech stress.
+                </span>
+                <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 tracking-tight leading-[1.2]">
+                  Expert tech support <br /> delivered fast
+                </h2>
               </div>
-            </Link>
-          ))}
-        </div>
+              <button
+                onClick={() => setViewMode("cylinder")}
+                className="flex items-center gap-2 px-4 py-2 rounded-full text-xs font-bold bg-[#04B6EA] text-white shadow-md shadow-[#04B6EA]/25 self-start md:self-end hover:scale-105 transition-all"
+              >
+                <Orbit className="w-3.5 h-3.5" />
+                <span>3D Cylinder View</span>
+              </button>
+            </div>
+
+            <div className="grid grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-6 md:gap-8">
+              {services.map((service) => (
+                <Link 
+                  key={service.id} 
+                  to={`/service/${service.slug}`}
+                  className="group p-4 sm:p-6 bg-[#F8FDFF] rounded-3xl sm:rounded-[2.5rem] border border-[#E1F7F9] hover:border-[#04B6EA] hover:bg-white transition-all duration-300 text-left flex flex-col justify-between space-y-4 sm:space-y-6 shadow-sm hover:shadow-[0_25px_50px_rgba(4, 182, 234,0.1)] hover:-translate-y-1.5"
+                >
+                  <div className="w-full h-36 sm:h-52 rounded-2xl sm:rounded-[1.8rem] overflow-hidden relative bg-white border border-gray-100 p-2 flex items-center justify-center">
+                    <img 
+                      src={service.image} 
+                      alt={service.title} 
+                      className="w-full h-full object-contain transition-transform duration-700 ease-out group-hover:scale-105" 
+                    />
+                  </div>
+                  
+                  <div className="flex flex-col flex-grow w-full justify-between">
+                    <h3 className="text-[13px] sm:text-xl md:text-2xl font-bold mb-2 sm:mb-4 text-gray-900 tracking-tight group-hover:text-[#04B6EA] transition-colors duration-300 leading-snug">{service.title}</h3>
+                    <div className="flex items-center justify-between pt-2 border-t border-gray-50 group-hover:border-[#E1F7F9] transition-colors duration-300">
+                      <span className="text-[10px] sm:text-sm font-bold text-gray-500 group-hover:text-gray-900 transition-colors duration-300 hidden sm:block">Click here</span>
+                      <div className="w-6 h-6 sm:w-10 sm:h-10 rounded-full bg-[#E1F7F9] text-[#04B6EA] flex items-center justify-center transition-all duration-300 group-hover:bg-[#04B6EA] group-hover:text-white transform group-hover:translate-x-1 ml-auto">
+                        <svg className="w-3 h-3 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                </Link>
+              ))}
+            </div>
+          </div>
+        )}
       </div>
     </section>
   );
@@ -294,20 +388,103 @@ const WhyChooseUsSection = () => {
     <section className="bg-white py-8 md:py-10 overflow-hidden relative">
       {/* Dynamic Floating Bubbles Background */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-[#4FB7D4]/5 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-[#04B6EA]/5 rounded-full blur-3xl animate-pulse"></div>
         <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-blue-100/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
       </div>
 
       <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
-        {/* Top Header Section */}
-        <div className="mb-16 md:mb-20 text-left">
-          <span className="text-[#4FB7D4] font-bold text-[14px] md:text-[15px] mb-3 md:mb-4 pl-1 block">Why Choose Door2fy?</span>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl lg:text-[4.5rem] font-bold mb-4 text-gray-900 tracking-tight leading-[1.2]">
-            Trusted Technology <br /> Solutions for Every Need
-          </h2>
-          <p className="text-gray-500 text-base lg:text-lg max-w-full lg:max-w-[60%] mt-4 leading-relaxed font-normal">
-            <span className="text-[#45afcb] font-bold">Door2fy</span> provides laptop repair with tech support to restore performance and maximize productivity.
-          </p>
+        {/* Top Header Section - Premium Split Layout */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center mb-10">
+          {/* Left Column (5/12) */}
+          <div className="lg:col-span-5 text-left space-y-6">
+            <div>
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#E1F7F9] text-[#04B6EA] text-xs font-bold mb-3 shadow-sm border border-[#04B6EA]/20">
+                <Sparkles className="w-3.5 h-3.5 text-[#04B6EA] animate-pulse" />
+                <span>Why Choose Door2fy?</span>
+              </div>
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-gray-900 tracking-tight leading-[1.15]">
+                Trusted Technology <br />
+                <span className="text-[#04B6EA]">
+                  Solutions for Every Need
+                </span>
+              </h2>
+              <p className="text-gray-600 text-base lg:text-lg leading-relaxed font-normal mt-4">
+                <span className="text-[#04B6EA] font-bold">Door2fy</span> provides certified doorstep laptop repair & on-demand tech support across India. We restore device performance, protect your data, and maximize your productivity with guaranteed peace of mind.
+              </p>
+            </div>
+
+            {/* Action Buttons */}
+            <div className="flex flex-wrap items-center gap-3 pt-2">
+              <Link
+                to="/contact-us"
+                className="inline-flex items-center gap-2 px-6 py-3.5 rounded-full bg-[#04B6EA] text-white font-bold text-xs md:text-sm hover:bg-[#039ecc] transition-all duration-300 shadow-lg shadow-[#04B6EA]/25 hover:scale-105"
+              >
+                <span>Book a Technician</span>
+                <ArrowRight className="w-4 h-4" />
+              </Link>
+              <Link
+                to="/services"
+                className="inline-flex items-center gap-2 px-5 py-3.5 rounded-full bg-gray-50 text-gray-700 font-bold text-xs md:text-sm hover:bg-gray-100 transition-all border border-gray-200"
+              >
+                <span>Explore All Services</span>
+              </Link>
+            </div>
+          </div>
+
+          {/* Right Column (7/12) - Door2fy Certified Hardware Engineers (Clean Full Showcase) */}
+          <div className="lg:col-span-7 relative flex justify-center items-center lg:justify-end">
+            <div className="relative w-full flex justify-center items-center group">
+              <img
+                src={door2fyTechLabEngineers}
+                alt="Door2fy Certified Hardware Engineers"
+                className="w-full h-auto max-h-[460px] object-contain drop-shadow-[0_20px_50px_rgba(4,182,234,0.2)] transform transition-transform duration-700 ease-out group-hover:scale-105 select-none pointer-events-none"
+                style={{ imageRendering: "-webkit-optimize-contrast" }}
+              />
+            </div>
+          </div>
+        </div>
+
+        {/* Feature Highlights Grid - 4 Full Width Cards */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-12 lg:mb-14">
+          <div className="flex items-center gap-3.5 p-4 rounded-3xl bg-[#F8FDFF] border border-[#E1F7F9] shadow-xs hover:border-[#04B6EA]/40 transition-all">
+            <div className="w-11 h-11 rounded-2xl bg-[#E1F7F9] flex items-center justify-center text-[#04B6EA] shrink-0 font-bold">
+              <ShieldCheck className="w-5 h-5" />
+            </div>
+            <div className="text-left">
+              <h4 className="text-sm font-bold text-gray-900 leading-snug">100% Genuine Parts</h4>
+              <p className="text-xs text-gray-500 font-medium mt-0.5">Certified OEM replacements</p>
+            </div>
+          </div>
+
+          <div className="flex items-center gap-3.5 p-4 rounded-3xl bg-[#F8FDFF] border border-[#E1F7F9] shadow-xs hover:border-[#04B6EA]/40 transition-all">
+            <div className="w-11 h-11 rounded-2xl bg-[#E1F7F9] flex items-center justify-center text-[#04B6EA] shrink-0 font-bold">
+              <Zap className="w-5 h-5" />
+            </div>
+            <div className="text-left">
+              <h4 className="text-sm font-bold text-gray-900 leading-snug">Doorstep in 30 Mins</h4>
+              <p className="text-xs text-gray-500 font-medium mt-0.5">Live technician GPS tracking</p>
+            </div>
+          </div>
+
+          <div className="flex items-center gap-3.5 p-4 rounded-3xl bg-[#F8FDFF] border border-[#E1F7F9] shadow-xs hover:border-[#04B6EA]/40 transition-all">
+            <div className="w-11 h-11 rounded-2xl bg-[#E1F7F9] flex items-center justify-center text-[#04B6EA] shrink-0 font-bold">
+              <Award className="w-5 h-5" />
+            </div>
+            <div className="text-left">
+              <h4 className="text-sm font-bold text-gray-900 leading-snug">Up to 90 Days Warranty</h4>
+              <p className="text-xs text-gray-500 font-medium mt-0.5">Hassle-free service protection</p>
+            </div>
+          </div>
+
+          <div className="flex items-center gap-3.5 p-4 rounded-3xl bg-[#F8FDFF] border border-[#E1F7F9] shadow-xs hover:border-[#04B6EA]/40 transition-all">
+            <div className="w-11 h-11 rounded-2xl bg-[#E1F7F9] flex items-center justify-center text-[#04B6EA] shrink-0 font-bold">
+              <Clock className="w-5 h-5" />
+            </div>
+            <div className="text-left">
+              <h4 className="text-sm font-bold text-gray-900 leading-snug">5-10 Min Diagnosis</h4>
+              <p className="text-xs text-gray-500 font-medium mt-0.5">Instant hardware & OS testing</p>
+            </div>
+          </div>
         </div>
 
         {/* 3D Stats Grid */}
@@ -315,9 +492,9 @@ const WhyChooseUsSection = () => {
           {stats.map((item, index) => (
             <div
               key={index}
-              className="group relative bg-white rounded-3xl sm:rounded-[2.5rem] p-4 sm:p-8 md:p-10 text-center transition-all duration-500 border border-gray-100 shadow-[0_10px_30px_rgba(0,0,0,0.02)] hover:shadow-[0_30px_60px_rgba(79,183,212,0.12)] flex flex-col items-center justify-center overflow-hidden"
+              className="group relative bg-white rounded-3xl sm:rounded-[2.5rem] p-4 sm:p-8 md:p-10 text-center transition-all duration-500 border border-gray-100 shadow-[0_10px_30px_rgba(0,0,0,0.02)] hover:shadow-[0_30px_60px_rgba(4, 182, 234,0.12)] flex flex-col items-center justify-center overflow-hidden"
             >
-              <div className="w-10 h-10 sm:w-14 sm:h-14 rounded-xl sm:rounded-2xl bg-[#E1F7F9] text-[#4FB7D4] flex items-center justify-center mb-3 sm:mb-6 shadow-lg transform group-hover:scale-110 group-hover:rotate-6 transition-all duration-500">
+              <div className="w-10 h-10 sm:w-14 sm:h-14 rounded-xl sm:rounded-2xl bg-[#E1F7F9] text-[#04B6EA] flex items-center justify-center mb-3 sm:mb-6 shadow-lg transform group-hover:scale-110 group-hover:rotate-6 transition-all duration-500">
                 <div className="scale-75 sm:scale-100">{item.icon}</div>
               </div>
 
@@ -334,7 +511,7 @@ const WhyChooseUsSection = () => {
 
         {/* Bottom App Banner */}
         <div className="relative group max-w-6xl mx-auto">
-          <div className="absolute inset-4 bg-[#4FB7D4]/10 blur-3xl rounded-[4rem] group-hover:opacity-60 transition-opacity"></div>
+          <div className="absolute inset-4 bg-[#04B6EA]/10 blur-3xl rounded-[4rem] group-hover:opacity-60 transition-opacity"></div>
           
           <div className="relative bg-[#F8FDFF] rounded-[3rem] md:rounded-[4rem] px-8 lg:px-20 py-0 flex flex-col lg:flex-row items-center justify-between border border-[#E1F7F9] shadow-[0_20px_50px_rgba(79,183,212,0.05)] overflow-hidden">
             {/* Phones Image - Left Side */}
@@ -377,90 +554,49 @@ const WhyChooseUsSection = () => {
 
 /* ================= TESTIMONIALS SECTION ================= */
 const TestimonialsSection = () => {
-  const reviews = [
-    { 
-      name: "Aarav Sharma", 
-      location: "Noida Sector 62",
-      rating: 5, 
-      review: "Door2Fy fixed my laptop quickly. Professional engineer and smooth service.", 
-      id: 1 
-    },
-    { 
-      name: "Sneha Verma", 
-      location: "Indirapuram",
-      rating: 5, 
-      review: "Quick response and efficient networking support by Door2Fy.", 
-      id: 2 
-    },
-    { 
-      name: "Karan Mehta", 
-      location: "Greater Noida",
-      rating: 5, 
-      review: "Excellent hardware repair service. My MacBook was repaired faster than expected and is working perfectly now.", 
-      id: 3 
-    },
-    { 
-      name: "Ritika Singh", 
-      location: "Delhi NCR",
-      rating: 5, 
-      review: "Highly professional team with genuine support. The technician arrived on time and handled the system setup perfectly.", 
-      id: 4 
-    },
-    { 
-      name: "Aditya Rao", 
-      location: "Sector 18 Noida",
-      rating: 5, 
-      review: "Door2Fy provides reliable IT services at affordable pricing. Their remote support saved a lot of time for our office.", 
-      id: 5 
-    },
-    { 
-      name: "Pooja Malhotra", 
-      location: "Gurgaon",
-      rating: 5, 
-      review: "Great experience with their networking and AMC services. The support team was polite, responsive, and technically strong.", 
-      id: 6 
-    }
-  ];
+  const { reviews } = useReviews();
 
-  interface Review {
-    name: string;
-    location: string;
-    rating: number;
-    review: string;
-    id: number;
-  }
-
-  const ReviewCard = ({ r }: { r: Review }) => (
+  const ReviewCard = ({ r }: { r: ReviewItem }) => (
     <div
-      className="w-[280px] sm:w-[320px] md:w-[400px] h-[190px] sm:h-[220px] md:h-[240px] p-5 md:p-8 rounded-3xl md:rounded-[2.5rem] bg-white border border-gray-100 relative overflow-hidden flex-shrink-0 mx-3 sm:mx-4 transition-all duration-500 hover:shadow-[0_20px_50px_rgba(0,0,0,0.05)] flex flex-col justify-between"
+      className="w-[300px] sm:w-[360px] md:w-[400px] h-[220px] sm:h-[240px] p-6 sm:p-7 rounded-3xl sm:rounded-[2.2rem] bg-[#F8FDFF] border border-[#E1F7F9] hover:border-[#04B6EA]/60 hover:bg-white transition-all duration-400 shadow-sm hover:shadow-[0_20px_45px_rgba(4,182,234,0.12)] hover:-translate-y-1.5 flex flex-col justify-between flex-shrink-0 mx-3 sm:mx-4 overflow-hidden relative group text-left"
     >
-      {/* Radial Dot Pattern Background */}
-      <div className="absolute inset-0 opacity-[0.05]" style={{ backgroundImage: "radial-gradient(circle, #4FB7D4 1.5px, transparent 1.5px)", backgroundSize: "20px 20px" }} />
-      
-      <div className="relative z-10 flex flex-col h-full">
-        {/* Stars at Top */}
-        <div className="flex gap-1 mb-4">
-          {[...Array(5)].map((_, i) => (
-            <svg key={i} className="w-4 h-4 text-[#4FB7D4] fill-current" viewBox="0 0 20 20">
-              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-            </svg>
+      {/* Background Subtle Watermark Quote */}
+      <Quote className="absolute right-4 top-4 w-12 h-12 text-[#04B6EA]/10 group-hover:text-[#04B6EA]/20 transition-colors pointer-events-none rotate-180" />
+
+      {/* Top Bar: Stars + Verified Badge */}
+      <div className="flex items-center justify-between relative z-10">
+        <div className="flex gap-1 text-amber-400">
+          {[...Array(Number(r.rating) || 5)].map((_, i) => (
+            <Star key={i} className="w-4 h-4 fill-amber-400 text-amber-400" />
           ))}
         </div>
+        <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-emerald-50 text-emerald-600 text-[10px] font-bold border border-emerald-100">
+          <ShieldCheck className="w-3 h-3 text-emerald-600" />
+          <span>Verified</span>
+        </span>
+      </div>
 
-        {/* Review Text in Middle */}
-        <p className="text-gray-800 leading-relaxed font-medium text-sm md:text-base mb-4 flex-grow line-clamp-3">
-          “{r.review}”
-        </p>
-        
-        {/* Bottom Section: Avatar, Name, Location */}
-        <div className="flex items-center gap-4 mt-auto">
-          {/* Circular Avatar */}
-          <div className="w-10 h-10 rounded-full bg-[#E1F7F9] flex items-center justify-center font-bold text-[#4FB7D4] text-base">
-            {r.name.charAt(0)}
-          </div>
-          <div className="text-left">
-            <h4 className="font-bold text-gray-900 text-sm md:text-[15px] leading-tight">{r.name}</h4>
-            <p className="text-gray-500 text-[11px] md:text-[12px] font-medium">{r.location}</p>
+      {/* Review Text */}
+      <p className="text-slate-700 font-normal text-xs sm:text-sm leading-relaxed line-clamp-3 my-2 flex-grow relative z-10">
+        “{r.review}”
+      </p>
+
+      {/* Bottom Profile Row */}
+      <div className="flex items-center gap-3 pt-3 border-t border-slate-100/90 mt-auto relative z-10">
+        <img
+          src={`https://ui-avatars.com/api/?name=${encodeURIComponent(
+            r.name || "Customer"
+          )}&background=E1F7F9&color=04B6EA&bold=true`}
+          alt={r.name}
+          className="w-10 h-10 rounded-full object-cover shadow-xs border border-white"
+        />
+        <div className="text-left">
+          <h4 className="font-bold text-slate-900 text-sm leading-tight group-hover:text-[#04B6EA] transition-colors">
+            {r.name}
+          </h4>
+          <div className="flex items-center gap-1 text-slate-400 text-[11px] font-medium mt-0.5">
+            <MapPin className="w-3 h-3 text-[#04B6EA]" />
+            <span>{r.city || r.location || "Doorstep Client"}</span>
           </div>
         </div>
       </div>
@@ -468,26 +604,44 @@ const TestimonialsSection = () => {
   );
 
   return (
-    <section className="py-4 lg:py-8 bg-white overflow-hidden">
-      <div className="max-w-7xl mx-auto px-6 lg:px-8 mb-16 md:mb-18 text-left">
-        <span className="text-[#4FB7D4] font-bold uppercase tracking-[0.4em] text-[10px] md:text-[11px] mb-4 block pl-4">Testimonials</span>
-        <h2 className="text-3xl md:text-4xl lg:text-5xl lg:text-[4.5rem] font-bold text-gray-900 tracking-tight leading-tight pl-4">Trusted by Door2fy  <br />Tech Experts.</h2>
-        <p className="text-gray-500 mt-4 font-medium text-base md:text-sm pl-4">Professional tech assistance, delivered when you need it.</p>
-      </div>
-
-      {/* Marquee Section */}
-      <div className="relative w-full flex flex-col gap-8 md:gap-12">
-        {/* Row 1: Right to Left */}
-        <div className="flex animate-marquee hover:[animation-play-state:paused] w-max py-2">
-          {[...reviews, ...reviews, ...reviews].map((r, idx) => (
-            <ReviewCard key={`r1-${idx}`} r={r} />
-          ))}
+    <section id="testimonials" className="py-14 lg:py-20 bg-white overflow-hidden scroll-mt-24">
+      <div className="max-w-7xl mx-auto px-6 lg:px-8 mb-12 text-left">
+        <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#E1F7F9] text-[#04B6EA] font-extrabold text-xs mb-3 border border-[#04B6EA]/20 shadow-xs">
+          <Sparkles className="w-3.5 h-3.5 fill-[#04B6EA]" />
+          <span>Verified Doorstep Reviews</span>
         </div>
 
-        {/* Row 2: Left to Right */}
-        <div className="flex animate-marquee-reverse hover:[animation-play-state:paused] w-max py-2">
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
+          <div>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-slate-900 tracking-tight leading-[1.12]">
+              Trusted by <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#04B6EA] to-[#0284c7]">Door2fy Customers</span> <br />
+              & Tech Experts.
+            </h2>
+            <p className="text-slate-600 mt-3 font-normal text-sm sm:text-base max-w-xl leading-relaxed">
+              Real experiences and verified ratings from home users, professionals, and engineers who rely on Door2fy doorstep tech repair.
+            </p>
+          </div>
+
+          <Link
+            to="/leave-a-review"
+            className="inline-flex items-center gap-2 px-5 py-3 rounded-full bg-[#04B6EA] hover:bg-[#039ecc] text-white text-xs sm:text-sm font-bold transition-all shadow-md shadow-[#04B6EA]/25 hover:scale-105 w-fit shrink-0"
+          >
+            <Star className="w-4 h-4 fill-white" />
+            <span>Leave a Review</span>
+          </Link>
+        </div>
+      </div>
+
+      {/* Marquee Container with Gradient Side Masks */}
+      <div className="relative w-full flex flex-col">
+        {/* Left & Right Gradient Fade Masks */}
+        <div className="pointer-events-none absolute left-0 top-0 bottom-0 w-16 sm:w-36 bg-gradient-to-r from-white to-transparent z-20" />
+        <div className="pointer-events-none absolute right-0 top-0 bottom-0 w-16 sm:w-36 bg-gradient-to-l from-white to-transparent z-20" />
+
+        {/* Single Row: Right to Left */}
+        <div className="flex animate-marquee hover:[animation-play-state:paused] w-max py-2">
           {[...reviews, ...reviews, ...reviews].map((r, idx) => (
-            <ReviewCard key={`r2-${idx}`} r={r} />
+            <ReviewCard key={`r-${idx}`} r={r} />
           ))}
         </div>
       </div>
@@ -497,25 +651,14 @@ const TestimonialsSection = () => {
           0% { transform: translateX(0); }
           100% { transform: translateX(-33.33%); }
         }
-        @keyframes marquee-reverse {
-          0% { transform: translateX(-33.33%); }
-          100% { transform: translateX(0); }
-        }
         .animate-marquee {
           animation: marquee 60s linear infinite;
         }
         .animate-marquee:hover {
           animation-play-state: paused !important;
         }
-        .animate-marquee-reverse {
-          animation: marquee-reverse 60s linear infinite;
-        }
-        .animate-marquee-reverse:hover {
-          animation-play-state: paused !important;
-        }
         @media (max-width: 768px) {
-          .animate-marquee { animation-duration: 35s; }
-          .animate-marquee-reverse { animation-duration: 35s; }
+          .animate-marquee { animation-duration: 38s; }
         }
       `}} />
     </section>
@@ -589,12 +732,12 @@ const PartnerSection = () => {
         <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
           {/* LEFT: Content */}
           <div className="flex flex-col items-start text-left pl-4 lg:pl-0">
-            <span className="uppercase tracking-[0.4em] text-[#4FB7D4] text-[10px] md:text-[11px] font-bold block mb-6">
+            <span className="uppercase tracking-[0.4em] text-[#04B6EA] text-[10px] md:text-[11px] font-bold block mb-6">
               Partner With Us
             </span>
             <h2 className="text-4xl lg:text-6xl leading-[1.2] font-extrabold text-gray-900 mb-8 tracking-tight">
               Become a <br />
-              <span className="text-[#4FB7D4]">Door2fy</span> Partner
+              <span className="text-[#04B6EA]">Door2fy</span> Partner
             </h2>
             <p className="text-gray-500 text-lg md:text-xl leading-relaxed mb-12 font-medium max-w-lg">
               Join our network of elite experts and grow your business with the most trusted IT brand in the region.
@@ -608,7 +751,7 @@ const PartnerSection = () => {
                 "24/7 dedicated partner support and training"
               ].map((item, index) => (
                 <div key={index} className="flex items-start gap-5 group">
-                  <div className="flex-shrink-0 w-6 h-6 md:w-7 md:h-7 mt-1 rounded-full bg-[#4FB7D4] flex items-center justify-center text-white shadow-lg shadow-[#4FB7D4]/20 group-hover:scale-110 transition-transform">
+                  <div className="flex-shrink-0 w-6 h-6 md:w-7 md:h-7 mt-1 rounded-full bg-[#04B6EA] flex items-center justify-center text-white shadow-lg shadow-[#04B6EA]/20 group-hover:scale-110 transition-transform">
                     <svg className="w-3.5 md:w-4 h-3.5 md:h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M5 13l4 4L19 7" />
                     </svg>
@@ -622,9 +765,9 @@ const PartnerSection = () => {
           {/* RIGHT: High Contrast Form */}
           <div className="relative">
             {/* Subtle glow behind the form */}
-            <div className="absolute -inset-6 bg-[#4FB7D4]/10 rounded-[3rem] blur-3xl -z-10"></div>
+            <div className="absolute -inset-6 bg-[#04B6EA]/10 rounded-[3rem] blur-3xl -z-10"></div>
             
-            <form onSubmit={handleSubmit} className="relative z-10 space-y-7 bg-white p-8 md:p-10 lg:p-14 rounded-[3rem] border border-[#E1F7F9] shadow-[0_30px_70px_rgba(79,183,212,0.12)]">
+            <form onSubmit={handleSubmit} className="relative z-10 space-y-7 bg-white p-8 md:p-10 lg:p-14 rounded-[3rem] border border-[#E1F7F9] shadow-[0_30px_70px_rgba(4, 182, 234,0.12)]">
               <div className="mb-6">
                 <h3 className="text-2xl md:text-3xl font-extrabold text-center text-gray-900 mb-3 tracking-tight">Registration Form</h3>
                 <p className="text-gray-500 text-sm md:text-base text-center font-medium">Join 100+ partners across the country.</p>
@@ -632,49 +775,49 @@ const PartnerSection = () => {
 
               <div className="grid md:grid-cols-2 gap-5 md:gap-7">
                 <div className="space-y-2.5 text-left">
-                  <label className="text-[10px] font-extrabold text-[#4FB7D4] uppercase tracking-widest ml-1">Full Name</label>
+                  <label className="text-[10px] font-extrabold text-[#04B6EA] uppercase tracking-widest ml-1">Full Name</label>
                   <input
                     type="text"
                     required
                     value={formData.fullName}
                     onChange={(e) => setFormData({ ...formData, fullName: e.target.value })}
                     placeholder="Enter your name"
-                    className="w-full h-14 md:h-16 px-6 md:px-7 rounded-2xl bg-[#F8FDFF] border-2 border-transparent focus:border-[#4FB7D4] focus:bg-white text-gray-900 text-[15px] outline-none transition-all placeholder:text-gray-400 shadow-sm font-bold"
+                    className="w-full h-14 md:h-16 px-6 md:px-7 rounded-2xl bg-[#F8FDFF] border-2 border-transparent focus:border-[#04B6EA] focus:bg-white text-gray-900 text-[15px] outline-none transition-all placeholder:text-gray-400 shadow-sm font-bold"
                   />
                 </div>
                 <div className="space-y-2.5 text-left">
-                  <label className="text-[10px] font-extrabold text-[#4FB7D4] uppercase tracking-widest ml-1">Email Address</label>
+                  <label className="text-[10px] font-extrabold text-[#04B6EA] uppercase tracking-widest ml-1">Email Address</label>
                   <input
                     type="email"
                     required
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                     placeholder="Enter your email"
-                    className="w-full h-14 md:h-16 px-6 md:px-7 rounded-2xl bg-[#F8FDFF] border-2 border-transparent focus:border-[#4FB7D4] focus:bg-white text-gray-900 text-[15px] outline-none transition-all placeholder:text-gray-400 shadow-sm font-bold"
+                    className="w-full h-14 md:h-16 px-6 md:px-7 rounded-2xl bg-[#F8FDFF] border-2 border-transparent focus:border-[#04B6EA] focus:bg-white text-gray-900 text-[15px] outline-none transition-all placeholder:text-gray-400 shadow-sm font-bold"
                   />
                 </div>
               </div>
 
               <div className="grid md:grid-cols-2 gap-5 md:gap-7">
                 <div className="space-y-2.5 text-left">
-                  <label className="text-[10px] font-extrabold text-[#4FB7D4] uppercase tracking-widest ml-1">Phone Number</label>
+                  <label className="text-[10px] font-extrabold text-[#04B6EA] uppercase tracking-widest ml-1">Phone Number</label>
                   <input
                     type="tel"
                     required
                     value={formData.phone}
                     onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                     placeholder="+91 00000 00000"
-                    className="w-full h-14 md:h-16 px-6 md:px-7 rounded-2xl bg-[#F8FDFF] border-2 border-transparent focus:border-[#4FB7D4] focus:bg-white text-gray-900 text-[15px] outline-none transition-all placeholder:text-gray-400 shadow-sm font-bold"
+                    className="w-full h-14 md:h-16 px-6 md:px-7 rounded-2xl bg-[#F8FDFF] border-2 border-transparent focus:border-[#04B6EA] focus:bg-white text-gray-900 text-[15px] outline-none transition-all placeholder:text-gray-400 shadow-sm font-bold"
                   />
                 </div>
                 <div className="space-y-2.5 text-left">
-                  <label className="text-[10px] font-extrabold text-[#4FB7D4] uppercase tracking-widest ml-1">Service Interest</label>
+                  <label className="text-[10px] font-extrabold text-[#04B6EA] uppercase tracking-widest ml-1">Service Interest</label>
                   <div className="relative">
                     <select
                       required
                       value={formData.category}
                       onChange={(e) => setFormData({ ...formData, category: e.target.value })}
-                      className="w-full h-14 md:h-16 px-6 md:px-7 rounded-2xl bg-[#F8FDFF] border-2 border-transparent focus:border-[#4FB7D4] focus:bg-white text-gray-900 text-[15px] outline-none appearance-none cursor-pointer shadow-sm font-bold"
+                      className="w-full h-14 md:h-16 px-6 md:px-7 rounded-2xl bg-[#F8FDFF] border-2 border-transparent focus:border-[#04B6EA] focus:bg-white text-gray-900 text-[15px] outline-none appearance-none cursor-pointer shadow-sm font-bold"
                     >
                       <option value="">Select Category</option>
                       <option value="macbook">MacBook Support</option>
@@ -691,20 +834,20 @@ const PartnerSection = () => {
               </div>
 
               <div className="space-y-2.5 text-left">
-                <label className="text-[10px] font-extrabold text-[#4FB7D4] uppercase tracking-widest ml-1">Your Message</label>
+                <label className="text-[10px] font-extrabold text-[#04B6EA] uppercase tracking-widest ml-1">Your Message</label>
                 <textarea
                   rows={3}
                   value={formData.message}
                   onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                   placeholder="Tell us about your background..."
-                  className="w-full px-6 md:px-7 py-5 md:py-6 rounded-2xl bg-[#F8FDFF] border-2 border-transparent focus:border-[#4FB7D4] focus:bg-white text-gray-900 text-[15px] outline-none resize-none transition-all placeholder:text-gray-400 shadow-sm font-bold"
+                  className="w-full px-6 md:px-7 py-5 md:py-6 rounded-2xl bg-[#F8FDFF] border-2 border-transparent focus:border-[#04B6EA] focus:bg-white text-gray-900 text-[15px] outline-none resize-none transition-all placeholder:text-gray-400 shadow-sm font-bold"
                 ></textarea>
               </div>
 
               <button
                 type="submit"
                 disabled={loading}
-                className={`w-full h-16 md:h-20 rounded-2xl bg-[#3EA2BE] hover:bg-[#3EA2BE] text-white text-sm md:text-base font-extrabold uppercase tracking-widest shadow-[0_15px_40px_rgba(79,183,212,0.35)] transition-all duration-300 hover:-translate-y-1 active:scale-[0.98] ${loading ? "opacity-70 cursor-not-allowed" : ""}`}
+                className={`w-full h-16 md:h-20 rounded-2xl bg-[#04B6EA] hover:bg-[#04B6EA] text-white text-sm md:text-base font-extrabold uppercase tracking-widest shadow-[0_15px_40px_rgba(79,183,212,0.35)] transition-all duration-300 hover:-translate-y-1 active:scale-[0.98] ${loading ? "opacity-70 cursor-not-allowed" : ""}`}
               >
                 {loading ? "Sending..." : "Send Partnership Request"}
               </button>
@@ -738,11 +881,71 @@ export default function Home() {
     return () => observer.disconnect();
   }, []);
 
+  const homeSchema = [
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "@id": "https://www.door2fy.in/#business",
+      "name": "Door2fy - Doorstep Laptop Repair & IT Support Network",
+      "url": "https://www.door2fy.in/",
+      "logo": "https://www.door2fy.in/door2fy-icon.jpg",
+      "image": "https://www.door2fy.in/og-image.jpg",
+      "description": "India's #1 Doorstep Laptop Repair & IT Support Network. 5-10 minute diagnostic, genuine spare parts, background-verified engineers across Delhi NCR & 30+ cities.",
+      "telephone": "+91-9217759006",
+      "priceRange": "₹₹",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "New Delhi",
+        "addressRegion": "Delhi",
+        "addressCountry": "IN"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "28.6139",
+        "longitude": "77.2090"
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+          "opens": "08:00",
+          "closes": "22:00"
+        }
+      ],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "reviewCount": "42700",
+        "bestRating": "5",
+        "worstRating": "1"
+      },
+      "sameAs": [
+        "https://play.google.com/store/apps/details?id=com.Door2fy&pli=1",
+        "https://partner.door2fy.in"
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "@id": "https://www.door2fy.in/#organization",
+      "name": "Door2fy",
+      "url": "https://www.door2fy.in/",
+      "logo": "https://www.door2fy.in/door2fy-icon.jpg",
+      "sameAs": [
+        "https://play.google.com/store/apps/details?id=com.Door2fy&pli=1"
+      ]
+    }
+  ];
+
   return (
     <div className="relative min-h-screen bg-white font-sans antialiased text-slate-900 overflow-x-hidden selection:bg-blue-100 selection:text-blue-700">
-      <Helmet>
-        <title>Door2fy - Reliable IT Solutions at Your Doorstep</title>
-      </Helmet>
+      <SEOHead
+        title="Doorstep Laptop Repair in Delhi NCR & Across India | Door2fy"
+        description="Door2fy provides 10-minute doorstep laptop repair, MacBook servicing, PC troubleshooting & IT support by verified engineers in Delhi NCR and 30+ cities."
+        canonicalUrl="https://www.door2fy.in/"
+        keywords="doorstep laptop repair Delhi, laptop repair Delhi, MacBook repair Delhi, computer service near me, laptop screen repair, IT support India, Door2fy"
+        schema={homeSchema}
+      />
 
       {/* Hero Section */}
       <HeroSection />

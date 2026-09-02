@@ -145,3 +145,23 @@ All colors MUST be HSL.
 .animate-scroll:hover {
   animation-play-state: paused;
 }
+
+/* Dora Chatbot widget positioning for mobile */
+@media (max-width: 768px) {
+  iframe[src*="omnidim"],
+  div[id*="omnidim"],
+  #omnidimension-web-widget {
+    max-width: 100vw !important;
+    bottom: 0 !important;
+  }
+}
+
+/* Hide scrollbar utility */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+

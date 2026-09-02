@@ -10,6 +10,7 @@ import { HelmetProvider } from "react-helmet-async";
 import { Navbar } from "./components/Navbar";
 import Footer from "./components/Footer";
 import { ScrollToTop } from "./components/ScrollToTop";
+import { SmoothScroll } from "./components/SmoothScroll";
 
 // 🏠 Pages (Lazy Loaded)
 const Home = lazy(() => import("./pages/Home"));
@@ -28,7 +29,7 @@ const Contact = lazy(() => import("./pages/ContactUs"));
 // Loading Fallback Component
 const PageLoader = () => (
   <div className="flex items-center justify-center min-h-[60vh]">
-    <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-[#53BED1]"></div>
+    <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-[#04B6EA]"></div>
   </div>
 );
 
@@ -60,6 +61,7 @@ const App = () => {
           <BrowserRouter future={{ v7_startTransition: true, v7_relativeSplatPath: true }}>
             {/* ✅ Add the tracker inside BrowserRouter so it can use useLocation */}
             <MetaPixelTracker />
+            <SmoothScroll />
             
             <ScrollToTop />
             <Navbar />
@@ -73,6 +75,7 @@ const App = () => {
                 <Route path="/how-it-works" element={<HowItWorks />} />
                 <Route path="/faqs" element={<FAQs />} />
                 <Route path="/contact-us" element={<Contact />} />
+                <Route path="/contact" element={<Contact />} />
                 <Route path="/privacy-policy" element={<PrivacyPolicy />} />
                 <Route path="/blogs" element={<BlogList />} />
                 <Route path="/blog/:slug" element={<BlogPage />} />

@@ -1,234 +1,503 @@
-import { Button } from "@/components/ui/button";
-import { Card } from "@/components/ui/card";
+import React from "react";
+import { Link } from "react-router-dom";
+import { SEOHead } from "@/components/SEOHead";
 import {
-  CheckCircle2,
   Clock,
-  Shield,
+  ShieldCheck,
   Star,
   Users,
   Award,
-  Heart,
   Zap,
+  CheckCircle2,
+  Sparkles,
+  ArrowRight,
+  Check,
+  X,
+  Lock,
+  Wrench,
+  ThumbsUp,
+  Cpu,
+  BadgeCheck,
 } from "lucide-react";
-import { Helmet } from "react-helmet-async";
+
+// Assets
+import door2fyTechLabEngineers from "@/assets/door2fy-tech-lab-engineers.png";
+import phone1 from "@/assets/phone1.png";
+import { useReviews } from "@/utils/reviews";
 
 export default function WhyUs() {
   const reasons = [
     {
       icon: Clock,
-      title: "Lightning Fast Service",
+      title: "10–30 Min Doorstep Arrival",
+      badge: "Rapid Response",
       description:
-        "Get professional help at your doorstep within 10 minutes of booking. No more waiting, no more planning around availability.",
+        "Skip the travel and long service center queues. Our certified engineers reach your home or office in 10 to 30 minutes with live GPS status.",
     },
     {
-      icon: Shield,
-      title: "100% Verified Professionals",
+      icon: ShieldCheck,
+      title: "100% Background-Verified",
+      badge: "Safety Assured",
       description:
-        "Every Door2fy professional undergoes rigorous background verification, police clearance, and skill training before joining our team.",
+        "Every Door2fy technician undergoes comprehensive background checks, police verification, and multi-tier technical skill certifications.",
     },
     {
-      icon: Star,
-      title: "Quality Guaranteed",
+      icon: Cpu,
+      title: "Genuine OEM Spare Parts",
+      badge: "Original Quality",
       description:
-        "We stand behind our service with a 100% satisfaction guarantee. Not happy? We'll make it right or refund your money.",
-    },
-    {
-      icon: Users,
-      title: "Trained & Professional",
-      description:
-        "Our team members receive comprehensive training in professional Engineering techniques, customer service, and safety protocols.",
+        "We use 100% genuine, factory-tested replacement components for Apple MacBook, Dell, HP, Lenovo, ASUS, Acer, and all major brands.",
     },
     {
       icon: Award,
-      title: "Trusted by Thousands",
+      title: "Up to 90 Days Warranty",
+      badge: "Guaranteed",
       description:
-        "Join 5000+ satisfied customers who have experienced the Door2fy difference in their homes across India.",
+        "Enjoy complete peace of mind. All hardware replacements and major repairs include up to 90 days comprehensive service warranty.",
     },
     {
-      icon: Heart,
-      title: "Fair & Transparent Pricing",
+      icon: Lock,
+      title: "100% Data Privacy & Live Repair",
+      badge: "Zero Risk",
       description:
-        "No hidden charges, no surprises. What you see is what you pay. Plus, we ensure fair wages for all our professionals.",
+        "Your device is diagnosed and repaired right in front of your eyes. No risky laboratory drop-offs, no unauthorized data access.",
     },
     {
-      icon: Zap,
-      title: "Available 24x7",
+      icon: ThumbsUp,
+      title: "Transparent Upfront Pricing",
+      badge: "No Hidden Costs",
       description:
-        "Early morning or late night, weekday or weekend – we're always available when you need us most.",
-    },
-    {
-      icon: CheckCircle2,
-      title: "Eco-Friendly Products",
-      description:
-        "We deploy only professionally trained engineers who use certified, eco-friendly tools and methods — ensuring safety for your devices, your family, and the environment.",
+        "Clear diagnostic report and exact price quote before work begins. Pay securely only after your laptop is tested and you are 100% satisfied.",
     },
   ];
 
-  const testimonials = [
+  const stats = [
     {
-      name: "Priya Sharma",
-      location: "Delhi",
-      rating: 5,
-      text: "Absolutely love Door2fy! The engineer arrived within 8 minutes and did an amazing job. My laptop is rebooting fast!",
+      num: "42,700+",
+      label: "Laptops Repaired",
+      icon: <CheckCircle2 className="w-5 h-5 text-[#04B6EA]" />,
     },
     {
-      name: "Rajesh Kumar",
-      location: "Mumbai",
-      rating: 5,
-      text: "Professional, punctual, and thorough. The verification process gives me peace of mind. Highly recommended!",
+      num: "10-30m",
+      label: "Average Arrival Time",
+      icon: <Clock className="w-5 h-5 text-[#04B6EA]" />,
     },
     {
-      name: "Anita Desai",
-      location: "Bangalore",
-      rating: 5,
-      text: "Game changer for working professionals like me. Book at late night if system crashing, no worries for morning meeting Engineers will be there at instant!",
+      num: "50+",
+      label: "Cities Active Across India",
+      icon: <Users className="w-5 h-5 text-[#04B6EA]" />,
+    },
+    {
+      num: "4.9/5",
+      label: "Customer Rating",
+      icon: <Star className="w-5 h-5 text-amber-500 fill-amber-500" />,
     },
   ];
+
+  const comparisonData = [
+    {
+      feature: "Service Location",
+      door2fy: "At Your Doorstep (Home or Office)",
+      others: "You Must Travel to Service Center",
+    },
+    {
+      feature: "Average Turnaround Time",
+      door2fy: "10–30 Min Arrival (Fixed Same Day)",
+      others: "3 to 7 Days Waiting in Lab",
+    },
+    {
+      feature: "Data Security & Privacy",
+      door2fy: "100% Safe (Live Repair in Front of You)",
+      others: "High Risk (Device Left with Unknown Staff)",
+    },
+    {
+      feature: "Spare Parts Authenticity",
+      door2fy: "100% Genuine OEM Certified Parts",
+      others: "Unverified Local / Refurbished Parts",
+    },
+    {
+      feature: "Service Warranty",
+      door2fy: "Up to 90 Days Hassle-Free Warranty",
+      others: "No Warranty or Limited 7-Day Guarantee",
+    },
+    {
+      feature: "Pricing Transparency",
+      door2fy: "Upfront Cost Estimation, Zero Hidden Fees",
+      others: "Surprise Inspection Charges & Upselling",
+    },
+  ];
+
+  const { reviews } = useReviews();
 
   return (
-    <div className="min-h-screen pt-20 font-sans antialiased text-slate-900">
-      <Helmet>
-        <title>Why Choose Door2fy? | Trusted Laptop Repair Service</title>
-        <meta
-          name="description"
-          content="Door2fy is India's most trusted doorstep laptop repair service. Get professional, certified technicians and reliable computer service at your convenience."
-        />
-        <meta
-          name="keywords"
-          content="why choose door2fy, trusted laptop repair service, professional laptop technicians, reliable computer service India, doorstep repair experts, certified laptop engineers"
-        />
-        <meta
-          property="og:title"
-          content="Why Choose Door2fy? | Trusted Laptop Repair Service"
-        />
-        <meta
-          property="og:description"
-          content="Door2fy is India's most trusted doorstep laptop repair service. Get professional, certified technicians and reliable computer service at your convenience."
-        />
-        <meta property="og:type" content="website" />
-      </Helmet>
-      {/* Hero Section */}
-      <section className=" pt-12 px-4 sm:px-6 lg:px-8 bg-[#53BED1]/5 relative overflow-hidden">
-        <div className="absolute top-0 right-0 w-96 h-96 bg-[#53BED1]/10 rounded-full blur-[100px] -mr-48 -mt-48" />
-        <div className="max-w-4xl mx-auto text-center space-y-8 relative z-10">
-          <h1 className="text-3xl md:text-6xl font-semibold text-slate-900 leading-snug">
-            Why Choose <br className="hidden md:block" /> Door2fy?
-          </h1>
-          <p className="text-md md:text-xl text-slate-600 font-medium italic max-w-2xl mx-auto">
-            India's most trusted DoorStep service platform, built on
-            reliability, quality, and trust
-          </p>
-        </div>
-      </section>
+    <div className="min-h-screen bg-white font-sans antialiased text-slate-900">
+      <SEOHead
+        title="Why Choose Door2fy? | Trusted Doorstep Laptop Repair & IT Support"
+        description="Discover why 42,700+ users choose Door2fy for doorstep laptop repair. Certified engineers, 10-30 min arrival, genuine spare parts, and up to 90 days warranty."
+        canonicalUrl="https://www.door2fy.in/why-us"
+        keywords="why choose door2fy, trusted laptop repair, doorstep computer service, certified laptop technician, MacBook repair, fast laptop support India"
+      />
 
-      {/* Main Reasons Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {reasons.map((reason, index) => (
-              <Card
-                key={index}
-                className="p-8 space-y-6 hover:shadow-premium transition-all duration-500 hover:-translate-y-2 border border-slate-100 rounded-[2.5rem] relative overflow-hidden group bg-white"
-              >
-                <div className="h-16 w-16 rounded-2xl bg-[#53BED1]/10 flex items-center justify-center transition-colors group-hover:bg-[#53BED1] group-hover:text-white">
-                  <reason.icon className="h-8 w-8 text-[#53BED1] group-hover:text-white transition-colors" />
+      {/* ================= HERO SECTION ================= */}
+      <section className="w-full bg-[#F0FBFF] overflow-hidden relative min-h-[60dvh] lg:min-h-[580px] flex flex-col justify-center">
+        {/* Background Shapes & Focus Lights matching Home */}
+        <div className="absolute top-[-10%] right-[-10%] w-[60%] aspect-square bg-[#F0FBFF] rounded-full -z-10 blur-3xl opacity-50 transform-gpu"></div>
+        <div className="absolute bottom-[10%] left-[-5%] w-[40%] aspect-square bg-[#E8F8FB] rounded-full -z-10 blur-3xl opacity-30 transform-gpu"></div>
+        <div className="absolute -bottom-24 -left-24 w-[500px] h-[500px] bg-[#04B6EA]/10 rounded-full -z-10 blur-[120px] transform-gpu"></div>
+        <div className="absolute -bottom-24 -right-24 w-[500px] h-[500px] bg-blue-400/10 rounded-full -z-10 blur-[120px] transform-gpu"></div>
+
+        <div className="max-w-7xl mx-auto px-6 lg:px-8 w-full pt-24 pb-14 lg:pt-28 lg:pb-16 relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-12 items-center gap-10 lg:gap-12">
+            
+            {/* Left Content */}
+            <div className="lg:col-span-6 space-y-5 text-center lg:text-left">
+              {/* Trust Badge */}
+              <div className="inline-flex items-center gap-2.5 px-4 py-1.5 bg-white border border-gray-100 rounded-full shadow-sm mx-auto lg:mx-0 w-fit">
+                <span className="relative flex h-2 w-2">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                  <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+                </span>
+                <span className="text-xs font-semibold text-gray-700 tracking-wide">
+                  India's #1 Doorstep Laptop Care Network <span className="text-gray-300">·</span> 50+ Cities Live
+                </span>
+              </div>
+
+              <h1 className="text-4xl sm:text-5xl lg:text-[4.2rem] font-extrabold leading-[1.12] text-gray-900 tracking-tight">
+                Why India Trusts <br />
+                <span className="text-[#04B6EA]">Door2fy Care</span>
+              </h1>
+
+              <p className="text-gray-600 text-base lg:text-lg max-w-xl mx-auto lg:mx-0 leading-relaxed font-normal">
+                Engineered for total transparency, speed, and safety. Get certified background-verified laptop engineers at your doorstep in <span className="font-semibold text-gray-900">10 to 30 minutes</span> with genuine spare parts and guaranteed peace of mind.
+              </p>
+
+              {/* Highlights Chips */}
+              <div className="flex flex-wrap items-center justify-center lg:justify-start gap-2.5 pt-1">
+                <div className="flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/90 shadow-sm border border-slate-100 text-xs font-bold text-slate-800">
+                  <span className="text-emerald-500">✓</span> 100% Verified Techs
                 </div>
-                <div className="space-y-4">
-                  <h3 className="text-lg md:text-xl font-semibold mb-1">{reason.title}</h3>
-                  <p className="text-sm text-slate-500">
-                    {reason.description}
-                  </p>
+                <div className="flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/90 shadow-sm border border-slate-100 text-xs font-bold text-slate-800">
+                  <span className="text-[#04B6EA]">⚡</span> 10–30 Min Arrival
                 </div>
-              </Card>
-            ))}
+                <div className="flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/90 shadow-sm border border-slate-100 text-xs font-bold text-slate-800">
+                  <span className="text-amber-500">★</span> 4.9/5 Rating (42k+ users)
+                </div>
+              </div>
+
+              {/* Buttons & Ratings */}
+              <div className="pt-2 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+                <Link
+                  to="/services"
+                  className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full bg-[#04B6EA] text-white font-bold text-sm hover:bg-[#039ecc] transition-all duration-300 shadow-lg shadow-[#04B6EA]/25 hover:scale-105 active:scale-95 w-full sm:w-auto"
+                >
+                  <span>Explore All Services</span>
+                  <ArrowRight className="w-4 h-4" />
+                </Link>
+
+                <a
+                  href="https://play.google.com/store/apps/details?id=com.Door2fy&pli=1"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full bg-white text-gray-800 font-bold text-sm hover:bg-gray-50 transition-all border border-gray-200 shadow-sm hover:border-[#04B6EA]/40 w-full sm:w-auto"
+                >
+                  <span>Download App</span>
+                </a>
+              </div>
+            </div>
+
+            {/* Right Hero Graphic Card */}
+            <div className="lg:col-span-6 relative flex justify-center items-center lg:justify-end mt-8 lg:mt-0">
+              <div className="relative w-full flex justify-center items-center group">
+                <img
+                  src={door2fyTechLabEngineers}
+                  alt="Door2fy Certified Hardware Engineers"
+                  className="w-full h-auto max-h-[460px] object-contain drop-shadow-[0_20px_50px_rgba(4,182,234,0.2)] transform transition-transform duration-700 ease-out group-hover:scale-105 select-none pointer-events-none"
+                  style={{ imageRendering: "-webkit-optimize-contrast" }}
+                />
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Stats Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-[#53BED1] text-white relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-emerald-600/20 to-transparent opacity-50" />
-        <div className="relative max-w-7xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-5xl font-semibold text-white mb-2 leading-snug">Our Impact</h2>
-            <p className="text-lg md-text-xl opacity-90 font-medium max-w-2xl mx-auto">
-              Numbers that speak for themselves
+      {/* ================= 6 CORE PILLARS SECTION ================= */}
+      <section className="py-16 md:py-24 bg-white relative overflow-hidden">
+        {/* Dynamic Glow */}
+        <div className="absolute top-1/2 right-1/4 -translate-y-1/2 w-[500px] h-[350px] bg-[#04B6EA]/5 rounded-full blur-[140px] pointer-events-none -z-10" />
+
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <div className="text-center max-w-3xl mx-auto mb-14 md:mb-18">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#E1F7F9] text-[#04B6EA] text-xs font-bold mb-3 shadow-sm border border-[#04B6EA]/20">
+              <Sparkles className="w-3.5 h-3.5 text-[#04B6EA] animate-pulse" />
+              <span>The Door2fy Standard</span>
+            </div>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-gray-900 tracking-tight leading-[1.15]">
+              Built on Trust, Speed & <br />
+              <span className="text-[#04B6EA]">Engineering Excellence</span>
+            </h2>
+            <p className="text-gray-500 text-base md:text-lg leading-relaxed mt-4 font-normal">
+              We redesigned computer repair from the ground up to eliminate risky lab drop-offs, hidden costs, and endless waiting times.
             </p>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-12 lg:gap-20">
-            {[
-              { number: "10,000+", label: "Happy Customers" },
-              { number: "9000+", label: "Hours Saved" },
-              { number: "5000+", label: "Professionals" },
-              { number: "4.9/5", label: "Average Rating" },
-            ].map((stat, index) => (
-              <div key={index} className="text-center space-y-4 group">
-                <div className="text-3xl md:text-5xl font-semibold transition-transform group-hover:scale-110">{stat.number}</div>
-                <div className="text-md md:text-lg opacity-90 font-semibold tracking-widest uppercase">{stat.label}</div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+            {reasons.map((reason, index) => {
+              const IconComponent = reason.icon;
+              return (
+                <div
+                  key={index}
+                  className="group p-6 sm:p-8 bg-[#F8FDFF] rounded-3xl sm:rounded-[2.5rem] border border-[#E1F7F9] hover:border-[#04B6EA] hover:bg-white transition-all duration-500 text-left flex flex-col justify-between shadow-sm hover:shadow-[0_25px_50px_rgba(4,182,234,0.1)] hover:-translate-y-1.5 relative overflow-hidden"
+                >
+                  {/* Subtle Background Radial Pattern */}
+                  <div
+                    className="absolute inset-0 opacity-[0.03] group-hover:opacity-[0.06] transition-opacity"
+                    style={{
+                      backgroundImage: "radial-gradient(circle, #04B6EA 1.5px, transparent 1.5px)",
+                      backgroundSize: "18px 18px",
+                    }}
+                  />
+
+                  <div className="relative z-10 space-y-5">
+                    <div className="flex items-center justify-between">
+                      <div className="w-14 h-14 rounded-2xl bg-[#E1F7F9] text-[#04B6EA] flex items-center justify-center transition-all duration-500 group-hover:bg-[#04B6EA] group-hover:text-white group-hover:scale-110 shadow-sm">
+                        <IconComponent className="w-7 h-7" />
+                      </div>
+                      <span className="text-[11px] font-bold uppercase tracking-wider text-[#04B6EA] bg-white px-3 py-1 rounded-full border border-[#E1F7F9] shadow-xs">
+                        {reason.badge}
+                      </span>
+                    </div>
+
+                    <div>
+                      <h3 className="text-xl sm:text-2xl font-bold text-gray-900 group-hover:text-[#04B6EA] transition-colors leading-snug mb-2.5">
+                        {reason.title}
+                      </h3>
+                      <p className="text-gray-600 text-sm sm:text-base leading-relaxed font-normal">
+                        {reason.description}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* ================= 3D STATS COUNTERS ================= */}
+      <section className="py-12 md:py-16 bg-[#F8FDFF] border-y border-[#E1F7F9] relative overflow-hidden">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 md:gap-8">
+            {stats.map((item, index) => (
+              <div
+                key={index}
+                className="group relative bg-white rounded-3xl sm:rounded-[2.5rem] p-5 sm:p-8 text-center transition-all duration-500 border border-gray-100 shadow-[0_10px_30px_rgba(0,0,0,0.02)] hover:shadow-[0_30px_60px_rgba(4,182,234,0.12)] flex flex-col items-center justify-center overflow-hidden hover:-translate-y-1"
+              >
+                <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-[#E1F7F9] text-[#04B6EA] flex items-center justify-center mb-3 sm:mb-4 shadow-sm transform group-hover:scale-110 group-hover:rotate-6 transition-all duration-500">
+                  {item.icon}
+                </div>
+
+                <h3 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-gray-900 mb-1 tracking-tight">
+                  {item.num}
+                </h3>
+
+                <p className="text-gray-500 text-[10px] sm:text-xs font-bold uppercase tracking-wider leading-tight">
+                  {item.label}
+                </p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Testimonials Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-50/50">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-5xl font-semibold text-slate-900 mb-6 leading-snug">
-              What Our Customers Say
+      {/* ================= COMPARISON MATRIX (DOOR2FY VS OTHERS) ================= */}
+      <section className="py-16 md:py-24 bg-white relative overflow-hidden">
+        <div className="max-w-6xl mx-auto px-6 lg:px-8">
+          <div className="text-center max-w-3xl mx-auto mb-14">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#E1F7F9] text-[#04B6EA] text-xs font-bold mb-3 shadow-sm border border-[#04B6EA]/20">
+              <BadgeCheck className="w-3.5 h-3.5 text-[#04B6EA]" />
+              <span>Smart Comparison</span>
+            </div>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-gray-900 tracking-tight leading-[1.15]">
+              How Door2fy Compares to <br />
+              <span className="text-[#04B6EA]">Traditional Repair Shops</span>
             </h2>
-            <p className="text-md md:text-lg text-slate-500 font-medium italic max-w-2xl mx-auto">
-              Real experiences from real people who trust Door2fy
+            <p className="text-gray-500 text-base md:text-lg mt-3 font-normal">
+              See why thousands of professionals and businesses choose on-demand doorstep repair.
             </p>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
-              <Card
-                key={index}
-                className="p-6 md:p-4 space-y-6 hover:shadow-premium transition-all duration-500 rounded-[2rem] bg-white border border-slate-100 group"
-              >
-                <div className="flex items-center space-x-1 text-yellow-400">
-                  {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} className="h-4 w-4 fill-current" />
+
+          <div className="bg-[#F8FDFF] rounded-3xl md:rounded-[3rem] border border-[#E1F7F9] shadow-sm overflow-hidden p-4 sm:p-8">
+            <div className="overflow-x-auto">
+              <table className="w-full text-left border-collapse min-w-[600px]">
+                <thead>
+                  <tr className="border-b border-[#E1F7F9]">
+                    <th className="py-4 px-4 text-xs font-bold uppercase tracking-wider text-gray-400">
+                      Features & Guarantee
+                    </th>
+                    <th className="py-4 px-4 text-sm font-extrabold text-[#04B6EA] bg-[#E1F7F9]/50 rounded-t-2xl">
+                      ⚡ Door2fy Care
+                    </th>
+                    <th className="py-4 px-4 text-xs font-bold uppercase tracking-wider text-gray-400">
+                      Local Repair Shops
+                    </th>
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-[#E1F7F9]/60">
+                  {comparisonData.map((row, idx) => (
+                    <tr key={idx} className="hover:bg-white/60 transition-colors">
+                      <td className="py-4 px-4 text-sm font-bold text-gray-900">
+                        {row.feature}
+                      </td>
+                      <td className="py-4 px-4 text-sm font-bold text-[#04B6EA] bg-[#E1F7F9]/20 flex items-center gap-2">
+                        <Check className="w-4 h-4 text-emerald-500 shrink-0" />
+                        <span>{row.door2fy}</span>
+                      </td>
+                      <td className="py-4 px-4 text-sm text-gray-500">
+                        <div className="flex items-center gap-2">
+                          <X className="w-4 h-4 text-rose-400 shrink-0" />
+                          <span>{row.others}</span>
+                        </div>
+                      </td>
+                    </tr>
                   ))}
-                </div>
-                <p className="text-slate-600 italic text-md md:text-lg leading-relaxed font-medium">
-                  "{testimonial.text}"
-                </p>
-                <div className="pt-6 border-t border-slate-50">
-                  <div className="font-semibold text-slate-900 text-md md:text-lg">{testimonial.name}</div>
-                  <div className="text-xs md:text-sm text-[#53BED1] font-semibold uppercase tracking-wider">
-                    {testimonial.location}
-                  </div>
-                </div>
-              </Card>
-            ))}
+                </tbody>
+              </table>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-[#53BED1] text-white relative overflow-hidden">
-        <div className="absolute top-0 right-0 w-96 h-96 bg-white/10 rounded-full blur-[120px] -mr-48 -mt-48" />
-        <div className="max-w-4xl mx-auto text-center space-y-10 relative z-10">
-          <h2 className="text-4xl md:text-6xl font-semibold text-white leading-snug">
-            Experience the <br className="hidden md:block" /> Door2fy Difference
+      {/* ================= TESTIMONIALS MARQUEE (MATCHING HOME) ================= */}
+      <section id="testimonials" className="py-12 lg:py-16 bg-white overflow-hidden border-t border-gray-100 scroll-mt-24">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8 mb-10 text-left">
+          <span className="text-[#04B6EA] font-bold uppercase tracking-[0.4em] text-[10px] md:text-[11px] mb-2 block">
+            Testimonials
+          </span>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 tracking-tight leading-tight">
+            Trusted by 42,700+ <br />
+            Satisfied Customers.
           </h2>
-          <p className="text-md md:text-lg text-white/90 leading-relaxed max-w-2xl mx-auto font-medium">
-            Join thousands of satisfied customers who trust us for their IT
-            needs. Download the app today and experience instant support.
+          <p className="text-gray-500 mt-2 font-medium text-sm md:text-base">
+            Real experiences from people who rely on Door2fy for their home and office tech needs.
           </p>
-          <a
-            href="https://play.google.com/store/apps/details?id=com.Door2fy&pli=1"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-block"
-          >
-            <Button size="lg" className="bg-white text-[#53BED1] hover:bg-slate-50 font-semibold px-12 py-8 rounded-full text-2xl shadow-2xl transition hover:scale-[1.02] active:scale-[0.98]">
-              Download the App Now
-            </Button>
-          </a>
+        </div>
+
+        {/* Marquee Row */}
+        <div className="relative w-full flex flex-col gap-6 overflow-hidden">
+          <div className="flex animate-marquee hover:[animation-play-state:paused] w-max py-2">
+            {[...reviews, ...reviews, ...reviews].map((r, idx) => (
+              <div
+                key={`r-${idx}`}
+                className="w-[290px] sm:w-[340px] md:w-[380px] h-[190px] sm:h-[210px] p-5 md:p-6 rounded-3xl bg-[#F8FDFF] border border-[#E1F7F9] relative overflow-hidden flex-shrink-0 mx-3 transition-all duration-300 hover:shadow-[0_15px_35px_rgba(4,182,234,0.1)] flex flex-col justify-between hover:bg-white"
+              >
+                <div className="relative z-10 flex flex-col h-full justify-between">
+                  <div>
+                    <div className="flex gap-0.5 text-amber-400 mb-2.5">
+                      {[...Array(5)].map((_, i) => (
+                        <svg key={i} className="w-3.5 h-3.5 fill-current" viewBox="0 0 20 20">
+                          <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                        </svg>
+                      ))}
+                    </div>
+
+                    <p className="text-gray-700 font-medium text-xs sm:text-sm leading-relaxed line-clamp-3">
+                      “{r.review}”
+                    </p>
+                  </div>
+
+                  <div className="flex items-center gap-3 pt-3 border-t border-gray-100">
+                    <div className="w-8 h-8 rounded-full bg-[#E1F7F9] flex items-center justify-center font-bold text-[#04B6EA] text-xs">
+                      {r.name.charAt(0)}
+                    </div>
+                    <div className="text-left">
+                      <h4 className="font-bold text-gray-900 text-xs">{r.name}</h4>
+                      <p className="text-gray-400 text-[10px]">{r.location}</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <style
+          dangerouslySetInnerHTML={{
+            __html: `
+            @keyframes marquee {
+              0% { transform: translateX(0); }
+              100% { transform: translateX(-33.33%); }
+            }
+            .animate-marquee {
+              animation: marquee 50s linear infinite;
+            }
+            .animate-marquee:hover {
+              animation-play-state: paused !important;
+            }
+          `,
+          }}
+        />
+      </section>
+
+      {/* ================= APP DOWNLOAD & ON-THE-GO BANNER ================= */}
+      <section className="py-12 lg:py-16 bg-white overflow-hidden">
+        <div className="max-w-6xl mx-auto px-6 lg:px-8">
+          <div className="relative group">
+            <div className="absolute inset-4 bg-[#04B6EA]/10 blur-3xl rounded-[4rem] group-hover:opacity-60 transition-opacity"></div>
+
+            <div className="relative bg-[#F8FDFF] rounded-[2.5rem] md:rounded-[3.5rem] px-8 lg:px-16 py-8 lg:py-12 flex flex-col lg:flex-row items-center justify-between border border-[#E1F7F9] shadow-[0_20px_50px_rgba(79,183,212,0.06)] overflow-hidden">
+              {/* Phones Image - Left Side */}
+              <div className="relative w-full lg:w-[50%] flex justify-center lg:justify-start transform transition-transform duration-700 group-hover:scale-105 pb-8 lg:pb-0">
+                <img
+                  src={phone1}
+                  alt="Door2fy Mobile App"
+                  className="w-full max-w-[260px] lg:max-w-[420px] drop-shadow-[0_25px_50px_rgba(79,183,212,0.18)] select-none pointer-events-none"
+                  style={{ imageRendering: "-webkit-optimize-contrast" }}
+                />
+              </div>
+
+              {/* Right Content */}
+              <div className="w-full lg:w-[48%] text-center lg:text-left space-y-5">
+                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#E1F7F9] text-[#04B6EA] text-xs font-bold">
+                  <Sparkles className="w-3.5 h-3.5" />
+                  <span>On-Demand Device Care</span>
+                </div>
+
+                <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-gray-900 leading-[1.15] tracking-tight">
+                  Book Repairs in <br />
+                  <span className="text-[#04B6EA]">Under 60 Seconds</span>
+                </h2>
+
+                <p className="text-gray-600 text-sm md:text-base leading-relaxed max-w-md mx-auto lg:mx-0 font-normal">
+                  Download the Door2fy app to track verified engineers live on map, manage warranty certificates, and receive priority doorstep support.
+                </p>
+
+                <div className="flex flex-wrap items-center justify-center lg:justify-start gap-3 pt-2">
+                  <a
+                    href="https://play.google.com/store/apps/details?id=com.Door2fy&pli=1"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="transform transition-all hover:scale-105 active:scale-95 shadow-md rounded-xl overflow-hidden block"
+                  >
+                    <img
+                      src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
+                      alt="Google Play"
+                      className="h-11 md:h-12 w-auto"
+                    />
+                  </a>
+                  <a
+                    href="#"
+                    className="transform transition-all hover:scale-105 active:scale-95 shadow-md rounded-xl overflow-hidden block"
+                  >
+                    <img
+                      src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Download_on_the_App_Store_Badge.svg"
+                      alt="App Store"
+                      className="h-11 md:h-12 w-auto"
+                    />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
     </div>

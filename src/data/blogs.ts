@@ -11,9 +11,9 @@ import slowLaptopImages from "../assets/data7.png";
 import slowLaptopImage from "../assets/data9.png";
 import BlogsPage from '../assets/abcnew.jpg'
 import BlogsPage2 from '../assets/bolgsnew.jpg'
-import pmActivityImages from '../assets/pmActivityImages.png'
-import laptopRepairCostDelhi from '../assets/pm.png'
-import laptopOverheatingDelhi from '../assets/laptopOverheatingDelhi.png'
+import pmActivityImages from '../assets/blog_pm_clean_white.jpg'
+import laptopRepairCostDelhi from '../assets/blog_repair_cost_clean_white.jpg'
+import laptopOverheatingDelhi from '../assets/blog_overheating_clean_white.jpg'
 
 // Interface for individual sections within the blog content
 export interface BlogSection {
