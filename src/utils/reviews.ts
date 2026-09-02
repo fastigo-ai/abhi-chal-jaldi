@@ -12,7 +12,7 @@ export interface ReviewItem {
 }
 
 export const AIRTABLE_API_KEY =
-  (import.meta as any).env?.VITE_AIRTABLE_TOKEN || "";
+  "patgmxjfTIPlbY9H5.913709b38e9a5e28a0247201f1808269abedbf4499b1d14e2f7933534b0b6dc1";
 export const AIRTABLE_BASE_ID = "appFPJTYE9q21Dlbz";
 export const AIRTABLE_TABLE = "Engineer Reviews";
 
