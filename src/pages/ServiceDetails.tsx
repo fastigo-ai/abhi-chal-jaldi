@@ -11,7 +11,7 @@ export default function ServiceDetails() {
     return (
       <div className="min-h-screen bg-gray-50 flex flex-col items-center justify-center pt-20">
         <h1 className="text-3xl font-bold mb-4">Service Not Found</h1>
-        <Link to="/services" className="text-[#04B6EA] hover:underline">
+        <Link to="/services" className="text-[#028dcd] hover:underline">
           Go back to services
         </Link>
       </div>
@@ -46,9 +46,9 @@ export default function ServiceDetails() {
       {/* Breadcrumb */}
       <div className="bg-gray-50 py-4 border-b border-gray-100">
         <div className="max-w-7xl mx-auto px-6 flex items-center text-sm text-gray-500 overflow-x-auto whitespace-nowrap">
-          <Link to="/" className="hover:text-[#04B6EA] transition-colors">Home</Link>
+          <Link to="/" className="hover:text-[#028dcd] transition-colors">Home</Link>
           <ChevronRight className="w-4 h-4 mx-2 flex-shrink-0" />
-          <Link to="/services" className="hover:text-[#04B6EA] transition-colors">Services</Link>
+          <Link to="/services" className="hover:text-[#028dcd] transition-colors">Services</Link>
           <ChevronRight className="w-4 h-4 mx-2 flex-shrink-0" />
           <span className="text-gray-900 font-medium">{service.title}</span>
         </div>
@@ -70,7 +70,7 @@ export default function ServiceDetails() {
         {/* Content Section */}
         <div className="space-y-8">
           <div>
-            <Link to="/services" className="inline-flex items-center text-sm font-semibold text-[#04B6EA] mb-6 hover:text-[#039ecc] transition-colors">
+            <Link to="/services" className="inline-flex items-center text-sm font-semibold text-[#028dcd] mb-6 hover:text-[#039ecc] transition-colors">
               <ArrowLeft className="w-4 h-4 mr-2" /> Back to all services
             </Link>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-6 leading-tight tracking-tight">
@@ -81,9 +81,9 @@ export default function ServiceDetails() {
             </p>
           </div>
 
-          <div className="bg-[#04B6EA]/5 p-6 md:p-8 rounded-2xl border border-[#04B6EA]/10">
+          <div className="bg-[#028dcd]/5 p-6 md:p-8 rounded-2xl border border-[#028dcd]/10">
             <h3 className="text-xl font-bold text-slate-900 mb-4 flex items-center">
-              <span className="w-2 h-6 bg-[#04B6EA] rounded-full mr-3 inline-block"></span>
+              <span className="w-2 h-6 bg-[#028dcd] rounded-full mr-3 inline-block"></span>
               About this service
             </h3>
             <p className="text-slate-600 leading-relaxed text-lg">
@@ -93,15 +93,15 @@ export default function ServiceDetails() {
 
           <div className="space-y-5">
             <div className="flex items-start">
-              <CheckCircle2 className="w-6 h-6 text-[#04B6EA] mr-4 flex-shrink-0 mt-0.5" />
+              <CheckCircle2 className="w-6 h-6 text-[#028dcd] mr-4 flex-shrink-0 mt-0.5" />
               <p className="text-slate-700 text-lg">Expert technicians with years of experience</p>
             </div>
             <div className="flex items-start">
-              <CheckCircle2 className="w-6 h-6 text-[#04B6EA] mr-4 flex-shrink-0 mt-0.5" />
+              <CheckCircle2 className="w-6 h-6 text-[#028dcd] mr-4 flex-shrink-0 mt-0.5" />
               <p className="text-slate-700 text-lg">Quick diagnosis within 5-10 minutes</p>
             </div>
             <div className="flex items-start">
-              <CheckCircle2 className="w-6 h-6 text-[#04B6EA] mr-4 flex-shrink-0 mt-0.5" />
+              <CheckCircle2 className="w-6 h-6 text-[#028dcd] mr-4 flex-shrink-0 mt-0.5" />
               <p className="text-slate-700 text-lg">Doorstep service across the city</p>
             </div>
           </div>
@@ -109,7 +109,7 @@ export default function ServiceDetails() {
           <div className="pt-8 border-t border-gray-100 flex flex-col sm:flex-row gap-4">
             <Link
               to="https://play.google.com/store/apps/details?id=com.Door2fy&pli=1"
-              className="inline-flex justify-center items-center px-8 py-4 bg-[#04B6EA] text-white text-lg font-semibold rounded-full hover:bg-[#039ecc] transition-all duration-300 shadow-lg shadow-[#04B6EA]/30 hover:shadow-[#04B6EA]/50 transform hover:-translate-y-1"
+              className="inline-flex justify-center items-center px-8 py-4 bg-[#028dcd] text-white text-lg font-semibold rounded-full hover:bg-[#039ecc] transition-all duration-300 shadow-lg shadow-[#028dcd]/30 hover:shadow-[#028dcd]/50 transform hover:-translate-y-1"
             >
               Book Service Now
             </Link>

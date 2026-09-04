@@ -30,10 +30,10 @@ export default function HowItWorks() {
     {
       number: "01",
       icon: Smartphone,
-      title: "Book in 60 Seconds",
+      title: "Book in 15 Seconds",
       subtitle: "Online or via App",
       description:
-        "Select your laptop brand and describe the issue (cracked display, battery failure, slow OS, or water damage). Choose your location and preferred time slot in under 1 minute.",
+        "Select your laptop brand and describe the issue (cracked display, battery failure, slow OS, or water damage). Choose your location and preferred time slot in under 15 seconds.",
       badge: "Step 1",
     },
     {
@@ -48,7 +48,7 @@ export default function HowItWorks() {
     {
       number: "03",
       icon: Clock,
-      title: "10–30 Min Doorstep Arrival",
+      title: "30 Min Doorstep Arrival",
       subtitle: "Fully Equipped at Your Door",
       description:
         "The technician arrives at your home or office equipped with professional diagnostic kits and genuine OEM spare parts for instant on-site troubleshooting.",
@@ -106,19 +106,19 @@ export default function HowItWorks() {
 
   const stats = [
     {
-      num: "60 Sec",
+      num: "15 Sec",
       label: "Average Booking Time",
-      icon: <Clock className="w-5 h-5 text-[#04B6EA]" />,
+      icon: <Clock className="w-5 h-5 text-[#028dcd]" />,
     },
     {
-      num: "10-30m",
+      num: "30 min",
       label: "Rapid Doorstep Arrival",
-      icon: <Zap className="w-5 h-5 text-[#04B6EA]" />,
+      icon: <Zap className="w-5 h-5 text-[#028dcd]" />,
     },
     {
       num: "100%",
       label: "Verified & Certified Techs",
-      icon: <ShieldCheck className="w-5 h-5 text-[#04B6EA]" />,
+      icon: <ShieldCheck className="w-5 h-5 text-[#028dcd]" />,
     },
     {
       num: "90 Days",
@@ -130,7 +130,7 @@ export default function HowItWorks() {
   const faqs = [
     {
       q: "How fast can a Door2fy engineer reach my location?",
-      a: "Our certified engineers arrive at your home or office within 10 to 30 minutes in Delhi NCR, Mumbai, Bengaluru, Pune, and 50+ supported cities across India.",
+      a: "Our certified engineers arrive at your home or office within  30 minutes in Delhi NCR, Mumbai, Bengaluru, Pune, and 50+ supported cities across India.",
     },
     {
       q: "Are the technicians background-verified and certified?",
@@ -183,7 +183,7 @@ export default function HowItWorks() {
         {/* Background Shapes & Focus Lights matching Home */}
         <div className="absolute top-[-10%] right-[-10%] w-[60%] aspect-square bg-[#F0FBFF] rounded-full -z-10 blur-3xl opacity-50 transform-gpu"></div>
         <div className="absolute bottom-[10%] left-[-5%] w-[40%] aspect-square bg-[#E8F8FB] rounded-full -z-10 blur-3xl opacity-30 transform-gpu"></div>
-        <div className="absolute -bottom-24 -left-24 w-[500px] h-[500px] bg-[#04B6EA]/10 rounded-full -z-10 blur-[120px] transform-gpu"></div>
+        <div className="absolute -bottom-24 -left-24 w-[500px] h-[500px] bg-[#028dcd]/10 rounded-full -z-10 blur-[120px] transform-gpu"></div>
         <div className="absolute -bottom-24 -right-24 w-[500px] h-[500px] bg-blue-400/10 rounded-full -z-10 blur-[120px] transform-gpu"></div>
 
         <div className="max-w-7xl mx-auto px-6 lg:px-8 w-full pt-24 pb-14 lg:pt-28 lg:pb-16 relative z-10">
@@ -197,26 +197,26 @@ export default function HowItWorks() {
                   <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
                 </span>
                 <span className="text-xs font-semibold text-gray-700 tracking-wide">
-                  Simple 4-Step Process <span className="text-gray-300">·</span> 10–30 Min Arrival
+                  Simple 4-Step Process <span className="text-gray-300">·</span> 30 Min Arrival
                 </span>
               </div>
 
               <h1 className="text-4xl sm:text-5xl lg:text-[4.2rem] font-extrabold leading-[1.12] text-gray-900 tracking-tight">
                 How Door2fy <br />
-                <span className="text-[#04B6EA]">Works for You</span>
+                <span className="text-[#028dcd]">Works for You</span>
               </h1>
 
               <p className="text-gray-600 text-base lg:text-lg max-w-xl mx-auto lg:mx-0 leading-relaxed font-normal">
-                Experience hassle-free doorstep laptop repair and tech support. Book in under 60 seconds, track your certified technician in real time, and get your device fixed right in front of your eyes.
+                Experience hassle-free doorstep laptop repair and tech support. Book in under 15 seconds, track your certified technician in real time, and get your device fixed right in front of your eyes.
               </p>
 
               {/* Highlights Chips */}
               <div className="flex flex-wrap items-center justify-center lg:justify-start gap-2.5 pt-1">
                 <div className="flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/90 shadow-sm border border-slate-100 text-xs font-bold text-slate-800">
-                  <span className="text-emerald-500">✓</span> 60s Fast Booking
+                  <span className="text-emerald-500">✓</span> 15s Fast Booking
                 </div>
                 <div className="flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/90 shadow-sm border border-slate-100 text-xs font-bold text-slate-800">
-                  <span className="text-[#04B6EA]">⚡</span> 10-Min Response
+                  <span className="text-[#028dcd]">⚡</span> 60-Min Response
                 </div>
                 <div className="flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/90 shadow-sm border border-slate-100 text-xs font-bold text-slate-800">
                   <span className="text-amber-500">★</span> 90-Day Warranty
@@ -227,7 +227,7 @@ export default function HowItWorks() {
               <div className="pt-2 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
                 <Link
                   to="/services"
-                  className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full bg-[#04B6EA] text-white font-bold text-sm hover:bg-[#039ecc] transition-all duration-300 shadow-lg shadow-[#04B6EA]/25 hover:scale-105 active:scale-95 w-full sm:w-auto"
+                  className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full bg-[#028dcd] text-white font-bold text-sm hover:bg-[#039ecc] transition-all duration-300 shadow-lg shadow-[#028dcd]/25 hover:scale-105 active:scale-95 w-full sm:w-auto"
                 >
                   <span>Book a Repair Now</span>
                   <ArrowRight className="w-4 h-4" />
@@ -236,7 +236,7 @@ export default function HowItWorks() {
                   href="https://play.google.com/store/apps/details?id=com.Door2fy&pli=1"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full bg-white text-gray-800 font-bold text-sm hover:bg-gray-50 transition-all border border-gray-200 shadow-sm hover:border-[#04B6EA]/40 w-full sm:w-auto"
+                  className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full bg-white text-gray-800 font-bold text-sm hover:bg-gray-50 transition-all border border-gray-200 shadow-sm hover:border-[#028dcd]/40 w-full sm:w-auto"
                 >
                   <span>Download App</span>
                 </a>
@@ -249,7 +249,7 @@ export default function HowItWorks() {
                 <img
                   src={door2fyTechLabEngineers}
                   alt="Door2fy Rapid Laptop Service"
-                  className="w-full h-auto max-h-[460px] object-contain drop-shadow-[0_20px_50px_rgba(4,182,234,0.2)] transform transition-transform duration-700 ease-out group-hover:scale-105 select-none pointer-events-none"
+                  className="w-full h-auto max-h-[460px] object-contain drop-shadow-[0_20px_50px_rgba(2, 141, 205,0.2)] transform transition-transform duration-700 ease-out group-hover:scale-105 select-none pointer-events-none"
                   style={{ imageRendering: "-webkit-optimize-contrast" }}
                 />
               </div>
@@ -261,17 +261,17 @@ export default function HowItWorks() {
       {/* ================= 6-STEP WORKFLOW CARDS ================= */}
       <section className="py-16 md:py-24 bg-white relative overflow-hidden">
         {/* Dynamic Glow */}
-        <div className="absolute top-1/2 right-1/4 -translate-y-1/2 w-[500px] h-[350px] bg-[#04B6EA]/5 rounded-full blur-[140px] pointer-events-none -z-10" />
+        <div className="absolute top-1/2 right-1/4 -translate-y-1/2 w-[500px] h-[350px] bg-[#028dcd]/5 rounded-full blur-[140px] pointer-events-none -z-10" />
 
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-14 md:mb-18">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#E1F7F9] text-[#04B6EA] text-xs font-bold mb-3 shadow-sm border border-[#04B6EA]/20">
-              <Sparkles className="w-3.5 h-3.5 text-[#04B6EA] animate-pulse" />
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#E1F7F9] text-[#028dcd] text-xs font-bold mb-3 shadow-sm border border-[#028dcd]/20">
+              <Sparkles className="w-3.5 h-3.5 text-[#028dcd] animate-pulse" />
               <span>Effortless Process</span>
             </div>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-gray-900 tracking-tight leading-[1.15]">
               Seamless Laptop Care in <br />
-              <span className="text-[#04B6EA]">6 Simple Steps</span>
+              <span className="text-[#028dcd]">6 Simple Steps</span>
             </h2>
             <p className="text-gray-500 text-base md:text-lg leading-relaxed mt-4 font-normal">
               From instant booking to live testing and warranty activation, experience complete convenience without stepping out of your home.
@@ -284,28 +284,28 @@ export default function HowItWorks() {
               return (
                 <div
                   key={index}
-                  className="group p-6 sm:p-8 bg-[#F8FDFF] rounded-3xl sm:rounded-[2.5rem] border border-[#E1F7F9] hover:border-[#04B6EA] hover:bg-white transition-all duration-500 text-left flex flex-col justify-between shadow-sm hover:shadow-[0_25px_50px_rgba(4,182,234,0.1)] hover:-translate-y-1.5 relative overflow-hidden"
+                  className="group p-6 sm:p-8 bg-[#F8FDFF] rounded-3xl sm:rounded-[2.5rem] border border-[#E1F7F9] hover:border-[#028dcd] hover:bg-white transition-all duration-500 text-left flex flex-col justify-between shadow-sm hover:shadow-[0_25px_50px_rgba(2, 141, 205,0.1)] hover:-translate-y-1.5 relative overflow-hidden"
                 >
                   {/* Step Number Big Watermark */}
-                  <div className="absolute -top-6 -right-4 text-7xl font-extrabold text-[#04B6EA]/5 group-hover:text-[#04B6EA]/10 transition-colors select-none">
+                  <div className="absolute -top-6 -right-4 text-7xl font-extrabold text-[#028dcd]/5 group-hover:text-[#028dcd]/10 transition-colors select-none">
                     {step.number}
                   </div>
 
                   <div className="relative z-10 space-y-5">
                     <div className="flex items-center justify-between">
-                      <div className="w-14 h-14 rounded-2xl bg-[#E1F7F9] text-[#04B6EA] flex items-center justify-center transition-all duration-500 group-hover:bg-[#04B6EA] group-hover:text-white group-hover:scale-110 shadow-sm">
+                      <div className="w-14 h-14 rounded-2xl bg-[#E1F7F9] text-[#028dcd] flex items-center justify-center transition-all duration-500 group-hover:bg-[#028dcd] group-hover:text-white group-hover:scale-110 shadow-sm">
                         <IconComponent className="w-7 h-7" />
                       </div>
-                      <span className="text-[11px] font-bold uppercase tracking-wider text-[#04B6EA] bg-white px-3 py-1 rounded-full border border-[#E1F7F9] shadow-xs">
+                      <span className="text-[11px] font-bold uppercase tracking-wider text-[#028dcd] bg-white px-3 py-1 rounded-full border border-[#E1F7F9] shadow-xs">
                         {step.badge}
                       </span>
                     </div>
 
                     <div>
-                      <h3 className="text-xl sm:text-2xl font-bold text-gray-900 group-hover:text-[#04B6EA] transition-colors leading-snug mb-1">
+                      <h3 className="text-xl sm:text-2xl font-bold text-gray-900 group-hover:text-[#028dcd] transition-colors leading-snug mb-1">
                         {step.title}
                       </h3>
-                      <p className="text-xs font-semibold text-[#04B6EA] uppercase tracking-wider mb-2.5">
+                      <p className="text-xs font-semibold text-[#028dcd] uppercase tracking-wider mb-2.5">
                         {step.subtitle}
                       </p>
                       <p className="text-gray-600 text-sm sm:text-base leading-relaxed font-normal">
@@ -327,9 +327,9 @@ export default function HowItWorks() {
             {stats.map((item, index) => (
               <div
                 key={index}
-                className="group relative bg-white rounded-3xl sm:rounded-[2.5rem] p-5 sm:p-8 text-center transition-all duration-500 border border-gray-100 shadow-[0_10px_30px_rgba(0,0,0,0.02)] hover:shadow-[0_30px_60px_rgba(4,182,234,0.12)] flex flex-col items-center justify-center overflow-hidden hover:-translate-y-1"
+                className="group relative bg-white rounded-3xl sm:rounded-[2.5rem] p-5 sm:p-8 text-center transition-all duration-500 border border-gray-100 shadow-[0_10px_30px_rgba(0,0,0,0.02)] hover:shadow-[0_30px_60px_rgba(2, 141, 205,0.12)] flex flex-col items-center justify-center overflow-hidden hover:-translate-y-1"
               >
-                <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-[#E1F7F9] text-[#04B6EA] flex items-center justify-center mb-3 sm:mb-4 shadow-sm transform group-hover:scale-110 group-hover:rotate-6 transition-all duration-500">
+                <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-[#E1F7F9] text-[#028dcd] flex items-center justify-center mb-3 sm:mb-4 shadow-sm transform group-hover:scale-110 group-hover:rotate-6 transition-all duration-500">
                   {item.icon}
                 </div>
 
@@ -350,13 +350,13 @@ export default function HowItWorks() {
       <section className="py-16 md:py-24 bg-white relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-14">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#E1F7F9] text-[#04B6EA] text-xs font-bold mb-3 shadow-sm border border-[#04B6EA]/20">
-              <BadgeCheck className="w-3.5 h-3.5 text-[#04B6EA]" />
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#E1F7F9] text-[#028dcd] text-xs font-bold mb-3 shadow-sm border border-[#028dcd]/20">
+              <BadgeCheck className="w-3.5 h-3.5 text-[#028dcd]" />
               <span>The Door2fy Edge</span>
             </div>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-gray-900 tracking-tight leading-[1.15]">
               Built for Safety, <br />
-              <span className="text-[#04B6EA]">Convenience & Speed</span>
+              <span className="text-[#028dcd]">Convenience & Speed</span>
             </h2>
             <p className="text-gray-500 text-base md:text-lg mt-3 font-normal">
               A frictionless tech care experience designed for home users, freelancers, and businesses.
@@ -369,13 +369,13 @@ export default function HowItWorks() {
               return (
                 <div
                   key={index}
-                  className="p-6 sm:p-8 bg-[#F8FDFF] rounded-3xl border border-[#E1F7F9] hover:border-[#04B6EA] hover:bg-white transition-all duration-300 text-left shadow-sm hover:shadow-[0_20px_40px_rgba(4,182,234,0.08)] flex flex-col justify-between group"
+                  className="p-6 sm:p-8 bg-[#F8FDFF] rounded-3xl border border-[#E1F7F9] hover:border-[#028dcd] hover:bg-white transition-all duration-300 text-left shadow-sm hover:shadow-[0_20px_40px_rgba(2, 141, 205,0.08)] flex flex-col justify-between group"
                 >
-                  <div className="w-14 h-14 rounded-2xl bg-[#E1F7F9] text-[#04B6EA] flex items-center justify-center mb-6 group-hover:bg-[#04B6EA] group-hover:text-white transition-colors">
+                  <div className="w-14 h-14 rounded-2xl bg-[#E1F7F9] text-[#028dcd] flex items-center justify-center mb-6 group-hover:bg-[#028dcd] group-hover:text-white transition-colors">
                     <IconComp className="w-7 h-7" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-[#04B6EA] transition-colors">
+                    <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-[#028dcd] transition-colors">
                       {feature.title}
                     </h3>
                     <p className="text-gray-600 text-sm sm:text-base leading-relaxed font-normal">
@@ -393,7 +393,7 @@ export default function HowItWorks() {
       <section className="py-16 md:py-20 bg-[#F8FDFF] border-t border-[#E1F7F9]">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
           <div className="text-center mb-12">
-            <span className="text-[#04B6EA] font-bold uppercase tracking-widest text-xs mb-2 block">
+            <span className="text-[#028dcd] font-bold uppercase tracking-widest text-xs mb-2 block">
               Frequently Asked Questions
             </span>
             <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 tracking-tight">
@@ -409,11 +409,11 @@ export default function HowItWorks() {
               >
                 <button
                   onClick={() => setOpenFaq(openFaq === idx ? null : idx)}
-                  className="w-full p-5 sm:p-6 text-left flex items-center justify-between gap-4 font-bold text-base sm:text-lg text-gray-900 hover:text-[#04B6EA] transition-colors"
+                  className="w-full p-5 sm:p-6 text-left flex items-center justify-between gap-4 font-bold text-base sm:text-lg text-gray-900 hover:text-[#028dcd] transition-colors"
                 >
                   <span>{faq.q}</span>
                   <ChevronDown
-                    className={`w-5 h-5 text-[#04B6EA] shrink-0 transition-transform duration-300 ${openFaq === idx ? "rotate-180" : ""
+                    className={`w-5 h-5 text-[#028dcd] shrink-0 transition-transform duration-300 ${openFaq === idx ? "rotate-180" : ""
                       }`}
                   />
                 </button>
@@ -432,7 +432,7 @@ export default function HowItWorks() {
       <section className="py-12 lg:py-16 bg-white overflow-hidden">
         <div className="max-w-6xl mx-auto px-6 lg:px-8">
           <div className="relative group">
-            <div className="absolute inset-4 bg-[#04B6EA]/10 blur-3xl rounded-[4rem] group-hover:opacity-60 transition-opacity"></div>
+            <div className="absolute inset-4 bg-[#028dcd]/10 blur-3xl rounded-[4rem] group-hover:opacity-60 transition-opacity"></div>
 
             <div className="relative bg-[#F8FDFF] rounded-[2.5rem] md:rounded-[3.5rem] px-8 lg:px-16 py-8 lg:py-12 flex flex-col lg:flex-row items-center justify-between border border-[#E1F7F9] shadow-[0_20px_50px_rgba(79,183,212,0.06)] overflow-hidden">
               {/* Phones Image */}
@@ -447,14 +447,14 @@ export default function HowItWorks() {
 
               {/* Content */}
               <div className="w-full lg:w-[48%] text-center lg:text-left space-y-5">
-                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#E1F7F9] text-[#04B6EA] text-xs font-bold">
+                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#E1F7F9] text-[#028dcd] text-xs font-bold">
                   <Sparkles className="w-3.5 h-3.5" />
                   <span>On-Demand Tech Assistance</span>
                 </div>
 
                 <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-gray-900 leading-[1.15] tracking-tight">
                   Book Repairs in <br />
-                  <span className="text-[#04B6EA]">Under 60 Seconds</span>
+                  <span className="text-[#028dcd]">Under 15 Seconds</span>
                 </h2>
 
                 <p className="text-gray-600 text-sm md:text-base leading-relaxed max-w-md mx-auto lg:mx-0 font-normal">

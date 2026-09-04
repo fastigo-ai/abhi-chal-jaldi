@@ -316,7 +316,7 @@ const pages: PageMetadata[] = [
           <li><strong>Emergency 10-Minute Support:</strong> Instant troubleshooting for software crashes, Blue Screen of Death (BSOD), and Excel freezing.</li>
         </ul>
         <h2>Why Choose Door2fy?</h2>
-        <p>With a 4.9/5 star customer rating and over 42,700 satisfied clients, Door2fy delivers 100% genuine OEM spare parts, transparent upfront pricing, and up to 90 days comprehensive warranty on all doorstep repairs.</p>
+        <p>With a 4.9/5 star customer rating and over 1000+ satisfied clients, Door2fy delivers 100% genuine OEM spare parts, transparent upfront pricing, and up to 90 days comprehensive warranty on all doorstep repairs.</p>
       </section>
     `,
     schema: {
@@ -338,7 +338,7 @@ const pages: PageMetadata[] = [
       "aggregateRating": {
         "@type": "AggregateRating",
         "ratingValue": "4.9",
-        "reviewCount": "42700"
+        "reviewCount": "1000"
       }
     },
     isPrimarySitemapUrl: true
@@ -470,6 +470,102 @@ const pages: PageMetadata[] = [
       <section class="seo-crawler-content">
         <h1>Latest Laptop Repair Guides & Tech Articles</h1>
         <p>Read expert advice from Door2fy's certified computer engineers on fixing overheating, slow performance, blue screens, and broken laptop screens.</p>
+      </section>
+    `,
+    isPrimarySitemapUrl: true
+  },
+
+  // 9. Refund & Cancellation Policy
+  {
+    path: "/refund-policy",
+    canonicalUrl: "https://www.door2fy.in/refund-policy",
+    title: "Refund & Cancellation Policy | Door2fy",
+    description: "Learn about Door2fy's transparent refund, cancellation, and warranty policy. 100% money-back guarantee if your laptop issue is not resolved.",
+    keywords: "door2fy refund policy, repair warranty, cancellation terms",
+    bodyHtml: `
+      <section class="seo-crawler-content">
+        <h1>Door2fy Refund & Cancellation Policy</h1>
+        <p>100% service protection, up to 90-day warranty, and 3-5 day direct bank refunds.</p>
+      </section>
+    `,
+    isPrimarySitemapUrl: true
+  },
+
+  // 12. Terms & Conditions
+  {
+    path: "/terms-and-conditions",
+    canonicalUrl: "https://www.door2fy.in/terms-and-conditions",
+    title: "Terms & Conditions | Door2fy",
+    description: "Read the Terms and Conditions of service for Door2fy doorstep laptop and computer tech support services.",
+    keywords: "terms and conditions, user agreement, door2fy legal",
+    bodyHtml: `
+      <section class="seo-crawler-content">
+        <h1>Door2fy Terms & Conditions</h1>
+        <p>Legal terms and conditions governing doorstep computer support.</p>
+      </section>
+    `,
+    isPrimarySitemapUrl: true
+  },
+
+  // 13. Anti-Discrimination Policy
+  {
+    path: "/anti-discrimination-policy",
+    canonicalUrl: "https://www.door2fy.in/anti-discrimination-policy",
+    title: "Anti-Discrimination Policy | Door2fy",
+    description: "Door2fy is committed to a safe, inclusive, and non-discriminatory environment for both customers and technician partners.",
+    keywords: "anti-discrimination policy, equality, safe workplace door2fy",
+    bodyHtml: `
+      <section class="seo-crawler-content">
+        <h1>Door2fy Anti-Discrimination Policy</h1>
+        <p>Zero tolerance policy for discrimination across all communities and partner networks.</p>
+      </section>
+    `,
+    isPrimarySitemapUrl: true
+  },
+
+  // 14. Partner Guidelines
+  {
+    path: "/partner-guidelines",
+    canonicalUrl: "https://www.door2fy.in/partner-guidelines",
+    title: "Service Partner Guidelines & Code of Conduct | Door2fy",
+    description: "Comprehensive guidelines, ethical standards, and operational protocols for Door2fy certified technician partners across India.",
+    keywords: "partner guidelines, technician code of conduct, door2fy partner standards",
+    bodyHtml: `
+      <section class="seo-crawler-content">
+        <h1>Door2fy Partner Guidelines</h1>
+        <p>Professional conduct, punctuality, and diagnostic integrity protocols.</p>
+      </section>
+    `,
+    isPrimarySitemapUrl: true
+  },
+
+  // 15. Partner Benefits
+  {
+    path: "/partner-benefits",
+    canonicalUrl: "https://www.door2fy.in/partner-benefits",
+    title: "Partner Benefits | Grow Your Earnings with Door2fy",
+    description: "Partner with Door2fy and earn ₹40,000 to ₹90,000+ per month. Enjoy daily payouts, free professional toolkits, nearby job orders, and free Apple training.",
+    keywords: "partner benefits, technician earnings, laptop repair partner program",
+    bodyHtml: `
+      <section class="seo-crawler-content">
+        <h1>Door2fy Partner Benefits & Earnings</h1>
+        <p>Highest payout rates, free professional kits, and guaranteed daily job orders.</p>
+      </section>
+    `,
+    isPrimarySitemapUrl: true
+  },
+
+  // 16. Partner Support
+  {
+    path: "/partner-support",
+    canonicalUrl: "https://www.door2fy.in/partner-support",
+    title: "Partner Support & Help Desk | Door2fy",
+    description: "Dedicated 24/7 support portal for Door2fy registered laptop technician partners. Technical escalations, spare parts requests, and payout assistance.",
+    keywords: "partner support, technician helpline, spare parts escalation",
+    bodyHtml: `
+      <section class="seo-crawler-content">
+        <h1>Door2fy Partner Support Helpdesk</h1>
+        <p>Priority technical assistance, parts dispatch, and payout support for technicians.</p>
       </section>
     `,
     isPrimarySitemapUrl: true

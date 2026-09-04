@@ -274,13 +274,13 @@ export default function EngineerReviews({
         {showList && (
           <div id="testimonials" className="mb-16 scroll-mt-24">
             <div className="text-center mb-12">
-              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#E1F7F9] text-[#04B6EA] text-xs font-bold mb-3 shadow-sm border border-[#04B6EA]/20">
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#E1F7F9] text-[#028dcd] text-xs font-bold mb-3 shadow-sm border border-[#028dcd]/20">
                 <Sparkles className="w-3.5 h-3.5" />
                 <span>Verified Customer Testimonials</span>
               </div>
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-gray-900 tracking-tight leading-[1.15]">
                 What Our Customers & <br />
-                <span className="text-[#04B6EA]">Engineers Say</span>
+                <span className="text-[#028dcd]">Engineers Say</span>
               </h2>
               <p className="text-gray-500 text-sm sm:text-base mt-2 font-normal">
                 Real feedback from real users who experienced our rapid doorstep repair.
@@ -305,7 +305,7 @@ export default function EngineerReviews({
                           <img
                             src={`https://ui-avatars.com/api/?name=${encodeURIComponent(
                               r.name || "Customer"
-                            )}&background=E1F7F9&color=04B6EA&bold=true`}
+                            )}&background=E1F7F9&color=028dcd&bold=true`}
                             alt={r.name}
                             className="w-10 h-10 rounded-full object-cover shadow-xs"
                           />
@@ -325,7 +325,7 @@ export default function EngineerReviews({
                             </div>
                           </div>
                         </div>
-                        <Quote className="text-[#04B6EA]/30 w-6 h-6 rotate-180" />
+                        <Quote className="text-[#028dcd]/30 w-6 h-6 rotate-180" />
                       </div>
                       <p className="text-gray-600 text-xs sm:text-sm leading-relaxed font-normal">
                         “{r.review}”
@@ -342,11 +342,11 @@ export default function EngineerReviews({
         {showForm && (
           <div className="relative">
             {/* Background Glow */}
-            <div className="absolute inset-0 bg-[#04B6EA]/5 blur-3xl rounded-[3rem] -z-10" />
+            <div className="absolute inset-0 bg-[#028dcd]/5 blur-3xl rounded-[3rem] -z-10" />
 
-            <div className="max-w-3xl mx-auto bg-[#F8FDFF] rounded-3xl sm:rounded-[2.5rem] p-6 sm:p-10 border border-[#E1F7F9] shadow-[0_20px_50px_rgba(4,182,234,0.06)]">
+            <div className="max-w-3xl mx-auto bg-[#F8FDFF] rounded-3xl sm:rounded-[2.5rem] p-6 sm:p-10 border border-[#E1F7F9] shadow-[0_20px_50px_rgba(2, 141, 205,0.06)]">
               <div className="text-center mb-8 space-y-2">
-                <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-[#E1F7F9] text-[#04B6EA] text-xs font-bold shadow-xs">
+                <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-[#E1F7F9] text-[#028dcd] text-xs font-bold shadow-xs">
                   <Star className="w-3.5 h-3.5 fill-current" />
                   <span>Share Your Experience</span>
                 </div>
@@ -372,7 +372,7 @@ export default function EngineerReviews({
                   <div className="flex flex-wrap items-center justify-center gap-3 pt-2">
                     <button
                       onClick={redirectToTestimonials}
-                      className="inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-[#04B6EA] text-white text-xs font-bold hover:bg-[#039ecc] transition-all shadow-sm shadow-[#04B6EA]/25 cursor-pointer"
+                      className="inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-[#028dcd] text-white text-xs font-bold hover:bg-[#039ecc] transition-all shadow-sm shadow-[#028dcd]/25 cursor-pointer"
                     >
                       <span>View Testimonials</span>
                       <ArrowRight className="w-3.5 h-3.5" />
@@ -393,7 +393,7 @@ export default function EngineerReviews({
                       <label className="block text-xs font-bold uppercase tracking-wider text-gray-700">
                         Overall Rating <span className="text-red-500">*</span>
                       </label>
-                      <span className="text-xs text-[#04B6EA] font-semibold">
+                      <span className="text-xs text-[#028dcd] font-semibold">
                         {ratingLabels[hoverRating || rating]}
                       </span>
                     </div>
@@ -440,7 +440,7 @@ export default function EngineerReviews({
                           className={`w-full pl-10 pr-4 py-3 rounded-2xl bg-white border text-sm text-gray-800 focus:outline-none transition-all font-medium ${
                             errors.name
                               ? "border-red-400 ring-2 ring-red-100"
-                              : "border-gray-200 focus:border-[#04B6EA] focus:ring-3 focus:ring-[#04B6EA]/10"
+                              : "border-gray-200 focus:border-[#028dcd] focus:ring-3 focus:ring-[#028dcd]/10"
                           }`}
                         />
                       </div>
@@ -471,7 +471,7 @@ export default function EngineerReviews({
                           className={`w-full pl-10 pr-4 py-3 rounded-2xl bg-white border text-sm text-gray-800 focus:outline-none transition-all font-medium ${
                             errors.city
                               ? "border-red-400 ring-2 ring-red-100"
-                              : "border-gray-200 focus:border-[#04B6EA] focus:ring-3 focus:ring-[#04B6EA]/10"
+                              : "border-gray-200 focus:border-[#028dcd] focus:ring-3 focus:ring-[#028dcd]/10"
                           }`}
                         />
                         <datalist id="city-options">
@@ -509,7 +509,7 @@ export default function EngineerReviews({
                           className={`w-full pl-10 pr-4 py-3 rounded-2xl bg-white border text-sm text-gray-800 focus:outline-none transition-all font-medium ${
                             errors.phone
                               ? "border-red-400 ring-2 ring-red-100"
-                              : "border-gray-200 focus:border-[#04B6EA] focus:ring-3 focus:ring-[#04B6EA]/10"
+                              : "border-gray-200 focus:border-[#028dcd] focus:ring-3 focus:ring-[#028dcd]/10"
                           }`}
                         />
                       </div>
@@ -539,7 +539,7 @@ export default function EngineerReviews({
                           className={`w-full pl-10 pr-4 py-3 rounded-2xl bg-white border text-sm text-gray-800 focus:outline-none transition-all font-medium ${
                             errors.email
                               ? "border-red-400 ring-2 ring-red-100"
-                              : "border-gray-200 focus:border-[#04B6EA] focus:ring-3 focus:ring-[#04B6EA]/10"
+                              : "border-gray-200 focus:border-[#028dcd] focus:ring-3 focus:ring-[#028dcd]/10"
                           }`}
                         />
                       </div>
@@ -570,7 +570,7 @@ export default function EngineerReviews({
                         className={`w-full pl-10 pr-4 py-3 rounded-2xl bg-white border text-sm text-gray-800 focus:outline-none transition-all font-medium resize-none leading-relaxed ${
                           errors.review
                             ? "border-red-400 ring-2 ring-red-100"
-                            : "border-gray-200 focus:border-[#04B6EA] focus:ring-3 focus:ring-[#04B6EA]/10"
+                            : "border-gray-200 focus:border-[#028dcd] focus:ring-3 focus:ring-[#028dcd]/10"
                         }`}
                       />
                     </div>
@@ -586,7 +586,7 @@ export default function EngineerReviews({
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="w-full py-4 rounded-full bg-[#04B6EA] hover:bg-[#039ecc] text-white font-bold text-sm shadow-md shadow-[#04B6EA]/25 transition-all hover:scale-[1.01] active:scale-[0.99] flex items-center justify-center gap-2 disabled:opacity-60 disabled:pointer-events-none cursor-pointer"
+                    className="w-full py-4 rounded-full bg-[#028dcd] hover:bg-[#039ecc] text-white font-bold text-sm shadow-md shadow-[#028dcd]/25 transition-all hover:scale-[1.01] active:scale-[0.99] flex items-center justify-center gap-2 disabled:opacity-60 disabled:pointer-events-none cursor-pointer"
                   >
                     {isSubmitting ? (
                       <span>Validating & Sending Review...</span>

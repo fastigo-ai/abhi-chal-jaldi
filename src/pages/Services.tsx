@@ -17,7 +17,7 @@ import phone1 from "@/assets/phone1.png";
 import servicesHeroEngineer from "@/assets/services-hero-engineer.png";
 
 export default function Services() {
-  const metaTitle = "Doorstep Laptop Repair Services | 10–30 Min Arrival | Door2fy";
+  const metaTitle = "Doorstep Laptop Repair Services | 30 Min Arrival | Door2fy";
   const metaDescription =
     "Explore Door2fy's certified laptop repair services. Same-day motherboard diagnostics, MacBook repairs, battery & screen replacements at your home or office.";
   const metaKeywords =
@@ -37,7 +37,7 @@ export default function Services() {
         {/* Ambient Glows */}
         <div className="absolute top-[-10%] right-[-10%] w-[60%] aspect-square bg-[#F0FBFF] rounded-full -z-10 blur-3xl opacity-50 transform-gpu"></div>
         <div className="absolute bottom-[10%] left-[-5%] w-[40%] aspect-square bg-[#E8F8FB] rounded-full -z-10 blur-3xl opacity-30 transform-gpu"></div>
-        <div className="absolute -bottom-24 -left-24 w-[500px] h-[500px] bg-[#04B6EA]/10 rounded-full -z-10 blur-[120px] transform-gpu"></div>
+        <div className="absolute -bottom-24 -left-24 w-[500px] h-[500px] bg-[#028dcd]/10 rounded-full -z-10 blur-[120px] transform-gpu"></div>
         <div className="absolute -bottom-24 -right-24 w-[500px] h-[500px] bg-blue-400/10 rounded-full -z-10 blur-[120px] transform-gpu"></div>
 
         <div className="max-w-7xl mx-auto px-6 lg:px-8 w-full pt-20 lg:pt-24 pb-0 relative z-10">
@@ -68,7 +68,7 @@ export default function Services() {
                 className="text-4xl sm:text-5xl lg:text-6xl font-black text-slate-900 tracking-tight leading-[1.12]"
               >
                 Professional <br />
-                <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#04B6EA] to-[#0284c7]">
+                <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#028dcd] to-[#0284c7]">
                   Engineering Services
                 </span>
               </motion.h1>
@@ -91,7 +91,7 @@ export default function Services() {
                 className="flex flex-wrap items-center gap-2.5 pt-1"
               >
                 <span className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-white border border-slate-200/80 text-xs font-bold text-slate-800 shadow-xs">
-                  <Clock className="w-3.5 h-3.5 text-[#04B6EA]" /> 5–10 Min Diagnosis
+                  <Clock className="w-3.5 h-3.5 text-[#028dcd]" /> 5–10 Min Diagnosis
                 </span>
                 <span className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-white border border-slate-200/80 text-xs font-bold text-slate-800 shadow-xs">
                   <ShieldCheck className="w-3.5 h-3.5 text-emerald-600" /> Up to 90 Days Warranty
@@ -111,11 +111,11 @@ export default function Services() {
             >
               <div className="relative w-full max-w-[440px] sm:max-w-[560px] lg:max-w-[660px] xl:max-w-[740px] flex items-end justify-center lg:justify-end">
                 {/* Ambient floor glow */}
-                <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 w-[380px] sm:w-[540px] h-[180px] bg-[#04B6EA]/25 rounded-full blur-3xl pointer-events-none -z-10" />
+                <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 w-[380px] sm:w-[540px] h-[180px] bg-[#028dcd]/25 rounded-full blur-3xl pointer-events-none -z-10" />
                 <img
                   src={servicesHeroEngineer}
                   alt="Door2fy Certified Laptop Engineer Repairing Motherboard"
-                  className="w-full h-auto max-h-[520px] sm:max-h-[600px] lg:max-h-[680px] object-contain object-bottom select-none pointer-events-none drop-shadow-[0_25px_50px_rgba(4,182,234,0.18)] block transform transition-transform duration-700 hover:scale-[1.02]"
+                  className="w-full h-auto max-h-[520px] sm:max-h-[600px] lg:max-h-[680px] object-contain object-bottom select-none pointer-events-none drop-shadow-[0_25px_50px_rgba(2, 141, 205,0.18)] block transform transition-transform duration-700 hover:scale-[1.02]"
                   style={{ imageRendering: "-webkit-optimize-contrast" }}
                 />
               </div>
@@ -125,60 +125,79 @@ export default function Services() {
       </section>
 
       {/* ================= SERVICES GRID SECTION ================= */}
-      <section className="pt-10 sm:pt-12 pb-16 md:pb-20 bg-white">
+      <section className="pt-12 sm:pt-16 pb-16 md:pb-24 bg-white relative">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 lg:gap-8">
+          {/* Section Header Title */}
+          <div className="text-left mb-8 md:mb-12">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#E1F7F9] text-[#028dcd] text-[11px] font-extrabold uppercase tracking-widest mb-3 border border-[#028dcd]/20 shadow-xs">
+              <Sparkles className="w-3 h-3 text-[#028dcd] animate-pulse" />
+              <span>All Doorstep Services</span>
+            </div>
+            <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+              Select Your <span className="text-[#028dcd]">Repair or Support Need</span>
+            </h2>
+            <p className="text-slate-500 text-sm sm:text-base mt-2 max-w-xl font-normal">
+              Transparent flat pricing, genuine OEM parts, and certified technician doorstep visit in 30 minutes.
+            </p>
+          </div>
+
+          {/* Clean Grid Layout Matching Reference Image 1 & Theme Image 2 */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 lg:gap-6">
             {services.map((service) => (
               <Link
                 key={service.id}
                 to={`/service/${service.slug}`}
-                className="group relative rounded-3xl bg-white hover:bg-[#F8FDFF] transition-all duration-300 flex flex-col justify-between overflow-hidden"
+                className="group relative bg-white rounded-3xl border border-gray-100 hover:border-[#028dcd]/60 p-4 transition-all duration-300 shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:shadow-[0_20px_45px_rgba(2, 141, 205,0.12)] hover:-translate-y-1.5 flex flex-col justify-between text-left overflow-hidden"
               >
-                {/* Image Container with pure white matching background and proper dimension */}
-                <div className="relative w-full aspect-[4/3] bg-white overflow-hidden flex items-center justify-center p-3">
-                  <img
-                    src={service.image}
-                    alt={service.title}
-                    className="w-full h-full object-contain transform transition-transform duration-700 ease-out group-hover:scale-106"
-                    loading="lazy"
-                  />
-
+                {/* Inner Image Viewport (Image 1 Style with Image 2 Badges) */}
+                <div className="relative w-full aspect-[4/3] rounded-2xl bg-[#F8FDFF] border border-[#E1F7F9] p-3 flex items-center justify-center overflow-hidden mb-3.5 group-hover:bg-white transition-colors">
                   {/* Speed Badge */}
-                  <div className="absolute top-3 left-3 flex items-center gap-1 px-2.5 py-1 rounded-full bg-white/95 backdrop-blur-sm shadow-xs">
-                    <Zap className="w-3 h-3 text-[#04B6EA] fill-[#04B6EA]" />
+                  <div className="absolute top-2.5 left-2.5 flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-white/95 backdrop-blur-xs shadow-xs border border-gray-100 z-10">
+                    <Zap className="w-2.5 h-2.5 text-[#028dcd] fill-[#028dcd]" />
                     <span className="text-[10px] font-extrabold tracking-wider text-slate-800 uppercase">
                       5–10 Min
                     </span>
                   </div>
 
-                  {/* Star Rating Badge */}
-                  <div className="absolute top-3 right-3 flex items-center gap-1 px-2.5 py-1 rounded-full bg-white/95 backdrop-blur-sm shadow-xs text-slate-800">
-                    <Star className="w-3.5 h-3.5 text-amber-500 fill-amber-500" />
+                  {/* Rating Badge */}
+                  <div className="absolute top-2.5 right-2.5 flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-white/95 backdrop-blur-xs shadow-xs border border-gray-100 text-slate-800 z-10">
+                    <Star className="w-2.5 h-2.5 text-amber-500 fill-amber-500" />
                     <span className="text-[10px] font-bold">4.9</span>
                   </div>
+
+                  <img
+                    src={service.image}
+                    alt={service.title}
+                    className="w-full h-full object-contain transform transition-transform duration-500 ease-out group-hover:scale-105 select-none"
+                    loading="lazy"
+                    style={{ imageRendering: "-webkit-optimize-contrast" }}
+                  />
                 </div>
 
-                {/* Content */}
-                <div className="p-5 flex flex-col justify-between flex-grow text-left space-y-3">
+                {/* Content & Details */}
+                <div className="flex flex-col justify-between flex-grow space-y-3">
                   <div>
-                    <h2 className="text-base sm:text-lg font-extrabold text-slate-900 tracking-tight leading-snug group-hover:text-[#04B6EA] transition-colors mb-1.5 line-clamp-1">
+                    <h3 className="text-base font-extrabold text-slate-900 tracking-tight leading-snug group-hover:text-[#028dcd] transition-colors mb-1 line-clamp-1">
                       {service.title}
-                    </h2>
-                    <p className="text-slate-600 text-xs sm:text-sm font-normal line-clamp-2 leading-relaxed">
+                    </h3>
+                    <p className="text-slate-500 text-xs font-normal line-clamp-2 leading-relaxed">
                       {service.description}
                     </p>
                   </div>
 
-                  <div className="pt-2 flex items-center justify-between">
+                  {/* Bottom Action Row (Matching Theme 2) */}
+                  <div className="pt-2.5 flex items-center justify-between border-t border-gray-50 group-hover:border-[#E1F7F9] transition-colors">
                     <div className="flex items-center gap-1.5 text-[11px] font-semibold text-slate-600">
                       <ShieldCheck className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
                       <span>Verified Tech</span>
                     </div>
 
-                    <span className="inline-flex items-center gap-1 text-xs font-bold text-[#04B6EA] group-hover:translate-x-1 transition-transform">
+                    <div className="flex items-center gap-1.5 text-xs font-bold text-[#028dcd]">
                       <span>Get Support</span>
-                      <ArrowRight className="w-3.5 h-3.5" />
-                    </span>
+                      <div className="w-5 h-5 rounded-full bg-[#E1F7F9] text-[#028dcd] group-hover:bg-[#028dcd] group-hover:text-white flex items-center justify-center shrink-0 transition-all duration-300 transform group-hover:translate-x-0.5">
+                        <ArrowRight className="w-3 h-3" />
+                      </div>
+                    </div>
                   </div>
                 </div>
               </Link>
@@ -191,7 +210,7 @@ export default function Services() {
       <section className="py-14 lg:py-20 bg-white overflow-hidden border-t border-slate-100">
         <div className="max-w-6xl mx-auto px-6 lg:px-8">
           <div className="relative group">
-            <div className="absolute inset-4 bg-[#04B6EA]/10 blur-3xl rounded-[4rem] group-hover:opacity-60 transition-opacity"></div>
+            <div className="absolute inset-4 bg-[#028dcd]/10 blur-3xl rounded-[4rem] group-hover:opacity-60 transition-opacity"></div>
 
             <div className="relative bg-[#F8FDFF] rounded-[2.5rem] md:rounded-[3.5rem] px-8 lg:px-16 py-8 lg:py-12 flex flex-col lg:flex-row items-center justify-between border border-[#E1F7F9] shadow-[0_20px_50px_rgba(79,183,212,0.06)] overflow-hidden">
               {/* Phones Image */}
@@ -206,14 +225,14 @@ export default function Services() {
 
               {/* Right Content */}
               <div className="w-full lg:w-[48%] text-center lg:text-left space-y-5">
-                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#E1F7F9] text-[#04B6EA] text-xs font-bold">
+                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#E1F7F9] text-[#028dcd] text-xs font-bold">
                   <Sparkles className="w-3.5 h-3.5" />
                   <span>Instant Doorstep Booking</span>
                 </div>
 
                 <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-slate-900 leading-[1.15] tracking-tight">
                   Need an Engineer <br />
-                  <span className="text-[#04B6EA]">Right Now?</span>
+                  <span className="text-[#028dcd]">Right Now?</span>
                 </h2>
 
                 <p className="text-slate-600 text-sm md:text-base leading-relaxed max-w-md mx-auto lg:mx-0 font-normal">
@@ -223,7 +242,7 @@ export default function Services() {
                 <div className="flex flex-wrap items-center justify-center lg:justify-start gap-3 pt-2">
                   <Link
                     to="/contact-us"
-                    className="px-6 py-3 rounded-full bg-[#04B6EA] text-white font-bold text-xs sm:text-sm hover:bg-[#039ecc] transition-all shadow-md shadow-[#04B6EA]/25 hover:scale-105"
+                    className="px-6 py-3 rounded-full bg-[#028dcd] text-white font-bold text-xs sm:text-sm hover:bg-[#039ecc] transition-all shadow-md shadow-[#028dcd]/25 hover:scale-105"
                   >
                     Contact Support
                   </Link>

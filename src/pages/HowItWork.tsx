@@ -37,7 +37,7 @@ export default function HowItWork() {
             }`}
           >
             {/* Icon */}
-            <div className="w-16 h-16 bg-[#04B6EA] text-white rounded-full flex items-center justify-center flex-shrink-0">
+            <div className="w-16 h-16 bg-[#028dcd] text-white rounded-full flex items-center justify-center flex-shrink-0">
               <CheckCircle className="w-8 h-8" />
             </div>
 

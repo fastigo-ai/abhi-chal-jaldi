@@ -2,10 +2,11 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { SEOHead } from "@/components/SEOHead";
+import { GradualSpacing } from "@/components/ui/gradual-spacing";
+import { TypingEffect } from "@/components/ui/typing-effect";
 import { services as allServices } from "@/data/services";
 import toast from "react-hot-toast";
-import { CylindricalServicesScroller } from "@/components/CylindricalServicesScroller";
-import { Orbit, LayoutGrid, ArrowRight, Zap, ShieldCheck, Sparkles, CheckCircle2, Award, Clock, Star, Quote, MapPin } from "lucide-react";
+import { ArrowRight, Zap, ShieldCheck, Sparkles, CheckCircle2, Award, Clock, Star, Quote, MapPin } from "lucide-react";
 import { useReviews, ReviewItem } from "@/utils/reviews";
 
 // Assets
@@ -24,9 +25,9 @@ const HeroSection = () => {
       <div className="absolute bottom-[10%] left-[-5%] w-[40%] aspect-square bg-[#E8F8FB] rounded-full -z-10 blur-3xl opacity-30 transform-gpu"></div>
 
       {/* Focus Lights - Bottom Corners */}
-      <div className="absolute -bottom-24 -left-24 w-[500px] h-[500px] bg-[#04B6EA]/10 rounded-full -z-10 blur-[120px] transform-gpu"></div>
+      <div className="absolute -bottom-24 -left-24 w-[500px] h-[500px] bg-[#028dcd]/10 rounded-full -z-10 blur-[120px] transform-gpu"></div>
       <div className="absolute -bottom-24 -right-24 w-[500px] h-[500px] bg-blue-400/10 rounded-full -z-10 blur-[120px] transform-gpu"></div>
-      
+
       {/* Top Header Row - Full Width Border */}
       <div className="max-w-7xl mx-auto px-6 lg:px-8 w-full flex flex-col pt-20 lg:pt-20">
         {/* Main Hero Grid */}
@@ -41,16 +42,16 @@ const HeroSection = () => {
               </span>
               <span className="text-[11px] lg:text-[12px] font-medium text-gray-600 tracking-wide">
                 Trusted by{" "}
-                <span className="font-bold text-gray-900">5000+</span> homes{" "}
+                <span className="font-bold text-gray-900">1000+</span> homes{" "}
                 <span className="mx-1 text-gray-300">·</span> 10 cities live
               </span>
             </div>
 
             <h1 className="text-4xl lg:text-[4.5rem] font-bold leading-[1.15] text-gray-900 tracking-tight">
-              Expert Laptop Repair & Tech Support 
+              <GradualSpacing text="Expert Laptop Repair & Tech Support" />
             </h1>
             <p className="text-gray-500 text-base lg:text-lg -mt-4 max-w-lg mx-auto lg:mx-0 leading-relaxed font-normal">
-              <span className="text-[#04B6EA] font-bold">Door2fy</span> delivers fast IT support & device care services across India.
+              <TypingEffect text="Door2fy delivers fast IT support & device care services across India." />
             </p>
 
             {/* Buttons */}
@@ -82,7 +83,7 @@ const HeroSection = () => {
               </div>
               {/* Ratings */}
               <div className="flex items-center gap-3 justify-center lg:justify-start">
-                <div className="flex gap-0.5 text-[#04B6EA]">
+                <div className="flex gap-0.5 text-[#028dcd]">
                   {[...Array(5)].map((_, i) => (
                     <svg
                       key={i}
@@ -95,7 +96,7 @@ const HeroSection = () => {
                 </div>
                 <div className="flex items-center gap-1.5 text-sm">
                   <span className="font-bold text-gray-900">4.8</span>
-                  <span className="text-gray-500">from 42,700+ ratings</span>
+                  <span className="text-gray-500">from 1000+ ratings</span>
                 </div>
               </div>
             </div>
@@ -171,172 +172,86 @@ const HeroSection = () => {
 
 /* ================= SERVICES SECTION ================= */
 const ServicesSection = () => {
-  const [viewMode, setViewMode] = useState<"cylinder" | "grid">("cylinder");
   const services = allServices;
+  // Duplicate array 3 times to create a seamless infinite marquee scroll
+  const marqueeServices = [...services, ...services, ...services];
 
   return (
-    <section className="bg-white py-8 md:py-14 overflow-hidden relative">
+    <section className="bg-white py-12 md:py-16 overflow-hidden relative">
       {/* Dynamic Background Glow */}
-      <div className="absolute top-1/2 right-1/4 -translate-y-1/2 w-[500px] h-[350px] bg-[#04B6EA]/10 rounded-full blur-[140px] pointer-events-none -z-10" />
+      <div className="absolute top-1/2 right-1/4 -translate-y-1/2 w-[500px] h-[350px] bg-[#028dcd]/5 rounded-full blur-[140px] pointer-events-none -z-10" />
 
-      <div className="max-w-7xl mx-auto px-6 lg:px-8">
-        {viewMode === "cylinder" ? (
-          /* Split 2-Column Layout: Left (Heading & CTA), Right (Compact 3D Cylinder Scroller) */
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
-            {/* Left Column (5/12) */}
-            <div className="lg:col-span-5 text-left space-y-6">
-              <div>
-                {/* Skip the tech stress Pill */}
-                <motion.div
-                  initial={{ opacity: 0, y: -15, scale: 0.95 }}
-                  whileInView={{ opacity: 1, y: 0, scale: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5, ease: "easeOut" }}
-                  className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#E1F7F9] text-[#04B6EA] text-xs font-extrabold mb-3.5 shadow-xs border border-[#04B6EA]/20"
-                >
-                  <span className="w-2 h-2 rounded-full bg-[#04B6EA]"></span>
-                  <span>Skip the tech stress</span>
-                </motion.div>
+      <div className="max-w-7xl mx-auto px-6 lg:px-8 mb-8 md:mb-12">
+        {/* Section Header matching Reference Image Layout */}
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
+          <div className="text-left max-w-2xl">
+            {/* Top Tag Pill */}
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#E1F7F9] text-[#028dcd] text-[11px] font-extrabold uppercase tracking-widest mb-3 border border-[#028dcd]/20 shadow-xs">
+              <Sparkles className="w-3 h-3 text-[#028dcd] animate-pulse" />
+              <span>Our Services</span>
+            </div>
 
-                {/* Main Heading */}
-                <motion.h2
-                  initial={{ opacity: 0, y: 25 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.6, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
-                  className="text-4xl sm:text-5xl lg:text-[3.25rem] font-black text-slate-900 tracking-tight leading-[1.12]"
-                >
-                  Expert tech support <br />
-                  <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#04B6EA] to-[#0284c7]">
-                    delivered fast
-                  </span>
-                </motion.h2>
+            {/* Main Heading */}
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-gray-900 tracking-tight leading-[1.12]">
+              Expert tech support <br className="hidden sm:inline" />
+              <span className="text-[#028dcd]">delivered fast.</span>
+            </h2>
 
-                {/* Subtitle Description */}
-                <motion.p
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
-                  className="text-slate-600 text-sm sm:text-base font-normal leading-relaxed mt-4 max-w-lg"
-                >
-                  Our team of verified Door2fy Professionals diagnose and resolve your device issues in{" "}
-                  <span className="text-[#04B6EA] font-bold">5–10 minutes</span>. On-demand doorstep care.
-                </motion.p>
+            {/* Description Subtitle */}
+            <p className="text-gray-500 text-sm sm:text-base leading-relaxed mt-3 font-normal">
+              Our verified Door2fy Engineers diagnose and resolve your device issues in <span className="text-[#028dcd] font-bold">5–10 minutes</span>. On-demand doorstep care with 100% genuine parts & transparent flat pricing.
+            </p>
+          </div>
+
+          {/* Action Link */}
+          <div className="flex items-center gap-3 self-start md:self-end">
+            <Link
+              to="/services"
+              className="inline-flex items-center gap-2 px-5 py-3 rounded-full bg-[#028dcd] hover:bg-[#039ecc] text-white text-xs sm:text-sm font-bold shadow-md shadow-[#028dcd]/25 transition-all duration-300 hover:scale-105 active:scale-95"
+            >
+              <span>Explore All Services</span>
+              <ArrowRight className="w-4 h-4" />
+            </Link>
+          </div>
+        </div>
+      </div>
+
+      {/* Auto-scrolling Side-by-Side Cards (Continuous Infinite Marquee) */}
+      <div className="relative w-full overflow-hidden py-3">
+        {/* Side Gradient Fade Masks for smooth infinity aesthetic */}
+        <div className="pointer-events-none absolute left-0 top-0 bottom-0 w-12 sm:w-28 bg-gradient-to-r from-white to-transparent z-10" />
+        <div className="pointer-events-none absolute right-0 top-0 bottom-0 w-12 sm:w-28 bg-gradient-to-l from-white to-transparent z-10" />
+
+        {/* Scrolling Track */}
+        <div className="animate-marquee-auto flex items-center">
+          {marqueeServices.map((service, idx) => (
+            <Link
+              key={`${service.id}-${idx}`}
+              to={`/service/${service.slug}`}
+              className="group w-[210px] sm:w-[245px] md:w-[260px] flex-shrink-0 bg-white rounded-3xl sm:rounded-[2rem] border border-gray-100 hover:border-[#028dcd]/60 p-4 transition-all duration-300 shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:shadow-[0_20px_40px_rgba(2, 141, 205,0.14)] hover:-translate-y-1.5 flex flex-col justify-between mx-2.5 sm:mx-3 text-left"
+            >
+              {/* Inner Soft Box holding the Service Image (Matching Reference Card) */}
+              <div className="w-full aspect-[4/3] rounded-2xl bg-[#F8FDFF] border border-[#E1F7F9] p-3.5 flex items-center justify-center overflow-hidden mb-3.5 group-hover:bg-white transition-colors">
+                <img
+                  src={service.image}
+                  alt={service.title}
+                  className="w-full h-full object-contain transform transition-transform duration-500 ease-out group-hover:scale-105 select-none pointer-events-none"
+                  style={{ imageRendering: "-webkit-optimize-contrast" }}
+                />
               </div>
 
-              {/* Trust & Guarantee Highlights */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: 0.3, ease: "easeOut" }}
-                className="space-y-4 pt-1"
-              >
-                <div className="flex items-center gap-3.5 group">
-                  <div className="w-10 h-10 rounded-full bg-[#E1F7F9] text-[#04B6EA] flex items-center justify-center shrink-0 shadow-xs group-hover:scale-110 transition-transform">
-                    <Zap className="w-4 h-4 fill-[#04B6EA]" />
-                  </div>
-                  <div>
-                    <h4 className="text-sm font-extrabold text-slate-900 leading-snug">5–10 Min Quick Diagnosis</h4>
-                    <p className="text-xs text-slate-500 font-medium">Fast doorstep & remote troubleshooting</p>
-                  </div>
+              {/* Bottom Row: Service Title + Clean Arrow */}
+              <div className="flex items-center justify-between gap-2 pt-1 border-t border-transparent group-hover:border-[#E1F7F9] transition-colors">
+                <h3 className="text-xs sm:text-sm font-bold text-gray-900 group-hover:text-[#028dcd] transition-colors leading-snug line-clamp-1">
+                  {service.title}
+                </h3>
+                <div className="w-6 h-6 rounded-full bg-[#E1F7F9] text-[#028dcd] group-hover:bg-[#028dcd] group-hover:text-white flex items-center justify-center shrink-0 transition-all duration-300 transform group-hover:translate-x-0.5">
+                  <ArrowRight className="w-3.5 h-3.5" />
                 </div>
-
-                <div className="flex items-center gap-3.5 group">
-                  <div className="w-10 h-10 rounded-full bg-[#E1F7F9] text-[#04B6EA] flex items-center justify-center shrink-0 shadow-xs group-hover:scale-110 transition-transform">
-                    <ShieldCheck className="w-4 h-4 text-[#04B6EA]" />
-                  </div>
-                  <div>
-                    <h4 className="text-sm font-extrabold text-slate-900 leading-snug">Verified & Certified Engineers</h4>
-                    <p className="text-xs text-slate-500 font-medium">100% background checked professionals</p>
-                  </div>
-                </div>
-              </motion.div>
-
-              {/* Actions & Switcher */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: 0.4, ease: "easeOut" }}
-                className="flex flex-wrap items-center gap-3 pt-2"
-              >
-                <Link
-                  to="/services"
-                  className="inline-flex items-center gap-2 px-6 py-3.5 rounded-2xl bg-[#04B6EA] hover:bg-[#039ecc] text-white font-bold text-xs sm:text-sm transition-all duration-300 shadow-md shadow-[#04B6EA]/25 hover:scale-105"
-                >
-                  <span>Explore All Services</span>
-                  <ArrowRight className="w-4 h-4" />
-                </Link>
-
-                <button
-                  onClick={() => setViewMode("grid")}
-                  className="inline-flex items-center gap-2 px-5 py-3.5 rounded-2xl bg-white hover:bg-slate-50 border border-slate-200 text-slate-700 font-bold text-xs sm:text-sm transition-all shadow-xs"
-                >
-                  <LayoutGrid className="w-4 h-4 text-slate-500" />
-                  <span>Grid View</span>
-                </button>
-              </motion.div>
-            </div>
-
-            {/* Right Column (7/12) - Compact 3D Cylindrical Scroller covering only half the section */}
-            <div className="lg:col-span-7 relative w-full flex justify-center items-center overflow-visible">
-              <CylindricalServicesScroller services={services} compact={true} />
-            </div>
-          </div>
-        ) : (
-          /* Grid View Mode */
-          <div className="space-y-8">
-            <div className="flex flex-col md:flex-row md:items-end justify-between gap-4">
-              <div className="text-left">
-                <span className="text-[#04B6EA] font-bold text-[14px] md:text-[15px] mb-2 block">
-                  Skip the tech stress.
-                </span>
-                <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 tracking-tight leading-[1.2]">
-                  Expert tech support <br /> delivered fast
-                </h2>
               </div>
-              <button
-                onClick={() => setViewMode("cylinder")}
-                className="flex items-center gap-2 px-4 py-2 rounded-full text-xs font-bold bg-[#04B6EA] text-white shadow-md shadow-[#04B6EA]/25 self-start md:self-end hover:scale-105 transition-all"
-              >
-                <Orbit className="w-3.5 h-3.5" />
-                <span>3D Cylinder View</span>
-              </button>
-            </div>
-
-            <div className="grid grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-6 md:gap-8">
-              {services.map((service) => (
-                <Link 
-                  key={service.id} 
-                  to={`/service/${service.slug}`}
-                  className="group p-4 sm:p-6 bg-[#F8FDFF] rounded-3xl sm:rounded-[2.5rem] border border-[#E1F7F9] hover:border-[#04B6EA] hover:bg-white transition-all duration-300 text-left flex flex-col justify-between space-y-4 sm:space-y-6 shadow-sm hover:shadow-[0_25px_50px_rgba(4, 182, 234,0.1)] hover:-translate-y-1.5"
-                >
-                  <div className="w-full h-36 sm:h-52 rounded-2xl sm:rounded-[1.8rem] overflow-hidden relative bg-white border border-gray-100 p-2 flex items-center justify-center">
-                    <img 
-                      src={service.image} 
-                      alt={service.title} 
-                      className="w-full h-full object-contain transition-transform duration-700 ease-out group-hover:scale-105" 
-                    />
-                  </div>
-                  
-                  <div className="flex flex-col flex-grow w-full justify-between">
-                    <h3 className="text-[13px] sm:text-xl md:text-2xl font-bold mb-2 sm:mb-4 text-gray-900 tracking-tight group-hover:text-[#04B6EA] transition-colors duration-300 leading-snug">{service.title}</h3>
-                    <div className="flex items-center justify-between pt-2 border-t border-gray-50 group-hover:border-[#E1F7F9] transition-colors duration-300">
-                      <span className="text-[10px] sm:text-sm font-bold text-gray-500 group-hover:text-gray-900 transition-colors duration-300 hidden sm:block">Click here</span>
-                      <div className="w-6 h-6 sm:w-10 sm:h-10 rounded-full bg-[#E1F7F9] text-[#04B6EA] flex items-center justify-center transition-all duration-300 group-hover:bg-[#04B6EA] group-hover:text-white transform group-hover:translate-x-1 ml-auto">
-                        <svg className="w-3 h-3 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                        </svg>
-                      </div>
-                    </div>
-                  </div>
-                </Link>
-              ))}
-            </div>
-          </div>
-        )}
+            </Link>
+          ))}
+        </div>
       </div>
     </section>
   );
@@ -388,7 +303,7 @@ const WhyChooseUsSection = () => {
     <section className="bg-white py-8 md:py-10 overflow-hidden relative">
       {/* Dynamic Floating Bubbles Background */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-[#04B6EA]/5 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-[#028dcd]/5 rounded-full blur-3xl animate-pulse"></div>
         <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-blue-100/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
       </div>
 
@@ -398,18 +313,18 @@ const WhyChooseUsSection = () => {
           {/* Left Column (5/12) */}
           <div className="lg:col-span-5 text-left space-y-6">
             <div>
-              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#E1F7F9] text-[#04B6EA] text-xs font-bold mb-3 shadow-sm border border-[#04B6EA]/20">
-                <Sparkles className="w-3.5 h-3.5 text-[#04B6EA] animate-pulse" />
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#E1F7F9] text-[#028dcd] text-xs font-bold mb-3 shadow-sm border border-[#028dcd]/20">
+                <Sparkles className="w-3.5 h-3.5 text-[#028dcd] animate-pulse" />
                 <span>Why Choose Door2fy?</span>
               </div>
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-gray-900 tracking-tight leading-[1.15]">
                 Trusted Technology <br />
-                <span className="text-[#04B6EA]">
+                <span className="text-[#028dcd]">
                   Solutions for Every Need
                 </span>
               </h2>
               <p className="text-gray-600 text-base lg:text-lg leading-relaxed font-normal mt-4">
-                <span className="text-[#04B6EA] font-bold">Door2fy</span> provides certified doorstep laptop repair & on-demand tech support across India. We restore device performance, protect your data, and maximize your productivity with guaranteed peace of mind.
+                <span className="text-[#028dcd] font-bold">Door2fy</span> provides certified doorstep laptop repair & on-demand tech support across India. We restore device performance, protect your data, and maximize your productivity with guaranteed peace of mind.
               </p>
             </div>
 
@@ -417,7 +332,7 @@ const WhyChooseUsSection = () => {
             <div className="flex flex-wrap items-center gap-3 pt-2">
               <Link
                 to="/contact-us"
-                className="inline-flex items-center gap-2 px-6 py-3.5 rounded-full bg-[#04B6EA] text-white font-bold text-xs md:text-sm hover:bg-[#039ecc] transition-all duration-300 shadow-lg shadow-[#04B6EA]/25 hover:scale-105"
+                className="inline-flex items-center gap-2 px-6 py-3.5 rounded-full bg-[#028dcd] text-white font-bold text-xs md:text-sm hover:bg-[#039ecc] transition-all duration-300 shadow-lg shadow-[#028dcd]/25 hover:scale-105"
               >
                 <span>Book a Technician</span>
                 <ArrowRight className="w-4 h-4" />
@@ -437,7 +352,7 @@ const WhyChooseUsSection = () => {
               <img
                 src={door2fyTechLabEngineers}
                 alt="Door2fy Certified Hardware Engineers"
-                className="w-full h-auto max-h-[460px] object-contain drop-shadow-[0_20px_50px_rgba(4,182,234,0.2)] transform transition-transform duration-700 ease-out group-hover:scale-105 select-none pointer-events-none"
+                className="w-full h-auto max-h-[460px] object-contain drop-shadow-[0_20px_50px_rgba(2, 141, 205,0.2)] transform transition-transform duration-700 ease-out group-hover:scale-105 select-none pointer-events-none"
                 style={{ imageRendering: "-webkit-optimize-contrast" }}
               />
             </div>
@@ -446,8 +361,8 @@ const WhyChooseUsSection = () => {
 
         {/* Feature Highlights Grid - 4 Full Width Cards */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-12 lg:mb-14">
-          <div className="flex items-center gap-3.5 p-4 rounded-3xl bg-[#F8FDFF] border border-[#E1F7F9] shadow-xs hover:border-[#04B6EA]/40 transition-all">
-            <div className="w-11 h-11 rounded-2xl bg-[#E1F7F9] flex items-center justify-center text-[#04B6EA] shrink-0 font-bold">
+          <div className="flex items-center gap-3.5 p-4 rounded-3xl bg-[#F8FDFF] border border-[#E1F7F9] shadow-xs hover:border-[#028dcd]/40 transition-all">
+            <div className="w-11 h-11 rounded-2xl bg-[#E1F7F9] flex items-center justify-center text-[#028dcd] shrink-0 font-bold">
               <ShieldCheck className="w-5 h-5" />
             </div>
             <div className="text-left">
@@ -456,8 +371,8 @@ const WhyChooseUsSection = () => {
             </div>
           </div>
 
-          <div className="flex items-center gap-3.5 p-4 rounded-3xl bg-[#F8FDFF] border border-[#E1F7F9] shadow-xs hover:border-[#04B6EA]/40 transition-all">
-            <div className="w-11 h-11 rounded-2xl bg-[#E1F7F9] flex items-center justify-center text-[#04B6EA] shrink-0 font-bold">
+          <div className="flex items-center gap-3.5 p-4 rounded-3xl bg-[#F8FDFF] border border-[#E1F7F9] shadow-xs hover:border-[#028dcd]/40 transition-all">
+            <div className="w-11 h-11 rounded-2xl bg-[#E1F7F9] flex items-center justify-center text-[#028dcd] shrink-0 font-bold">
               <Zap className="w-5 h-5" />
             </div>
             <div className="text-left">
@@ -466,8 +381,8 @@ const WhyChooseUsSection = () => {
             </div>
           </div>
 
-          <div className="flex items-center gap-3.5 p-4 rounded-3xl bg-[#F8FDFF] border border-[#E1F7F9] shadow-xs hover:border-[#04B6EA]/40 transition-all">
-            <div className="w-11 h-11 rounded-2xl bg-[#E1F7F9] flex items-center justify-center text-[#04B6EA] shrink-0 font-bold">
+          <div className="flex items-center gap-3.5 p-4 rounded-3xl bg-[#F8FDFF] border border-[#E1F7F9] shadow-xs hover:border-[#028dcd]/40 transition-all">
+            <div className="w-11 h-11 rounded-2xl bg-[#E1F7F9] flex items-center justify-center text-[#028dcd] shrink-0 font-bold">
               <Award className="w-5 h-5" />
             </div>
             <div className="text-left">
@@ -476,8 +391,8 @@ const WhyChooseUsSection = () => {
             </div>
           </div>
 
-          <div className="flex items-center gap-3.5 p-4 rounded-3xl bg-[#F8FDFF] border border-[#E1F7F9] shadow-xs hover:border-[#04B6EA]/40 transition-all">
-            <div className="w-11 h-11 rounded-2xl bg-[#E1F7F9] flex items-center justify-center text-[#04B6EA] shrink-0 font-bold">
+          <div className="flex items-center gap-3.5 p-4 rounded-3xl bg-[#F8FDFF] border border-[#E1F7F9] shadow-xs hover:border-[#028dcd]/40 transition-all">
+            <div className="w-11 h-11 rounded-2xl bg-[#E1F7F9] flex items-center justify-center text-[#028dcd] shrink-0 font-bold">
               <Clock className="w-5 h-5" />
             </div>
             <div className="text-left">
@@ -492,9 +407,9 @@ const WhyChooseUsSection = () => {
           {stats.map((item, index) => (
             <div
               key={index}
-              className="group relative bg-white rounded-3xl sm:rounded-[2.5rem] p-4 sm:p-8 md:p-10 text-center transition-all duration-500 border border-gray-100 shadow-[0_10px_30px_rgba(0,0,0,0.02)] hover:shadow-[0_30px_60px_rgba(4, 182, 234,0.12)] flex flex-col items-center justify-center overflow-hidden"
+              className="group relative bg-white rounded-3xl sm:rounded-[2.5rem] p-4 sm:p-8 md:p-10 text-center transition-all duration-500 border border-gray-100 shadow-[0_10px_30px_rgba(0,0,0,0.02)] hover:shadow-[0_30px_60px_rgba(2, 141, 205,0.12)] flex flex-col items-center justify-center overflow-hidden"
             >
-              <div className="w-10 h-10 sm:w-14 sm:h-14 rounded-xl sm:rounded-2xl bg-[#E1F7F9] text-[#04B6EA] flex items-center justify-center mb-3 sm:mb-6 shadow-lg transform group-hover:scale-110 group-hover:rotate-6 transition-all duration-500">
+              <div className="w-10 h-10 sm:w-14 sm:h-14 rounded-xl sm:rounded-2xl bg-[#E1F7F9] text-[#028dcd] flex items-center justify-center mb-3 sm:mb-6 shadow-lg transform group-hover:scale-110 group-hover:rotate-6 transition-all duration-500">
                 <div className="scale-75 sm:scale-100">{item.icon}</div>
               </div>
 
@@ -511,8 +426,8 @@ const WhyChooseUsSection = () => {
 
         {/* Bottom App Banner */}
         <div className="relative group max-w-6xl mx-auto">
-          <div className="absolute inset-4 bg-[#04B6EA]/10 blur-3xl rounded-[4rem] group-hover:opacity-60 transition-opacity"></div>
-          
+          <div className="absolute inset-4 bg-[#028dcd]/10 blur-3xl rounded-[4rem] group-hover:opacity-60 transition-opacity"></div>
+
           <div className="relative bg-[#F8FDFF] rounded-[3rem] md:rounded-[4rem] px-8 lg:px-20 py-0 flex flex-col lg:flex-row items-center justify-between border border-[#E1F7F9] shadow-[0_20px_50px_rgba(79,183,212,0.05)] overflow-hidden">
             {/* Phones Image - Left Side */}
             <div className="relative w-full lg:w-[60%] flex justify-center lg:justify-start transform transition-transform duration-700 group-hover:scale-105 pt-10 lg:pt-0">
@@ -558,10 +473,10 @@ const TestimonialsSection = () => {
 
   const ReviewCard = ({ r }: { r: ReviewItem }) => (
     <div
-      className="w-[300px] sm:w-[360px] md:w-[400px] h-[220px] sm:h-[240px] p-6 sm:p-7 rounded-3xl sm:rounded-[2.2rem] bg-[#F8FDFF] border border-[#E1F7F9] hover:border-[#04B6EA]/60 hover:bg-white transition-all duration-400 shadow-sm hover:shadow-[0_20px_45px_rgba(4,182,234,0.12)] hover:-translate-y-1.5 flex flex-col justify-between flex-shrink-0 mx-3 sm:mx-4 overflow-hidden relative group text-left"
+      className="w-[300px] sm:w-[360px] md:w-[400px] h-[220px] sm:h-[240px] p-6 sm:p-7 rounded-3xl sm:rounded-[2.2rem] bg-[#F8FDFF] border border-[#E1F7F9] hover:border-[#028dcd]/60 hover:bg-white transition-all duration-400 shadow-sm hover:shadow-[0_20px_45px_rgba(2, 141, 205,0.12)] hover:-translate-y-1.5 flex flex-col justify-between flex-shrink-0 mx-3 sm:mx-4 overflow-hidden relative group text-left"
     >
       {/* Background Subtle Watermark Quote */}
-      <Quote className="absolute right-4 top-4 w-12 h-12 text-[#04B6EA]/10 group-hover:text-[#04B6EA]/20 transition-colors pointer-events-none rotate-180" />
+      <Quote className="absolute right-4 top-4 w-12 h-12 text-[#028dcd]/10 group-hover:text-[#028dcd]/20 transition-colors pointer-events-none rotate-180" />
 
       {/* Top Bar: Stars + Verified Badge */}
       <div className="flex items-center justify-between relative z-10">
@@ -586,16 +501,16 @@ const TestimonialsSection = () => {
         <img
           src={`https://ui-avatars.com/api/?name=${encodeURIComponent(
             r.name || "Customer"
-          )}&background=E1F7F9&color=04B6EA&bold=true`}
+          )}&background=E1F7F9&color=028dcd&bold=true`}
           alt={r.name}
           className="w-10 h-10 rounded-full object-cover shadow-xs border border-white"
         />
         <div className="text-left">
-          <h4 className="font-bold text-slate-900 text-sm leading-tight group-hover:text-[#04B6EA] transition-colors">
+          <h4 className="font-bold text-slate-900 text-sm leading-tight group-hover:text-[#028dcd] transition-colors">
             {r.name}
           </h4>
           <div className="flex items-center gap-1 text-slate-400 text-[11px] font-medium mt-0.5">
-            <MapPin className="w-3 h-3 text-[#04B6EA]" />
+            <MapPin className="w-3 h-3 text-[#028dcd]" />
             <span>{r.city || r.location || "Doorstep Client"}</span>
           </div>
         </div>
@@ -606,15 +521,15 @@ const TestimonialsSection = () => {
   return (
     <section id="testimonials" className="py-14 lg:py-20 bg-white overflow-hidden scroll-mt-24">
       <div className="max-w-7xl mx-auto px-6 lg:px-8 mb-12 text-left">
-        <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#E1F7F9] text-[#04B6EA] font-extrabold text-xs mb-3 border border-[#04B6EA]/20 shadow-xs">
-          <Sparkles className="w-3.5 h-3.5 fill-[#04B6EA]" />
+        <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#E1F7F9] text-[#028dcd] font-extrabold text-xs mb-3 border border-[#028dcd]/20 shadow-xs">
+          <Sparkles className="w-3.5 h-3.5 fill-[#028dcd]" />
           <span>Verified Doorstep Reviews</span>
         </div>
 
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
           <div>
             <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-slate-900 tracking-tight leading-[1.12]">
-              Trusted by <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#04B6EA] to-[#0284c7]">Door2fy Customers</span> <br />
+              Trusted by <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#028dcd] to-[#0284c7]">Door2fy Customers</span> <br />
               & Tech Experts.
             </h2>
             <p className="text-slate-600 mt-3 font-normal text-sm sm:text-base max-w-xl leading-relaxed">
@@ -624,7 +539,7 @@ const TestimonialsSection = () => {
 
           <Link
             to="/leave-a-review"
-            className="inline-flex items-center gap-2 px-5 py-3 rounded-full bg-[#04B6EA] hover:bg-[#039ecc] text-white text-xs sm:text-sm font-bold transition-all shadow-md shadow-[#04B6EA]/25 hover:scale-105 w-fit shrink-0"
+            className="inline-flex items-center gap-2 px-5 py-3 rounded-full bg-[#028dcd] hover:bg-[#039ecc] text-white text-xs sm:text-sm font-bold transition-all shadow-md shadow-[#028dcd]/25 hover:scale-105 w-fit shrink-0"
           >
             <Star className="w-4 h-4 fill-white" />
             <span>Leave a Review</span>
@@ -646,7 +561,8 @@ const TestimonialsSection = () => {
         </div>
       </div>
 
-      <style dangerouslySetInnerHTML={{ __html: `
+      <style dangerouslySetInnerHTML={{
+        __html: `
         @keyframes marquee {
           0% { transform: translateX(0); }
           100% { transform: translateX(-33.33%); }
@@ -727,17 +643,17 @@ const PartnerSection = () => {
     <section id="form-section" className="bg-white overflow-hidden relative py-6 lg:py-8">
       {/* Decorative background element for section contrast */}
       <div className="absolute top-0 right-0 w-full h-full bg-gradient-to-br from-[#F8FDFF] to-white -z-10"></div>
-      
+
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
           {/* LEFT: Content */}
           <div className="flex flex-col items-start text-left pl-4 lg:pl-0">
-            <span className="uppercase tracking-[0.4em] text-[#04B6EA] text-[10px] md:text-[11px] font-bold block mb-6">
+            <span className="uppercase tracking-[0.4em] text-[#028dcd] text-[10px] md:text-[11px] font-bold block mb-6">
               Partner With Us
             </span>
             <h2 className="text-4xl lg:text-6xl leading-[1.2] font-extrabold text-gray-900 mb-8 tracking-tight">
               Become a <br />
-              <span className="text-[#04B6EA]">Door2fy</span> Partner
+              <span className="text-[#028dcd]">Door2fy</span> Partner
             </h2>
             <p className="text-gray-500 text-lg md:text-xl leading-relaxed mb-12 font-medium max-w-lg">
               Join our network of elite experts and grow your business with the most trusted IT brand in the region.
@@ -751,9 +667,9 @@ const PartnerSection = () => {
                 "24/7 dedicated partner support and training"
               ].map((item, index) => (
                 <div key={index} className="flex items-start gap-5 group">
-                  <div className="flex-shrink-0 w-6 h-6 md:w-7 md:h-7 mt-1 rounded-full bg-[#04B6EA] flex items-center justify-center text-white shadow-lg shadow-[#04B6EA]/20 group-hover:scale-110 transition-transform">
+                  <div className="flex-shrink-0 w-6 h-6 md:w-7 md:h-7 mt-1 rounded-full bg-[#028dcd] flex items-center justify-center text-white shadow-lg shadow-[#028dcd]/20 group-hover:scale-110 transition-transform">
                     <svg className="w-3.5 md:w-4 h-3.5 md:h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M5 13l4 4L19 7" />
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M5 13l4 4L19 7" />
                     </svg>
                   </div>
                   <p className="text-gray-700 text-base md:text-lg font-bold tracking-tight">{item}</p>
@@ -765,9 +681,9 @@ const PartnerSection = () => {
           {/* RIGHT: High Contrast Form */}
           <div className="relative">
             {/* Subtle glow behind the form */}
-            <div className="absolute -inset-6 bg-[#04B6EA]/10 rounded-[3rem] blur-3xl -z-10"></div>
-            
-            <form onSubmit={handleSubmit} className="relative z-10 space-y-7 bg-white p-8 md:p-10 lg:p-14 rounded-[3rem] border border-[#E1F7F9] shadow-[0_30px_70px_rgba(4, 182, 234,0.12)]">
+            <div className="absolute -inset-6 bg-[#028dcd]/10 rounded-[3rem] blur-3xl -z-10"></div>
+
+            <form onSubmit={handleSubmit} className="relative z-10 space-y-7 bg-white p-8 md:p-10 lg:p-14 rounded-[3rem] border border-[#E1F7F9] shadow-[0_30px_70px_rgba(2, 141, 205,0.12)]">
               <div className="mb-6">
                 <h3 className="text-2xl md:text-3xl font-extrabold text-center text-gray-900 mb-3 tracking-tight">Registration Form</h3>
                 <p className="text-gray-500 text-sm md:text-base text-center font-medium">Join 100+ partners across the country.</p>
@@ -775,49 +691,49 @@ const PartnerSection = () => {
 
               <div className="grid md:grid-cols-2 gap-5 md:gap-7">
                 <div className="space-y-2.5 text-left">
-                  <label className="text-[10px] font-extrabold text-[#04B6EA] uppercase tracking-widest ml-1">Full Name</label>
+                  <label className="text-[10px] font-extrabold text-[#028dcd] uppercase tracking-widest ml-1">Full Name</label>
                   <input
                     type="text"
                     required
                     value={formData.fullName}
                     onChange={(e) => setFormData({ ...formData, fullName: e.target.value })}
                     placeholder="Enter your name"
-                    className="w-full h-14 md:h-16 px-6 md:px-7 rounded-2xl bg-[#F8FDFF] border-2 border-transparent focus:border-[#04B6EA] focus:bg-white text-gray-900 text-[15px] outline-none transition-all placeholder:text-gray-400 shadow-sm font-bold"
+                    className="w-full h-14 md:h-16 px-6 md:px-7 rounded-2xl bg-[#F8FDFF] border-2 border-transparent focus:border-[#028dcd] focus:bg-white text-gray-900 text-[15px] outline-none transition-all placeholder:text-gray-400 shadow-sm font-bold"
                   />
                 </div>
                 <div className="space-y-2.5 text-left">
-                  <label className="text-[10px] font-extrabold text-[#04B6EA] uppercase tracking-widest ml-1">Email Address</label>
+                  <label className="text-[10px] font-extrabold text-[#028dcd] uppercase tracking-widest ml-1">Email Address</label>
                   <input
                     type="email"
                     required
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                     placeholder="Enter your email"
-                    className="w-full h-14 md:h-16 px-6 md:px-7 rounded-2xl bg-[#F8FDFF] border-2 border-transparent focus:border-[#04B6EA] focus:bg-white text-gray-900 text-[15px] outline-none transition-all placeholder:text-gray-400 shadow-sm font-bold"
+                    className="w-full h-14 md:h-16 px-6 md:px-7 rounded-2xl bg-[#F8FDFF] border-2 border-transparent focus:border-[#028dcd] focus:bg-white text-gray-900 text-[15px] outline-none transition-all placeholder:text-gray-400 shadow-sm font-bold"
                   />
                 </div>
               </div>
 
               <div className="grid md:grid-cols-2 gap-5 md:gap-7">
                 <div className="space-y-2.5 text-left">
-                  <label className="text-[10px] font-extrabold text-[#04B6EA] uppercase tracking-widest ml-1">Phone Number</label>
+                  <label className="text-[10px] font-extrabold text-[#028dcd] uppercase tracking-widest ml-1">Phone Number</label>
                   <input
                     type="tel"
                     required
                     value={formData.phone}
                     onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                     placeholder="+91 00000 00000"
-                    className="w-full h-14 md:h-16 px-6 md:px-7 rounded-2xl bg-[#F8FDFF] border-2 border-transparent focus:border-[#04B6EA] focus:bg-white text-gray-900 text-[15px] outline-none transition-all placeholder:text-gray-400 shadow-sm font-bold"
+                    className="w-full h-14 md:h-16 px-6 md:px-7 rounded-2xl bg-[#F8FDFF] border-2 border-transparent focus:border-[#028dcd] focus:bg-white text-gray-900 text-[15px] outline-none transition-all placeholder:text-gray-400 shadow-sm font-bold"
                   />
                 </div>
                 <div className="space-y-2.5 text-left">
-                  <label className="text-[10px] font-extrabold text-[#04B6EA] uppercase tracking-widest ml-1">Service Interest</label>
+                  <label className="text-[10px] font-extrabold text-[#028dcd] uppercase tracking-widest ml-1">Service Interest</label>
                   <div className="relative">
                     <select
                       required
                       value={formData.category}
                       onChange={(e) => setFormData({ ...formData, category: e.target.value })}
-                      className="w-full h-14 md:h-16 px-6 md:px-7 rounded-2xl bg-[#F8FDFF] border-2 border-transparent focus:border-[#04B6EA] focus:bg-white text-gray-900 text-[15px] outline-none appearance-none cursor-pointer shadow-sm font-bold"
+                      className="w-full h-14 md:h-16 px-6 md:px-7 rounded-2xl bg-[#F8FDFF] border-2 border-transparent focus:border-[#028dcd] focus:bg-white text-gray-900 text-[15px] outline-none appearance-none cursor-pointer shadow-sm font-bold"
                     >
                       <option value="">Select Category</option>
                       <option value="macbook">MacBook Support</option>
@@ -834,20 +750,20 @@ const PartnerSection = () => {
               </div>
 
               <div className="space-y-2.5 text-left">
-                <label className="text-[10px] font-extrabold text-[#04B6EA] uppercase tracking-widest ml-1">Your Message</label>
+                <label className="text-[10px] font-extrabold text-[#028dcd] uppercase tracking-widest ml-1">Your Message</label>
                 <textarea
                   rows={3}
                   value={formData.message}
                   onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                   placeholder="Tell us about your background..."
-                  className="w-full px-6 md:px-7 py-5 md:py-6 rounded-2xl bg-[#F8FDFF] border-2 border-transparent focus:border-[#04B6EA] focus:bg-white text-gray-900 text-[15px] outline-none resize-none transition-all placeholder:text-gray-400 shadow-sm font-bold"
+                  className="w-full px-6 md:px-7 py-5 md:py-6 rounded-2xl bg-[#F8FDFF] border-2 border-transparent focus:border-[#028dcd] focus:bg-white text-gray-900 text-[15px] outline-none resize-none transition-all placeholder:text-gray-400 shadow-sm font-bold"
                 ></textarea>
               </div>
 
               <button
                 type="submit"
                 disabled={loading}
-                className={`w-full h-16 md:h-20 rounded-2xl bg-[#04B6EA] hover:bg-[#04B6EA] text-white text-sm md:text-base font-extrabold uppercase tracking-widest shadow-[0_15px_40px_rgba(79,183,212,0.35)] transition-all duration-300 hover:-translate-y-1 active:scale-[0.98] ${loading ? "opacity-70 cursor-not-allowed" : ""}`}
+                className={`w-full h-16 md:h-20 rounded-2xl bg-[#028dcd] hover:bg-[#028dcd] text-white text-sm md:text-base font-extrabold uppercase tracking-widest shadow-[0_15px_40px_rgba(79,183,212,0.35)] transition-all duration-300 hover:-translate-y-1 active:scale-[0.98] ${loading ? "opacity-70 cursor-not-allowed" : ""}`}
               >
                 {loading ? "Sending..." : "Send Partnership Request"}
               </button>
@@ -915,7 +831,7 @@ export default function Home() {
       "aggregateRating": {
         "@type": "AggregateRating",
         "ratingValue": "4.9",
-        "reviewCount": "42700",
+        "reviewCount": "1000",
         "bestRating": "5",
         "worstRating": "1"
       },

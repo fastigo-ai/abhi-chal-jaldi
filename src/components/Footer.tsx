@@ -69,30 +69,28 @@ const citiesList = [
   "New Delhi",
 ];
 
-const companyLinks = [
+const companyLinks: { name: string; path?: string; href?: string }[] = [
   { name: "About Us", path: "/why-us" },
   { name: "Our Services", path: "/services" },
-  { name: "Careers", path: "/why-us" },
+  { name: "Careers", href: "https://partner.door2fy.in/" },
   { name: "Blog & Insights", path: "/blogs" },
-  { name: "Press & Media", path: "/blogs" },
   { name: "Contact Us", path: "/contact-us" },
 ];
 
 const customerLinks = [
   { name: "How It Works", path: "/how-it-works" },
-  { name: "Refundable Policy", path: "/privacy-policy" },
-  { name: "Terms & Conditions", path: "/privacy-policy" },
+  { name: "Refundable Policy", path: "/refund-policy" },
+  { name: "Terms & Conditions", path: "/terms-and-conditions" },
   { name: "Privacy Policy", path: "/privacy-policy" },
-  { name: "Anti-Discrimination Policy", path: "/privacy-policy" },
+  { name: "Anti-Discrimination Policy", path: "/anti-discrimination-policy" },
   { name: "Help & Support", path: "/faqs" },
 ];
 
 const partnerLinks = [
-  { name: "Register as a Professional", href: "http://partner.door2fy.in" },
-  { name: "Partner Guidelines", path: "/how-it-works" },
-  { name: "Partner Benefits", path: "/why-us" },
-  { name: "Success Stories", path: "/blogs" },
-  { name: "Partner Support", path: "/contact-us" },
+  { name: "Register as a Professional", href: "https://partner.door2fy.in" },
+  { name: "Partner Guidelines", path: "/partner-guidelines" },
+  { name: "Partner Benefits", path: "/partner-benefits" },
+  { name: "Partner Support", path: "/partner-support" },
 ];
 
 const Footer: React.FC = () => {
@@ -101,13 +99,13 @@ const Footer: React.FC = () => {
       <div className="max-w-7xl mx-auto">
         
         {/* ================= 1. CITIES BANNER CARD ================= */}
-        <div className="bg-gradient-to-br from-[#EEF5FF] via-[#EBF3FE] to-[#F5F8FF] rounded-2xl sm:rounded-3xl p-4 sm:p-6 md:p-8 shadow-[0_4px_25px_rgba(4, 182, 234,0.04)] text-center relative overflow-hidden mb-8 sm:mb-12">
+        <div className="bg-gradient-to-br from-[#EEF5FF] via-[#EBF3FE] to-[#F5F8FF] rounded-2xl sm:rounded-3xl p-4 sm:p-6 md:p-8 shadow-[0_4px_25px_rgba(2, 141, 205,0.04)] text-center relative overflow-hidden mb-8 sm:mb-12">
           {/* Decorative background light glow */}
-          <div className="absolute -top-24 left-1/2 -translate-x-1/2 w-96 h-48 bg-[#04B6EA]/10 rounded-full blur-3xl pointer-events-none" />
+          <div className="absolute -top-24 left-1/2 -translate-x-1/2 w-96 h-48 bg-[#028dcd]/10 rounded-full blur-3xl pointer-events-none" />
 
           {/* Heading */}
           <h2 className="text-xl sm:text-2xl md:text-3xl font-extrabold text-slate-900 tracking-tight">
-            We Are Live In <span className="text-[#04B6EA]">50 Cities</span>
+            We Are Live In <span className="text-[#028dcd]">50 Cities</span>
           </h2>
           <p className="text-xs sm:text-sm text-slate-500 font-medium mt-1 mb-4 sm:mb-6">
             Delivering services across India — and growing every day!
@@ -119,9 +117,9 @@ const Footer: React.FC = () => {
               <Link
                 key={idx}
                 to={`/best-laptop-service-in/${city.toLowerCase().replace(/\s+/g, "-")}`}
-                className="inline-flex items-center gap-1 sm:gap-1.5 px-2.5 py-1 sm:px-3.5 sm:py-1.5 bg-white/90 hover:bg-white text-slate-800 font-semibold text-[11px] sm:text-xs rounded-full border border-blue-100/90 shadow-[0_2px_4px_rgba(0,0,0,0.02)] hover:border-[#04B6EA]/50 hover:text-[#04B6EA] hover:shadow-md transition-all duration-200 group"
+                className="inline-flex items-center gap-1 sm:gap-1.5 px-2.5 py-1 sm:px-3.5 sm:py-1.5 bg-white/90 hover:bg-white text-slate-800 font-semibold text-[11px] sm:text-xs rounded-full border border-blue-100/90 shadow-[0_2px_4px_rgba(0,0,0,0.02)] hover:border-[#028dcd]/50 hover:text-[#028dcd] hover:shadow-md transition-all duration-200 group"
               >
-                <MapPin className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-[#04B6EA] group-hover:scale-110 transition-transform" />
+                <MapPin className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-[#028dcd] group-hover:scale-110 transition-transform" />
                 <span>{city}</span>
               </Link>
             ))}
@@ -150,7 +148,7 @@ const Footer: React.FC = () => {
 
             {/* Indian Monument Skyline Background Illustration */}
             <div className="mt-6 sm:mt-8 pt-2 sm:pt-4 pointer-events-none opacity-40 w-full">
-              <svg viewBox="0 0 500 120" className="w-full h-16 sm:h-20 md:h-24 text-[#04B6EA]" fill="currentColor">
+              <svg viewBox="0 0 500 120" className="w-full h-16 sm:h-20 md:h-24 text-[#028dcd]" fill="currentColor">
                 {/* Gateway / India Gate */}
                 <path d="M 20 120 L 20 50 L 30 50 L 30 30 L 40 20 L 70 20 L 80 30 L 80 50 L 90 50 L 90 120 L 75 120 L 75 80 C 75 65 35 65 35 80 L 35 120 Z" />
                 {/* Taj Mahal Dome */}
@@ -180,7 +178,7 @@ const Footer: React.FC = () => {
             {/* Column 1: Company */}
             <div>
               <div className="flex items-center gap-2 mb-3 sm:mb-4">
-                <div className="p-1.5 rounded-lg bg-[#04B6EA]/10 text-[#04B6EA] shrink-0">
+                <div className="p-1.5 rounded-lg bg-[#028dcd]/10 text-[#028dcd] shrink-0">
                   <Building2 className="w-4 h-4" />
                 </div>
                 <h3 className="text-xs sm:text-sm font-bold text-slate-900">Company</h3>
@@ -188,12 +186,23 @@ const Footer: React.FC = () => {
               <ul className="space-y-2 sm:space-y-2.5 text-xs font-medium">
                 {companyLinks.map((item, idx) => (
                   <li key={idx}>
-                    <Link
-                      to={item.path}
-                      className="text-slate-600 hover:text-[#04B6EA] transition-colors py-0.5 inline-block"
-                    >
-                      {item.name}
-                    </Link>
+                    {item.href ? (
+                      <a
+                        href={item.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-slate-600 hover:text-[#028dcd] hover:translate-x-1 transition-all duration-200 py-0.5 inline-block"
+                      >
+                        {item.name}
+                      </a>
+                    ) : (
+                      <Link
+                        to={item.path!}
+                        className="text-slate-600 hover:text-[#028dcd] hover:translate-x-1 transition-all duration-200 py-0.5 inline-block"
+                      >
+                        {item.name}
+                      </Link>
+                    )}
                   </li>
                 ))}
               </ul>
@@ -202,7 +211,7 @@ const Footer: React.FC = () => {
             {/* Column 2: For Customers */}
             <div>
               <div className="flex items-center gap-2 mb-3 sm:mb-4">
-                <div className="p-1.5 rounded-lg bg-[#04B6EA]/10 text-[#04B6EA] shrink-0">
+                <div className="p-1.5 rounded-lg bg-[#028dcd]/10 text-[#028dcd] shrink-0">
                   <Users className="w-4 h-4" />
                 </div>
                 <h3 className="text-xs sm:text-sm font-bold text-slate-900">For Customers</h3>
@@ -212,7 +221,7 @@ const Footer: React.FC = () => {
                   <li key={idx}>
                     <Link
                       to={item.path}
-                      className="text-slate-600 hover:text-[#04B6EA] transition-colors py-0.5 inline-block"
+                      className="text-slate-600 hover:text-[#028dcd] hover:translate-x-1 transition-all duration-200 py-0.5 inline-block"
                     >
                       {item.name}
                     </Link>
@@ -224,7 +233,7 @@ const Footer: React.FC = () => {
             {/* Column 3: For Partners */}
             <div className="col-span-2 sm:col-span-1">
               <div className="flex items-center gap-2 mb-3 sm:mb-4">
-                <div className="p-1.5 rounded-lg bg-[#04B6EA]/10 text-[#04B6EA] shrink-0">
+                <div className="p-1.5 rounded-lg bg-[#028dcd]/10 text-[#028dcd] shrink-0">
                   <Handshake className="w-4 h-4" />
                 </div>
                 <h3 className="text-xs sm:text-sm font-bold text-slate-900">For Partners</h3>
@@ -237,14 +246,14 @@ const Footer: React.FC = () => {
                         href={item.href}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-slate-600 hover:text-[#04B6EA] transition-colors py-0.5 inline-block"
+                        className="text-slate-600 hover:text-[#028dcd] hover:translate-x-1 transition-all duration-200 py-0.5 inline-block"
                       >
                         {item.name}
                       </a>
                     ) : (
                       <Link
                         to={item.path!}
-                        className="text-slate-600 hover:text-[#04B6EA] transition-colors py-0.5 inline-block"
+                        className="text-slate-600 hover:text-[#028dcd] hover:translate-x-1 transition-all duration-200 py-0.5 inline-block"
                       >
                         {item.name}
                       </Link>
@@ -274,7 +283,7 @@ const Footer: React.FC = () => {
                 href="https://linkedin.com"
                 target="_blank"
                 rel="noreferrer"
-                className="w-7 h-7 rounded-full bg-white border border-slate-200 text-slate-600 hover:text-[#04B6EA] hover:border-[#04B6EA]/40 hover:shadow-xs flex items-center justify-center transition-all"
+                className="w-7 h-7 rounded-full bg-white border border-slate-200 text-slate-600 hover:text-[#028dcd] hover:border-[#028dcd]/40 hover:shadow-xs flex items-center justify-center transition-all"
                 aria-label="LinkedIn"
               >
                 <FaLinkedinIn className="w-3.5 h-3.5" />
@@ -292,7 +301,7 @@ const Footer: React.FC = () => {
                 href="https://facebook.com"
                 target="_blank"
                 rel="noreferrer"
-                className="w-7 h-7 rounded-full bg-white border border-slate-200 text-slate-600 hover:text-[#04B6EA] hover:border-[#04B6EA]/40 hover:shadow-xs flex items-center justify-center transition-all"
+                className="w-7 h-7 rounded-full bg-white border border-slate-200 text-slate-600 hover:text-[#028dcd] hover:border-[#028dcd]/40 hover:shadow-xs flex items-center justify-center transition-all"
                 aria-label="Facebook"
               >
                 <FaFacebookF className="w-3.5 h-3.5" />

@@ -1,15 +1,15 @@
 import React, { useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { 
-  Clock, 
-  Shield, 
-  Star, 
-  CheckCircle2, 
-  ArrowRight, 
-  Settings, 
-  Smartphone, 
-  MapPin, 
+import {
+  Clock,
+  Shield,
+  Star,
+  CheckCircle2,
+  ArrowRight,
+  Settings,
+  Smartphone,
+  MapPin,
   CheckCircle,
   Laptop,
   Cpu,
@@ -130,7 +130,7 @@ export default function CityService() {
   const cityFaqs = [
     {
       q: `How quickly can a Door2fy technician arrive at my location in ${formattedCity}?`,
-      a: `Our background-verified engineers reach your doorstep across ${formattedCity} in as fast as 10 to 30 minutes after you place your booking via our mobile app or web portal.`
+      a: `Our background-verified engineers reach your doorstep across ${formattedCity} in as fast as 30 minutes after you place your booking via our mobile app or web portal.`
     },
     {
       q: `What types of laptop and MacBook issues do you fix in ${formattedCity}?`,
@@ -258,23 +258,23 @@ export default function CityService() {
       {/* 1. Hero Section */}
       <section className="relative pt-28 pb-16 md:pt-36 md:pb-24 px-6 overflow-hidden bg-gradient-to-b from-[#F0FAFD] to-white">
         <div className="max-w-7xl mx-auto grid lg:grid-cols-12 gap-10 lg:gap-12 items-center">
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, x: -30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
             className="lg:col-span-7 text-left space-y-6"
           >
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-[#04B6EA]/30 text-[#04B6EA] text-xs font-bold shadow-xs">
-              <Star size={14} className="fill-[#04B6EA]" />
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-[#028dcd]/30 text-[#028dcd] text-xs font-bold shadow-xs">
+              <Star size={14} className="fill-[#028dcd]" />
               <span>#1 Rated Doorstep Laptop Care in {formattedCity}</span>
             </div>
 
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight leading-[1.15]">
-              Doorstep Laptop Repair & Service in <span className="text-[#04B6EA]">{formattedCity}</span>
+              Doorstep Laptop Repair & Service in <span className="text-[#028dcd]">{formattedCity}</span>
             </h1>
 
             <p className="text-slate-600 text-base sm:text-lg md:text-xl leading-relaxed max-w-2xl font-normal">
-              Get instant, certified tech support at your home or office in {formattedCity}. Our background-verified engineers arrive in <span className="font-bold text-slate-900">10–30 minutes</span> with genuine parts and a 90-day warranty.
+              Get instant, certified tech support at your home or office in {formattedCity}. Our background-verified engineers arrive in <span className="font-bold text-slate-900">30 minutes</span> with genuine parts and a 90-day warranty.
             </p>
 
             {/* Value Badges */}
@@ -284,7 +284,7 @@ export default function CityService() {
                 <span>10-30 Min Arrival</span>
               </div>
               <div className="flex items-center gap-2 p-2.5 rounded-xl bg-white border border-slate-100 shadow-xs text-xs font-semibold text-slate-800">
-                <Shield className="w-4 h-4 text-[#04B6EA] shrink-0" />
+                <Shield className="w-4 h-4 text-[#028dcd] shrink-0" />
                 <span>90-Day Warranty</span>
               </div>
               <div className="flex items-center gap-2 p-2.5 rounded-xl bg-white border border-slate-100 shadow-xs text-xs font-semibold text-slate-800 col-span-2 sm:col-span-1">
@@ -295,7 +295,7 @@ export default function CityService() {
 
             <div className="flex flex-wrap gap-4 pt-4">
               <a href="https://play.google.com/store/apps/details?id=com.Door2fy&pli=1" target="_blank" rel="noopener noreferrer">
-                <Button size="lg" className="bg-[#04B6EA] hover:bg-[#039ecc] text-white rounded-full px-8 h-14 text-base font-bold shadow-lg shadow-[#04B6EA]/25 transition-all hover:scale-105">
+                <Button size="lg" className="bg-[#028dcd] hover:bg-[#039ecc] text-white rounded-full px-8 h-14 text-base font-bold shadow-lg shadow-[#028dcd]/25 transition-all hover:scale-105">
                   Book Doorstep Technician <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
               </a>
@@ -307,7 +307,7 @@ export default function CityService() {
             </div>
           </motion.div>
 
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6, delay: 0.2 }}
@@ -322,7 +322,7 @@ export default function CityService() {
               />
               <div className="absolute bottom-4 left-4 right-4 bg-white/95 backdrop-blur-md p-3.5 rounded-2xl border border-slate-100 flex items-center justify-between">
                 <div className="text-left">
-                  <p className="text-[10px] uppercase font-bold text-[#04B6EA]">Service Guarantee</p>
+                  <p className="text-[10px] uppercase font-bold text-[#028dcd]">Service Guarantee</p>
                   <p className="text-xs font-extrabold text-slate-900">Diagnosis in 5–10 Mins</p>
                 </div>
                 <span className="px-3 py-1 rounded-full bg-emerald-50 text-emerald-600 text-xs font-bold">
@@ -341,11 +341,11 @@ export default function CityService() {
             {[
               { icon: Clock, label: "10-30 Mins", sub: `Rapid Doorstep Response in ${formattedCity}` },
               { icon: Shield, label: "Up to 90 Days", sub: "Comprehensive Service Warranty" },
-              { icon: Star, label: "4.9 / 5.0", sub: "Over 42,700+ Satisfied Users" },
+              { icon: Star, label: "4.9 / 5.0", sub: "Over 1000+ Satisfied Users" },
               { icon: Settings, label: "All Brands", sub: "MacBook, Dell, HP, Lenovo & ASUS" },
             ].map((stat, i) => (
               <div key={i} className="flex flex-col items-center">
-                <div className="w-12 h-12 rounded-2xl bg-[#E1F7F9] text-[#04B6EA] flex items-center justify-center mb-2.5 font-bold">
+                <div className="w-12 h-12 rounded-2xl bg-[#E1F7F9] text-[#028dcd] flex items-center justify-center mb-2.5 font-bold">
                   <stat.icon className="h-6 w-6" />
                 </div>
                 <div className="font-extrabold text-lg sm:text-xl text-slate-900">{stat.label}</div>
@@ -360,7 +360,7 @@ export default function CityService() {
       <section className="py-16 md:py-24 bg-[#F8FDFF]">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-left max-w-3xl mb-12">
-            <span className="text-[#04B6EA] text-xs font-extrabold uppercase tracking-widest block mb-2">
+            <span className="text-[#028dcd] text-xs font-extrabold uppercase tracking-widest block mb-2">
               Common Laptop Problems Resolved
             </span>
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-slate-900 tracking-tight">
@@ -374,10 +374,10 @@ export default function CityService() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {repairIssues.map((issue, idx) => (
               <div key={idx} className="p-6 rounded-3xl bg-white border border-slate-100 shadow-sm hover:shadow-md transition-all text-left group">
-                <div className="w-12 h-12 rounded-2xl bg-[#E1F7F9] text-[#04B6EA] flex items-center justify-center mb-4 group-hover:bg-[#04B6EA] group-hover:text-white transition-colors">
+                <div className="w-12 h-12 rounded-2xl bg-[#E1F7F9] text-[#028dcd] flex items-center justify-center mb-4 group-hover:bg-[#028dcd] group-hover:text-white transition-colors">
                   <issue.icon className="w-6 h-6" />
                 </div>
-                <h3 className="text-lg font-bold text-slate-900 mb-2 group-hover:text-[#04B6EA] transition-colors">{issue.title}</h3>
+                <h3 className="text-lg font-bold text-slate-900 mb-2 group-hover:text-[#028dcd] transition-colors">{issue.title}</h3>
                 <p className="text-slate-600 text-xs sm:text-sm leading-relaxed">{issue.desc}</p>
               </div>
             ))}
@@ -399,27 +399,27 @@ export default function CityService() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
-              { 
-                title: "Apple MacBook Support", 
-                img: MACBOOK, 
-                desc: "Specialized diagnostics for MacBook Air, MacBook Pro, and iMac. Logic board repair, battery swap, and macOS recovery." 
+              {
+                title: "Apple MacBook Support",
+                img: MACBOOK,
+                desc: "Specialized diagnostics for MacBook Air, MacBook Pro, and iMac. Logic board repair, battery swap, and macOS recovery."
               },
-              { 
-                title: "Hardware Upgrade & Setup", 
-                img: install, 
-                desc: "High-speed RAM upgrades, NVMe SSD installations, Wi-Fi card fixes, thermal re-pasting, and office printer setup." 
+              {
+                title: "Hardware Upgrade & Setup",
+                img: install,
+                desc: "High-speed RAM upgrades, NVMe SSD installations, Wi-Fi card fixes, thermal re-pasting, and office printer setup."
               },
-              { 
-                title: "Emergency 10-Min Support", 
-                img: support, 
-                desc: "Sudden system freeze, Excel crash, boot loop, or virus infection? Our quick response team arrives in 10-30 minutes." 
+              {
+                title: "Emergency 10-Min Support",
+                img: support,
+                desc: "Sudden system freeze, Excel crash, boot loop, or virus infection? Our quick response team arrives in 10-30 minutes."
               },
             ].map((service, i) => (
               <Card key={i} className="p-8 h-full bg-[#F8FDFF] border border-[#E1F7F9] shadow-xs hover:shadow-xl transition-all duration-300 rounded-[2.5rem] text-left group">
                 <div className="mb-6 bg-white rounded-2xl p-4 inline-block shadow-xs group-hover:scale-105 transition-transform duration-300">
                   <img src={service.img} alt={service.title} className="w-20 h-20 object-contain" loading="lazy" />
                 </div>
-                <h3 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-[#04B6EA] transition-colors">{service.title}</h3>
+                <h3 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-[#028dcd] transition-colors">{service.title}</h3>
                 <p className="text-slate-600 text-sm leading-relaxed">{service.desc}</p>
               </Card>
             ))}
@@ -431,13 +431,13 @@ export default function CityService() {
       <section className="py-12 bg-slate-50 border-y border-slate-100">
         <div className="max-w-7xl mx-auto px-6 text-left">
           <div className="flex items-center gap-2 mb-4">
-            <MapPin className="w-5 h-5 text-[#04B6EA]" />
+            <MapPin className="w-5 h-5 text-[#028dcd]" />
             <h3 className="text-lg md:text-xl font-bold text-slate-900">
               Areas & Localities We Serve in {formattedCity}
             </h3>
           </div>
           <p className="text-xs sm:text-sm text-slate-600 mb-6">
-            We provide fast 10–30 minute doorstep laptop and computer repair across all major localities in {formattedCity}:
+            We provide fast 30 minute doorstep laptop and computer repair across all major localities in {formattedCity}:
           </p>
           <div className="flex flex-wrap gap-2 sm:gap-3">
             {localities.map((loc, i) => (
@@ -445,7 +445,7 @@ export default function CityService() {
                 📍 {loc}
               </span>
             ))}
-            <span className="px-3.5 py-1.5 rounded-full bg-[#E1F7F9] text-[#04B6EA] text-xs font-bold">
+            <span className="px-3.5 py-1.5 rounded-full bg-[#E1F7F9] text-[#028dcd] text-xs font-bold">
               + All Surrounding Sectors
             </span>
           </div>
@@ -466,11 +466,11 @@ export default function CityService() {
             {[
               { icon: Smartphone, title: "1. Book via App/Web", desc: "Select your issue and enter your location in " + formattedCity + "." },
               { icon: Settings, title: "2. Nearest Tech Assigned", desc: "Our highest-rated verified engineer is matched to your request." },
-              { icon: MapPin, title: "3. Doorstep Arrival", desc: "The engineer reaches your doorstep within 10–30 minutes." },
+              { icon: MapPin, title: "3. Doorstep Arrival", desc: "The engineer reaches your doorstep within 30 minutes." },
               { icon: CheckCircle, title: "4. Pay After Satisfaction", desc: "Test your repaired device and pay securely with warranty." },
             ].map((step, i) => (
               <div key={i} className="flex flex-col items-center text-center p-4">
-                <div className="w-14 h-14 rounded-2xl bg-[#04B6EA] text-white flex items-center justify-center mb-5 shadow-lg shadow-[#04B6EA]/30 font-bold text-xl">
+                <div className="w-14 h-14 rounded-2xl bg-[#028dcd] text-white flex items-center justify-center mb-5 shadow-lg shadow-[#028dcd]/30 font-bold text-xl">
                   {i + 1}
                 </div>
                 <h4 className="text-base font-bold text-slate-900 mb-2">{step.title}</h4>
@@ -485,7 +485,7 @@ export default function CityService() {
       <section className="py-16 md:py-20 bg-[#F8FDFF] border-t border-slate-100">
         <div className="max-w-4xl mx-auto px-6 text-left">
           <div className="text-center mb-12">
-            <span className="text-[#04B6EA] text-xs font-bold uppercase tracking-widest block mb-2">Got Questions?</span>
+            <span className="text-[#028dcd] text-xs font-bold uppercase tracking-widest block mb-2">Got Questions?</span>
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-slate-900 tracking-tight">
               Frequently Asked Questions in {formattedCity}
             </h2>
@@ -499,10 +499,10 @@ export default function CityService() {
               >
                 <button
                   onClick={() => setOpenFaq(openFaq === idx ? null : idx)}
-                  className="w-full p-5 sm:p-6 text-left flex items-center justify-between gap-4 font-bold text-slate-900 text-sm sm:text-base hover:text-[#04B6EA] transition-colors"
+                  className="w-full p-5 sm:p-6 text-left flex items-center justify-between gap-4 font-bold text-slate-900 text-sm sm:text-base hover:text-[#028dcd] transition-colors"
                 >
                   <span>{faq.q}</span>
-                  <ChevronDown className={`w-5 h-5 text-slate-400 shrink-0 transform transition-transform duration-300 ${openFaq === idx ? "rotate-180 text-[#04B6EA]" : ""}`} />
+                  <ChevronDown className={`w-5 h-5 text-slate-400 shrink-0 transform transition-transform duration-300 ${openFaq === idx ? "rotate-180 text-[#028dcd]" : ""}`} />
                 </button>
                 {openFaq === idx && (
                   <div className="px-5 pb-5 sm:px-6 sm:pb-6 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-50 pt-3">
@@ -518,9 +518,9 @@ export default function CityService() {
       {/* 8. Final CTA Section */}
       <section className="py-16 md:py-20 px-6 bg-white">
         <div className="max-w-5xl mx-auto bg-slate-900 rounded-[3rem] p-8 sm:p-12 md:p-16 text-center relative overflow-hidden text-white shadow-2xl">
-          <div className="absolute top-0 right-0 w-64 h-64 bg-[#04B6EA]/20 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
+          <div className="absolute top-0 right-0 w-64 h-64 bg-[#028dcd]/20 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
           <div className="relative z-10 space-y-6">
-            <span className="px-4 py-1.5 rounded-full bg-white/10 text-[#04B6EA] text-xs font-bold tracking-wider uppercase inline-block">
+            <span className="px-4 py-1.5 rounded-full bg-white/10 text-[#028dcd] text-xs font-bold tracking-wider uppercase inline-block">
               Fast Doorstep Service
             </span>
             <h2 className="text-2xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-white">
@@ -531,7 +531,7 @@ export default function CityService() {
             </p>
             <div className="flex flex-wrap justify-center gap-4 pt-2">
               <a href="https://play.google.com/store/apps/details?id=com.Door2fy&pli=1" target="_blank" rel="noopener noreferrer">
-                <Button size="lg" className="bg-[#04B6EA] hover:bg-[#039ecc] text-white rounded-full px-8 h-14 text-base font-bold shadow-lg shadow-[#04B6EA]/30 transition-all hover:scale-105">
+                <Button size="lg" className="bg-[#028dcd] hover:bg-[#039ecc] text-white rounded-full px-8 h-14 text-base font-bold shadow-lg shadow-[#028dcd]/30 transition-all hover:scale-105">
                   Download Door2fy App
                 </Button>
               </a>

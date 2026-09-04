@@ -35,17 +35,17 @@ export default function FAQs() {
         {
           question: "What is Door2fy?",
           answer:
-            "Door2fy is India's leading on-demand doorstep laptop repair and tech support platform. We connect you with certified, background-verified computer engineers who reach your home or office within 10 to 30 minutes in Delhi NCR, Mumbai, Bengaluru, Pune, and 50+ cities across India.",
+            "Door2fy is India's leading on-demand doorstep laptop repair and tech support platform. We connect you with certified, background-verified computer engineers who reach your home or office within 30 minutes in Delhi NCR, Mumbai, Bengaluru, Pune, and 50+ cities across India.",
         },
         {
           question: "How do I book a laptop repair on Door2fy?",
           answer:
-            "You can book online through Door2fy.in or via our mobile app in under 60 seconds. Simply select your laptop brand (MacBook, Dell, HP, Lenovo, ASUS, Acer, etc.), describe the problem (screen, battery, speed boost, OS crash), choose your location, and select an instant or scheduled time slot.",
+            "You can book online through Door2fy.in or via our mobile app in under 15 seconds. Simply select your laptop brand (MacBook, Dell, HP, Lenovo, ASUS, Acer, etc.), describe the problem (screen, battery, speed boost, OS crash), choose your location, and select an instant or scheduled time slot.",
         },
         {
           question: "How quickly can a technician reach my location?",
           answer:
-            "Our certified engineers arrive at your doorstep in 10 to 30 minutes on average. You can track your assigned technician's live GPS location and ETA directly in real time.",
+            "Our certified engineers arrive at your doorstep in 30 minutes on average. You can track your assigned technician's live GPS location and ETA directly in real time.",
         },
         {
           question: "Which laptop brands and devices do you repair?",
@@ -189,7 +189,7 @@ export default function FAQs() {
         {/* Background Glow Orbs */}
         <div className="absolute top-[-10%] right-[-10%] w-[60%] aspect-square bg-[#F0FBFF] rounded-full -z-10 blur-3xl opacity-50 transform-gpu"></div>
         <div className="absolute bottom-[10%] left-[-5%] w-[40%] aspect-square bg-[#E8F8FB] rounded-full -z-10 blur-3xl opacity-30 transform-gpu"></div>
-        <div className="absolute -bottom-24 -left-24 w-[500px] h-[500px] bg-[#04B6EA]/10 rounded-full -z-10 blur-[120px] transform-gpu"></div>
+        <div className="absolute -bottom-24 -left-24 w-[500px] h-[500px] bg-[#028dcd]/10 rounded-full -z-10 blur-[120px] transform-gpu"></div>
         <div className="absolute -bottom-24 -right-24 w-[500px] h-[500px] bg-blue-400/10 rounded-full -z-10 blur-[120px] transform-gpu"></div>
 
         <div className="max-w-7xl mx-auto px-6 lg:px-8 w-full pt-20 lg:pt-24 pb-0 relative z-10">
@@ -209,25 +209,25 @@ export default function FAQs() {
 
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-slate-900 tracking-tight leading-[1.12]">
                 Frequently Asked <br />
-                <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#04B6EA] to-[#0284c7]">
+                <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#028dcd] to-[#0284c7]">
                   Questions
                 </span>
               </h1>
 
               <p className="text-slate-600 text-base sm:text-lg leading-relaxed font-normal max-w-xl">
-                Everything you need to know about Door2fy's 10–30 minute doorstep laptop repair, spare parts warranty, data privacy, and pricing.
+                Everything you need to know about Door2fy's 30 minute doorstep laptop repair, spare parts warranty, data privacy, and pricing.
               </p>
 
               {/* Live Search Input */}
               <div className="pt-2 max-w-lg">
                 <div className="relative flex items-center shadow-sm rounded-full">
-                  <Search className="absolute left-4 w-5 h-5 text-[#04B6EA] pointer-events-none" />
+                  <Search className="absolute left-4 w-5 h-5 text-[#028dcd] pointer-events-none" />
                   <input
                     type="text"
                     placeholder="Search a question (e.g. warranty, arrival time, pricing)..."
                     value={searchQuery}
                     onChange={(e) => setSearchQuery(e.target.value)}
-                    className="w-full pl-12 pr-14 py-3.5 sm:py-4 rounded-full bg-white border border-slate-200/90 text-sm font-medium text-slate-800 focus:outline-none focus:border-[#04B6EA] focus:ring-4 focus:ring-[#04B6EA]/15 transition-all placeholder:text-slate-400"
+                    className="w-full pl-12 pr-14 py-3.5 sm:py-4 rounded-full bg-white border border-slate-200/90 text-sm font-medium text-slate-800 focus:outline-none focus:border-[#028dcd] focus:ring-4 focus:ring-[#028dcd]/15 transition-all placeholder:text-slate-400"
                   />
                   {searchQuery && (
                     <button
@@ -245,11 +245,11 @@ export default function FAQs() {
             <div className="lg:col-span-6 flex justify-center lg:justify-end items-end relative order-1 lg:order-2 self-end">
               <div className="relative w-full max-w-[440px] sm:max-w-[560px] lg:max-w-[680px] xl:max-w-[760px] flex items-end justify-center lg:justify-end">
                 {/* Ambient floor glow */}
-                <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 w-[380px] sm:w-[540px] h-[180px] bg-[#04B6EA]/30 rounded-full blur-3xl pointer-events-none -z-10" />
+                <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 w-[380px] sm:w-[540px] h-[180px] bg-[#028dcd]/30 rounded-full blur-3xl pointer-events-none -z-10" />
                 <img
                   src={faqNamasteImg}
                   alt="Door2fy Verified Laptop Technician"
-                  className="w-full h-auto max-h-[550px] sm:max-h-[640px] lg:max-h-[720px] object-contain object-bottom select-none pointer-events-none drop-shadow-[0_25px_50px_rgba(4,182,234,0.2)] block"
+                  className="w-full h-auto max-h-[550px] sm:max-h-[640px] lg:max-h-[720px] object-contain object-bottom select-none pointer-events-none drop-shadow-[0_25px_50px_rgba(2, 141, 205,0.2)] block"
                   style={{ imageRendering: "-webkit-optimize-contrast" }}
                 />
               </div>
@@ -263,14 +263,14 @@ export default function FAQs() {
         <div className="max-w-4xl mx-auto px-6 lg:px-8 space-y-12">
           {filteredFaqCategories.length === 0 ? (
             <div className="text-center py-20 bg-[#F8FDFF] rounded-3xl border border-[#E1F7F9] p-8">
-              <HelpCircle className="w-12 h-12 text-[#04B6EA] mx-auto mb-3 opacity-60" />
+              <HelpCircle className="w-12 h-12 text-[#028dcd] mx-auto mb-3 opacity-60" />
               <h3 className="text-xl font-bold text-gray-900 mb-1">No matching questions found</h3>
               <p className="text-gray-500 text-sm mb-4">
                 Try searching for terms like "warranty", "MacBook", "cost", or "arrival time".
               </p>
               <button
                 onClick={() => setSearchQuery("")}
-                className="px-5 py-2 rounded-full bg-[#04B6EA] text-white font-bold text-xs hover:bg-[#039ecc] transition-colors"
+                className="px-5 py-2 rounded-full bg-[#028dcd] text-white font-bold text-xs hover:bg-[#039ecc] transition-colors"
               >
                 Reset Search
               </button>
@@ -281,7 +281,7 @@ export default function FAQs() {
               return (
                 <div key={catIdx} className="space-y-5">
                   <div className="flex items-center gap-3 pb-2 border-b border-gray-100">
-                    <div className="w-9 h-9 rounded-xl bg-[#E1F7F9] text-[#04B6EA] flex items-center justify-center shrink-0">
+                    <div className="w-9 h-9 rounded-xl bg-[#E1F7F9] text-[#028dcd] flex items-center justify-center shrink-0">
                       <CategoryIcon className="w-5 h-5" />
                     </div>
                     <h2 className="text-2xl sm:text-3xl font-extrabold text-gray-900 tracking-tight">
@@ -297,23 +297,21 @@ export default function FAQs() {
                       return (
                         <div
                           key={qIdx}
-                          className={`rounded-2xl sm:rounded-3xl border transition-all duration-300 overflow-hidden ${
-                            isOpen
-                              ? "bg-[#F8FDFF] border-[#04B6EA]/40 shadow-sm"
-                              : "bg-white border-gray-100 hover:border-[#E1F7F9] hover:bg-[#F8FDFF]/50"
-                          }`}
+                          className={`rounded-2xl sm:rounded-3xl border transition-all duration-300 overflow-hidden ${isOpen
+                            ? "bg-[#F8FDFF] border-[#028dcd]/40 shadow-sm"
+                            : "bg-white border-gray-100 hover:border-[#E1F7F9] hover:bg-[#F8FDFF]/50"
+                            }`}
                         >
                           <button
                             onClick={() => toggleAccordion(itemKey)}
-                            className="w-full p-5 sm:p-6 text-left flex items-center justify-between gap-4 font-bold text-base sm:text-lg text-gray-900 hover:text-[#04B6EA] transition-colors"
+                            className="w-full p-5 sm:p-6 text-left flex items-center justify-between gap-4 font-bold text-base sm:text-lg text-gray-900 hover:text-[#028dcd] transition-colors"
                           >
                             <span className="leading-snug">{faq.question}</span>
                             <div
-                              className={`w-7 h-7 rounded-full flex items-center justify-center shrink-0 transition-transform duration-300 ${
-                                isOpen
-                                  ? "bg-[#04B6EA] text-white rotate-180"
-                                  : "bg-[#E1F7F9] text-[#04B6EA]"
-                              }`}
+                              className={`w-7 h-7 rounded-full flex items-center justify-center shrink-0 transition-transform duration-300 ${isOpen
+                                ? "bg-[#028dcd] text-white rotate-180"
+                                : "bg-[#E1F7F9] text-[#028dcd]"
+                                }`}
                             >
                               <ChevronDown className="w-4 h-4" />
                             </div>
@@ -339,8 +337,8 @@ export default function FAQs() {
       <section className="py-16 md:py-20 bg-[#F8FDFF] border-t border-[#E1F7F9]">
         <div className="max-w-6xl mx-auto px-6 lg:px-8">
           <div className="text-center max-w-2xl mx-auto mb-12">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#E1F7F9] text-[#04B6EA] text-xs font-bold mb-3 shadow-sm border border-[#04B6EA]/20">
-              <Sparkles className="w-3.5 h-3.5 text-[#04B6EA]" />
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#E1F7F9] text-[#028dcd] text-xs font-bold mb-3 shadow-sm border border-[#028dcd]/20">
+              <Sparkles className="w-3.5 h-3.5 text-[#028dcd]" />
               <span>We're Here to Help</span>
             </div>
             <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 tracking-tight">
@@ -353,8 +351,8 @@ export default function FAQs() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-3xl mx-auto">
             {/* Phone Card */}
-            <div className="p-6 sm:p-8 bg-white rounded-3xl border border-gray-100 shadow-sm hover:shadow-[0_20px_40px_rgba(4,182,234,0.08)] hover:border-[#04B6EA]/40 transition-all duration-300 text-center space-y-4 group">
-              <div className="w-14 h-14 rounded-2xl bg-[#E1F7F9] text-[#04B6EA] flex items-center justify-center mx-auto group-hover:bg-[#04B6EA] group-hover:text-white transition-colors">
+            <div className="p-6 sm:p-8 bg-white rounded-3xl border border-gray-100 shadow-sm hover:shadow-[0_20px_40px_rgba(2, 141, 205,0.08)] hover:border-[#028dcd]/40 transition-all duration-300 text-center space-y-4 group">
+              <div className="w-14 h-14 rounded-2xl bg-[#E1F7F9] text-[#028dcd] flex items-center justify-center mx-auto group-hover:bg-[#028dcd] group-hover:text-white transition-colors">
                 <Phone className="w-6 h-6" />
               </div>
               <div>
@@ -364,7 +362,7 @@ export default function FAQs() {
                 </p>
                 <a
                   href="tel:+919217759006"
-                  className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#04B6EA] text-white font-bold text-xs hover:bg-[#039ecc] transition-all shadow-sm shadow-[#04B6EA]/20"
+                  className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#028dcd] text-white font-bold text-xs hover:bg-[#039ecc] transition-all shadow-sm shadow-[#028dcd]/20"
                 >
                   <span>+91 9217759006</span>
                 </a>
@@ -372,8 +370,8 @@ export default function FAQs() {
             </div>
 
             {/* Email Card */}
-            <div className="p-6 sm:p-8 bg-white rounded-3xl border border-gray-100 shadow-sm hover:shadow-[0_20px_40px_rgba(4,182,234,0.08)] hover:border-[#04B6EA]/40 transition-all duration-300 text-center space-y-4 group">
-              <div className="w-14 h-14 rounded-2xl bg-[#E1F7F9] text-[#04B6EA] flex items-center justify-center mx-auto group-hover:bg-[#04B6EA] group-hover:text-white transition-colors">
+            <div className="p-6 sm:p-8 bg-white rounded-3xl border border-gray-100 shadow-sm hover:shadow-[0_20px_40px_rgba(2, 141, 205,0.08)] hover:border-[#028dcd]/40 transition-all duration-300 text-center space-y-4 group">
+              <div className="w-14 h-14 rounded-2xl bg-[#E1F7F9] text-[#028dcd] flex items-center justify-center mx-auto group-hover:bg-[#028dcd] group-hover:text-white transition-colors">
                 <Mail className="w-6 h-6" />
               </div>
               <div>
@@ -383,7 +381,7 @@ export default function FAQs() {
                 </p>
                 <a
                   href="mailto:support@door2fy.in"
-                  className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#04B6EA] text-white font-bold text-xs hover:bg-[#039ecc] transition-all shadow-sm shadow-[#04B6EA]/20"
+                  className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#028dcd] text-white font-bold text-xs hover:bg-[#039ecc] transition-all shadow-sm shadow-[#028dcd]/20"
                 >
                   <span>support@door2fy.in</span>
                 </a>
@@ -400,7 +398,7 @@ export default function FAQs() {
       <section className="py-12 lg:py-16 bg-white overflow-hidden border-t border-gray-100">
         <div className="max-w-6xl mx-auto px-6 lg:px-8">
           <div className="relative group">
-            <div className="absolute inset-4 bg-[#04B6EA]/10 blur-3xl rounded-[4rem] group-hover:opacity-60 transition-opacity"></div>
+            <div className="absolute inset-4 bg-[#028dcd]/10 blur-3xl rounded-[4rem] group-hover:opacity-60 transition-opacity"></div>
 
             <div className="relative bg-[#F8FDFF] rounded-[2.5rem] md:rounded-[3.5rem] px-8 lg:px-16 py-8 lg:py-12 flex flex-col lg:flex-row items-center justify-between border border-[#E1F7F9] shadow-[0_20px_50px_rgba(79,183,212,0.06)] overflow-hidden">
               {/* Phones Image */}
@@ -415,24 +413,24 @@ export default function FAQs() {
 
               {/* Right Content */}
               <div className="w-full lg:w-[48%] text-center lg:text-left space-y-5">
-                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#E1F7F9] text-[#04B6EA] text-xs font-bold">
+                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#E1F7F9] text-[#028dcd] text-xs font-bold">
                   <Sparkles className="w-3.5 h-3.5" />
                   <span>Doorstep Tech Support</span>
                 </div>
 
                 <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-gray-900 leading-[1.15] tracking-tight">
                   Ready to Book an <br />
-                  <span className="text-[#04B6EA]">Expert Engineer?</span>
+                  <span className="text-[#028dcd]">Expert Engineer?</span>
                 </h2>
 
                 <p className="text-gray-600 text-sm md:text-base leading-relaxed max-w-md mx-auto lg:mx-0 font-normal">
-                  Download the Door2fy app and get background-verified computer technicians at your home or office in 10 to 30 minutes.
+                  Download the Door2fy app and get background-verified computer technicians at your home or office in 30 minutes.
                 </p>
 
                 <div className="flex flex-wrap items-center justify-center lg:justify-start gap-3 pt-2">
                   <Link
                     to="/services"
-                    className="px-6 py-3.5 rounded-full bg-[#04B6EA] text-white font-bold text-xs sm:text-sm hover:bg-[#039ecc] transition-all shadow-md shadow-[#04B6EA]/25 hover:scale-105"
+                    className="px-6 py-3.5 rounded-full bg-[#028dcd] text-white font-bold text-xs sm:text-sm hover:bg-[#039ecc] transition-all shadow-md shadow-[#028dcd]/25 hover:scale-105"
                   >
                     Book Online Now
                   </Link>

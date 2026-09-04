@@ -76,7 +76,7 @@ To solve the SPA crawler visibility problem without the overhead of maintaining 
   - `"laptop screen replacement Delhi"`
   - `"laptop service at home Delhi"`
 - **City Page Content Enhancements (`src/pages/CityService.tsx`):**
-  - **Hero Section:** `<h1>Doorstep Laptop Repair & Service in {City}</h1>` with 10–30 min guarantee.
+  - **Hero Section:** `<h1>Doorstep Laptop Repair & Service in {City}</h1>` with 30 min guarantee.
   - **Local Area Coverage:** Micro-localities mapped per city (e.g., Delhi: *Nehru Place, Connaught Place, Dwarka, Rohini, Saket, South Ex, Janakpuri, Lajpat Nagar, Pitampura, Vasant Kunj*).
   - **Repair Issues Grid:** Screen replacement, battery repair, chip-level motherboard repair, NVMe SSD speed upgrades, liquid damage treatment, thermal paste & cooling fan service.
   - **Brand Support:** Apple MacBook (Air/Pro, M1/M2/M3), Dell, HP, Lenovo, ASUS, Acer, MSI, Samsung.
@@ -105,7 +105,7 @@ graph TD
    - `telephone`: "+91-8800000000"
    - `priceRange`: "₹₹"
    - `openingHoursSpecification`: 08:00 to 22:00 (All days)
-   - `aggregateRating`: 4.9/5 from 42,700+ verified ratings
+   - `aggregateRating`: 4.9/5 from 1000+ verified ratings
    - `areaServed`: Mapped dynamically per city.
 2. **`FAQPage`**:
    - Validated Q&A pairs for Google FAQ rich snippet accordion display in search results.

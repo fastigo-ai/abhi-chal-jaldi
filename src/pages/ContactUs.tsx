@@ -95,13 +95,13 @@ export default function ContactUs() {
 
       {/* Dynamic Ambient Background Glow */}
       <div className="relative overflow-hidden pt-8 pb-16 md:pt-12 md:pb-24">
-        <div className="absolute top-10 left-1/2 -translate-x-1/2 w-[700px] h-[400px] bg-[#04B6EA]/10 rounded-full blur-[150px] pointer-events-none -z-10" />
+        <div className="absolute top-10 left-1/2 -translate-x-1/2 w-[700px] h-[400px] bg-[#028dcd]/10 rounded-full blur-[150px] pointer-events-none -z-10" />
         <div className="absolute top-1/3 -right-20 w-[400px] h-[400px] bg-blue-100/30 rounded-full blur-[120px] pointer-events-none -z-10" />
 
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           {/* Main Grid: Left Details & Right Form */}
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-start">
-            
+
             {/* LEFT COLUMN: Contact Channels & Info (7/12) */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -111,23 +111,23 @@ export default function ContactUs() {
             >
               <div>
                 {/* Header Tag / Pill */}
-                <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#E1F7F9] text-[#04B6EA] text-xs font-extrabold mb-4 shadow-xs border border-[#04B6EA]/20">
-                  <Sparkles className="w-3.5 h-3.5 fill-[#04B6EA]" />
+                <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#E1F7F9] text-[#028dcd] text-xs font-extrabold mb-4 shadow-xs border border-[#028dcd]/20">
+                  <Sparkles className="w-3.5 h-3.5 fill-[#028dcd]" />
                   <span>24/7 Doorstep Support & Consultation</span>
                 </div>
 
                 {/* Main Heading */}
                 <h1 className="text-4xl sm:text-5xl lg:text-[3.4rem] font-black text-slate-900 tracking-tight leading-[1.12]">
                   Get in touch with <br />
-                  <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#04B6EA] to-[#0284c7]">
+                  <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#028dcd] to-[#0284c7]">
                     Door2fy Experts
                   </span>
                 </h1>
 
                 {/* Subtitle */}
                 <p className="text-slate-600 text-base sm:text-lg font-normal leading-relaxed mt-4 max-w-xl">
-                  Have a laptop issue, need quick hardware diagnostics, or require corporate IT support? 
-                  Our certified engineers arrive at your doorstep in <span className="text-[#04B6EA] font-bold">10–30 minutes</span>.
+                  Have a laptop issue, need quick hardware diagnostics, or require corporate IT support?
+                  Our certified engineers arrive at your doorstep in <span className="text-[#028dcd] font-bold">30 minutes</span>.
                 </p>
               </div>
 
@@ -136,13 +136,13 @@ export default function ContactUs() {
                 {/* Phone Call Card */}
                 <a
                   href="tel:+919217759006"
-                  className="group p-5 rounded-3xl bg-[#F8FDFF] border border-[#E1F7F9] hover:border-[#04B6EA]/60 hover:bg-white transition-all duration-300 shadow-sm hover:shadow-[0_15px_35px_rgba(4,182,234,0.12)] flex flex-col justify-between"
+                  className="group p-5 rounded-3xl bg-[#F8FDFF] border border-[#E1F7F9] hover:border-[#028dcd]/60 hover:bg-white transition-all duration-300 shadow-sm hover:shadow-[0_15px_35px_rgba(2, 141, 205,0.12)] flex flex-col justify-between"
                 >
                   <div className="flex items-center justify-between mb-4">
-                    <div className="w-12 h-12 rounded-2xl bg-[#E1F7F9] text-[#04B6EA] flex items-center justify-center group-hover:bg-[#04B6EA] group-hover:text-white transition-all duration-300 shadow-xs">
+                    <div className="w-12 h-12 rounded-2xl bg-[#E1F7F9] text-[#028dcd] flex items-center justify-center group-hover:bg-[#028dcd] group-hover:text-white transition-all duration-300 shadow-xs">
                       <Phone className="w-5 h-5" />
                     </div>
-                    <span className="text-[11px] font-bold text-[#04B6EA] bg-[#E1F7F9]/80 px-2.5 py-1 rounded-full">
+                    <span className="text-[11px] font-bold text-[#028dcd] bg-[#E1F7F9]/80 px-2.5 py-1 rounded-full">
                       Instant Call
                     </span>
                   </div>
@@ -150,7 +150,7 @@ export default function ContactUs() {
                     <h3 className="text-xs font-extrabold uppercase tracking-wider text-slate-400 mb-1">
                       Direct Support Line
                     </h3>
-                    <p className="text-base sm:text-lg font-black text-slate-900 group-hover:text-[#04B6EA] transition-colors">
+                    <p className="text-base sm:text-lg font-black text-slate-900 group-hover:text-[#028dcd] transition-colors">
                       +91 9217759006
                     </p>
                     <p className="text-xs text-slate-500 font-medium mt-1">
@@ -164,7 +164,7 @@ export default function ContactUs() {
                   href="https://wa.me/919217759006?text=Hi%20Door2fy%20Team%2C%20I%20need%20tech%20support%20for%20my%20laptop."
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group p-5 rounded-3xl bg-[#F8FDFF] border border-[#E1F7F9] hover:border-[#04B6EA]/60 hover:bg-white transition-all duration-300 shadow-sm hover:shadow-[0_15px_35px_rgba(4,182,234,0.12)] flex flex-col justify-between"
+                  className="group p-5 rounded-3xl bg-[#F8FDFF] border border-[#E1F7F9] hover:border-[#028dcd]/60 hover:bg-white transition-all duration-300 shadow-sm hover:shadow-[0_15px_35px_rgba(2, 141, 205,0.12)] flex flex-col justify-between"
                 >
                   <div className="flex items-center justify-between mb-4">
                     <div className="w-12 h-12 rounded-2xl bg-emerald-50 text-emerald-600 flex items-center justify-center group-hover:bg-emerald-500 group-hover:text-white transition-all duration-300 shadow-xs">
@@ -190,13 +190,13 @@ export default function ContactUs() {
                 {/* Email Card */}
                 <a
                   href="mailto:support@door2fy.in"
-                  className="group p-5 rounded-3xl bg-[#F8FDFF] border border-[#E1F7F9] hover:border-[#04B6EA]/60 hover:bg-white transition-all duration-300 shadow-sm hover:shadow-[0_15px_35px_rgba(4,182,234,0.12)] flex flex-col justify-between"
+                  className="group p-5 rounded-3xl bg-[#F8FDFF] border border-[#E1F7F9] hover:border-[#028dcd]/60 hover:bg-white transition-all duration-300 shadow-sm hover:shadow-[0_15px_35px_rgba(2, 141, 205,0.12)] flex flex-col justify-between"
                 >
                   <div className="flex items-center justify-between mb-4">
-                    <div className="w-12 h-12 rounded-2xl bg-[#E1F7F9] text-[#04B6EA] flex items-center justify-center group-hover:bg-[#04B6EA] group-hover:text-white transition-all duration-300 shadow-xs">
+                    <div className="w-12 h-12 rounded-2xl bg-[#E1F7F9] text-[#028dcd] flex items-center justify-center group-hover:bg-[#028dcd] group-hover:text-white transition-all duration-300 shadow-xs">
                       <Mail className="w-5 h-5" />
                     </div>
-                    <span className="text-[11px] font-bold text-[#04B6EA] bg-[#E1F7F9]/80 px-2.5 py-1 rounded-full">
+                    <span className="text-[11px] font-bold text-[#028dcd] bg-[#E1F7F9]/80 px-2.5 py-1 rounded-full">
                       Official Email
                     </span>
                   </div>
@@ -204,7 +204,7 @@ export default function ContactUs() {
                     <h3 className="text-xs font-extrabold uppercase tracking-wider text-slate-400 mb-1">
                       Customer Assistance
                     </h3>
-                    <p className="text-base sm:text-lg font-black text-slate-900 group-hover:text-[#04B6EA] transition-colors">
+                    <p className="text-base sm:text-lg font-black text-slate-900 group-hover:text-[#028dcd] transition-colors">
                       support@Door2fy.in
                     </p>
                     <p className="text-xs text-slate-500 font-medium mt-1">
@@ -216,7 +216,7 @@ export default function ContactUs() {
                 {/* Working Hours & Coverage Card */}
                 <div className="p-5 rounded-3xl bg-[#F8FDFF] border border-[#E1F7F9] flex flex-col justify-between">
                   <div className="flex items-center justify-between mb-4">
-                    <div className="w-12 h-12 rounded-2xl bg-[#E1F7F9] text-[#04B6EA] flex items-center justify-center shadow-xs">
+                    <div className="w-12 h-12 rounded-2xl bg-[#E1F7F9] text-[#028dcd] flex items-center justify-center shadow-xs">
                       <Clock className="w-5 h-5" />
                     </div>
                     <span className="text-[11px] font-bold text-emerald-600 bg-emerald-50 px-2.5 py-1 rounded-full flex items-center gap-1">
@@ -240,7 +240,7 @@ export default function ContactUs() {
 
               {/* Service Location Banner */}
               <div className="p-6 rounded-3xl bg-[#F8FDFF] border border-[#E1F7F9] flex flex-col sm:flex-row items-start sm:items-center gap-4">
-                <div className="w-12 h-12 rounded-2xl bg-[#04B6EA] text-white flex items-center justify-center shrink-0 shadow-md shadow-[#04B6EA]/25">
+                <div className="w-12 h-12 rounded-2xl bg-[#028dcd] text-white flex items-center justify-center shrink-0 shadow-md shadow-[#028dcd]/25">
                   <MapPin className="w-6 h-6" />
                 </div>
                 <div>
@@ -257,15 +257,15 @@ export default function ContactUs() {
               <div className="pt-2">
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
                   <div className="flex items-center gap-2.5 text-slate-700">
-                    <CheckCircle2 className="w-4 h-4 text-[#04B6EA] shrink-0" />
+                    <CheckCircle2 className="w-4 h-4 text-[#028dcd] shrink-0" />
                     <span className="text-xs font-bold">100% Data Privacy</span>
                   </div>
                   <div className="flex items-center gap-2.5 text-slate-700">
-                    <CheckCircle2 className="w-4 h-4 text-[#04B6EA] shrink-0" />
+                    <CheckCircle2 className="w-4 h-4 text-[#028dcd] shrink-0" />
                     <span className="text-xs font-bold">Verified Engineers</span>
                   </div>
                   <div className="flex items-center gap-2.5 text-slate-700">
-                    <CheckCircle2 className="w-4 h-4 text-[#04B6EA] shrink-0" />
+                    <CheckCircle2 className="w-4 h-4 text-[#028dcd] shrink-0" />
                     <span className="text-xs font-bold">Up to 90 Days Warranty</span>
                   </div>
                 </div>
@@ -280,11 +280,11 @@ export default function ContactUs() {
               className="lg:col-span-5 relative"
             >
               {/* Form Ambient Glow */}
-              <div className="absolute -inset-4 bg-[#04B6EA]/15 rounded-[3.5rem] blur-2xl -z-10" />
+              <div className="absolute -inset-4 bg-[#028dcd]/15 rounded-[3.5rem] blur-2xl -z-10" />
 
-              <div className="bg-white rounded-[2.5rem] sm:rounded-[3rem] p-7 sm:p-9 md:p-10 border border-[#E1F7F9] shadow-[0_25px_60px_rgba(4,182,234,0.12)] relative text-left">
+              <div className="bg-white rounded-[2.5rem] sm:rounded-[3rem] p-7 sm:p-9 md:p-10 border border-[#E1F7F9] shadow-[0_25px_60px_rgba(2, 141, 205,0.12)] relative text-left">
                 <div className="mb-7">
-                  <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#E1F7F9] text-[#04B6EA] text-[11px] font-extrabold mb-2">
+                  <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#E1F7F9] text-[#028dcd] text-[11px] font-extrabold mb-2">
                     <Headphones className="w-3.5 h-3.5" />
                     <span>Quick Callback Form</span>
                   </div>
@@ -300,7 +300,7 @@ export default function ContactUs() {
                   {/* Full Name */}
                   <div className="space-y-1.5">
                     <label className="text-[11px] font-extrabold uppercase tracking-wider text-slate-700 ml-1">
-                      Your Full Name <span className="text-[#04B6EA]">*</span>
+                      Your Full Name <span className="text-[#028dcd]">*</span>
                     </label>
                     <div className="relative">
                       <div className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 pointer-events-none">
@@ -313,7 +313,7 @@ export default function ContactUs() {
                         value={formData.name}
                         onChange={handleChange}
                         placeholder="e.g. Rahul Sharma"
-                        className="w-full h-12 sm:h-14 pl-11 pr-4 rounded-2xl bg-[#F8FDFF] border-2 border-[#E1F7F9] focus:border-[#04B6EA] focus:bg-white text-slate-900 text-sm font-bold outline-none transition-all placeholder:text-slate-400 shadow-xs"
+                        className="w-full h-12 sm:h-14 pl-11 pr-4 rounded-2xl bg-[#F8FDFF] border-2 border-[#E1F7F9] focus:border-[#028dcd] focus:bg-white text-slate-900 text-sm font-bold outline-none transition-all placeholder:text-slate-400 shadow-xs"
                       />
                     </div>
                   </div>
@@ -323,7 +323,7 @@ export default function ContactUs() {
                     {/* Email */}
                     <div className="space-y-1.5">
                       <label className="text-[11px] font-extrabold uppercase tracking-wider text-slate-700 ml-1">
-                        Email Address <span className="text-[#04B6EA]">*</span>
+                        Email Address <span className="text-[#028dcd]">*</span>
                       </label>
                       <div className="relative">
                         <div className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 pointer-events-none">
@@ -336,7 +336,7 @@ export default function ContactUs() {
                           value={formData.email}
                           onChange={handleChange}
                           placeholder="name@gmail.com"
-                          className="w-full h-12 sm:h-14 pl-11 pr-4 rounded-2xl bg-[#F8FDFF] border-2 border-[#E1F7F9] focus:border-[#04B6EA] focus:bg-white text-slate-900 text-sm font-bold outline-none transition-all placeholder:text-slate-400 shadow-xs"
+                          className="w-full h-12 sm:h-14 pl-11 pr-4 rounded-2xl bg-[#F8FDFF] border-2 border-[#E1F7F9] focus:border-[#028dcd] focus:bg-white text-slate-900 text-sm font-bold outline-none transition-all placeholder:text-slate-400 shadow-xs"
                         />
                       </div>
                     </div>
@@ -356,7 +356,7 @@ export default function ContactUs() {
                           value={formData.phone}
                           onChange={handleChange}
                           placeholder="+91 98765 43210"
-                          className="w-full h-12 sm:h-14 pl-11 pr-4 rounded-2xl bg-[#F8FDFF] border-2 border-[#E1F7F9] focus:border-[#04B6EA] focus:bg-white text-slate-900 text-sm font-bold outline-none transition-all placeholder:text-slate-400 shadow-xs"
+                          className="w-full h-12 sm:h-14 pl-11 pr-4 rounded-2xl bg-[#F8FDFF] border-2 border-[#E1F7F9] focus:border-[#028dcd] focus:bg-white text-slate-900 text-sm font-bold outline-none transition-all placeholder:text-slate-400 shadow-xs"
                         />
                       </div>
                     </div>
@@ -375,7 +375,7 @@ export default function ContactUs() {
                         name="category"
                         value={formData.category}
                         onChange={handleChange}
-                        className="w-full h-12 sm:h-14 pl-11 pr-10 rounded-2xl bg-[#F8FDFF] border-2 border-[#E1F7F9] focus:border-[#04B6EA] focus:bg-white text-slate-900 text-sm font-bold outline-none transition-all appearance-none cursor-pointer shadow-xs"
+                        className="w-full h-12 sm:h-14 pl-11 pr-10 rounded-2xl bg-[#F8FDFF] border-2 border-[#E1F7F9] focus:border-[#028dcd] focus:bg-white text-slate-900 text-sm font-bold outline-none transition-all appearance-none cursor-pointer shadow-xs"
                       >
                         <option value="Laptop Repair">Laptop Repair (General / Hardware)</option>
                         <option value="MacBook Support">Apple MacBook Support & Screen/Battery</option>
@@ -396,7 +396,7 @@ export default function ContactUs() {
                   {/* Message Field */}
                   <div className="space-y-1.5">
                     <label className="text-[11px] font-extrabold uppercase tracking-wider text-slate-700 ml-1">
-                      Device Details / Problem Description <span className="text-[#04B6EA]">*</span>
+                      Device Details / Problem Description <span className="text-[#028dcd]">*</span>
                     </label>
                     <div className="relative">
                       <textarea
@@ -406,7 +406,7 @@ export default function ContactUs() {
                         value={formData.message}
                         onChange={handleChange}
                         placeholder="Tell us your device brand, model, and what issue you are facing..."
-                        className="w-full p-4 rounded-2xl bg-[#F8FDFF] border-2 border-[#E1F7F9] focus:border-[#04B6EA] focus:bg-white text-slate-900 text-sm font-bold outline-none transition-all placeholder:text-slate-400 resize-none shadow-xs"
+                        className="w-full p-4 rounded-2xl bg-[#F8FDFF] border-2 border-[#E1F7F9] focus:border-[#028dcd] focus:bg-white text-slate-900 text-sm font-bold outline-none transition-all placeholder:text-slate-400 resize-none shadow-xs"
                       />
                     </div>
                   </div>
@@ -415,9 +415,8 @@ export default function ContactUs() {
                   <button
                     type="submit"
                     disabled={loading}
-                    className={`w-full h-14 sm:h-16 rounded-2xl bg-[#04B6EA] hover:bg-[#039ecc] text-white font-extrabold text-sm sm:text-base tracking-wide flex items-center justify-center gap-2 shadow-lg shadow-[#04B6EA]/30 transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] ${
-                      loading ? "opacity-75 cursor-not-allowed" : ""
-                    }`}
+                    className={`w-full h-14 sm:h-16 rounded-2xl bg-[#028dcd] hover:bg-[#039ecc] text-white font-extrabold text-sm sm:text-base tracking-wide flex items-center justify-center gap-2 shadow-lg shadow-[#028dcd]/30 transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] ${loading ? "opacity-75 cursor-not-allowed" : ""
+                      }`}
                   >
                     {loading ? (
                       <span>Sending your message...</span>
@@ -445,8 +444,8 @@ export default function ContactUs() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="p-7 rounded-3xl bg-white border border-[#E1F7F9] shadow-xs text-left">
-              <div className="w-12 h-12 rounded-2xl bg-[#E1F7F9] text-[#04B6EA] flex items-center justify-center mb-4">
-                <Zap className="w-6 h-6 fill-[#04B6EA]" />
+              <div className="w-12 h-12 rounded-2xl bg-[#E1F7F9] text-[#028dcd] flex items-center justify-center mb-4">
+                <Zap className="w-6 h-6 fill-[#028dcd]" />
               </div>
               <h3 className="text-lg font-black text-slate-900 mb-2">
                 Urgent Doorstep Booking
@@ -456,7 +455,7 @@ export default function ContactUs() {
               </p>
               <Link
                 to="/services"
-                className="inline-flex items-center gap-1.5 text-xs font-extrabold text-[#04B6EA] hover:text-[#0284c7] transition-colors"
+                className="inline-flex items-center gap-1.5 text-xs font-extrabold text-[#028dcd] hover:text-[#0284c7] transition-colors"
               >
                 <span>Browse Services</span>
                 <ArrowRight className="w-3.5 h-3.5" />
@@ -464,8 +463,8 @@ export default function ContactUs() {
             </div>
 
             <div className="p-7 rounded-3xl bg-white border border-[#E1F7F9] shadow-xs text-left">
-              <div className="w-12 h-12 rounded-2xl bg-[#E1F7F9] text-[#04B6EA] flex items-center justify-center mb-4">
-                <ShieldCheck className="w-6 h-6 text-[#04B6EA]" />
+              <div className="w-12 h-12 rounded-2xl bg-[#E1F7F9] text-[#028dcd] flex items-center justify-center mb-4">
+                <ShieldCheck className="w-6 h-6 text-[#028dcd]" />
               </div>
               <h3 className="text-lg font-black text-slate-900 mb-2">
                 Corporate & Bulk IT Support
@@ -475,7 +474,7 @@ export default function ContactUs() {
               </p>
               <Link
                 to="/why-choose-us"
-                className="inline-flex items-center gap-1.5 text-xs font-extrabold text-[#04B6EA] hover:text-[#0284c7] transition-colors"
+                className="inline-flex items-center gap-1.5 text-xs font-extrabold text-[#028dcd] hover:text-[#0284c7] transition-colors"
               >
                 <span>Why Choose Door2fy</span>
                 <ArrowRight className="w-3.5 h-3.5" />
@@ -483,8 +482,8 @@ export default function ContactUs() {
             </div>
 
             <div className="p-7 rounded-3xl bg-white border border-[#E1F7F9] shadow-xs text-left">
-              <div className="w-12 h-12 rounded-2xl bg-[#E1F7F9] text-[#04B6EA] flex items-center justify-center mb-4">
-                <MessageSquare className="w-6 h-6 text-[#04B6EA]" />
+              <div className="w-12 h-12 rounded-2xl bg-[#E1F7F9] text-[#028dcd] flex items-center justify-center mb-4">
+                <MessageSquare className="w-6 h-6 text-[#028dcd]" />
               </div>
               <h3 className="text-lg font-black text-slate-900 mb-2">
                 Frequently Asked Questions
@@ -494,7 +493,7 @@ export default function ContactUs() {
               </p>
               <Link
                 to="/faqs"
-                className="inline-flex items-center gap-1.5 text-xs font-extrabold text-[#04B6EA] hover:text-[#0284c7] transition-colors"
+                className="inline-flex items-center gap-1.5 text-xs font-extrabold text-[#028dcd] hover:text-[#0284c7] transition-colors"
               >
                 <span>Read FAQs</span>
                 <ArrowRight className="w-3.5 h-3.5" />

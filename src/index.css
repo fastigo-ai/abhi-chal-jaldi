@@ -165,3 +165,24 @@ All colors MUST be HSL.
   scrollbar-width: none;
 }
 
+/* Continuous Horizontal Auto-Scroll Marquee */
+@keyframes marquee-scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee-auto {
+  display: flex;
+  width: max-content;
+  animation: marquee-scroll-left 32s linear infinite;
+}
+
+.animate-marquee-auto:hover {
+  animation-play-state: paused;
+}
+
+

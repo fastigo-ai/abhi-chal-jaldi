@@ -27,7 +27,7 @@ const BlogDetail = () => {
         <p className="text-gray-500 mb-6">The article you are looking for might have been moved or updated.</p>
         <Link
           to="/blogs"
-          className="px-6 py-3 bg-[#04B6EA] text-white font-bold text-sm rounded-full hover:bg-[#039ecc] transition-colors shadow-md shadow-[#04B6EA]/25"
+          className="px-6 py-3 bg-[#028dcd] text-white font-bold text-sm rounded-full hover:bg-[#039ecc] transition-colors shadow-md shadow-[#028dcd]/25"
         >
           Explore All Guides
         </Link>
@@ -87,11 +87,11 @@ const BlogDetail = () => {
       {/* ================= BREADCRUMB ================= */}
       <div className="bg-[#F0FBFF] py-3.5 border-b border-[#E1F7F9]">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 flex items-center text-xs text-gray-500 overflow-x-auto whitespace-nowrap">
-          <Link to="/" className="hover:text-[#04B6EA] transition-colors">
+          <Link to="/" className="hover:text-[#028dcd] transition-colors">
             Home
           </Link>
           <ChevronRight className="w-3.5 h-3.5 mx-2 text-gray-400 flex-shrink-0" />
-          <Link to="/blogs" className="hover:text-[#04B6EA] transition-colors">
+          <Link to="/blogs" className="hover:text-[#028dcd] transition-colors">
             Tech Guides
           </Link>
           <ChevronRight className="w-3.5 h-3.5 mx-2 text-gray-400 flex-shrink-0" />
@@ -103,13 +103,13 @@ const BlogDetail = () => {
 
       {/* ================= ARTICLE HEADER ================= */}
       <div className="max-w-6xl mx-auto px-4 sm:px-6 pt-10 pb-6">
-        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#E1F7F9] text-[#04B6EA] font-extrabold text-xs uppercase tracking-wider mb-4 border border-[#04B6EA]/20">
+        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#E1F7F9] text-[#028dcd] font-extrabold text-xs uppercase tracking-wider mb-4 border border-[#028dcd]/20">
           <span>{blog.category}</span>
           {blog.city && blog.city !== "India" && blog.city !== "All Cities" && (
             <>
               <span className="text-gray-300">·</span>
               <span className="flex items-center gap-1">
-                <MapPin className="w-3 h-3 text-[#04B6EA]" />
+                <MapPin className="w-3 h-3 text-[#028dcd]" />
                 {blog.city}
               </span>
             </>
@@ -122,12 +122,12 @@ const BlogDetail = () => {
 
         <div className="flex flex-wrap items-center gap-4 text-xs font-semibold text-gray-500 pb-6 border-b border-gray-100">
           <div className="flex items-center gap-1.5">
-            <Calendar className="w-4 h-4 text-[#04B6EA]" />
+            <Calendar className="w-4 h-4 text-[#028dcd]" />
             <span>Updated {formattedDate}</span>
           </div>
           <span>·</span>
           <div className="flex items-center gap-1.5">
-            <Clock className="w-4 h-4 text-[#04B6EA]" />
+            <Clock className="w-4 h-4 text-[#028dcd]" />
             <span>5 Min Read</span>
           </div>
           <span>·</span>
@@ -166,7 +166,7 @@ const BlogDetail = () => {
             <div key={index} className="space-y-6">
               {section.heading && (
                 <h2 className="text-2xl sm:text-3xl font-extrabold text-gray-900 tracking-tight leading-snug pt-2 border-b border-gray-100 pb-3 flex items-center gap-2.5">
-                  <span className="w-2 h-6 bg-[#04B6EA] rounded-full inline-block shrink-0" />
+                  <span className="w-2 h-6 bg-[#028dcd] rounded-full inline-block shrink-0" />
                   <span>{section.heading}</span>
                 </h2>
               )}
@@ -184,7 +184,7 @@ const BlogDetail = () => {
                   {section.points.map((p: any, i: number) => (
                     <div
                       key={`${p.title}-${i}`}
-                      className="bg-[#F8FDFF] border-l-4 border-[#04B6EA] p-5 sm:p-6 rounded-r-2xl border-y border-r border-[#E1F7F9] shadow-xs"
+                      className="bg-[#F8FDFF] border-l-4 border-[#028dcd] p-5 sm:p-6 rounded-r-2xl border-y border-r border-[#E1F7F9] shadow-xs"
                     >
                       <h3 className="font-bold text-base sm:text-lg text-gray-900 mb-1.5">
                         {p.title}
@@ -204,7 +204,7 @@ const BlogDetail = () => {
                     const text = typeof item === "string" ? item : item.title || item.description;
                     return (
                       <li key={i} className="flex items-start gap-3 text-sm sm:text-base text-gray-700 leading-relaxed">
-                        <CheckCircle2 className="w-5 h-5 text-[#04B6EA] shrink-0 mt-0.5" />
+                        <CheckCircle2 className="w-5 h-5 text-[#028dcd] shrink-0 mt-0.5" />
                         <span>{text}</span>
                       </li>
                     );
@@ -217,7 +217,7 @@ const BlogDetail = () => {
                 <div className="space-y-3 pl-1">
                   {section.steps.map((step: string, i: number) => (
                     <div key={i} className="flex items-start gap-3.5 bg-white p-4 rounded-2xl border border-gray-100 shadow-xs">
-                      <div className="w-7 h-7 rounded-xl bg-[#E1F7F9] text-[#04B6EA] font-extrabold text-xs flex items-center justify-center shrink-0 mt-0.5">
+                      <div className="w-7 h-7 rounded-xl bg-[#E1F7F9] text-[#028dcd] font-extrabold text-xs flex items-center justify-center shrink-0 mt-0.5">
                         {i + 1}
                       </div>
                       <p className="text-sm sm:text-base text-gray-700 font-medium leading-relaxed pt-0.5">
@@ -256,7 +256,7 @@ const BlogDetail = () => {
                       {section.table.map((row: any, i: number) => (
                         <tr key={i} className="hover:bg-white transition-colors">
                           <td className="py-3 px-4 text-sm font-semibold text-gray-900">{row.service}</td>
-                          <td className="py-3 px-4 text-sm font-bold text-[#04B6EA]">{row.cost}</td>
+                          <td className="py-3 px-4 text-sm font-bold text-[#028dcd]">{row.cost}</td>
                         </tr>
                       ))}
                     </tbody>
@@ -270,9 +270,9 @@ const BlogDetail = () => {
                   {section.tips.map((tip: string, i: number) => (
                     <div
                       key={i}
-                      className="flex items-start gap-2.5 bg-[#E1F7F9]/40 border border-[#04B6EA]/20 p-3.5 rounded-2xl text-xs sm:text-sm text-gray-800 font-medium"
+                      className="flex items-start gap-2.5 bg-[#E1F7F9]/40 border border-[#028dcd]/20 p-3.5 rounded-2xl text-xs sm:text-sm text-gray-800 font-medium"
                     >
-                      <Sparkles className="w-4 h-4 text-[#04B6EA] shrink-0 mt-0.5" />
+                      <Sparkles className="w-4 h-4 text-[#028dcd] shrink-0 mt-0.5" />
                       <span>{tip}</span>
                     </div>
                   ))}
@@ -282,9 +282,9 @@ const BlogDetail = () => {
           ))}
 
           {/* Conclusion Box */}
-          <div className="bg-gradient-to-br from-[#E1F7F9]/50 to-[#F8FDFF] p-6 sm:p-8 rounded-3xl border border-[#04B6EA]/20 space-y-3">
+          <div className="bg-gradient-to-br from-[#E1F7F9]/50 to-[#F8FDFF] p-6 sm:p-8 rounded-3xl border border-[#028dcd]/20 space-y-3">
             <h3 className="text-xl sm:text-2xl font-bold text-gray-900 flex items-center gap-2">
-              <Award className="w-5 h-5 text-[#04B6EA]" />
+              <Award className="w-5 h-5 text-[#028dcd]" />
               <span>Key Takeaway</span>
             </h3>
             <p className="text-gray-700 text-base leading-relaxed font-normal">
@@ -296,11 +296,11 @@ const BlogDetail = () => {
         {/* ================= SIDEBAR ================= */}
         <aside className="lg:col-span-4 space-y-6 lg:sticky lg:top-24">
           {/* Quick Repair CTA Card (Upgraded & Themed) */}
-          <div className="bg-[#F8FDFF] p-6 sm:p-7 rounded-3xl border border-[#E1F7F9] shadow-[0_15px_35px_rgba(4,182,234,0.08)] space-y-5 text-left relative overflow-hidden">
-            <div className="absolute top-0 right-0 w-32 h-32 bg-[#04B6EA]/10 rounded-full blur-2xl pointer-events-none" />
+          <div className="bg-[#F8FDFF] p-6 sm:p-7 rounded-3xl border border-[#E1F7F9] shadow-[0_15px_35px_rgba(2, 141, 205,0.08)] space-y-5 text-left relative overflow-hidden">
+            <div className="absolute top-0 right-0 w-32 h-32 bg-[#028dcd]/10 rounded-full blur-2xl pointer-events-none" />
 
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#E1F7F9] text-[#04B6EA] text-xs font-bold">
-              <span className="w-2 h-2 rounded-full bg-[#04B6EA] animate-pulse" />
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#E1F7F9] text-[#028dcd] text-xs font-bold">
+              <span className="w-2 h-2 rounded-full bg-[#028dcd] animate-pulse" />
               <span>Engineers Live Nearby</span>
             </div>
 
@@ -309,21 +309,21 @@ const BlogDetail = () => {
                 Need Laptop Repair?
               </h3>
               <p className="text-gray-600 text-xs sm:text-sm leading-relaxed font-normal">
-                Get certified background-verified engineers at your doorstep in <span className="font-bold text-gray-900">10 to 30 minutes</span> with genuine parts & 90-day warranty.
+                Get certified background-verified engineers at your doorstep in <span className="font-bold text-gray-900">30 minutes</span> with genuine parts & 90-day warranty.
               </p>
             </div>
 
             <div className="space-y-2 pt-1">
               <div className="flex items-center gap-2 text-xs font-semibold text-gray-700">
-                <CheckCircle2 className="w-4 h-4 text-[#04B6EA]" />
-                <span>10–30 Min Doorstep Arrival</span>
+                <CheckCircle2 className="w-4 h-4 text-[#028dcd]" />
+                <span>30 Min Doorstep Arrival</span>
               </div>
               <div className="flex items-center gap-2 text-xs font-semibold text-gray-700">
-                <CheckCircle2 className="w-4 h-4 text-[#04B6EA]" />
+                <CheckCircle2 className="w-4 h-4 text-[#028dcd]" />
                 <span>100% Genuine OEM Parts</span>
               </div>
               <div className="flex items-center gap-2 text-xs font-semibold text-gray-700">
-                <CheckCircle2 className="w-4 h-4 text-[#04B6EA]" />
+                <CheckCircle2 className="w-4 h-4 text-[#028dcd]" />
                 <span>Live Repair in Front of You</span>
               </div>
             </div>
@@ -331,7 +331,7 @@ const BlogDetail = () => {
             <div className="space-y-2.5 pt-2">
               <Link
                 to="/services"
-                className="w-full inline-flex items-center justify-center gap-2 bg-[#04B6EA] hover:bg-[#039ecc] text-white py-3.5 px-6 rounded-full font-bold text-xs sm:text-sm shadow-md shadow-[#04B6EA]/25 transition-all hover:scale-105 active:scale-95 text-center"
+                className="w-full inline-flex items-center justify-center gap-2 bg-[#028dcd] hover:bg-[#039ecc] text-white py-3.5 px-6 rounded-full font-bold text-xs sm:text-sm shadow-md shadow-[#028dcd]/25 transition-all hover:scale-105 active:scale-95 text-center"
               >
                 <span>Book Doorstep Repair</span>
                 <ArrowRight className="w-4 h-4" />
@@ -350,7 +350,7 @@ const BlogDetail = () => {
           {/* More Recommended Guides */}
           <div className="bg-white p-6 rounded-3xl border border-gray-100 shadow-xs space-y-4 text-left">
             <h4 className="text-base font-bold text-gray-900 flex items-center gap-2">
-              <Sparkles className="w-4 h-4 text-[#04B6EA]" />
+              <Sparkles className="w-4 h-4 text-[#028dcd]" />
               <span>Recommended Guides</span>
             </h4>
 
@@ -359,12 +359,12 @@ const BlogDetail = () => {
                 <Link
                   key={b.slug}
                   to={`/blog/${b.slug}`}
-                  className="group block p-3 rounded-2xl bg-[#F8FDFF] hover:bg-white border border-[#E1F7F9] hover:border-[#04B6EA]/40 transition-all"
+                  className="group block p-3 rounded-2xl bg-[#F8FDFF] hover:bg-white border border-[#E1F7F9] hover:border-[#028dcd]/40 transition-all"
                 >
-                  <span className="text-[10px] font-bold text-[#04B6EA] uppercase tracking-wider block mb-1">
+                  <span className="text-[10px] font-bold text-[#028dcd] uppercase tracking-wider block mb-1">
                     {b.category}
                   </span>
-                  <h5 className="text-xs sm:text-sm font-bold text-gray-900 group-hover:text-[#04B6EA] transition-colors leading-snug line-clamp-2">
+                  <h5 className="text-xs sm:text-sm font-bold text-gray-900 group-hover:text-[#028dcd] transition-colors leading-snug line-clamp-2">
                     {b.title}
                   </h5>
                 </Link>
@@ -373,7 +373,7 @@ const BlogDetail = () => {
 
             <Link
               to="/blogs"
-              className="inline-flex items-center gap-1.5 text-xs font-bold text-[#04B6EA] hover:underline pt-1"
+              className="inline-flex items-center gap-1.5 text-xs font-bold text-[#028dcd] hover:underline pt-1"
             >
               <span>View All 15+ Guides</span>
               <ArrowRight className="w-3.5 h-3.5" />

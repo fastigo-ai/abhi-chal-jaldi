@@ -200,11 +200,11 @@ export const CylindricalServicesScroller: React.FC<CylindricalServicesScrollerPr
           }}
         >
           {/* Outer glow ring */}
-          <div className="absolute inset-0 rounded-full border border-[#04B6EA]/30 bg-gradient-to-b from-[#04B6EA]/20 via-[#04B6EA]/5 to-transparent blur-xs" />
+          <div className="absolute inset-0 rounded-full border border-[#028dcd]/30 bg-gradient-to-b from-[#028dcd]/20 via-[#028dcd]/5 to-transparent blur-xs" />
           {/* Inner platform circle */}
-          <div className="w-[85%] h-[85%] rounded-full border-2 border-[#04B6EA]/40 bg-white/70 shadow-[0_0_35px_rgba(4,182,234,0.35)]" />
+          <div className="w-[85%] h-[85%] rounded-full border-2 border-[#028dcd]/40 bg-white/70 shadow-[0_0_35px_rgba(2, 141, 205,0.35)]" />
           {/* Center spot */}
-          <div className="w-[60%] h-[60%] rounded-full bg-radial from-[#04B6EA]/30 to-transparent blur-md" />
+          <div className="w-[60%] h-[60%] rounded-full bg-radial from-[#028dcd]/30 to-transparent blur-md" />
         </div>
 
         {/* 3D Cards Container */}
@@ -254,8 +254,8 @@ export const CylindricalServicesScroller: React.FC<CylindricalServicesScrollerPr
                 }}
                 className={`absolute rounded-[2rem] bg-white transition-all duration-300 overflow-hidden group flex flex-col justify-between cursor-pointer ${
                   isFront
-                    ? "border-2 border-[#04B6EA] shadow-[0_25px_65px_rgba(4,182,234,0.22)] ring-4 ring-[#04B6EA]/10"
-                    : "border border-slate-100 shadow-[0_12px_35px_rgba(0,0,0,0.05)] hover:border-[#04B6EA]/40"
+                    ? "border-2 border-[#028dcd] shadow-[0_25px_65px_rgba(2, 141, 205,0.22)] ring-4 ring-[#028dcd]/10"
+                    : "border border-slate-100 shadow-[0_12px_35px_rgba(0,0,0,0.05)] hover:border-[#028dcd]/40"
                 }`}
                 style={{
                   width: `${cardWidth}px`,
@@ -280,7 +280,7 @@ export const CylindricalServicesScroller: React.FC<CylindricalServicesScrollerPr
 
                   {/* Speed Badge */}
                   <div className="absolute top-2.5 left-2.5 flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-white/95 backdrop-blur-sm shadow-xs border border-slate-100">
-                    <Zap className="w-3 h-3 text-[#04B6EA] fill-[#04B6EA]" />
+                    <Zap className="w-3 h-3 text-[#028dcd] fill-[#028dcd]" />
                     <span className="text-[9px] font-extrabold tracking-wider text-slate-800 uppercase">
                       5–10 Min
                     </span>
@@ -296,7 +296,7 @@ export const CylindricalServicesScroller: React.FC<CylindricalServicesScrollerPr
                 {/* Content & Action */}
                 <div className="p-4 sm:p-5 flex flex-col justify-between flex-grow bg-white text-left space-y-2">
                   <div>
-                    <h3 className="text-base sm:text-lg font-black text-slate-900 tracking-tight leading-snug group-hover:text-[#04B6EA] transition-colors mb-1 line-clamp-1">
+                    <h3 className="text-base sm:text-lg font-black text-slate-900 tracking-tight leading-snug group-hover:text-[#028dcd] transition-colors mb-1 line-clamp-1">
                       {service.title}
                     </h3>
                     <p className="text-slate-500 text-xs font-normal line-clamp-2 leading-relaxed mb-2">
@@ -312,12 +312,12 @@ export const CylindricalServicesScroller: React.FC<CylindricalServicesScrollerPr
                   {/* Button Action */}
                   <div className="pt-2">
                     {isFront ? (
-                      <div className="w-full py-2.5 px-4 rounded-xl bg-[#04B6EA] hover:bg-[#039ecc] text-white flex items-center justify-between transition-all duration-300 font-bold text-xs sm:text-sm shadow-md shadow-[#04B6EA]/25">
+                      <div className="w-full py-2.5 px-4 rounded-xl bg-[#028dcd] hover:bg-[#039ecc] text-white flex items-center justify-between transition-all duration-300 font-bold text-xs sm:text-sm shadow-md shadow-[#028dcd]/25">
                         <span>Book Support</span>
                         <ArrowRight className="w-4 h-4" />
                       </div>
                     ) : (
-                      <div className="w-full py-1.5 flex items-center justify-between text-[#04B6EA] font-bold text-xs sm:text-sm group-hover:text-[#039ecc] transition-colors">
+                      <div className="w-full py-1.5 flex items-center justify-between text-[#028dcd] font-bold text-xs sm:text-sm group-hover:text-[#039ecc] transition-colors">
                         <span>View</span>
                         <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
                       </div>

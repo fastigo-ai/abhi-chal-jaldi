@@ -77,7 +77,7 @@ export default function BlogList() {
   const endIndexDisplay = Math.min(currentPage * ITEMS_PER_PAGE, filteredBlogs.length);
 
   return (
-    <div className="min-h-screen bg-white font-sans antialiased text-slate-900 selection:bg-[#04B6EA]/20 selection:text-[#04B6EA]">
+    <div className="min-h-screen bg-white font-sans antialiased text-slate-900 selection:bg-[#028dcd]/20 selection:text-[#028dcd]">
       <SEOHead
         title={metaTitle}
         description={metaDescription}
@@ -88,7 +88,7 @@ export default function BlogList() {
       {/* ================= HERO SECTION ================= */}
       <section className="w-full bg-gradient-to-b from-[#F0FBFF] via-[#F8FDFF] to-white overflow-hidden relative pt-24 pb-12 lg:pt-32 lg:pb-14 flex flex-col justify-center">
         {/* Floating Ambient Glow Orbs */}
-        <div className="absolute top-[-15%] right-[-10%] w-[550px] h-[550px] bg-[#04B6EA]/15 rounded-full -z-10 blur-[130px] pointer-events-none transform-gpu animate-pulse" />
+        <div className="absolute top-[-15%] right-[-10%] w-[550px] h-[550px] bg-[#028dcd]/15 rounded-full -z-10 blur-[130px] pointer-events-none transform-gpu animate-pulse" />
         <div className="absolute bottom-[-10%] left-[-10%] w-[450px] h-[450px] bg-[#38BDF8]/12 rounded-full -z-10 blur-[120px] pointer-events-none transform-gpu" />
 
         <div className="max-w-7xl mx-auto px-6 lg:px-8 w-full relative z-10">
@@ -103,8 +103,8 @@ export default function BlogList() {
                 className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-white/90 backdrop-blur-md"
               >
                 <span className="relative flex h-2.5 w-2.5">
-                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#04B6EA] opacity-75"></span>
-                  <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-[#04B6EA]"></span>
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#028dcd] opacity-75"></span>
+                  <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-[#028dcd]"></span>
                 </span>
                 <span className="text-xs font-bold text-slate-800 tracking-wide">
                   Door2fy Tech Hub <span className="text-slate-300">·</span> {totalBlogs}+ Certified Guides
@@ -119,7 +119,7 @@ export default function BlogList() {
                 className="text-4xl sm:text-5xl lg:text-6xl font-black text-slate-900 tracking-tight leading-[1.12]"
               >
                 Laptop Repair Guides & <br />
-                <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#04B6EA] to-[#0284c7]">
+                <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#028dcd] to-[#0284c7]">
                   Tech Insights
                 </span>
               </motion.h1>
@@ -143,7 +143,7 @@ export default function BlogList() {
               >
                 <div className="relative flex items-center rounded-full bg-[#F0FBFF]">
                   <div className="absolute left-4 flex items-center pointer-events-none">
-                    <Search className="w-5 h-5 text-[#04B6EA]" />
+                    <Search className="w-5 h-5 text-[#028dcd]" />
                   </div>
                   <input
                     type="text"
@@ -173,11 +173,11 @@ export default function BlogList() {
             >
               <div className="relative w-full max-w-[420px] sm:max-w-[540px] lg:max-w-[620px] xl:max-w-[680px]">
                 {/* Ambient glow behind laptop */}
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[380px] sm:w-[500px] h-[360px] bg-[#04B6EA]/20 rounded-full blur-3xl pointer-events-none -z-10" />
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[380px] sm:w-[500px] h-[360px] bg-[#028dcd]/20 rounded-full blur-3xl pointer-events-none -z-10" />
                 <img
                   src={blogsHeroLaptop}
                   alt="Door2fy Laptop Repair Guides & Tech Insights"
-                  className="w-full h-auto object-contain select-none pointer-events-none drop-shadow-[0_20px_45px_rgba(4,182,234,0.18)] transform transition-transform duration-700 hover:scale-[1.03]"
+                  className="w-full h-auto object-contain select-none pointer-events-none drop-shadow-[0_20px_45px_rgba(2, 141, 205,0.18)] transform transition-transform duration-700 hover:scale-[1.03]"
                   style={{ imageRendering: "-webkit-optimize-contrast" }}
                 />
               </div>
@@ -211,20 +211,20 @@ export default function BlogList() {
                     <div className="absolute inset-0 bg-gradient-to-t from-slate-950/60 via-transparent to-transparent opacity-60 group-hover:opacity-40 transition-opacity" />
 
                     <div className="absolute top-4 left-4">
-                      <span className="inline-flex items-center gap-1.5 px-3.5 py-1.5 bg-white/95 backdrop-blur-md text-[#04B6EA] font-extrabold text-xs uppercase tracking-wider rounded-full">
-                        <Sparkles className="w-3.5 h-3.5 fill-[#04B6EA]" />
+                      <span className="inline-flex items-center gap-1.5 px-3.5 py-1.5 bg-white/95 backdrop-blur-md text-[#028dcd] font-extrabold text-xs uppercase tracking-wider rounded-full">
+                        <Sparkles className="w-3.5 h-3.5 fill-[#028dcd]" />
                         <span>Featured Guide</span>
                       </span>
                     </div>
                   </div>
 
                   <div className="lg:col-span-6 space-y-4 text-left">
-                    <div className="inline-flex items-center gap-2 text-xs font-extrabold text-[#04B6EA] bg-[#E1F7F9] px-3 py-1 rounded-full w-fit">
+                    <div className="inline-flex items-center gap-2 text-xs font-extrabold text-[#028dcd] bg-[#E1F7F9] px-3 py-1 rounded-full w-fit">
                       <TrendingUp className="w-4 h-4" />
                       <span>Most Read This Month</span>
                     </div>
 
-                    <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 group-hover:text-[#04B6EA] transition-colors leading-tight">
+                    <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 group-hover:text-[#028dcd] transition-colors leading-tight">
                       {featuredBlog.title}
                     </h2>
 
@@ -235,17 +235,17 @@ export default function BlogList() {
                     <div className="pt-3 flex items-center justify-between">
                       <div className="flex items-center gap-2 text-xs text-slate-400 font-semibold">
                         <div className="flex items-center gap-1 text-slate-500">
-                          <Calendar className="w-3.5 h-3.5 text-[#04B6EA]" />
+                          <Calendar className="w-3.5 h-3.5 text-[#028dcd]" />
                           <span>Updated {featuredBlog.updatedAt}</span>
                         </div>
                         <span>·</span>
                         <div className="flex items-center gap-1 text-slate-500">
-                          <Clock className="w-3.5 h-3.5 text-[#04B6EA]" />
+                          <Clock className="w-3.5 h-3.5 text-[#028dcd]" />
                           <span>5 min read</span>
                         </div>
                       </div>
 
-                      <div className="inline-flex items-center gap-2 text-xs sm:text-sm font-bold text-[#04B6EA] group-hover:translate-x-1.5 transition-transform">
+                      <div className="inline-flex items-center gap-2 text-xs sm:text-sm font-bold text-[#028dcd] group-hover:translate-x-1.5 transition-transform">
                         <span>Read Full Guide</span>
                         <ArrowRight className="w-4 h-4" />
                       </div>
@@ -294,14 +294,14 @@ export default function BlogList() {
               animate={{ opacity: 1, scale: 1 }}
               className="text-center py-20 bg-[#F8FDFF] rounded-3xl p-8 max-w-lg mx-auto"
             >
-              <BookOpen className="w-12 h-12 text-[#04B6EA] mx-auto mb-3 opacity-60" />
+              <BookOpen className="w-12 h-12 text-[#028dcd] mx-auto mb-3 opacity-60" />
               <h3 className="text-xl font-bold text-slate-900 mb-1">No articles found</h3>
               <p className="text-slate-500 text-sm mb-5">
                 Try clearing your search query to see all available articles.
               </p>
               <button
                 onClick={() => setSearchQuery("")}
-                className="px-5 py-2.5 rounded-full bg-[#04B6EA] hover:bg-[#039ecc] text-white font-bold text-xs transition-colors cursor-pointer"
+                className="px-5 py-2.5 rounded-full bg-[#028dcd] hover:bg-[#039ecc] text-white font-bold text-xs transition-colors cursor-pointer"
               >
                 Reset Search
               </button>
@@ -334,7 +334,7 @@ export default function BlogList() {
                     <button
                       onClick={() => handlePageChange(currentPage - 1)}
                       disabled={currentPage === 1}
-                      className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full text-xs font-bold text-slate-700 bg-slate-100 hover:bg-slate-200 hover:text-[#04B6EA] transition-all disabled:opacity-40 disabled:pointer-events-none cursor-pointer"
+                      className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full text-xs font-bold text-slate-700 bg-slate-100 hover:bg-slate-200 hover:text-[#028dcd] transition-all disabled:opacity-40 disabled:pointer-events-none cursor-pointer"
                       aria-label="Previous Page"
                     >
                       <ChevronLeft className="w-4 h-4" />
@@ -347,11 +347,10 @@ export default function BlogList() {
                         <button
                           key={pageNum}
                           onClick={() => handlePageChange(pageNum)}
-                          className={`w-9 h-9 rounded-full text-xs font-bold transition-all duration-300 cursor-pointer flex items-center justify-center ${
-                            currentPage === pageNum
-                              ? "bg-[#04B6EA] text-white scale-105"
-                              : "bg-slate-100 text-slate-700 hover:bg-slate-200 hover:text-[#04B6EA]"
-                          }`}
+                          className={`w-9 h-9 rounded-full text-xs font-bold transition-all duration-300 cursor-pointer flex items-center justify-center ${currentPage === pageNum
+                              ? "bg-[#028dcd] text-white scale-105"
+                              : "bg-slate-100 text-slate-700 hover:bg-slate-200 hover:text-[#028dcd]"
+                            }`}
                         >
                           {pageNum}
                         </button>
@@ -362,7 +361,7 @@ export default function BlogList() {
                     <button
                       onClick={() => handlePageChange(currentPage + 1)}
                       disabled={currentPage === totalPages}
-                      className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full text-xs font-bold text-slate-700 bg-slate-100 hover:bg-slate-200 hover:text-[#04B6EA] transition-all disabled:opacity-40 disabled:pointer-events-none cursor-pointer"
+                      className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full text-xs font-bold text-slate-700 bg-slate-100 hover:bg-slate-200 hover:text-[#028dcd] transition-all disabled:opacity-40 disabled:pointer-events-none cursor-pointer"
                       aria-label="Next Page"
                     >
                       <span>Next</span>
@@ -411,26 +410,26 @@ export default function BlogList() {
                 transition={{ duration: 0.8, delay: 0.2 }}
                 className="w-full lg:w-[48%] text-center lg:text-left space-y-5"
               >
-                <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#E1F7F9] text-[#04B6EA] text-xs font-extrabold">
+                <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#E1F7F9] text-[#028dcd] text-xs font-extrabold">
                   <Sparkles className="w-3.5 h-3.5 fill-current" />
                   <span>Instant Tech Assistance</span>
                 </div>
 
                 <h2 className="text-3xl md:text-4xl lg:text-5xl font-black text-slate-900 leading-[1.15] tracking-tight">
                   Need an Engineer <br />
-                  <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#04B6EA] to-[#0284c7]">
+                  <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#028dcd] to-[#0284c7]">
                     Right Now?
                   </span>
                 </h2>
 
                 <p className="text-slate-600 text-sm md:text-base leading-relaxed max-w-md mx-auto lg:mx-0 font-normal">
-                  Our background-verified certified laptop engineers arrive in 10–30 minutes to solve your issues at your doorstep.
+                  Our background-verified certified laptop engineers arrive in 30 minutes to solve your issues at your doorstep.
                 </p>
 
                 <div className="flex flex-wrap items-center justify-center lg:justify-start gap-3.5 pt-2">
                   <Link
                     to="/services"
-                    className="px-6 py-3.5 rounded-full bg-[#04B6EA] hover:bg-[#039ecc] text-white font-bold text-xs sm:text-sm transition-all hover:scale-105 cursor-pointer"
+                    className="px-6 py-3.5 rounded-full bg-[#028dcd] hover:bg-[#039ecc] text-white font-bold text-xs sm:text-sm transition-all hover:scale-105 cursor-pointer"
                   >
                     Book Doorstep Repair
                   </Link>

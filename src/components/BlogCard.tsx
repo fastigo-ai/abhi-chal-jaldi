@@ -44,14 +44,14 @@ const BlogCard: React.FC<BlogCardProps> = ({ blog, index = 0 }) => {
 
           {/* Top Badges */}
           <div className="absolute top-3 left-3 right-3 flex items-center justify-between pointer-events-none">
-            <span className="inline-flex items-center gap-1 px-3 py-1 bg-white/95 backdrop-blur-md text-[#04B6EA] font-extrabold text-[10px] uppercase tracking-wider rounded-full">
-              <Sparkles className="w-2.5 h-2.5 fill-[#04B6EA]" />
+            <span className="inline-flex items-center gap-1 px-3 py-1 bg-white/95 backdrop-blur-md text-[#028dcd] font-extrabold text-[10px] uppercase tracking-wider rounded-full">
+              <Sparkles className="w-2.5 h-2.5 fill-[#028dcd]" />
               <span>{blog.category}</span>
             </span>
 
             {blog.city && blog.city !== "India" && blog.city !== "All Cities" && (
               <span className="inline-flex items-center gap-1 px-2.5 py-0.5 bg-slate-900/80 backdrop-blur-md text-white text-[10px] font-semibold rounded-full">
-                <MapPin className="w-2.5 h-2.5 text-[#04B6EA]" />
+                <MapPin className="w-2.5 h-2.5 text-[#028dcd]" />
                 <span>{blog.city}</span>
               </span>
             )}
@@ -64,18 +64,18 @@ const BlogCard: React.FC<BlogCardProps> = ({ blog, index = 0 }) => {
             {/* Meta Timestamp & Reading Time */}
             <div className="flex items-center gap-2 text-[11px] font-semibold text-slate-400">
               <div className="flex items-center gap-1 text-slate-500">
-                <Calendar className="w-3 h-3 text-[#04B6EA]" />
+                <Calendar className="w-3 h-3 text-[#028dcd]" />
                 <span>{formattedDate}</span>
               </div>
               <span>·</span>
               <div className="flex items-center gap-1 text-slate-500">
-                <Clock className="w-3 h-3 text-[#04B6EA]" />
+                <Clock className="w-3 h-3 text-[#028dcd]" />
                 <span>4 min read</span>
               </div>
             </div>
 
             {/* Title */}
-            <h3 className="text-base sm:text-lg font-extrabold text-slate-900 group-hover:text-[#04B6EA] transition-colors leading-snug line-clamp-2">
+            <h3 className="text-base sm:text-lg font-extrabold text-slate-900 group-hover:text-[#028dcd] transition-colors leading-snug line-clamp-2">
               {blog.title}
             </h3>
 
@@ -87,10 +87,10 @@ const BlogCard: React.FC<BlogCardProps> = ({ blog, index = 0 }) => {
 
           {/* Card Footer */}
           <div className="pt-3.5 flex items-center justify-between mt-auto">
-            <span className="text-xs font-bold text-slate-500 group-hover:text-[#04B6EA] transition-colors">
+            <span className="text-xs font-bold text-slate-500 group-hover:text-[#028dcd] transition-colors">
               Read Complete Guide
             </span>
-            <div className="w-7 h-7 rounded-full bg-[#E1F7F9] text-[#04B6EA] flex items-center justify-center transition-all duration-300 group-hover:bg-[#04B6EA] group-hover:text-white group-hover:translate-x-1">
+            <div className="w-7 h-7 rounded-full bg-[#E1F7F9] text-[#028dcd] flex items-center justify-center transition-all duration-300 group-hover:bg-[#028dcd] group-hover:text-white group-hover:translate-x-1">
               <ArrowRight className="w-3.5 h-3.5" />
             </div>
           </div>

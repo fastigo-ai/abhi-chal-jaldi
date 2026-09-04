@@ -25,11 +25,18 @@ const NotFound = lazy(() => import("./pages/NotFound"));
 const BlogList = lazy(() => import("./pages/BlogList"));
 const BlogPage = lazy(() => import("./pages/BlogPage"));
 const Contact = lazy(() => import("./pages/ContactUs"));
+const RefundPolicy = lazy(() => import("./pages/RefundPolicy"));
+const TermsAndConditions = lazy(() => import("./pages/TermsAndConditions"));
+const AntiDiscriminationPolicy = lazy(() => import("./pages/AntiDiscriminationPolicy"));
+const PartnerGuidelines = lazy(() => import("./pages/PartnerGuidelines"));
+const PartnerBenefits = lazy(() => import("./pages/PartnerBenefits"));
+const PartnerSupport = lazy(() => import("./pages/PartnerSupport"));
+const EngineerReviews = lazy(() => import("./pages/EngineerReviews"));
 
 // Loading Fallback Component
 const PageLoader = () => (
   <div className="flex items-center justify-center min-h-[60vh]">
-    <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-[#04B6EA]"></div>
+    <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-[#028dcd]"></div>
   </div>
 );
 
@@ -45,6 +52,20 @@ const MetaPixelTracker = () => {
   }, [location]);
 
   return null;
+};
+
+// Smooth External Redirect Component for Careers
+const CareersRedirect = () => {
+  useEffect(() => {
+    window.location.replace("https://partner.door2fy.in/");
+  }, []);
+
+  return (
+    <div className="flex flex-col items-center justify-center min-h-[60vh] gap-3 pt-24 text-center">
+      <div className="animate-spin rounded-full h-10 w-10 border-b-2 border-[#028dcd]"></div>
+      <p className="text-slate-600 font-medium text-sm">Opening Door2fy Career Portal...</p>
+    </div>
+  );
 };
 
 // ⚙️ Query Client
@@ -69,14 +90,27 @@ const App = () => {
             <Suspense fallback={<PageLoader />}>
               <Routes>
                 <Route path="/" element={<Home />} />
+                <Route path="/about-us" element={<WhyUs />} />
+                <Route path="/about" element={<WhyUs />} />
                 <Route path="/why-us" element={<WhyUs />} />
+                <Route path="/careers" element={<CareersRedirect />} />
+                <Route path="/career" element={<CareersRedirect />} />
                 <Route path="/services" element={<Services />} />
                 <Route path="/service/:slug" element={<ServiceDetails />} />
                 <Route path="/how-it-works" element={<HowItWorks />} />
                 <Route path="/faqs" element={<FAQs />} />
                 <Route path="/contact-us" element={<Contact />} />
                 <Route path="/contact" element={<Contact />} />
+                <Route path="/refund-policy" element={<RefundPolicy />} />
+                <Route path="/refundable-policy" element={<RefundPolicy />} />
+                <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
+                <Route path="/terms" element={<TermsAndConditions />} />
                 <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+                <Route path="/anti-discrimination-policy" element={<AntiDiscriminationPolicy />} />
+                <Route path="/partner-guidelines" element={<PartnerGuidelines />} />
+                <Route path="/partner-benefits" element={<PartnerBenefits />} />
+                <Route path="/engineer-reviews" element={<EngineerReviews />} />
+                <Route path="/partner-support" element={<PartnerSupport />} />
                 <Route path="/blogs" element={<BlogList />} />
                 <Route path="/blog/:slug" element={<BlogPage />} />
                 <Route path="/best-laptop-service-in/:city" element={<CityService />} />
