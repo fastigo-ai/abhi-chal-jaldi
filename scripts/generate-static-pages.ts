@@ -812,13 +812,10 @@ function injectMetaAndContent(templateHtml: string, page: PageMetadata): string 
     html = html.replace("</head>", `${schemaScript}</head>`);
   }
 
-  // 8. Inject SEO Pre-rendered Crawler Content into <div id="root">
-  const prerenderedRoot = `<div id="root">${page.bodyHtml}</div>`;
-  if (/<div id="root">[\s\S]*?<\/div>/i.test(html)) {
-    html = html.replace(/<div id="root">[\s\S]*?<\/div>/i, prerenderedRoot);
-  } else {
-    html = html.replace('<div id="root"></div>', prerenderedRoot);
-  }
+  // 8. Inject SEO Pre-rendered Crawler Content alongside the Branded Skeleton in <div id="root">
+  const crawlerContent = `\n      <!-- 🤖 SEO Crawler Structured Content -->\n      <div class="seo-crawler-content" style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border-width: 0;">\n${page.bodyHtml}\n      </div>\n    </div>`;
+
+  html = html.replace(/<\/div>\s*<\/body>/i, `${crawlerContent}\n  </body>`);
 
   return html;
 }
@@ -844,7 +841,8 @@ function generateStaticPages() {
 
   // Clean any previously injected root content to make it a pristine template
   const pristineTemplateHtml = rawBaseHtml
-    .replace(/<div id="root">[\s\S]*?<\/div>/i, '<div id="root"></div>')
+    .replace(/<!-- 🤖 SEO Crawler Structured Content -->[\s\S]*?<\/div>\s*<\/div>/gi, "</div>")
+    .replace(/<div class="seo-crawler-content"[\s\S]*?<\/div>/gi, "")
     .replace(/<link\s+rel="canonical"\s+href="[\s\S]*?"\s*\/?>/i, "")
     .replace(/<script type="application\/ld\+json">[\s\S]*?<\/script>/gi, "");
 

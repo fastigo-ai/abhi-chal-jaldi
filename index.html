@@ -65,6 +65,40 @@
       async 
       src="https://omnidim.io/web_widget.js?secret_key=03870a41a88bfa5cd8554fe56d806130">
     </script>
+
+    <!-- ✅ Critical Skeleton Loader CSS for Instant FCP and Zero Layout Shift -->
+    <style>
+      .initial-skeleton-pulse {
+        background: linear-gradient(90deg, #f1f5f9 0%, #e2e8f0 50%, #f1f5f9 100%);
+        background-size: 200% 100%;
+        animation: initialShimmer 1.5s infinite ease-in-out;
+        border-radius: 8px;
+      }
+      @keyframes initialShimmer {
+        0% { background-position: 200% 0; }
+        100% { background-position: -200% 0; }
+      }
+      .initial-nav-skeleton {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 70px;
+        background: rgba(255, 255, 255, 0.9);
+        backdrop-filter: blur(8px);
+        border-bottom: 1px solid #f1f5f9;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 24px;
+        z-index: 50;
+      }
+      .initial-container {
+        max-width: 1280px;
+        margin: 0 auto;
+        padding: 94px 16px 40px;
+      }
+    </style>
   </head>
 
   <body>
@@ -72,7 +106,37 @@
       <img height="1" width="1" style="display:none"
       src="https://www.facebook.com/tr?id=966307126258613&ev=PageView&noscript=1"/>
     </noscript>
-    <div id="root"></div>
+    <div id="root">
+      <div class="initial-nav-skeleton">
+        <div class="initial-skeleton-pulse" style="width: 140px; height: 38px; border-radius: 10px;"></div>
+        <div style="display: flex; gap: 24px;">
+          <div class="initial-skeleton-pulse" style="width: 60px; height: 16px;"></div>
+          <div class="initial-skeleton-pulse" style="width: 70px; height: 16px;"></div>
+          <div class="initial-skeleton-pulse" style="width: 65px; height: 16px;"></div>
+        </div>
+        <div class="initial-skeleton-pulse" style="width: 120px; height: 40px; border-radius: 12px; background: #e0f2fe;"></div>
+      </div>
+      <div class="initial-container">
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 32px; align-items: center; margin-bottom: 48px;">
+          <div style="display: flex; flex-direction: column; gap: 16px;">
+            <div class="initial-skeleton-pulse" style="width: 180px; height: 28px; border-radius: 9999px;"></div>
+            <div class="initial-skeleton-pulse" style="width: 90%; height: 48px; border-radius: 12px;"></div>
+            <div class="initial-skeleton-pulse" style="width: 75%; height: 48px; border-radius: 12px;"></div>
+            <div class="initial-skeleton-pulse" style="width: 80%; height: 18px;"></div>
+            <div class="initial-skeleton-pulse" style="width: 100%; max-width: 480px; height: 56px; border-radius: 16px; margin-top: 8px;"></div>
+          </div>
+          <div style="display: flex; justify-content: center;">
+            <div class="initial-skeleton-pulse" style="width: 100%; max-width: 440px; height: 280px; border-radius: 24px;"></div>
+          </div>
+        </div>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px;">
+          <div class="initial-skeleton-pulse" style="height: 180px; border-radius: 20px;"></div>
+          <div class="initial-skeleton-pulse" style="height: 180px; border-radius: 20px;"></div>
+          <div class="initial-skeleton-pulse" style="height: 180px; border-radius: 20px;"></div>
+          <div class="initial-skeleton-pulse" style="height: 180px; border-radius: 20px;"></div>
+        </div>
+      </div>
+    </div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

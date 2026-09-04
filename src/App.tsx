@@ -11,6 +11,7 @@ import { Navbar } from "./components/Navbar";
 import Footer from "./components/Footer";
 import { ScrollToTop } from "./components/ScrollToTop";
 import { SmoothScroll } from "./components/SmoothScroll";
+import { RouteSkeletonLoader } from "./components/skeletons";
 
 // 🏠 Pages (Lazy Loaded)
 const Home = lazy(() => import("./pages/Home"));
@@ -32,13 +33,6 @@ const PartnerGuidelines = lazy(() => import("./pages/PartnerGuidelines"));
 const PartnerBenefits = lazy(() => import("./pages/PartnerBenefits"));
 const PartnerSupport = lazy(() => import("./pages/PartnerSupport"));
 const EngineerReviews = lazy(() => import("./pages/EngineerReviews"));
-
-// Loading Fallback Component
-const PageLoader = () => (
-  <div className="flex items-center justify-center min-h-[60vh]">
-    <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-[#028dcd]"></div>
-  </div>
-);
 
 // ⚙️ Meta Pixel Tracker Component
 // This component listens to URL changes and fires the Pixel event
@@ -87,7 +81,7 @@ const App = () => {
             <ScrollToTop />
             <Navbar />
 
-            <Suspense fallback={<PageLoader />}>
+            <Suspense fallback={<RouteSkeletonLoader />}>
               <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/about-us" element={<WhyUs />} />

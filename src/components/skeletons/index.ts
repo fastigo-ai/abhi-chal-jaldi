@@ -1,0 +1,13 @@
+export { HomeSkeleton } from "./HomeSkeleton";
+export { CityServiceSkeleton } from "./CityServiceSkeleton";
+export { ServiceDetailsSkeleton } from "./ServiceDetailsSkeleton";
+export { ServicesSkeleton } from "./ServicesSkeleton";
+export { WhyUsSkeleton } from "./WhyUsSkeleton";
+export { BlogListSkeleton } from "./BlogListSkeleton";
+export { BlogPageSkeleton } from "./BlogPageSkeleton";
+export { HowItWorksSkeleton } from "./HowItWorksSkeleton";
+export { FAQsSkeleton } from "./FAQsSkeleton";
+export { ContactSkeleton } from "./ContactSkeleton";
+export { PolicySkeleton } from "./PolicySkeleton";
+export { PartnerSkeleton } from "./PartnerSkeleton";
+export { RouteSkeletonLoader } from "./RouteSkeletonLoader";
