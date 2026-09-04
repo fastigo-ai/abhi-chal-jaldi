@@ -20,8 +20,8 @@ import {
 } from "lucide-react";
 
 // Assets
-import phone1 from "@/assets/phone1.png";
-import door2fyTechLabEngineers from "@/assets/door2fy-tech-lab-engineers.png";
+import phone1 from "@/assets/phone1.webp";
+import door2fyTechLabEngineers from "@/assets/door2fy-tech-lab-engineers.webp";
 
 export default function HowItWorks() {
   const [openFaq, setOpenFaq] = useState<number | null>(0);
@@ -251,6 +251,8 @@ export default function HowItWorks() {
                   alt="Door2fy Rapid Laptop Service"
                   className="w-full h-auto max-h-[340px] sm:max-h-[460px] object-contain drop-shadow-[0_20px_40px_rgba(2, 141, 205,0.18)] transform transition-transform duration-700 ease-out group-hover:scale-105 select-none pointer-events-none"
                   style={{ imageRendering: "-webkit-optimize-contrast" }}
+                  loading="eager"
+                  decoding="async"
                 />
               </div>
             </div>
@@ -442,6 +444,8 @@ export default function HowItWorks() {
                   alt="Door2fy Mobile App"
                   className="w-full max-w-[260px] lg:max-w-[420px] drop-shadow-[0_25px_50px_rgba(79,183,212,0.18)] select-none pointer-events-none"
                   style={{ imageRendering: "-webkit-optimize-contrast" }}
+                  loading="lazy"
+                  decoding="async"
                 />
               </div>
 
@@ -472,6 +476,8 @@ export default function HowItWorks() {
                       src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
                       alt="Google Play"
                       className="h-11 md:h-12 w-auto"
+                      loading="lazy"
+                      decoding="async"
                     />
                   </a>
                   <a
@@ -482,6 +488,8 @@ export default function HowItWorks() {
                       src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Download_on_the_App_Store_Badge.svg"
                       alt="App Store"
                       className="h-11 md:h-12 w-auto"
+                      loading="lazy"
+                      decoding="async"
                     />
                   </a>
                 </div>

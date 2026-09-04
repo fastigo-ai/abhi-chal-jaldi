@@ -18,8 +18,8 @@ import {
 import EngineerReviews from "./EngineerReviews";
 
 // Assets
-import phone1 from "@/assets/phone1.png";
-import faqNamasteImg from "@/assets/door2fy-faq-namaste-engineer.png";
+import phone1 from "@/assets/phone1.webp";
+import faqNamasteImg from "@/assets/door2fy-faq-namaste-engineer.webp";
 
 export default function FAQs() {
   const [searchQuery, setSearchQuery] = useState("");
@@ -251,6 +251,8 @@ export default function FAQs() {
                   alt="Door2fy Verified Laptop Technician"
                   className="w-full h-auto max-h-[320px] sm:max-h-[640px] lg:max-h-[720px] object-contain object-bottom select-none pointer-events-none drop-shadow-[0_20px_40px_rgba(2, 141, 205,0.2)] block"
                   style={{ imageRendering: "-webkit-optimize-contrast" }}
+                  loading="eager"
+                  decoding="async"
                 />
               </div>
             </div>
@@ -408,6 +410,8 @@ export default function FAQs() {
                   alt="Door2fy Mobile App"
                   className="w-full max-w-[260px] lg:max-w-[420px] drop-shadow-[0_25px_50px_rgba(79,183,212,0.18)] select-none pointer-events-none"
                   style={{ imageRendering: "-webkit-optimize-contrast" }}
+                  loading="lazy"
+                  decoding="async"
                 />
               </div>
 
@@ -444,6 +448,8 @@ export default function FAQs() {
                       src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
                       alt="Google Play"
                       className="h-11 md:h-12 w-auto"
+                      loading="lazy"
+                      decoding="async"
                     />
                   </a>
                 </div>

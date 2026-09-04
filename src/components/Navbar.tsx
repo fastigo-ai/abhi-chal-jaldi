@@ -16,7 +16,7 @@ import {
   Home,
 } from "lucide-react";
 import { useState, useEffect } from "react";
-import Logo from "../assets/Logo-removebg-preview.png";
+import Logo from "../assets/Logo-removebg-preview.webp";
 
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -81,7 +81,7 @@ export const Navbar = () => {
 
           {/* Center Logo */}
           <Link to="/" className="text-[#028dcd] h-full flex items-center hover:scale-105 transition-transform">
-            <img src={Logo} alt="Door2fy Logo" className="h-7 w-auto object-contain" />
+            <img src={Logo} alt="Door2fy Logo" className="h-7 w-auto object-contain" loading="eager" decoding="async" />
           </Link>
 
           {/* Right Links */}
@@ -106,7 +106,7 @@ export const Navbar = () => {
         <div className="flex items-center justify-between bg-white/95 rounded-full shadow-md border border-[#E1F7F9] px-5 py-2.5 backdrop-blur-md">
           {/* Left-aligned logo */}
           <Link to="/" className="h-full flex items-center py-0.5">
-            <img src={Logo} alt="Door2fy Logo" className="h-7 w-auto object-contain" />
+            <img src={Logo} alt="Door2fy Logo" className="h-7 w-auto object-contain" loading="eager" decoding="async" />
           </Link>
 
           {/* Right Actions: Phone pill + Hamburger Button */}
@@ -143,7 +143,7 @@ export const Navbar = () => {
         {/* Drawer Header */}
         <div className="flex items-center justify-between px-5 py-4 border-b border-[#E1F7F9] bg-[#F8FDFF]/80">
           <div className="flex items-center">
-            <img src={Logo} alt="Door2fy" className="h-6 w-auto object-contain" />
+            <img src={Logo} alt="Door2fy" className="h-6 w-auto object-contain" loading="eager" decoding="async" />
           </div>
 
           <button

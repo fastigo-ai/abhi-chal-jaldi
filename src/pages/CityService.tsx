@@ -20,10 +20,10 @@ import {
   BatteryCharging,
   HardDrive
 } from "lucide-react";
-import Banner from "../assets/WhatsApp Image 2025-10-16 at 3.58.29 PM.jpeg";
-import support from "../assets/support-removebg-preview.png";
-import MACBOOK from "../assets/mac-removebg-preview.png";
-import install from "../assets/install-removebg-preview.png";
+import Banner from "../assets/WhatsApp Image 2025-10-16 at 3.58.29 PM.webp";
+import support from "../assets/support-removebg-preview.webp";
+import MACBOOK from "../assets/mac-removebg-preview.webp";
+import install from "../assets/install-removebg-preview.webp";
 import { SEOHead } from "@/components/SEOHead";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
@@ -319,6 +319,7 @@ export default function CityService() {
                 alt={`Doorstep Laptop Repair Technician in ${formattedCity}`}
                 className="w-full h-auto object-cover transform hover:scale-105 transition-transform duration-700 select-none"
                 loading="eager"
+                decoding="async"
               />
               <div className="absolute bottom-4 left-4 right-4 bg-white/95 backdrop-blur-md p-3.5 rounded-2xl border border-slate-100 flex items-center justify-between">
                 <div className="text-left">
@@ -417,7 +418,7 @@ export default function CityService() {
             ].map((service, i) => (
               <Card key={i} className="p-8 h-full bg-[#F8FDFF] border border-[#E1F7F9] shadow-xs hover:shadow-xl transition-all duration-300 rounded-[2.5rem] text-left group">
                 <div className="mb-6 bg-white rounded-2xl p-4 inline-block shadow-xs group-hover:scale-105 transition-transform duration-300">
-                  <img src={service.img} alt={service.title} className="w-20 h-20 object-contain" loading="lazy" />
+                  <img src={service.img} alt={service.title} className="w-20 h-20 object-contain" loading="lazy" decoding="async" />
                 </div>
                 <h3 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-[#028dcd] transition-colors">{service.title}</h3>
                 <p className="text-slate-600 text-sm leading-relaxed">{service.desc}</p>

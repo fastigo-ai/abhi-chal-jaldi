@@ -1,19 +1,19 @@
 // src/data/blogs.ts
-import Repair from "../assets/data1.jpeg";
-import repairNoida from "../assets/data2.jpeg";
-import repairGhaziabad from "../assets/data3.jpeg";
-import systemSlow from "../assets/data4.jpeg";
+import Repair from "../assets/data1.webp";
+import repairNoida from "../assets/data2.webp";
+import repairGhaziabad from "../assets/data3.webp";
+import systemSlow from "../assets/data4.webp";
 // Retaining other imports even if not currently used in the 4 blogs below, 
 // in case you add more later.
-import Urgent from "../assets/data5.jpeg";
-import ProfessionalRepair from "../assets/data8.png";
-import slowLaptopImages from "../assets/data7.png";
-import slowLaptopImage from "../assets/data9.png";
-import BlogsPage from '../assets/abcnew.jpg'
-import BlogsPage2 from '../assets/bolgsnew.jpg'
-import pmActivityImages from '../assets/blog_pm_clean_white.jpg'
-import laptopRepairCostDelhi from '../assets/blog_repair_cost_clean_white.jpg'
-import laptopOverheatingDelhi from '../assets/blog_overheating_clean_white.jpg'
+import Urgent from "../assets/data5.webp";
+import ProfessionalRepair from "../assets/data8.webp";
+import slowLaptopImages from "../assets/data7.webp";
+import slowLaptopImage from "../assets/data9.webp";
+import BlogsPage from '../assets/abcnew.webp'
+import BlogsPage2 from '../assets/bolgsnew.webp'
+import pmActivityImages from '../assets/blog_pm_clean_white.webp'
+import laptopRepairCostDelhi from '../assets/blog_repair_cost_clean_white.webp'
+import laptopOverheatingDelhi from '../assets/blog_overheating_clean_white.webp'
 
 // Interface for individual sections within the blog content
 export interface BlogSection {

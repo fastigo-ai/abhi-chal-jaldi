@@ -21,8 +21,8 @@ import {
 } from "lucide-react";
 
 // Assets
-import doorstepNamasteEngineerDoorway from "@/assets/doorstep-namaste-engineer-doorway.png";
-import phone1 from "@/assets/phone1.png";
+import doorstepNamasteEngineerDoorway from "@/assets/doorstep-namaste-engineer-doorway.webp";
+import phone1 from "@/assets/phone1.webp";
 import { useReviews } from "@/utils/reviews";
 
 export default function WhyUs() {
@@ -158,6 +158,8 @@ export default function WhyUs() {
           alt="Door2fy Verified Technician Greeting at Doorstep"
           className="absolute inset-0 w-full h-full object-cover object-[72%_center] sm:object-[68%_center] lg:object-center select-none pointer-events-none"
           style={{ imageRendering: "-webkit-optimize-contrast" }}
+          loading="eager"
+          decoding="async"
         />
 
         {/* Content Container (Positioned on Left Side) */}
@@ -453,6 +455,8 @@ export default function WhyUs() {
                   alt="Door2fy Mobile App"
                   className="w-full max-w-[260px] lg:max-w-[420px] drop-shadow-[0_25px_50px_rgba(79,183,212,0.18)] select-none pointer-events-none"
                   style={{ imageRendering: "-webkit-optimize-contrast" }}
+                  loading="lazy"
+                  decoding="async"
                 />
               </div>
 
@@ -483,6 +487,8 @@ export default function WhyUs() {
                       src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
                       alt="Google Play"
                       className="h-11 md:h-12 w-auto"
+                      loading="lazy"
+                      decoding="async"
                     />
                   </a>
                   <a
@@ -493,6 +499,8 @@ export default function WhyUs() {
                       src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Download_on_the_App_Store_Badge.svg"
                       alt="App Store"
                       className="h-11 md:h-12 w-auto"
+                      loading="lazy"
+                      decoding="async"
                     />
                   </a>
                 </div>

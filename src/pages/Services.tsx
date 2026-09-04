@@ -13,8 +13,8 @@ import {
 } from "lucide-react";
 
 // Assets
-import phone1 from "@/assets/phone1.png";
-import servicesHeroEngineer from "@/assets/services-hero-engineer.png";
+import phone1 from "@/assets/phone1.webp";
+import servicesHeroEngineer from "@/assets/services-hero-engineer.webp";
 
 export default function Services() {
   const metaTitle = "Doorstep Laptop Repair Services | 30 Min Arrival | Door2fy";
@@ -117,6 +117,8 @@ export default function Services() {
                   alt="Door2fy Certified Laptop Engineer Repairing Motherboard"
                   className="w-full h-auto max-h-[300px] sm:max-h-[480px] lg:max-h-[680px] object-contain object-bottom select-none pointer-events-none drop-shadow-[0_20px_40px_rgba(2, 141, 205,0.18)] block transform transition-transform duration-700 hover:scale-[1.02]"
                   style={{ imageRendering: "-webkit-optimize-contrast" }}
+                  loading="eager"
+                  decoding="async"
                 />
               </div>
             </motion.div>
@@ -170,6 +172,7 @@ export default function Services() {
                     alt={service.title}
                     className="w-full h-full object-contain transform transition-transform duration-500 ease-out group-hover:scale-105 select-none"
                     loading="lazy"
+                    decoding="async"
                     style={{ imageRendering: "-webkit-optimize-contrast" }}
                   />
                 </div>
@@ -220,6 +223,8 @@ export default function Services() {
                   alt="Door2fy Mobile App"
                   className="w-full max-w-[260px] lg:max-w-[420px] drop-shadow-[0_25px_50px_rgba(79,183,212,0.18)] select-none pointer-events-none"
                   style={{ imageRendering: "-webkit-optimize-contrast" }}
+                  loading="lazy"
+                  decoding="async"
                 />
               </div>
 
@@ -256,6 +261,8 @@ export default function Services() {
                       src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
                       alt="Google Play"
                       className="h-10 md:h-11 w-auto"
+                      loading="lazy"
+                      decoding="async"
                     />
                   </a>
                 </div>

@@ -39,6 +39,7 @@ const BlogCard: React.FC<BlogCardProps> = ({ blog, index = 0 }) => {
             alt={blog.title}
             className="w-full h-full object-cover transform transition-transform duration-700 ease-out group-hover:scale-106"
             loading="lazy"
+            decoding="async"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-slate-950/60 via-slate-950/15 to-transparent opacity-70 group-hover:opacity-50 transition-opacity duration-300" />
 

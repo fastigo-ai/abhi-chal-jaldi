@@ -17,8 +17,8 @@ import {
 } from "lucide-react";
 
 // Assets
-import phone1 from "@/assets/phone1.png";
-import blogsHeroLaptop from "@/assets/blogs-hero-laptop.png";
+import phone1 from "@/assets/phone1.webp";
+import blogsHeroLaptop from "@/assets/blogs-hero-laptop.webp";
 
 const ITEMS_PER_PAGE = 6; // 2 rows of 3 cards on desktop
 
@@ -179,6 +179,8 @@ export default function BlogList() {
                   alt="Door2fy Laptop Repair Guides & Tech Insights"
                   className="w-full h-auto max-h-[260px] sm:max-h-[420px] lg:max-h-[550px] object-contain select-none pointer-events-none drop-shadow-[0_20px_45px_rgba(2, 141, 205,0.18)] transform transition-transform duration-700 hover:scale-[1.03]"
                   style={{ imageRendering: "-webkit-optimize-contrast" }}
+                  loading="eager"
+                  decoding="async"
                 />
               </div>
             </motion.div>
@@ -399,6 +401,8 @@ export default function BlogList() {
                   alt="Door2fy Mobile App"
                   className="w-full max-w-[260px] lg:max-w-[420px] select-none pointer-events-none"
                   style={{ imageRendering: "-webkit-optimize-contrast" }}
+                  loading="lazy"
+                  decoding="async"
                 />
               </motion.div>
 
@@ -443,6 +447,8 @@ export default function BlogList() {
                       src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
                       alt="Google Play"
                       className="h-10 md:h-11 w-auto"
+                      loading="lazy"
+                      decoding="async"
                     />
                   </a>
                 </div>

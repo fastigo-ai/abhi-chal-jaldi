@@ -308,6 +308,8 @@ export default function EngineerReviews({
                             )}&background=E1F7F9&color=028dcd&bold=true`}
                             alt={r.name}
                             className="w-9 h-9 sm:w-10 sm:h-10 rounded-full object-cover shadow-xs"
+                            loading="lazy"
+                            decoding="async"
                           />
                           <div>
                             <h4 className="font-bold text-xs sm:text-sm text-gray-900">

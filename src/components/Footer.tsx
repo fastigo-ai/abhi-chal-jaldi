@@ -13,7 +13,7 @@ import {
   FaTwitter,
   FaYoutube,
 } from "react-icons/fa";
-import Logo from "../assets/Logo-removebg-preview.png";
+import Logo from "../assets/Logo-removebg-preview.webp";
 
 // Cities list matching the visual layout
 const citiesList = [
@@ -134,7 +134,7 @@ const Footer: React.FC = () => {
             <div>
               {/* Brand Logo */}
               <Link to="/" className="inline-flex items-center">
-                <img src={Logo} alt="Door2fy" className="h-12 sm:h-14 md:h-16 w-auto object-contain" />
+                <img src={Logo} alt="Door2fy" className="h-12 sm:h-14 md:h-16 w-auto object-contain" loading="lazy" decoding="async" />
               </Link>
               <p className="text-xs text-slate-500 font-medium mt-0.5">
                 India's Trusted Home Services Platform

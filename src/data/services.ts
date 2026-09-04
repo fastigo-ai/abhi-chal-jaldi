@@ -1,15 +1,15 @@
-import physical from "@/assets/quickSupport/physical_damage_clean.jpg";
-import system from "@/assets/quickSupport/system_slow_clean.jpg";
-import port from "@/assets/quickSupport/port_issue_clean.jpg";
-import speaker from "@/assets/quickSupport/speaker_camera_clean.jpg";
+import physical from "@/assets/quickSupport/physical_damage_clean.webp";
+import system from "@/assets/quickSupport/system_slow_clean.webp";
+import port from "@/assets/quickSupport/port_issue_clean.webp";
+import speaker from "@/assets/quickSupport/speaker_camera_clean.webp";
 
-import Software from "@/assets/quickSupport/software_crash_clean.jpg";
-import excel from "@/assets/quickSupport/excel_clean.jpg";
-import hanging from "@/assets/quickSupport/freezing_clean.jpg";
-import macbook from "@/assets/quickSupport/macbook_slow_clean.jpg";
-import macos from "@/assets/quickSupport/macos_update_clean.jpg";
-import problem from "@/assets/quickSupport/not_sure_clean.jpg";
-import macbookSupportImg from "@/assets/macbook-support.jpeg";
+import Software from "@/assets/quickSupport/software_crash_clean.webp";
+import excel from "@/assets/quickSupport/excel_clean.webp";
+import hanging from "@/assets/quickSupport/freezing_clean.webp";
+import macbook from "@/assets/quickSupport/macbook_slow_clean.webp";
+import macos from "@/assets/quickSupport/macos_update_clean.webp";
+import problem from "@/assets/quickSupport/not_sure_clean.webp";
+import macbookSupportImg from "@/assets/macbook-support.webp";
 
 export interface ServiceType {
   id: number;

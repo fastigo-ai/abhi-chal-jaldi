@@ -62,6 +62,8 @@ export default function ServiceDetails() {
             src={service.image}
             alt={service.title}
             className="w-full h-[260px] sm:h-[400px] md:h-[550px] object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+            loading="eager"
+            decoding="async"
           />
         </div>
 

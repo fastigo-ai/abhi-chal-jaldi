@@ -277,6 +277,8 @@ export const CylindricalServicesScroller: React.FC<CylindricalServicesScrollerPr
                     alt={service.title}
                     className="w-full h-full object-contain transform transition-transform duration-700 ease-out group-hover:scale-106"
                     draggable={false}
+                    loading="lazy"
+                    decoding="async"
                   />
 
                   {/* Speed Badge */}

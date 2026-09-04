@@ -146,6 +146,7 @@ const BlogDetail = () => {
             alt={blog.title}
             className="w-full h-full object-cover max-h-[460px]"
             loading="eager"
+            decoding="async"
           />
         </div>
       </div>

@@ -10,11 +10,11 @@ import { ArrowRight, Zap, ShieldCheck, Sparkles, CheckCircle2, Award, Clock, Sta
 import { useReviews, ReviewItem } from "@/utils/reviews";
 
 // Assets
-import heroTechnician from "@/assets/hero-section.png";
-import partnerHandshake from "@/assets/partner_handshake.png";
-import macbookSupportImg from "@/assets/macbook-support.jpeg";
-import phone1 from "@/assets/phone1.png";
-import door2fyTechLabEngineers from "@/assets/door2fy-tech-lab-engineers.png";
+import heroTechnician from "@/assets/hero-section.webp";
+import partnerHandshake from "@/assets/partner_handshake.webp";
+import macbookSupportImg from "@/assets/macbook-support.webp";
+import phone1 from "@/assets/phone1.webp";
+import door2fyTechLabEngineers from "@/assets/door2fy-tech-lab-engineers.webp";
 
 /* ================= HERO SECTION ================= */
 const HeroSection = () => {
@@ -67,6 +67,8 @@ const HeroSection = () => {
                     src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
                     alt="Google Play"
                     className="h-[40px] sm:h-[48px] lg:h-[56px] w-auto"
+                    loading="lazy"
+                    decoding="async"
                   />
                 </a>
 
@@ -78,6 +80,8 @@ const HeroSection = () => {
                     src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Download_on_the_App_Store_Badge.svg"
                     alt="App Store"
                     className="h-[40px] sm:h-[48px] lg:h-[56px] w-auto"
+                    loading="lazy"
+                    decoding="async"
                   />
                 </a>
               </div>
@@ -114,6 +118,8 @@ const HeroSection = () => {
                 alt="IT Support"
                 className="relative z-10 w-full h-[340px] sm:h-[480px] lg:h-[720px] drop-shadow-[0_20px_40px_rgba(0,0,0,0.1)] object-contain select-none"
                 style={{ imageRendering: "-webkit-optimize-contrast" }}
+                loading="eager"
+                decoding="async"
               />
 
               {/* Floating Card 1 */}
@@ -352,6 +358,8 @@ const WhyChooseUsSection = () => {
                 alt="Door2fy Certified Hardware Engineers"
                 className="w-full h-auto max-h-[460px] object-contain drop-shadow-[0_20px_50px_rgba(2, 141, 205,0.2)] transform transition-transform duration-700 ease-out group-hover:scale-105 select-none pointer-events-none"
                 style={{ imageRendering: "-webkit-optimize-contrast" }}
+                loading="lazy"
+                decoding="async"
               />
             </div>
           </div>
@@ -434,6 +442,8 @@ const WhyChooseUsSection = () => {
                 alt="mobile app"
                 className="w-full max-w-[240px] sm:max-w-[300px] lg:max-w-[540px] drop-shadow-[0_20px_50px_rgba(79,183,212,0.15)] select-none pointer-events-none"
                 style={{ imageRendering: "-webkit-optimize-contrast" }}
+                loading="lazy"
+                decoding="async"
               />
             </div>
 
@@ -454,6 +464,8 @@ const WhyChooseUsSection = () => {
                     src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
                     alt="Google Play"
                     className="h-10 sm:h-12 md:h-14 w-auto"
+                    loading="lazy"
+                    decoding="async"
                   />
                 </a>
               </div>
@@ -502,6 +514,8 @@ const TestimonialsSection = () => {
           )}&background=E1F7F9&color=028dcd&bold=true`}
           alt={r.name}
           className="w-10 h-10 rounded-full object-cover shadow-xs border border-white"
+          loading="lazy"
+          decoding="async"
         />
         <div className="text-left">
           <h4 className="font-bold text-slate-900 text-sm leading-tight group-hover:text-[#028dcd] transition-colors">
