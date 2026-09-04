@@ -27,7 +27,7 @@ export function GradualSpacing({
   let globalCharIndex = 0;
 
   return (
-    <span ref={ref} className={cn("inline-flex flex-wrap gap-x-[0.25em]", className)}>
+    <span ref={ref} className={cn("inline-flex flex-wrap justify-center lg:justify-start gap-x-[0.25em]", className)}>
       {words.map((word, wordIndex) => (
         <span key={wordIndex} className="inline-flex whitespace-nowrap">
           {word.split("").map((char) => {

@@ -91,22 +91,22 @@ export default function BlogList() {
         <div className="absolute top-[-15%] right-[-10%] w-[550px] h-[550px] bg-[#028dcd]/15 rounded-full -z-10 blur-[130px] pointer-events-none transform-gpu animate-pulse" />
         <div className="absolute bottom-[-10%] left-[-10%] w-[450px] h-[450px] bg-[#38BDF8]/12 rounded-full -z-10 blur-[120px] pointer-events-none transform-gpu" />
 
-        <div className="max-w-7xl mx-auto px-6 lg:px-8 w-full relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 lg:gap-10 items-center">
             {/* Left Column: Text & Search (6/12) */}
-            <div className="lg:col-span-6 text-left space-y-6 order-2 lg:order-1">
+            <div className="lg:col-span-6 text-left space-y-4 sm:space-y-6 order-1 lg:order-1">
               {/* Status Pill with Motion */}
               <motion.div
                 initial={{ opacity: 0, y: -15, scale: 0.95 }}
                 animate={{ opacity: 1, y: 0, scale: 1 }}
                 transition={{ duration: 0.5, ease: "easeOut" }}
-                className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-white/90 backdrop-blur-md"
+                className="inline-flex items-center gap-2.5 px-3.5 sm:px-4 py-1.5 rounded-full bg-white/90 backdrop-blur-md border border-slate-100 shadow-xs"
               >
                 <span className="relative flex h-2.5 w-2.5">
                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#028dcd] opacity-75"></span>
                   <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-[#028dcd]"></span>
                 </span>
-                <span className="text-xs font-bold text-slate-800 tracking-wide">
+                <span className="text-[11px] sm:text-xs font-bold text-slate-800 tracking-wide">
                   Door2fy Tech Hub <span className="text-slate-300">·</span> {totalBlogs}+ Certified Guides
                 </span>
               </motion.div>
@@ -116,7 +116,7 @@ export default function BlogList() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
-                className="text-4xl sm:text-5xl lg:text-6xl font-black text-slate-900 tracking-tight leading-[1.12]"
+                className="text-3xl sm:text-5xl lg:text-6xl font-black text-slate-900 tracking-tight leading-[1.12]"
               >
                 Laptop Repair Guides & <br />
                 <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#028dcd] to-[#0284c7]">
@@ -129,7 +129,7 @@ export default function BlogList() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
-                className="text-slate-600 text-base sm:text-lg leading-relaxed font-normal max-w-xl"
+                className="text-slate-600 text-sm sm:text-base lg:text-lg leading-relaxed font-normal max-w-xl"
               >
                 Practical troubleshooting steps, hardware maintenance advice, and speed optimization articles written directly by our certified doorstep laptop engineers.
               </motion.p>
@@ -141,21 +141,21 @@ export default function BlogList() {
                 transition={{ duration: 0.6, delay: 0.3, ease: "easeOut" }}
                 className="pt-1 max-w-xl"
               >
-                <div className="relative flex items-center rounded-full bg-[#F0FBFF]">
+                <div className="relative flex items-center rounded-full bg-[#F0FBFF] border border-[#E1F7F9] shadow-xs">
                   <div className="absolute left-4 flex items-center pointer-events-none">
-                    <Search className="w-5 h-5 text-[#028dcd]" />
+                    <Search className="w-4 h-4 sm:w-5 sm:h-5 text-[#028dcd]" />
                   </div>
                   <input
                     type="text"
                     placeholder="Search by issue (e.g. slow laptop, overheating, SSD upgrade)..."
                     value={searchQuery}
                     onChange={(e) => setSearchQuery(e.target.value)}
-                    className="w-full pl-12 pr-14 py-3.5 sm:py-4 rounded-full bg-[#F0FBFF] text-sm font-medium text-slate-800 focus:outline-none transition-all placeholder:text-slate-400"
+                    className="w-full pl-11 sm:pl-12 pr-14 py-3 sm:py-4 rounded-full bg-[#F0FBFF] text-xs sm:text-sm font-medium text-slate-800 focus:outline-none transition-all placeholder:text-slate-400"
                   />
                   {searchQuery && (
                     <button
                       onClick={() => setSearchQuery("")}
-                      className="absolute right-3.5 px-2.5 py-1 text-xs font-bold text-slate-400 hover:text-slate-700 bg-white rounded-full transition-colors cursor-pointer"
+                      className="absolute right-3 px-2 py-1 text-[11px] font-bold text-slate-400 hover:text-slate-700 bg-white rounded-full transition-colors cursor-pointer shadow-xs"
                     >
                       Clear
                     </button>
@@ -169,15 +169,15 @@ export default function BlogList() {
               initial={{ opacity: 0, x: 30, scale: 0.95 }}
               animate={{ opacity: 1, x: 0, scale: 1 }}
               transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
-              className="lg:col-span-6 flex justify-center lg:justify-end items-center relative order-1 lg:order-2"
+              className="lg:col-span-6 flex justify-center lg:justify-end items-center relative order-2 lg:order-2"
             >
-              <div className="relative w-full max-w-[420px] sm:max-w-[540px] lg:max-w-[620px] xl:max-w-[680px]">
+              <div className="relative w-full max-w-[300px] sm:max-w-[540px] lg:max-w-[620px] xl:max-w-[680px]">
                 {/* Ambient glow behind laptop */}
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[380px] sm:w-[500px] h-[360px] bg-[#028dcd]/20 rounded-full blur-3xl pointer-events-none -z-10" />
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[260px] sm:w-[500px] h-[260px] sm:h-[360px] bg-[#028dcd]/20 rounded-full blur-3xl pointer-events-none -z-10" />
                 <img
                   src={blogsHeroLaptop}
                   alt="Door2fy Laptop Repair Guides & Tech Insights"
-                  className="w-full h-auto object-contain select-none pointer-events-none drop-shadow-[0_20px_45px_rgba(2, 141, 205,0.18)] transform transition-transform duration-700 hover:scale-[1.03]"
+                  className="w-full h-auto max-h-[260px] sm:max-h-[420px] lg:max-h-[550px] object-contain select-none pointer-events-none drop-shadow-[0_20px_45px_rgba(2, 141, 205,0.18)] transform transition-transform duration-700 hover:scale-[1.03]"
                   style={{ imageRendering: "-webkit-optimize-contrast" }}
                 />
               </div>

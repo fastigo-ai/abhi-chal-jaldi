@@ -192,47 +192,47 @@ export default function FAQs() {
         <div className="absolute -bottom-24 -left-24 w-[500px] h-[500px] bg-[#028dcd]/10 rounded-full -z-10 blur-[120px] transform-gpu"></div>
         <div className="absolute -bottom-24 -right-24 w-[500px] h-[500px] bg-blue-400/10 rounded-full -z-10 blur-[120px] transform-gpu"></div>
 
-        <div className="max-w-7xl mx-auto px-6 lg:px-8 w-full pt-20 lg:pt-24 pb-0 relative z-10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full pt-16 sm:pt-20 lg:pt-24 pb-0 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-end">
             {/* Left Column: Text & Search (6/12) */}
-            <div className="lg:col-span-6 text-left space-y-6 order-2 lg:order-1 pb-10 lg:pb-16 pt-2 lg:pt-6">
+            <div className="lg:col-span-6 text-left space-y-4 sm:space-y-6 order-1 lg:order-1 pb-6 sm:pb-10 lg:pb-16 pt-2 lg:pt-6">
               {/* Live Status Pill */}
-              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-gray-100 shadow-sm">
+              <div className="inline-flex items-center gap-2 px-3 sm:px-3.5 py-1.5 rounded-full bg-white border border-gray-100 shadow-xs">
                 <span className="relative flex h-2 w-2">
                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
                   <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
                 </span>
-                <span className="text-xs font-semibold text-gray-700 tracking-wide">
+                <span className="text-[11px] sm:text-xs font-semibold text-gray-700 tracking-wide">
                   Help & Knowledge Base <span className="text-gray-300">·</span> 24/7 Doorstep Support
                 </span>
               </div>
 
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-slate-900 tracking-tight leading-[1.12]">
+              <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black text-slate-900 tracking-tight leading-[1.12]">
                 Frequently Asked <br />
                 <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#028dcd] to-[#0284c7]">
                   Questions
                 </span>
               </h1>
 
-              <p className="text-slate-600 text-base sm:text-lg leading-relaxed font-normal max-w-xl">
+              <p className="text-slate-600 text-sm sm:text-base lg:text-lg leading-relaxed font-normal max-w-xl">
                 Everything you need to know about Door2fy's 30 minute doorstep laptop repair, spare parts warranty, data privacy, and pricing.
               </p>
 
               {/* Live Search Input */}
               <div className="pt-2 max-w-lg">
-                <div className="relative flex items-center shadow-sm rounded-full">
-                  <Search className="absolute left-4 w-5 h-5 text-[#028dcd] pointer-events-none" />
+                <div className="relative flex items-center shadow-xs rounded-full">
+                  <Search className="absolute left-4 w-4 h-4 sm:w-5 sm:h-5 text-[#028dcd] pointer-events-none" />
                   <input
                     type="text"
                     placeholder="Search a question (e.g. warranty, arrival time, pricing)..."
                     value={searchQuery}
                     onChange={(e) => setSearchQuery(e.target.value)}
-                    className="w-full pl-12 pr-14 py-3.5 sm:py-4 rounded-full bg-white border border-slate-200/90 text-sm font-medium text-slate-800 focus:outline-none focus:border-[#028dcd] focus:ring-4 focus:ring-[#028dcd]/15 transition-all placeholder:text-slate-400"
+                    className="w-full pl-11 sm:pl-12 pr-14 py-3 sm:py-4 rounded-full bg-white border border-slate-200/90 text-xs sm:text-sm font-medium text-slate-800 focus:outline-none focus:border-[#028dcd] focus:ring-4 focus:ring-[#028dcd]/15 transition-all placeholder:text-slate-400 shadow-xs"
                   />
                   {searchQuery && (
                     <button
                       onClick={() => setSearchQuery("")}
-                      className="absolute right-3.5 px-2.5 py-1 text-xs font-bold text-slate-400 hover:text-slate-700 bg-slate-100 rounded-full transition-colors cursor-pointer"
+                      className="absolute right-3 px-2 py-1 text-[11px] font-bold text-slate-400 hover:text-slate-700 bg-slate-100 rounded-full transition-colors cursor-pointer"
                     >
                       Clear
                     </button>
@@ -242,14 +242,14 @@ export default function FAQs() {
             </div>
 
             {/* Right Column: Namaste Engineer Image (6/12) Full Top-to-Bottom */}
-            <div className="lg:col-span-6 flex justify-center lg:justify-end items-end relative order-1 lg:order-2 self-end">
-              <div className="relative w-full max-w-[440px] sm:max-w-[560px] lg:max-w-[680px] xl:max-w-[760px] flex items-end justify-center lg:justify-end">
+            <div className="lg:col-span-6 flex justify-center lg:justify-end items-end relative order-2 lg:order-2 self-end">
+              <div className="relative w-full max-w-[340px] sm:max-w-[560px] lg:max-w-[680px] xl:max-w-[760px] flex items-end justify-center lg:justify-end">
                 {/* Ambient floor glow */}
-                <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 w-[380px] sm:w-[540px] h-[180px] bg-[#028dcd]/30 rounded-full blur-3xl pointer-events-none -z-10" />
+                <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 w-[300px] sm:w-[540px] h-[140px] sm:h-[180px] bg-[#028dcd]/30 rounded-full blur-3xl pointer-events-none -z-10" />
                 <img
                   src={faqNamasteImg}
                   alt="Door2fy Verified Laptop Technician"
-                  className="w-full h-auto max-h-[550px] sm:max-h-[640px] lg:max-h-[720px] object-contain object-bottom select-none pointer-events-none drop-shadow-[0_25px_50px_rgba(2, 141, 205,0.2)] block"
+                  className="w-full h-auto max-h-[320px] sm:max-h-[640px] lg:max-h-[720px] object-contain object-bottom select-none pointer-events-none drop-shadow-[0_20px_40px_rgba(2, 141, 205,0.2)] block"
                   style={{ imageRendering: "-webkit-optimize-contrast" }}
                 />
               </div>
@@ -260,7 +260,7 @@ export default function FAQs() {
 
       {/* ================= ACCORDION FAQS SECTION ================= */}
       <section className="pt-8 sm:pt-10 pb-16 md:pb-20 bg-white">
-        <div className="max-w-4xl mx-auto px-6 lg:px-8 space-y-12">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8 sm:space-y-12">
           {filteredFaqCategories.length === 0 ? (
             <div className="text-center py-20 bg-[#F8FDFF] rounded-3xl border border-[#E1F7F9] p-8">
               <HelpCircle className="w-12 h-12 text-[#028dcd] mx-auto mb-3 opacity-60" />

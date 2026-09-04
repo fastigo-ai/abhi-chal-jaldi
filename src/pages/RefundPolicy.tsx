@@ -22,7 +22,7 @@ export default function RefundPolicy() {
       />
 
       {/* ================= 1. HERO HEADER ================= */}
-      <div className="max-w-4xl mx-auto px-6 pt-8 pb-10 text-left">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 pt-4 sm:pt-8 pb-8 sm:pb-10 text-left">
         <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#E1F7F9] text-[#028dcd] text-xs font-bold mb-4">
           <ShieldCheck className="w-4 h-4 text-[#028dcd]" />
           <span>100% Service Protection Guarantee</span>
@@ -35,13 +35,13 @@ export default function RefundPolicy() {
           Effective Date: October 1, 2025 · Last Updated: 2026
         </p>
 
-        <p className="text-slate-600 text-base leading-relaxed mt-4">
+        <p className="text-slate-600 text-sm sm:text-base leading-relaxed mt-4">
           At <strong className="text-slate-900">Door2fy</strong>, customer satisfaction, honest diagnostics, and genuine spare parts are our topmost priorities. We believe in 100% pricing transparency and zero-risk service guarantees.
         </p>
       </div>
 
       {/* ================= 2. HIGHLIGHT CARDS ================= */}
-      <div className="max-w-4xl mx-auto px-6 mb-12">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 mb-8 sm:mb-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           <div className="p-5 rounded-2xl bg-white border border-slate-100 shadow-xs">
             <RotateCcw className="w-6 h-6 text-[#028dcd] mb-2" />

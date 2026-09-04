@@ -94,30 +94,30 @@ export default function ContactUs() {
       />
 
       {/* Dynamic Ambient Background Glow */}
-      <div className="relative overflow-hidden pt-8 pb-16 md:pt-12 md:pb-24">
+      <div className="relative overflow-hidden pt-4 pb-12 sm:pt-8 sm:pb-16 md:pt-12 md:pb-24">
         <div className="absolute top-10 left-1/2 -translate-x-1/2 w-[700px] h-[400px] bg-[#028dcd]/10 rounded-full blur-[150px] pointer-events-none -z-10" />
         <div className="absolute top-1/3 -right-20 w-[400px] h-[400px] bg-blue-100/30 rounded-full blur-[120px] pointer-events-none -z-10" />
 
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Main Grid: Left Details & Right Form */}
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-start">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-14 items-start">
 
             {/* LEFT COLUMN: Contact Channels & Info (7/12) */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, ease: "easeOut" }}
-              className="lg:col-span-7 text-left space-y-8"
+              className="lg:col-span-7 text-left space-y-6 sm:space-y-8"
             >
               <div>
                 {/* Header Tag / Pill */}
-                <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#E1F7F9] text-[#028dcd] text-xs font-extrabold mb-4 shadow-xs border border-[#028dcd]/20">
+                <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#E1F7F9] text-[#028dcd] text-[11px] sm:text-xs font-extrabold mb-3 sm:mb-4 shadow-xs border border-[#028dcd]/20">
                   <Sparkles className="w-3.5 h-3.5 fill-[#028dcd]" />
                   <span>24/7 Doorstep Support & Consultation</span>
                 </div>
 
                 {/* Main Heading */}
-                <h1 className="text-4xl sm:text-5xl lg:text-[3.4rem] font-black text-slate-900 tracking-tight leading-[1.12]">
+                <h1 className="text-3xl sm:text-5xl lg:text-[3.4rem] font-black text-slate-900 tracking-tight leading-[1.12]">
                   Get in touch with <br />
                   <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#028dcd] to-[#0284c7]">
                     Door2fy Experts
@@ -125,7 +125,7 @@ export default function ContactUs() {
                 </h1>
 
                 {/* Subtitle */}
-                <p className="text-slate-600 text-base sm:text-lg font-normal leading-relaxed mt-4 max-w-xl">
+                <p className="text-slate-600 text-sm sm:text-base md:text-lg font-normal leading-relaxed mt-3 sm:mt-4 max-w-xl">
                   Have a laptop issue, need quick hardware diagnostics, or require corporate IT support?
                   Our certified engineers arrive at your doorstep in <span className="text-[#028dcd] font-bold">30 minutes</span>.
                 </p>
@@ -280,15 +280,15 @@ export default function ContactUs() {
               className="lg:col-span-5 relative"
             >
               {/* Form Ambient Glow */}
-              <div className="absolute -inset-4 bg-[#028dcd]/15 rounded-[3.5rem] blur-2xl -z-10" />
+              <div className="absolute -inset-2 sm:-inset-4 bg-[#028dcd]/15 rounded-[2.5rem] sm:rounded-[3.5rem] blur-2xl -z-10" />
 
-              <div className="bg-white rounded-[2.5rem] sm:rounded-[3rem] p-7 sm:p-9 md:p-10 border border-[#E1F7F9] shadow-[0_25px_60px_rgba(2, 141, 205,0.12)] relative text-left">
-                <div className="mb-7">
+              <div className="bg-white rounded-2xl sm:rounded-[3rem] p-5 sm:p-8 md:p-10 border border-[#E1F7F9] shadow-[0_20px_50px_rgba(2, 141, 205,0.1)] relative text-left">
+                <div className="mb-5 sm:mb-7">
                   <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#E1F7F9] text-[#028dcd] text-[11px] font-extrabold mb-2">
                     <Headphones className="w-3.5 h-3.5" />
                     <span>Quick Callback Form</span>
                   </div>
-                  <h2 className="text-2xl sm:text-3xl font-black text-slate-900 tracking-tight">
+                  <h2 className="text-xl sm:text-2xl md:text-3xl font-black text-slate-900 tracking-tight">
                     Send Us a Message
                   </h2>
                   <p className="text-slate-500 text-xs sm:text-sm font-medium mt-1">

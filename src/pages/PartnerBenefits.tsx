@@ -25,36 +25,36 @@ export default function PartnerBenefits() {
       />
 
       {/* ================= 1. HERO SECTION ================= */}
-      <section className="relative overflow-hidden py-12 md:py-20 bg-gradient-to-b from-[#F0FAFD] to-transparent">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8 text-center relative z-10">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white border border-[#028dcd]/20 shadow-xs mb-6">
+      <section className="relative overflow-hidden py-8 sm:py-12 md:py-20 bg-gradient-to-b from-[#F0FAFD] to-transparent">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white border border-[#028dcd]/20 shadow-xs mb-4 sm:mb-6">
             <Zap className="w-4 h-4 text-[#028dcd]" />
             <span className="text-xs font-bold text-[#028dcd] tracking-wide uppercase">
               India's Highest Earning Partner Network
             </span>
           </div>
 
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-slate-900 tracking-tight leading-[1.15] max-w-4xl mx-auto">
+          <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black text-slate-900 tracking-tight leading-[1.15] max-w-4xl mx-auto">
             Earn More, Grow Faster with <br className="hidden sm:inline" />
             <span className="text-[#028dcd]">Door2fy Partnership</span>
           </h1>
 
-          <p className="text-slate-600 text-base sm:text-lg lg:text-xl max-w-2xl mx-auto mt-5 leading-relaxed">
+          <p className="text-slate-600 text-sm sm:text-lg lg:text-xl max-w-2xl mx-auto mt-4 sm:mt-5 leading-relaxed">
             Turn your laptop repair skills into a thriving, independent business. Get guaranteed daily jobs within your local radius, daily bank payouts, and free OEM spare parts supply.
           </p>
 
-          <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
+          <div className="mt-6 sm:mt-8 flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4">
             <a
               href="https://partner.door2fy.in"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-8 py-4 rounded-full bg-[#028dcd] text-white font-extrabold text-sm sm:text-base hover:bg-[#039ecc] shadow-lg shadow-[#028dcd]/25 transition-all hover:scale-105"
+              className="w-full sm:w-auto px-8 py-3.5 sm:py-4 rounded-full bg-[#028dcd] text-white font-extrabold text-sm sm:text-base hover:bg-[#039ecc] shadow-lg shadow-[#028dcd]/25 transition-all hover:scale-105 text-center"
             >
               Join as a Certified Partner Now
             </a>
             <Link
               to="/partner-guidelines"
-              className="px-7 py-4 rounded-full bg-white border border-slate-200 text-slate-700 font-bold text-sm hover:border-[#028dcd] hover:text-[#028dcd] transition-all shadow-xs"
+              className="w-full sm:w-auto px-7 py-3.5 sm:py-4 rounded-full bg-white border border-slate-200 text-slate-700 font-bold text-sm hover:border-[#028dcd] hover:text-[#028dcd] transition-all shadow-xs text-center"
             >
               View Partner Guidelines
             </Link>
@@ -63,7 +63,7 @@ export default function PartnerBenefits() {
       </section>
 
       {/* ================= 2. EARNING CALCULATOR / HIGHLIGHTS ================= */}
-      <section className="py-12 max-w-7xl mx-auto px-6 lg:px-8">
+      <section className="py-8 sm:py-12 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <div className="p-8 rounded-3xl bg-gradient-to-br from-[#028dcd] to-[#0170a3] text-white shadow-xl relative overflow-hidden flex flex-col justify-between">
             <div>

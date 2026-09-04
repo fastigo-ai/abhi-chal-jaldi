@@ -40,22 +40,22 @@ export default function Services() {
         <div className="absolute -bottom-24 -left-24 w-[500px] h-[500px] bg-[#028dcd]/10 rounded-full -z-10 blur-[120px] transform-gpu"></div>
         <div className="absolute -bottom-24 -right-24 w-[500px] h-[500px] bg-blue-400/10 rounded-full -z-10 blur-[120px] transform-gpu"></div>
 
-        <div className="max-w-7xl mx-auto px-6 lg:px-8 w-full pt-20 lg:pt-24 pb-0 relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-8 items-end">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full pt-16 sm:pt-20 lg:pt-24 pb-0 relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 items-end">
             {/* Left Column: Text & Badges (6/12) */}
-            <div className="lg:col-span-6 text-left space-y-6 order-2 lg:order-1 pb-10 lg:pb-16 pt-2 lg:pt-6">
+            <div className="lg:col-span-6 text-left space-y-4 sm:space-y-6 order-1 lg:order-1 pb-6 sm:pb-10 lg:pb-16 pt-2 lg:pt-6">
               {/* Status Pill with Motion */}
               <motion.div
                 initial={{ opacity: 0, y: -15, scale: 0.95 }}
                 animate={{ opacity: 1, y: 0, scale: 1 }}
                 transition={{ duration: 0.5, ease: "easeOut" }}
-                className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-gray-100 shadow-xs"
+                className="inline-flex items-center gap-2 px-3 sm:px-3.5 py-1.5 rounded-full bg-white border border-gray-100 shadow-xs"
               >
                 <span className="relative flex h-2 w-2">
                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
                   <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
                 </span>
-                <span className="text-xs font-semibold text-gray-700 tracking-wide">
+                <span className="text-[11px] sm:text-xs font-semibold text-gray-700 tracking-wide">
                   10-30 Minute Doorstep Arrival <span className="text-gray-300">·</span> 50+ Cities Live
                 </span>
               </motion.div>
@@ -65,7 +65,7 @@ export default function Services() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
-                className="text-4xl sm:text-5xl lg:text-6xl font-black text-slate-900 tracking-tight leading-[1.12]"
+                className="text-3xl sm:text-5xl lg:text-6xl font-black text-slate-900 tracking-tight leading-[1.12]"
               >
                 Professional <br />
                 <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#028dcd] to-[#0284c7]">
@@ -78,7 +78,7 @@ export default function Services() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
-                className="text-slate-600 text-base sm:text-lg leading-relaxed font-normal max-w-xl"
+                className="text-slate-600 text-sm sm:text-base lg:text-lg leading-relaxed font-normal max-w-xl"
               >
                 Fast, on-demand laptop repair, chip-level diagnostics, and system optimizations delivered at your doorstep by certified engineers.
               </motion.p>
@@ -88,15 +88,15 @@ export default function Services() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.3, ease: "easeOut" }}
-                className="flex flex-wrap items-center gap-2.5 pt-1"
+                className="flex flex-wrap items-center gap-2 pt-1"
               >
-                <span className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-white border border-slate-200/80 text-xs font-bold text-slate-800 shadow-xs">
+                <span className="inline-flex items-center gap-1.5 px-3 py-1 sm:px-3.5 sm:py-1.5 rounded-full bg-white border border-slate-200/80 text-[11px] sm:text-xs font-bold text-slate-800 shadow-xs">
                   <Clock className="w-3.5 h-3.5 text-[#028dcd]" /> 5–10 Min Diagnosis
                 </span>
-                <span className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-white border border-slate-200/80 text-xs font-bold text-slate-800 shadow-xs">
+                <span className="inline-flex items-center gap-1.5 px-3 py-1 sm:px-3.5 sm:py-1.5 rounded-full bg-white border border-slate-200/80 text-[11px] sm:text-xs font-bold text-slate-800 shadow-xs">
                   <ShieldCheck className="w-3.5 h-3.5 text-emerald-600" /> Up to 90 Days Warranty
                 </span>
-                <span className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-white border border-slate-200/80 text-xs font-bold text-slate-800 shadow-xs">
+                <span className="inline-flex items-center gap-1.5 px-3 py-1 sm:px-3.5 sm:py-1.5 rounded-full bg-white border border-slate-200/80 text-[11px] sm:text-xs font-bold text-slate-800 shadow-xs">
                   <Star className="w-3.5 h-3.5 text-amber-500 fill-amber-500" /> 4.9/5 Rating
                 </span>
               </motion.div>
@@ -107,15 +107,15 @@ export default function Services() {
               initial={{ opacity: 0, x: 30, scale: 0.95 }}
               animate={{ opacity: 1, x: 0, scale: 1 }}
               transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
-              className="lg:col-span-6 flex justify-center lg:justify-end items-end relative order-1 lg:order-2 self-end"
+              className="lg:col-span-6 flex justify-center lg:justify-end items-end relative order-2 lg:order-2 self-end"
             >
-              <div className="relative w-full max-w-[440px] sm:max-w-[560px] lg:max-w-[660px] xl:max-w-[740px] flex items-end justify-center lg:justify-end">
+              <div className="relative w-full max-w-[340px] sm:max-w-[560px] lg:max-w-[660px] xl:max-w-[740px] flex items-end justify-center lg:justify-end">
                 {/* Ambient floor glow */}
-                <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 w-[380px] sm:w-[540px] h-[180px] bg-[#028dcd]/25 rounded-full blur-3xl pointer-events-none -z-10" />
+                <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 w-[300px] sm:w-[540px] h-[140px] sm:h-[180px] bg-[#028dcd]/25 rounded-full blur-3xl pointer-events-none -z-10" />
                 <img
                   src={servicesHeroEngineer}
                   alt="Door2fy Certified Laptop Engineer Repairing Motherboard"
-                  className="w-full h-auto max-h-[520px] sm:max-h-[600px] lg:max-h-[680px] object-contain object-bottom select-none pointer-events-none drop-shadow-[0_25px_50px_rgba(2, 141, 205,0.18)] block transform transition-transform duration-700 hover:scale-[1.02]"
+                  className="w-full h-auto max-h-[300px] sm:max-h-[480px] lg:max-h-[680px] object-contain object-bottom select-none pointer-events-none drop-shadow-[0_20px_40px_rgba(2, 141, 205,0.18)] block transform transition-transform duration-700 hover:scale-[1.02]"
                   style={{ imageRendering: "-webkit-optimize-contrast" }}
                 />
               </div>

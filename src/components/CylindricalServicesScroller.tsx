@@ -43,14 +43,15 @@ export const CylindricalServicesScroller: React.FC<CylindricalServicesScrollerPr
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
+  const isSmallMobile = viewportWidth < 380;
   const isMobile = viewportWidth < 640;
   const isTablet = viewportWidth >= 640 && viewportWidth < 1024;
 
   // Card dimensions matching screenshot proportions
-  const cardWidth = isMobile ? 240 : isTablet ? 255 : 270;
-  const cardHeight = isMobile ? 345 : isTablet ? 365 : 390;
-  const radiusX = isMobile ? 165 : isTablet ? 195 : 225;
-  const radiusZ = isMobile ? 145 : isTablet ? 175 : 205;
+  const cardWidth = isSmallMobile ? 215 : isMobile ? 235 : isTablet ? 255 : 270;
+  const cardHeight = isSmallMobile ? 325 : isMobile ? 340 : isTablet ? 365 : 390;
+  const radiusX = isSmallMobile ? 135 : isMobile ? 160 : isTablet ? 195 : 225;
+  const radiusZ = isSmallMobile ? 120 : isMobile ? 140 : isTablet ? 175 : 205;
   const anglePerItem = 360 / totalItems;
 
   // Step functions

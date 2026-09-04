@@ -268,13 +268,13 @@ export default function EngineerReviews({
   };
 
   return (
-    <section className="py-16 md:py-24 bg-white relative overflow-hidden">
-      <div className="max-w-6xl mx-auto px-6 lg:px-8">
+    <section className="py-12 sm:py-16 md:py-24 bg-white relative overflow-hidden">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* ================= REVIEWS LIST & MARQUEE ================= */}
         {showList && (
-          <div id="testimonials" className="mb-16 scroll-mt-24">
-            <div className="text-center mb-12">
-              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#E1F7F9] text-[#028dcd] text-xs font-bold mb-3 shadow-sm border border-[#028dcd]/20">
+          <div id="testimonials" className="mb-12 sm:mb-16 scroll-mt-24">
+            <div className="text-center mb-8 sm:mb-12">
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#E1F7F9] text-[#028dcd] text-xs font-bold mb-3 shadow-xs border border-[#028dcd]/20">
                 <Sparkles className="w-3.5 h-3.5" />
                 <span>Verified Customer Testimonials</span>
               </div>
@@ -282,7 +282,7 @@ export default function EngineerReviews({
                 What Our Customers & <br />
                 <span className="text-[#028dcd]">Engineers Say</span>
               </h2>
-              <p className="text-gray-500 text-sm sm:text-base mt-2 font-normal">
+              <p className="text-gray-500 text-xs sm:text-sm md:text-base mt-2 font-normal">
                 Real feedback from real users who experienced our rapid doorstep repair.
               </p>
             </div>
@@ -298,7 +298,7 @@ export default function EngineerReviews({
                   {[...reviews, ...reviews, ...reviews].map((r, idx) => (
                     <div
                       key={`${r.id}-${idx}`}
-                      className="min-w-[300px] max-w-[340px] p-6 rounded-3xl bg-[#F8FDFF] border border-[#E1F7F9] relative overflow-hidden flex-shrink-0 mx-3 shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between"
+                      className="min-w-[270px] sm:min-w-[300px] max-w-[340px] p-5 sm:p-6 rounded-2xl sm:rounded-3xl bg-[#F8FDFF] border border-[#E1F7F9] relative overflow-hidden flex-shrink-0 mx-2.5 sm:mx-3 shadow-xs hover:shadow-md transition-shadow flex flex-col justify-between"
                     >
                       <div className="flex justify-between items-start mb-3">
                         <div className="flex items-center gap-3">
@@ -307,13 +307,13 @@ export default function EngineerReviews({
                               r.name || "Customer"
                             )}&background=E1F7F9&color=028dcd&bold=true`}
                             alt={r.name}
-                            className="w-10 h-10 rounded-full object-cover shadow-xs"
+                            className="w-9 h-9 sm:w-10 sm:h-10 rounded-full object-cover shadow-xs"
                           />
                           <div>
-                            <h4 className="font-bold text-sm text-gray-900">
+                            <h4 className="font-bold text-xs sm:text-sm text-gray-900">
                               {r.name}
                             </h4>
-                            <p className="text-gray-400 text-[11px] font-medium">
+                            <p className="text-gray-400 text-[10px] sm:text-[11px] font-medium">
                               {r.city || r.location || "Doorstep Client"}
                             </p>
                             <div className="flex text-amber-400 text-xs mt-0.5">
@@ -325,7 +325,7 @@ export default function EngineerReviews({
                             </div>
                           </div>
                         </div>
-                        <Quote className="text-[#028dcd]/30 w-6 h-6 rotate-180" />
+                        <Quote className="text-[#028dcd]/30 w-5 h-5 sm:w-6 sm:h-6 rotate-180" />
                       </div>
                       <p className="text-gray-600 text-xs sm:text-sm leading-relaxed font-normal">
                         “{r.review}”
@@ -344,7 +344,7 @@ export default function EngineerReviews({
             {/* Background Glow */}
             <div className="absolute inset-0 bg-[#028dcd]/5 blur-3xl rounded-[3rem] -z-10" />
 
-            <div className="max-w-3xl mx-auto bg-[#F8FDFF] rounded-3xl sm:rounded-[2.5rem] p-6 sm:p-10 border border-[#E1F7F9] shadow-[0_20px_50px_rgba(2, 141, 205,0.06)]">
+            <div className="max-w-3xl mx-auto bg-[#F8FDFF] rounded-2xl sm:rounded-[2.5rem] p-5 sm:p-10 border border-[#E1F7F9] shadow-[0_20px_50px_rgba(2, 141, 205,0.06)]">
               <div className="text-center mb-8 space-y-2">
                 <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-[#E1F7F9] text-[#028dcd] text-xs font-bold shadow-xs">
                   <Star className="w-3.5 h-3.5 fill-current" />

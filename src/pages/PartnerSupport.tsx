@@ -57,27 +57,27 @@ export default function PartnerSupport() {
       />
 
       {/* ================= 1. HERO SECTION ================= */}
-      <section className="relative overflow-hidden py-12 md:py-20 bg-gradient-to-b from-[#F0FAFD] to-transparent">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8 text-center relative z-10">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white border border-[#028dcd]/20 shadow-xs mb-6">
+      <section className="relative overflow-hidden py-8 sm:py-12 md:py-20 bg-gradient-to-b from-[#F0FAFD] to-transparent">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white border border-[#028dcd]/20 shadow-xs mb-4 sm:mb-6">
             <Headphones className="w-4 h-4 text-[#028dcd]" />
             <span className="text-xs font-bold text-[#028dcd] tracking-wide uppercase">
               Dedicated Partner Helpdesk
             </span>
           </div>
 
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-slate-900 tracking-tight leading-[1.15] max-w-3xl mx-auto">
+          <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black text-slate-900 tracking-tight leading-[1.15] max-w-3xl mx-auto">
             Door2fy Partner <span className="text-[#028dcd]">Support Center</span>
           </h1>
 
-          <p className="text-slate-600 text-base sm:text-lg max-w-2xl mx-auto mt-5 leading-relaxed">
+          <p className="text-slate-600 text-sm sm:text-base md:text-lg max-w-2xl mx-auto mt-4 sm:mt-5 leading-relaxed">
             Need urgent diagnostic advice, instant OEM spare parts dispatch, or payout resolution? Our dedicated technician desk is available 7 days a week.
           </p>
         </div>
       </section>
 
       {/* ================= 2. QUICK CONTACT CHANNELS ================= */}
-      <section className="py-8 max-w-7xl mx-auto px-6 lg:px-8">
+      <section className="py-6 sm:py-8 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <div className="p-7 rounded-3xl bg-white border border-slate-100 shadow-sm text-left">
             <div className="w-12 h-12 rounded-2xl bg-[#E1F7F9] text-[#028dcd] flex items-center justify-center mb-4">

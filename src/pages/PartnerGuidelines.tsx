@@ -21,7 +21,7 @@ export default function PartnerGuidelines() {
         canonicalUrl="https://www.door2fy.in/partner-guidelines"
       />
 
-      <div className="max-w-4xl mx-auto px-6 pt-8 pb-10 text-left">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 pt-4 sm:pt-8 pb-8 sm:pb-10 text-left">
         <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#E1F7F9] text-[#028dcd] text-xs font-bold mb-4">
           <BookOpen className="w-4 h-4 text-[#028dcd]" />
           <span>Door2fy Certified Partner Standards</span>
@@ -34,12 +34,12 @@ export default function PartnerGuidelines() {
           Effective for All Registered Technicians & Service Partners Across 50+ Cities
         </p>
 
-        <p className="text-slate-600 text-base leading-relaxed mt-4">
+        <p className="text-slate-600 text-sm sm:text-base leading-relaxed mt-4">
           As a <strong className="text-slate-900">Door2fy Certified Partner</strong>, you represent the highest benchmark of trustworthiness, technical precision, and customer courtesy in the tech support industry.
         </p>
       </div>
 
-      <div className="max-w-4xl mx-auto px-6 space-y-8 text-left text-slate-700 leading-relaxed text-sm sm:text-base">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 space-y-6 sm:space-y-8 text-left text-slate-700 leading-relaxed text-sm sm:text-base">
         
         <section className="bg-white p-6 sm:p-8 rounded-3xl border border-slate-100 shadow-xs space-y-4">
           <h2 className="text-xl sm:text-2xl font-black text-slate-900 flex items-center gap-2">

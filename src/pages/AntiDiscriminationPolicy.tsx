@@ -11,7 +11,7 @@ export default function AntiDiscriminationPolicy() {
         canonicalUrl="https://www.door2fy.in/anti-discrimination-policy"
       />
 
-      <div className="max-w-4xl mx-auto px-6 pt-8 pb-10 text-left">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 pt-4 sm:pt-8 pb-8 sm:pb-10 text-left">
         <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#E1F7F9] text-[#028dcd] text-xs font-bold mb-4">
           <HeartHandshake className="w-4 h-4 text-[#028dcd]" />
           <span>Commitment to Equality & Respect</span>
@@ -24,12 +24,12 @@ export default function AntiDiscriminationPolicy() {
           Effective Date: October 1, 2025 · Last Updated: 2026
         </p>
 
-        <p className="text-slate-600 text-base leading-relaxed mt-4">
+        <p className="text-slate-600 text-sm sm:text-base leading-relaxed mt-4">
           <strong className="text-slate-900">Door2fy</strong> is founded on values of respect, dignity, and inclusivity. We maintain a strict zero-tolerance policy towards discrimination and harassment in any form.
         </p>
       </div>
 
-      <div className="max-w-4xl mx-auto px-6 space-y-8 text-left text-slate-700 leading-relaxed text-sm sm:text-base">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 space-y-6 sm:space-y-8 text-left text-slate-700 leading-relaxed text-sm sm:text-base">
         
         <section className="bg-white p-6 sm:p-8 rounded-3xl border border-slate-100 shadow-xs space-y-3">
           <h2 className="text-xl font-bold text-slate-900">1. Core Principles of Non-Discrimination</h2>

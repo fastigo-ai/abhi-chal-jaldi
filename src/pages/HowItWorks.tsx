@@ -186,48 +186,48 @@ export default function HowItWorks() {
         <div className="absolute -bottom-24 -left-24 w-[500px] h-[500px] bg-[#028dcd]/10 rounded-full -z-10 blur-[120px] transform-gpu"></div>
         <div className="absolute -bottom-24 -right-24 w-[500px] h-[500px] bg-blue-400/10 rounded-full -z-10 blur-[120px] transform-gpu"></div>
 
-        <div className="max-w-7xl mx-auto px-6 lg:px-8 w-full pt-24 pb-14 lg:pt-28 lg:pb-16 relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-12 items-center gap-10 lg:gap-12">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full pt-20 sm:pt-24 pb-10 sm:pb-14 lg:pt-28 lg:pb-16 relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-12 items-center gap-8 lg:gap-12">
             {/* Left Content */}
-            <div className="lg:col-span-6 space-y-5 text-center lg:text-left">
+            <div className="lg:col-span-6 space-y-4 sm:space-y-5 text-center lg:text-left">
               {/* Trust Badge */}
-              <div className="inline-flex items-center gap-2.5 px-4 py-1.5 bg-white border border-gray-100 rounded-full shadow-sm mx-auto lg:mx-0 w-fit">
+              <div className="inline-flex items-center gap-2.5 px-3.5 py-1.5 bg-white border border-gray-100 rounded-full shadow-xs mx-auto lg:mx-0 w-fit">
                 <span className="relative flex h-2 w-2">
                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
                   <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
                 </span>
-                <span className="text-xs font-semibold text-gray-700 tracking-wide">
+                <span className="text-[11px] sm:text-xs font-semibold text-gray-700 tracking-wide">
                   Simple 4-Step Process <span className="text-gray-300">·</span> 30 Min Arrival
                 </span>
               </div>
 
-              <h1 className="text-4xl sm:text-5xl lg:text-[4.2rem] font-extrabold leading-[1.12] text-gray-900 tracking-tight">
+              <h1 className="text-3xl sm:text-5xl lg:text-[4.2rem] font-extrabold leading-[1.12] text-gray-900 tracking-tight">
                 How Door2fy <br />
                 <span className="text-[#028dcd]">Works for You</span>
               </h1>
 
-              <p className="text-gray-600 text-base lg:text-lg max-w-xl mx-auto lg:mx-0 leading-relaxed font-normal">
+              <p className="text-gray-600 text-sm sm:text-base lg:text-lg max-w-xl mx-auto lg:mx-0 leading-relaxed font-normal">
                 Experience hassle-free doorstep laptop repair and tech support. Book in under 15 seconds, track your certified technician in real time, and get your device fixed right in front of your eyes.
               </p>
 
               {/* Highlights Chips */}
-              <div className="flex flex-wrap items-center justify-center lg:justify-start gap-2.5 pt-1">
-                <div className="flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/90 shadow-sm border border-slate-100 text-xs font-bold text-slate-800">
+              <div className="flex flex-wrap items-center justify-center lg:justify-start gap-2 pt-1">
+                <div className="flex items-center gap-1.5 px-3 py-1 sm:px-3.5 sm:py-1.5 rounded-full bg-white/90 shadow-xs border border-slate-100 text-[11px] sm:text-xs font-bold text-slate-800">
                   <span className="text-emerald-500">✓</span> 15s Fast Booking
                 </div>
-                <div className="flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/90 shadow-sm border border-slate-100 text-xs font-bold text-slate-800">
-                  <span className="text-[#028dcd]">⚡</span> 60-Min Response
+                <div className="flex items-center gap-1.5 px-3 py-1 sm:px-3.5 sm:py-1.5 rounded-full bg-white/90 shadow-xs border border-slate-100 text-[11px] sm:text-xs font-bold text-slate-800">
+                  <span className="text-[#028dcd]">⚡</span> 30-Min Arrival
                 </div>
-                <div className="flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/90 shadow-sm border border-slate-100 text-xs font-bold text-slate-800">
+                <div className="flex items-center gap-1.5 px-3 py-1 sm:px-3.5 sm:py-1.5 rounded-full bg-white/90 shadow-xs border border-slate-100 text-[11px] sm:text-xs font-bold text-slate-800">
                   <span className="text-amber-500">★</span> 90-Day Warranty
                 </div>
               </div>
 
               {/* Action Buttons */}
-              <div className="pt-2 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+              <div className="pt-2 flex flex-col sm:flex-row items-stretch sm:items-center justify-center lg:justify-start gap-3 sm:gap-4">
                 <Link
                   to="/services"
-                  className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full bg-[#028dcd] text-white font-bold text-sm hover:bg-[#039ecc] transition-all duration-300 shadow-lg shadow-[#028dcd]/25 hover:scale-105 active:scale-95 w-full sm:w-auto"
+                  className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full bg-[#028dcd] text-white font-bold text-sm hover:bg-[#039ecc] transition-all duration-300 shadow-lg shadow-[#028dcd]/25 hover:scale-105 active:scale-95 text-center"
                 >
                   <span>Book a Repair Now</span>
                   <ArrowRight className="w-4 h-4" />
@@ -236,7 +236,7 @@ export default function HowItWorks() {
                   href="https://play.google.com/store/apps/details?id=com.Door2fy&pli=1"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full bg-white text-gray-800 font-bold text-sm hover:bg-gray-50 transition-all border border-gray-200 shadow-sm hover:border-[#028dcd]/40 w-full sm:w-auto"
+                  className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full bg-white text-gray-800 font-bold text-sm hover:bg-gray-50 transition-all border border-gray-200 shadow-xs hover:border-[#028dcd]/40 text-center"
                 >
                   <span>Download App</span>
                 </a>
@@ -244,12 +244,12 @@ export default function HowItWorks() {
             </div>
 
             {/* Right Visual Graphic Card */}
-            <div className="lg:col-span-6 relative flex justify-center items-center lg:justify-end mt-8 lg:mt-0">
+            <div className="lg:col-span-6 relative flex justify-center items-center lg:justify-end mt-4 lg:mt-0">
               <div className="relative w-full flex justify-center items-center group">
                 <img
                   src={door2fyTechLabEngineers}
                   alt="Door2fy Rapid Laptop Service"
-                  className="w-full h-auto max-h-[460px] object-contain drop-shadow-[0_20px_50px_rgba(2, 141, 205,0.2)] transform transition-transform duration-700 ease-out group-hover:scale-105 select-none pointer-events-none"
+                  className="w-full h-auto max-h-[340px] sm:max-h-[460px] object-contain drop-shadow-[0_20px_40px_rgba(2, 141, 205,0.18)] transform transition-transform duration-700 ease-out group-hover:scale-105 select-none pointer-events-none"
                   style={{ imageRendering: "-webkit-optimize-contrast" }}
                 />
               </div>

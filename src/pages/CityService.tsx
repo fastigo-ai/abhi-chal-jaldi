@@ -256,15 +256,15 @@ export default function CityService() {
       />
 
       {/* 1. Hero Section */}
-      <section className="relative pt-28 pb-16 md:pt-36 md:pb-24 px-6 overflow-hidden bg-gradient-to-b from-[#F0FAFD] to-white">
-        <div className="max-w-7xl mx-auto grid lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+      <section className="relative pt-20 pb-12 sm:pt-28 sm:pb-16 md:pt-36 md:pb-24 px-4 sm:px-6 overflow-hidden bg-gradient-to-b from-[#F0FAFD] to-white">
+        <div className="max-w-7xl mx-auto grid lg:grid-cols-12 gap-8 lg:gap-12 items-center">
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
-            className="lg:col-span-7 text-left space-y-6"
+            className="lg:col-span-7 text-left space-y-4 sm:space-y-6"
           >
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-[#028dcd]/30 text-[#028dcd] text-xs font-bold shadow-xs">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-[#028dcd]/30 text-[#028dcd] text-[11px] sm:text-xs font-bold shadow-xs">
               <Star size={14} className="fill-[#028dcd]" />
               <span>#1 Rated Doorstep Laptop Care in {formattedCity}</span>
             </div>
@@ -273,34 +273,34 @@ export default function CityService() {
               Doorstep Laptop Repair & Service in <span className="text-[#028dcd]">{formattedCity}</span>
             </h1>
 
-            <p className="text-slate-600 text-base sm:text-lg md:text-xl leading-relaxed max-w-2xl font-normal">
+            <p className="text-slate-600 text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed max-w-2xl font-normal">
               Get instant, certified tech support at your home or office in {formattedCity}. Our background-verified engineers arrive in <span className="font-bold text-slate-900">30 minutes</span> with genuine parts and a 90-day warranty.
             </p>
 
             {/* Value Badges */}
-            <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 pt-2">
-              <div className="flex items-center gap-2 p-2.5 rounded-xl bg-white border border-slate-100 shadow-xs text-xs font-semibold text-slate-800">
+            <div className="grid grid-cols-2 sm:grid-cols-3 gap-2.5 sm:gap-3 pt-2">
+              <div className="flex items-center gap-2 p-2 sm:p-2.5 rounded-xl bg-white border border-slate-100 shadow-xs text-[11px] sm:text-xs font-semibold text-slate-800">
                 <CheckCircle2 className="w-4 h-4 text-emerald-500 shrink-0" />
                 <span>10-30 Min Arrival</span>
               </div>
-              <div className="flex items-center gap-2 p-2.5 rounded-xl bg-white border border-slate-100 shadow-xs text-xs font-semibold text-slate-800">
+              <div className="flex items-center gap-2 p-2 sm:p-2.5 rounded-xl bg-white border border-slate-100 shadow-xs text-[11px] sm:text-xs font-semibold text-slate-800">
                 <Shield className="w-4 h-4 text-[#028dcd] shrink-0" />
                 <span>90-Day Warranty</span>
               </div>
-              <div className="flex items-center gap-2 p-2.5 rounded-xl bg-white border border-slate-100 shadow-xs text-xs font-semibold text-slate-800 col-span-2 sm:col-span-1">
+              <div className="flex items-center gap-2 p-2 sm:p-2.5 rounded-xl bg-white border border-slate-100 shadow-xs text-[11px] sm:text-xs font-semibold text-slate-800 col-span-2 sm:col-span-1">
                 <Award className="w-4 h-4 text-amber-500 shrink-0" />
                 <span>100% Genuine Parts</span>
               </div>
             </div>
 
-            <div className="flex flex-wrap gap-4 pt-4">
-              <a href="https://play.google.com/store/apps/details?id=com.Door2fy&pli=1" target="_blank" rel="noopener noreferrer">
-                <Button size="lg" className="bg-[#028dcd] hover:bg-[#039ecc] text-white rounded-full px-8 h-14 text-base font-bold shadow-lg shadow-[#028dcd]/25 transition-all hover:scale-105">
-                  Book Doorstep Technician <ArrowRight className="ml-2 h-5 w-5" />
+            <div className="flex flex-col sm:flex-row gap-3 pt-3">
+              <a href="https://play.google.com/store/apps/details?id=com.Door2fy&pli=1" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
+                <Button size="lg" className="w-full sm:w-auto bg-[#028dcd] hover:bg-[#039ecc] text-white rounded-full px-7 h-13 sm:h-14 text-sm sm:text-base font-bold shadow-lg shadow-[#028dcd]/25 transition-all hover:scale-105">
+                  Book Doorstep Technician <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5" />
                 </Button>
               </a>
-              <Link to="/contact-us">
-                <Button variant="outline" size="lg" className="rounded-full px-7 h-14 text-base font-bold border-slate-200 hover:bg-slate-50">
+              <Link to="/contact-us" className="w-full sm:w-auto">
+                <Button variant="outline" size="lg" className="w-full sm:w-auto rounded-full px-7 h-13 sm:h-14 text-sm sm:text-base font-bold border-slate-200 hover:bg-slate-50">
                   Request Callback
                 </Button>
               </Link>

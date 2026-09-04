@@ -54,65 +54,65 @@ export default function ServiceDetails() {
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-6 py-12 md:py-20 grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-20 items-center">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 py-8 sm:py-12 md:py-20 grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-12 lg:gap-20 items-center">
         {/* Image Section */}
-        <div className="rounded-3xl overflow-hidden relative group">
+        <div className="rounded-2xl sm:rounded-3xl overflow-hidden relative group">
           <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
           <img
             src={service.image}
             alt={service.title}
-            className="w-full h-[400px] md:h-[550px] object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+            className="w-full h-[260px] sm:h-[400px] md:h-[550px] object-cover transition-transform duration-700 ease-out group-hover:scale-105"
           />
         </div>
 
-        
-
         {/* Content Section */}
-        <div className="space-y-8">
+        <div className="space-y-6 sm:space-y-8 text-left">
           <div>
-            <Link to="/services" className="inline-flex items-center text-sm font-semibold text-[#028dcd] mb-6 hover:text-[#039ecc] transition-colors">
+            <Link to="/services" className="inline-flex items-center text-xs sm:text-sm font-semibold text-[#028dcd] mb-4 sm:mb-6 hover:text-[#039ecc] transition-colors">
               <ArrowLeft className="w-4 h-4 mr-2" /> Back to all services
             </Link>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-6 leading-tight tracking-tight">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-slate-900 mb-4 sm:mb-6 leading-tight tracking-tight">
               {service.title}
             </h1>
-            <p className="text-xl md:text-2xl text-slate-600 font-medium">
+            <p className="text-base sm:text-xl md:text-2xl text-slate-600 font-medium">
               {service.description}
             </p>
           </div>
 
-          <div className="bg-[#028dcd]/5 p-6 md:p-8 rounded-2xl border border-[#028dcd]/10">
-            <h3 className="text-xl font-bold text-slate-900 mb-4 flex items-center">
-              <span className="w-2 h-6 bg-[#028dcd] rounded-full mr-3 inline-block"></span>
+          <div className="bg-[#028dcd]/5 p-5 sm:p-6 md:p-8 rounded-2xl border border-[#028dcd]/10">
+            <h3 className="text-lg sm:text-xl font-bold text-slate-900 mb-3 sm:mb-4 flex items-center">
+              <span className="w-2 h-5 sm:h-6 bg-[#028dcd] rounded-full mr-3 inline-block"></span>
               About this service
             </h3>
-            <p className="text-slate-600 leading-relaxed text-lg">
+            <p className="text-slate-600 leading-relaxed text-sm sm:text-base md:text-lg">
               {service.longDescription}
             </p>
           </div>
 
-          <div className="space-y-5">
+          <div className="space-y-4 sm:space-y-5">
             <div className="flex items-start">
-              <CheckCircle2 className="w-6 h-6 text-[#028dcd] mr-4 flex-shrink-0 mt-0.5" />
-              <p className="text-slate-700 text-lg">Expert technicians with years of experience</p>
+              <CheckCircle2 className="w-5 h-5 text-[#028dcd] mr-3 sm:mr-4 flex-shrink-0 mt-0.5" />
+              <p className="text-slate-700 text-sm sm:text-base md:text-lg">Expert technicians with years of experience</p>
             </div>
             <div className="flex items-start">
-              <CheckCircle2 className="w-6 h-6 text-[#028dcd] mr-4 flex-shrink-0 mt-0.5" />
-              <p className="text-slate-700 text-lg">Quick diagnosis within 5-10 minutes</p>
+              <CheckCircle2 className="w-5 h-5 text-[#028dcd] mr-3 sm:mr-4 flex-shrink-0 mt-0.5" />
+              <p className="text-slate-700 text-sm sm:text-base md:text-lg">Quick diagnosis within 5-10 minutes</p>
             </div>
             <div className="flex items-start">
-              <CheckCircle2 className="w-6 h-6 text-[#028dcd] mr-4 flex-shrink-0 mt-0.5" />
-              <p className="text-slate-700 text-lg">Doorstep service across the city</p>
+              <CheckCircle2 className="w-5 h-5 text-[#028dcd] mr-3 sm:mr-4 flex-shrink-0 mt-0.5" />
+              <p className="text-slate-700 text-sm sm:text-base md:text-lg">Doorstep service across 50+ cities</p>
             </div>
           </div>
 
-          <div className="pt-8 border-t border-gray-100 flex flex-col sm:flex-row gap-4">
-            <Link
-              to="https://play.google.com/store/apps/details?id=com.Door2fy&pli=1"
-              className="inline-flex justify-center items-center px-8 py-4 bg-[#028dcd] text-white text-lg font-semibold rounded-full hover:bg-[#039ecc] transition-all duration-300 shadow-lg shadow-[#028dcd]/30 hover:shadow-[#028dcd]/50 transform hover:-translate-y-1"
+          <div className="pt-6 sm:pt-8 border-t border-gray-100 flex flex-col sm:flex-row gap-4">
+            <a
+              href="https://play.google.com/store/apps/details?id=com.Door2fy&pli=1"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex justify-center items-center px-8 py-3.5 sm:py-4 bg-[#028dcd] text-white text-base sm:text-lg font-bold rounded-full hover:bg-[#039ecc] transition-all duration-300 shadow-lg shadow-[#028dcd]/30 hover:shadow-[#028dcd]/50 transform hover:-translate-y-0.5 text-center"
             >
-              Book Service Now
-            </Link>
+              Book Service on App
+            </a>
           </div>
         </div>
       </div>

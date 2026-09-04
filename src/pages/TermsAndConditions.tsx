@@ -12,7 +12,7 @@ export default function TermsAndConditions() {
       />
 
       {/* Header */}
-      <div className="max-w-4xl mx-auto px-6 pt-8 pb-10 text-left">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 pt-4 sm:pt-8 pb-8 sm:pb-10 text-left">
         <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#E1F7F9] text-[#028dcd] text-xs font-bold mb-4">
           <Scale className="w-4 h-4 text-[#028dcd]" />
           <span>Legal Agreement & Terms of Service</span>
@@ -25,13 +25,13 @@ export default function TermsAndConditions() {
           Effective Date: October 1, 2025 · Last Updated: 2026
         </p>
 
-        <p className="text-slate-600 text-base leading-relaxed mt-4">
+        <p className="text-slate-600 text-sm sm:text-base leading-relaxed mt-4">
           Welcome to <strong className="text-slate-900">Door2fy</strong>. These Terms & Conditions govern your access to and use of Door2fy's website, mobile applications, and on-demand doorstep hardware repair and IT support services.
         </p>
       </div>
 
       {/* Content */}
-      <div className="max-w-4xl mx-auto px-6 space-y-8 text-left text-slate-700 leading-relaxed text-sm sm:text-base">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 space-y-6 sm:space-y-8 text-left text-slate-700 leading-relaxed text-sm sm:text-base">
         
         <section className="bg-white p-6 sm:p-8 rounded-3xl border border-slate-100 shadow-xs space-y-3">
           <h2 className="text-xl font-bold text-slate-900">1. Acceptance of Terms</h2>

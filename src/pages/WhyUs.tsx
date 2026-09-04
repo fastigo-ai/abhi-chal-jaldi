@@ -151,7 +151,7 @@ export default function WhyUs() {
       />
 
       {/* ================= HERO SECTION (FULL-BLEED 0-PADDING BANNER) ================= */}
-      <section className="w-full relative min-h-[580px] sm:min-h-[620px] lg:min-h-[680px] flex items-center overflow-hidden px-0 bg-[#F0FBFF]">
+      <section className="w-full relative min-h-[520px] sm:min-h-[620px] lg:min-h-[680px] flex items-center overflow-hidden px-0 bg-[#F0FBFF]">
         {/* Full-bleed Background Image */}
         <img
           src={doorstepNamasteEngineerDoorway}
@@ -161,48 +161,48 @@ export default function WhyUs() {
         />
 
         {/* Content Container (Positioned on Left Side) */}
-        <div className="w-full max-w-7xl mx-auto px-6 sm:px-10 lg:px-12 relative z-10 pt-24 pb-14 lg:py-28">
-          <div className="max-w-xl lg:max-w-2xl text-left space-y-5">
+        <div className="w-full max-w-7xl mx-auto px-4 sm:px-10 lg:px-12 relative z-10 pt-20 sm:pt-24 pb-12 sm:pb-14 lg:py-28">
+          <div className="max-w-xl lg:max-w-2xl text-left space-y-4 sm:space-y-5">
             {/* Trust Badge */}
-            <div className="inline-flex items-center gap-2.5 px-4 py-1.5 bg-white/90 backdrop-blur-xs border border-gray-200/80 rounded-full shadow-xs">
+            <div className="inline-flex items-center gap-2 px-3 sm:px-4 py-1.5 bg-white/90 backdrop-blur-xs border border-gray-200/80 rounded-full shadow-xs">
               <span className="relative flex h-2 w-2">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
               </span>
-              <span className="text-xs font-bold text-gray-700 tracking-wide">
+              <span className="text-[11px] sm:text-xs font-bold text-gray-700 tracking-wide">
                 India's #1 Doorstep Laptop Care Network <span className="text-gray-300">·</span> 50+ Cities Live
               </span>
             </div>
 
             {/* Main Headline */}
-            <h1 className="text-4xl sm:text-5xl lg:text-[4rem] font-black leading-[1.12] text-gray-900 tracking-tight">
+            <h1 className="text-3xl sm:text-5xl lg:text-[4rem] font-black leading-[1.12] text-gray-900 tracking-tight">
               Why India Trusts <br />
               <span className="text-gray-900">Door2fy Care</span>
             </h1>
 
             {/* Description */}
-            <p className="text-gray-700 text-base sm:text-lg leading-relaxed font-medium">
+            <p className="text-gray-700 text-sm sm:text-lg leading-relaxed font-medium">
               Engineered for total transparency, speed, and safety. Get certified background-verified laptop engineers at your doorstep in <span className="font-bold text-gray-900"> 30 minutes</span> with genuine spare parts and guaranteed peace of mind.
             </p>
 
             {/* Highlights Chips */}
-            <div className="flex flex-wrap items-center gap-2.5 pt-1">
-              <div className="flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/95 backdrop-blur-xs shadow-xs border border-slate-200 text-xs font-bold text-slate-800">
+            <div className="flex flex-wrap items-center gap-2 pt-1">
+              <div className="flex items-center gap-1.5 px-3 py-1 sm:px-3.5 sm:py-1.5 rounded-full bg-white/95 backdrop-blur-xs shadow-xs border border-slate-200 text-[11px] sm:text-xs font-bold text-slate-800">
                 <span className="text-emerald-500">✓</span> 100% Verified Techs
               </div>
-              <div className="flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/95 backdrop-blur-xs shadow-xs border border-slate-200 text-xs font-bold text-slate-800">
+              <div className="flex items-center gap-1.5 px-3 py-1 sm:px-3.5 sm:py-1.5 rounded-full bg-white/95 backdrop-blur-xs shadow-xs border border-slate-200 text-[11px] sm:text-xs font-bold text-slate-800">
                 <span className="text-[#028dcd]">⚡</span> 30 Min Arrival
               </div>
-              <div className="flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/95 backdrop-blur-xs shadow-xs border border-slate-200 text-xs font-bold text-slate-800">
+              <div className="flex items-center gap-1.5 px-3 py-1 sm:px-3.5 sm:py-1.5 rounded-full bg-white/95 backdrop-blur-xs shadow-xs border border-slate-200 text-[11px] sm:text-xs font-bold text-slate-800">
                 <span className="text-amber-500">★</span> 4.9/5 Rating (1000+ users)
               </div>
             </div>
 
             {/* Action Buttons */}
-            <div className="pt-2 flex flex-col sm:flex-row items-center gap-4">
+            <div className="pt-2 flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4">
               <Link
                 to="/services"
-                className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full bg-[#028dcd] text-white font-bold text-sm hover:bg-[#039ecc] transition-all duration-300 shadow-lg shadow-[#028dcd]/25 hover:scale-105 active:scale-95 w-full sm:w-auto"
+                className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full bg-[#028dcd] text-white font-bold text-sm hover:bg-[#039ecc] transition-all duration-300 shadow-lg shadow-[#028dcd]/25 hover:scale-105 active:scale-95 text-center"
               >
                 <span>Explore All Services</span>
                 <ArrowRight className="w-4 h-4" />
@@ -212,7 +212,7 @@ export default function WhyUs() {
                 href="https://play.google.com/store/apps/details?id=com.Door2fy&pli=1"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full bg-white/95 backdrop-blur-xs text-gray-800 font-bold text-sm hover:bg-white transition-all border border-gray-200 shadow-xs hover:border-[#028dcd]/40 w-full sm:w-auto"
+                className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full bg-white/95 backdrop-blur-xs text-gray-800 font-bold text-sm hover:bg-white transition-all border border-gray-200 shadow-xs hover:border-[#028dcd]/40 text-center"
               >
                 <span>Download App</span>
               </a>
@@ -356,7 +356,7 @@ export default function WhyUs() {
                       <td className="py-4 px-4 text-sm text-gray-500">
                         <div className="flex items-center gap-2">
                           <X className="w-4 h-4 text-rose-400 shrink-0" />
-                          <span>{row.others}</span>
+                          <span>{row.localShops}</span>
                         </div>
                       </td>
                     </tr>

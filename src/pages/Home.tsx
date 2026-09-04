@@ -29,13 +29,13 @@ const HeroSection = () => {
       <div className="absolute -bottom-24 -right-24 w-[500px] h-[500px] bg-blue-400/10 rounded-full -z-10 blur-[120px] transform-gpu"></div>
 
       {/* Top Header Row - Full Width Border */}
-      <div className="max-w-7xl mx-auto px-6 lg:px-8 w-full flex flex-col pt-20 lg:pt-20">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full flex flex-col pt-16 sm:pt-20 lg:pt-20">
         {/* Main Hero Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 items-center gap-10 lg:gap-8 pb-10 lg:pb-6">
+        <div className="grid grid-cols-1 lg:grid-cols-12 items-center gap-8 lg:gap-8 pb-10 lg:pb-6">
           {/* Left Content */}
-          <div className="lg:col-span-7 space-y-4 lg:space-y-5 text-center lg:text-left z-10 order-2 lg:order-1 pt-0">
+          <div className="lg:col-span-7 space-y-4 lg:space-y-5 text-center lg:text-left z-10 order-1 lg:order-1 pt-0">
             {/* Trust Badge */}
-            <div className="inline-flex items-center gap-3 px-4 py-2 bg-white border border-gray-100 rounded-full shadow-sm mx-auto lg:mx-0 w-fit mb-2">
+            <div className="inline-flex items-center gap-2.5 px-3.5 py-1.5 bg-white border border-gray-100 rounded-full shadow-xs mx-auto lg:mx-0 w-fit mb-2">
               <span className="relative flex h-2 w-2">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
@@ -47,117 +47,115 @@ const HeroSection = () => {
               </span>
             </div>
 
-            <h1 className="text-4xl lg:text-[4.5rem] font-bold leading-[1.15] text-gray-900 tracking-tight">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[4.5rem] font-bold leading-[1.15] text-gray-900 tracking-tight">
               <GradualSpacing text="Expert Laptop Repair & Tech Support" />
             </h1>
-            <p className="text-gray-500 text-base lg:text-lg -mt-4 max-w-lg mx-auto lg:mx-0 leading-relaxed font-normal">
+            <p className="text-gray-500 text-sm sm:text-base lg:text-lg -mt-2 sm:-mt-4 max-w-lg mx-auto lg:mx-0 leading-relaxed font-normal">
               <TypingEffect text="Door2fy delivers fast IT support & device care services across India." />
             </p>
 
             {/* Buttons */}
-            <div className="space-y-6">
+            <div className="space-y-5">
               <div className="flex flex-row gap-3 justify-center lg:justify-start items-center mt-2">
                 <a
                   href="https://play.google.com/store/apps/details?id=com.Door2fy&pli=1"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="transition-all hover:scale-105 active:scale-95 block rounded-xl overflow-hidden shadow-lg"
+                  className="transition-all hover:scale-105 active:scale-95 block rounded-xl overflow-hidden shadow-md"
                 >
                   <img
                     src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
                     alt="Google Play"
-                    className="h-[44px] md:h-[48px] lg:h-[56px] w-auto"
+                    className="h-[40px] sm:h-[48px] lg:h-[56px] w-auto"
                   />
                 </a>
 
                 <a
                   href="#"
-                  className="transition-all hover:scale-105 active:scale-95 block rounded-xl overflow-hidden shadow-lg"
+                  className="transition-all hover:scale-105 active:scale-95 block rounded-xl overflow-hidden shadow-md"
                 >
                   <img
                     src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Download_on_the_App_Store_Badge.svg"
                     alt="App Store"
-                    className="h-[44px] md:h-[48px] lg:h-[56px] w-auto"
+                    className="h-[40px] sm:h-[48px] lg:h-[56px] w-auto"
                   />
                 </a>
               </div>
               {/* Ratings */}
-              <div className="flex items-center gap-3 justify-center lg:justify-start">
+              <div className="flex items-center gap-2.5 justify-center lg:justify-start">
                 <div className="flex gap-0.5 text-[#028dcd]">
                   {[...Array(5)].map((_, i) => (
                     <svg
                       key={i}
-                      className="w-5 h-5 fill-current"
+                      className="w-4 h-4 sm:w-5 sm:h-5 fill-current"
                       viewBox="0 0 24 24"
                     >
                       <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
                     </svg>
                   ))}
                 </div>
-                <div className="flex items-center gap-1.5 text-sm">
+                <div className="flex items-center gap-1.5 text-xs sm:text-sm">
                   <span className="font-bold text-gray-900">4.8</span>
                   <span className="text-gray-500">from 1000+ ratings</span>
                 </div>
               </div>
             </div>
-
-
           </div>
 
           {/* Right Image Section */}
-          <div className="lg:col-span-5 relative flex justify-center items-center lg:justify-end order-1 lg:order-2 mt-12 lg:mt-0">
+          <div className="lg:col-span-5 relative flex justify-center items-center lg:justify-end order-2 lg:order-2 mt-4 lg:mt-0">
             {/* Background Shape */}
-            <div className="absolute w-[100%] lg:w-[110%] h-[100%] lg:h-[110%] bg-blue-50/50 rounded-[30px] lg:rounded-[40px] rotate-3 -z-10 -right-10"></div>
+            <div className="absolute w-[95%] lg:w-[110%] h-[95%] lg:h-[110%] bg-blue-50/50 rounded-[28px] lg:rounded-[40px] rotate-3 -z-10 -right-2 sm:-right-6 lg:-right-10"></div>
 
             {/* Main Image */}
-            <div className="relative w-full max-w-[480px] lg:max-w-[560px]">
+            <div className="relative w-full max-w-[340px] sm:max-w-[460px] lg:max-w-[560px]">
               <img
                 src={heroTechnician}
                 alt="IT Support"
-                className="relative z-10 w-full h-[660px] lg:h-[720px] drop-shadow-[0_30px_60px_rgba(0,0,0,0.12)] object-contain select-none"
+                className="relative z-10 w-full h-[340px] sm:h-[480px] lg:h-[720px] drop-shadow-[0_20px_40px_rgba(0,0,0,0.1)] object-contain select-none"
                 style={{ imageRendering: "-webkit-optimize-contrast" }}
               />
 
               {/* Floating Card 1 */}
-              <div className="absolute top-[35%] lg:-left-12 bg-white shadow-2xl rounded-2xl lg:rounded-3xl p-2 lg:p-3 z-20 border border-gray-50 flex items-center gap-3 lg:gap-4 animate-bounce-slow">
-                <div className="w-8 h-8 lg:w-10 lg:h-14 bg-blue-50 rounded-lg lg:rounded-xl flex items-center justify-center text-blue-500 text-sm lg:text-base">
+              <div className="absolute top-[30%] sm:top-[35%] left-1 sm:left-2 lg:-left-12 bg-white shadow-xl rounded-xl sm:rounded-2xl lg:rounded-3xl p-2 sm:p-2.5 lg:p-3 z-20 border border-gray-50 flex items-center gap-2 sm:gap-3 lg:gap-4 animate-bounce-slow">
+                <div className="w-7 h-7 sm:w-8 sm:h-8 lg:w-10 lg:h-14 bg-blue-50 rounded-lg lg:rounded-xl flex items-center justify-center text-blue-500 text-xs sm:text-sm lg:text-base">
                   🕒
                 </div>
                 <div>
-                  <p className="text-[7px] lg:text-[10px] text-gray-400 font-semibold uppercase tracking-widest">
+                  <p className="text-[7px] sm:text-[8px] lg:text-[10px] text-gray-400 font-semibold uppercase tracking-widest">
                     On-Time
                   </p>
-                  <h3 className="font-semibold text-md lg:text-lg text-gray-900">
+                  <h3 className="font-semibold text-xs sm:text-md lg:text-lg text-gray-900">
                     99%
                   </h3>
                 </div>
               </div>
 
               {/* Floating Card 2 */}
-              <div className="absolute top-16 -right-1 bg-white shadow-2xl rounded-2xl lg:rounded-3xl p-2 lg:p-3 z-20 border border-gray-50 flex items-center gap-3 lg:gap-4">
-                <div className="w-8 h-8 lg:w-10 lg:h-10 bg-blue-50 rounded-lg lg:rounded-xl flex items-center justify-center text-blue-500 text-xs lg:text-lg">
+              <div className="absolute top-10 sm:top-16 right-1 sm:right-2 lg:-right-1 bg-white shadow-xl rounded-xl sm:rounded-2xl lg:rounded-3xl p-2 sm:p-2.5 lg:p-3 z-20 border border-gray-50 flex items-center gap-2 sm:gap-3 lg:gap-4">
+                <div className="w-7 h-7 sm:w-8 sm:h-8 lg:w-10 lg:h-10 bg-blue-50 rounded-lg lg:rounded-xl flex items-center justify-center text-blue-500 text-[11px] sm:text-xs lg:text-lg">
                   24
                 </div>
                 <div>
-                  <p className="text-[7px] lg:text-[8px] text-gray-400 font-semibold uppercase tracking-widest">
+                  <p className="text-[7px] sm:text-[8px] lg:text-[8px] text-gray-400 font-semibold uppercase tracking-widest">
                     Support
                   </p>
-                  <h3 className="font-semibold text-sm lg:text-lg text-gray-900">
+                  <h3 className="font-semibold text-xs sm:text-sm lg:text-lg text-gray-900">
                     24/7
                   </h3>
                 </div>
               </div>
 
               {/* Floating Card 3 */}
-              <div className="absolute bottom-[5%] -right-2 bg-white shadow-2xl rounded-2xl lg:rounded-3xl p-2 lg:p-3 z-20 border border-gray-50 flex items-center gap-3 lg:gap-4">
-                <div className="w-10 h-10 lg:w-12 lg:h-12 bg-yellow-50 rounded-lg lg:rounded-xl flex items-center justify-center text-yellow-500 text-lg lg:text-xl">
+              <div className="absolute bottom-[4%] right-1 sm:right-2 lg:-right-2 bg-white shadow-xl rounded-xl sm:rounded-2xl lg:rounded-3xl p-2 sm:p-2.5 lg:p-3 z-20 border border-gray-50 flex items-center gap-2 sm:gap-3 lg:gap-4">
+                <div className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 bg-yellow-50 rounded-lg lg:rounded-xl flex items-center justify-center text-yellow-500 text-sm sm:text-lg lg:text-xl">
                   ⭐
                 </div>
                 <div>
-                  <p className="text-[8px] lg:text-[9px] text-gray-400 font-semibold uppercase tracking-widest">
+                  <p className="text-[7px] sm:text-[8px] lg:text-[9px] text-gray-400 font-semibold uppercase tracking-widest">
                     Success
                   </p>
-                  <h3 className="font-semibold text-lg lg:text-2xl text-gray-900">
+                  <h3 className="font-semibold text-xs sm:text-lg lg:text-2xl text-gray-900">
                     4.8/5
                   </h3>
                 </div>
@@ -426,36 +424,36 @@ const WhyChooseUsSection = () => {
 
         {/* Bottom App Banner */}
         <div className="relative group max-w-6xl mx-auto">
-          <div className="absolute inset-4 bg-[#028dcd]/10 blur-3xl rounded-[4rem] group-hover:opacity-60 transition-opacity"></div>
+          <div className="absolute inset-2 sm:inset-4 bg-[#028dcd]/10 blur-3xl rounded-[3rem] sm:rounded-[4rem] group-hover:opacity-60 transition-opacity"></div>
 
-          <div className="relative bg-[#F8FDFF] rounded-[3rem] md:rounded-[4rem] px-8 lg:px-20 py-0 flex flex-col lg:flex-row items-center justify-between border border-[#E1F7F9] shadow-[0_20px_50px_rgba(79,183,212,0.05)] overflow-hidden">
+          <div className="relative bg-[#F8FDFF] rounded-[2rem] sm:rounded-[3rem] md:rounded-[4rem] px-5 sm:px-8 lg:px-20 py-6 sm:py-8 lg:py-0 flex flex-col lg:flex-row items-center justify-between border border-[#E1F7F9] shadow-[0_20px_50px_rgba(79,183,212,0.05)] overflow-hidden">
             {/* Phones Image - Left Side */}
-            <div className="relative w-full lg:w-[60%] flex justify-center lg:justify-start transform transition-transform duration-700 group-hover:scale-105 pt-10 lg:pt-0">
+            <div className="relative w-full lg:w-[60%] flex justify-center lg:justify-start transform transition-transform duration-700 group-hover:scale-105 pt-4 sm:pt-10 lg:pt-0">
               <img
                 src={phone1}
                 alt="mobile app"
-                className="w-full max-w-[300px] lg:max-w-[540px] drop-shadow-[0_30px_70px_rgba(79,183,212,0.15)] select-none pointer-events-none"
+                className="w-full max-w-[240px] sm:max-w-[300px] lg:max-w-[540px] drop-shadow-[0_20px_50px_rgba(79,183,212,0.15)] select-none pointer-events-none"
                 style={{ imageRendering: "-webkit-optimize-contrast" }}
               />
             </div>
 
             {/* Right Content */}
-            <div className="w-full lg:w-[42%] text-center lg:text-left py-12 lg:py-20">
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-gray-900 leading-[1.1] mb-6 tracking-tight">
+            <div className="w-full lg:w-[42%] text-center lg:text-left py-6 sm:py-12 lg:py-20">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-gray-900 leading-[1.1] mb-4 sm:mb-6 tracking-tight">
                 Manage Services <br />
                 on the Go
               </h2>
 
-              <p className="text-gray-600 text-base md:text-lg leading-relaxed mb-8 md:mb-10 max-w-md mx-auto lg:mx-0 font-medium">
+              <p className="text-gray-600 text-sm sm:text-base md:text-lg leading-relaxed mb-6 sm:mb-8 md:mb-10 max-w-md mx-auto lg:mx-0 font-medium">
                 Download our mobile app to book services, track your requests and get instant updates.
               </p>
 
               <div className="flex justify-center lg:justify-start">
-                <a href="https://play.google.com/store/apps/details?id=com.Door2fy&pli=1" target="_blank" rel="noopener noreferrer" className="transform transition-all hover:scale-105 active:scale-95 shadow-xl rounded-2xl overflow-hidden block">
+                <a href="https://play.google.com/store/apps/details?id=com.Door2fy&pli=1" target="_blank" rel="noopener noreferrer" className="transform transition-all hover:scale-105 active:scale-95 shadow-lg rounded-2xl overflow-hidden block">
                   <img
                     src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
                     alt="Google Play"
-                    className="h-12 md:h-14 w-auto"
+                    className="h-10 sm:h-12 md:h-14 w-auto"
                   />
                 </a>
               </div>
@@ -681,16 +679,16 @@ const PartnerSection = () => {
           {/* RIGHT: High Contrast Form */}
           <div className="relative">
             {/* Subtle glow behind the form */}
-            <div className="absolute -inset-6 bg-[#028dcd]/10 rounded-[3rem] blur-3xl -z-10"></div>
+            <div className="absolute -inset-2 sm:-inset-6 bg-[#028dcd]/10 rounded-[2rem] sm:rounded-[3rem] blur-3xl -z-10"></div>
 
-            <form onSubmit={handleSubmit} className="relative z-10 space-y-7 bg-white p-8 md:p-10 lg:p-14 rounded-[3rem] border border-[#E1F7F9] shadow-[0_30px_70px_rgba(2, 141, 205,0.12)]">
-              <div className="mb-6">
-                <h3 className="text-2xl md:text-3xl font-extrabold text-center text-gray-900 mb-3 tracking-tight">Registration Form</h3>
-                <p className="text-gray-500 text-sm md:text-base text-center font-medium">Join 100+ partners across the country.</p>
+            <form onSubmit={handleSubmit} className="relative z-10 space-y-5 sm:space-y-7 bg-white p-5 sm:p-8 md:p-10 lg:p-14 rounded-2xl sm:rounded-[3rem] border border-[#E1F7F9] shadow-[0_20px_50px_rgba(2, 141, 205,0.1)]">
+              <div className="mb-4 sm:mb-6">
+                <h3 className="text-xl sm:text-2xl md:text-3xl font-extrabold text-center text-gray-900 mb-2 sm:mb-3 tracking-tight">Registration Form</h3>
+                <p className="text-gray-500 text-xs sm:text-sm md:text-base text-center font-medium">Join 100+ partners across the country.</p>
               </div>
 
-              <div className="grid md:grid-cols-2 gap-5 md:gap-7">
-                <div className="space-y-2.5 text-left">
+              <div className="grid md:grid-cols-2 gap-4 sm:gap-5 md:gap-7">
+                <div className="space-y-2 text-left">
                   <label className="text-[10px] font-extrabold text-[#028dcd] uppercase tracking-widest ml-1">Full Name</label>
                   <input
                     type="text"
@@ -698,10 +696,10 @@ const PartnerSection = () => {
                     value={formData.fullName}
                     onChange={(e) => setFormData({ ...formData, fullName: e.target.value })}
                     placeholder="Enter your name"
-                    className="w-full h-14 md:h-16 px-6 md:px-7 rounded-2xl bg-[#F8FDFF] border-2 border-transparent focus:border-[#028dcd] focus:bg-white text-gray-900 text-[15px] outline-none transition-all placeholder:text-gray-400 shadow-sm font-bold"
+                    className="w-full h-12 sm:h-14 md:h-16 px-4 sm:px-6 md:px-7 rounded-xl sm:rounded-2xl bg-[#F8FDFF] border-2 border-transparent focus:border-[#028dcd] focus:bg-white text-gray-900 text-sm md:text-[15px] outline-none transition-all placeholder:text-gray-400 shadow-xs font-bold"
                   />
                 </div>
-                <div className="space-y-2.5 text-left">
+                <div className="space-y-2 text-left">
                   <label className="text-[10px] font-extrabold text-[#028dcd] uppercase tracking-widest ml-1">Email Address</label>
                   <input
                     type="email"
@@ -709,13 +707,13 @@ const PartnerSection = () => {
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                     placeholder="Enter your email"
-                    className="w-full h-14 md:h-16 px-6 md:px-7 rounded-2xl bg-[#F8FDFF] border-2 border-transparent focus:border-[#028dcd] focus:bg-white text-gray-900 text-[15px] outline-none transition-all placeholder:text-gray-400 shadow-sm font-bold"
+                    className="w-full h-12 sm:h-14 md:h-16 px-4 sm:px-6 md:px-7 rounded-xl sm:rounded-2xl bg-[#F8FDFF] border-2 border-transparent focus:border-[#028dcd] focus:bg-white text-gray-900 text-sm md:text-[15px] outline-none transition-all placeholder:text-gray-400 shadow-xs font-bold"
                   />
                 </div>
               </div>
 
-              <div className="grid md:grid-cols-2 gap-5 md:gap-7">
-                <div className="space-y-2.5 text-left">
+              <div className="grid md:grid-cols-2 gap-4 sm:gap-5 md:gap-7">
+                <div className="space-y-2 text-left">
                   <label className="text-[10px] font-extrabold text-[#028dcd] uppercase tracking-widest ml-1">Phone Number</label>
                   <input
                     type="tel"
@@ -723,24 +721,24 @@ const PartnerSection = () => {
                     value={formData.phone}
                     onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                     placeholder="+91 00000 00000"
-                    className="w-full h-14 md:h-16 px-6 md:px-7 rounded-2xl bg-[#F8FDFF] border-2 border-transparent focus:border-[#028dcd] focus:bg-white text-gray-900 text-[15px] outline-none transition-all placeholder:text-gray-400 shadow-sm font-bold"
+                    className="w-full h-12 sm:h-14 md:h-16 px-4 sm:px-6 md:px-7 rounded-xl sm:rounded-2xl bg-[#F8FDFF] border-2 border-transparent focus:border-[#028dcd] focus:bg-white text-gray-900 text-sm md:text-[15px] outline-none transition-all placeholder:text-gray-400 shadow-xs font-bold"
                   />
                 </div>
-                <div className="space-y-2.5 text-left">
+                <div className="space-y-2 text-left">
                   <label className="text-[10px] font-extrabold text-[#028dcd] uppercase tracking-widest ml-1">Service Interest</label>
                   <div className="relative">
                     <select
                       required
                       value={formData.category}
                       onChange={(e) => setFormData({ ...formData, category: e.target.value })}
-                      className="w-full h-14 md:h-16 px-6 md:px-7 rounded-2xl bg-[#F8FDFF] border-2 border-transparent focus:border-[#028dcd] focus:bg-white text-gray-900 text-[15px] outline-none appearance-none cursor-pointer shadow-sm font-bold"
+                      className="w-full h-12 sm:h-14 md:h-16 px-4 sm:px-6 md:px-7 rounded-xl sm:rounded-2xl bg-[#F8FDFF] border-2 border-transparent focus:border-[#028dcd] focus:bg-white text-gray-900 text-sm md:text-[15px] outline-none appearance-none cursor-pointer shadow-xs font-bold"
                     >
                       <option value="">Select Category</option>
                       <option value="macbook">MacBook Support</option>
                       <option value="windows">Windows / Desktop</option>
                       <option value="networking">IT Networking</option>
                     </select>
-                    <div className="absolute right-6 top-1/2 -translate-y-1/2 pointer-events-none text-gray-400">
+                    <div className="absolute right-5 top-1/2 -translate-y-1/2 pointer-events-none text-gray-400">
                       <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M19 9l-7 7-7-7" />
                       </svg>
@@ -749,21 +747,21 @@ const PartnerSection = () => {
                 </div>
               </div>
 
-              <div className="space-y-2.5 text-left">
+              <div className="space-y-2 text-left">
                 <label className="text-[10px] font-extrabold text-[#028dcd] uppercase tracking-widest ml-1">Your Message</label>
                 <textarea
                   rows={3}
                   value={formData.message}
                   onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                   placeholder="Tell us about your background..."
-                  className="w-full px-6 md:px-7 py-5 md:py-6 rounded-2xl bg-[#F8FDFF] border-2 border-transparent focus:border-[#028dcd] focus:bg-white text-gray-900 text-[15px] outline-none resize-none transition-all placeholder:text-gray-400 shadow-sm font-bold"
+                  className="w-full px-4 sm:px-6 md:px-7 py-3.5 sm:py-5 md:py-6 rounded-xl sm:rounded-2xl bg-[#F8FDFF] border-2 border-transparent focus:border-[#028dcd] focus:bg-white text-gray-900 text-sm md:text-[15px] outline-none resize-none transition-all placeholder:text-gray-400 shadow-xs font-bold"
                 ></textarea>
               </div>
 
               <button
                 type="submit"
                 disabled={loading}
-                className={`w-full h-16 md:h-20 rounded-2xl bg-[#028dcd] hover:bg-[#028dcd] text-white text-sm md:text-base font-extrabold uppercase tracking-widest shadow-[0_15px_40px_rgba(79,183,212,0.35)] transition-all duration-300 hover:-translate-y-1 active:scale-[0.98] ${loading ? "opacity-70 cursor-not-allowed" : ""}`}
+                className={`w-full h-13 sm:h-16 md:h-20 rounded-xl sm:rounded-2xl bg-[#028dcd] hover:bg-[#039ecc] text-white text-xs sm:text-sm md:text-base font-extrabold uppercase tracking-widest shadow-[0_12px_35px_rgba(2, 141, 205,0.3)] transition-all duration-300 hover:-translate-y-0.5 active:scale-[0.98] ${loading ? "opacity-70 cursor-not-allowed" : ""}`}
               >
                 {loading ? "Sending..." : "Send Partnership Request"}
               </button>
