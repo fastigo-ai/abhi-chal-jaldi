@@ -301,7 +301,7 @@ const pages: PageMetadata[] = [
   {
     path: "/",
     canonicalUrl: "https://www.door2fy.in/",
-    title: "Doorstep Laptop Repair in Delhi NCR & Across India | Door2fy",
+    title: "Relax we are just 30 min away | Door2fy",
     description: "Door2fy provides 10-minute doorstep laptop repair, MacBook servicing, PC troubleshooting & IT support by verified engineers in Delhi NCR and 30+ cities.",
     keywords: "doorstep laptop repair Delhi, laptop repair Delhi, MacBook repair Delhi, computer service near me, laptop screen repair, IT support India, Door2fy",
     bodyHtml: `
