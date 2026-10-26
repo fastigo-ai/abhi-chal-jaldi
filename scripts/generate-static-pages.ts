@@ -569,6 +569,46 @@ const pages: PageMetadata[] = [
       </section>
     `,
     isPrimarySitemapUrl: true
+  },
+
+  // 17. Engineer Feedback Form
+  {
+    path: "/feedback",
+    canonicalUrl: "https://www.door2fy.in/feedback",
+    title: "Engineer Feedback Form | Door2fy",
+    description: "Door2fy Engineer Feedback Form for service quality, Scope of Work (SOW), payment and on-site support feedback.",
+    keywords: "engineer feedback, technician feedback form, Door2fy feedback, service quality review",
+    bodyHtml: `
+      <section class="seo-crawler-content">
+        <h1>Door2fy Engineer Feedback Form</h1>
+        <p>Service quality, Scope of Work (SOW), payment and on-site support feedback.</p>
+      </section>
+    `,
+    isPrimarySitemapUrl: true
+  },
+  {
+    path: "/feedback-form",
+    canonicalUrl: "https://www.door2fy.in/feedback",
+    title: "Engineer Feedback Form | Door2fy",
+    description: "Door2fy Engineer Feedback Form for service quality, Scope of Work (SOW), payment and on-site support feedback.",
+    keywords: "engineer feedback, technician feedback form, Door2fy feedback",
+    isPrimarySitemapUrl: false
+  },
+
+  // 18. Engineer Reviews
+  {
+    path: "/engineer-reviews",
+    canonicalUrl: "https://www.door2fy.in/engineer-reviews",
+    title: "Verified Engineer Reviews & Ratings | Door2fy",
+    description: "Read real customer reviews and ratings for Door2fy doorstep laptop repair engineers.",
+    keywords: "engineer reviews, laptop technician ratings, door2fy reviews",
+    bodyHtml: `
+      <section class="seo-crawler-content">
+        <h1>Door2fy Verified Engineer Reviews</h1>
+        <p>Real customer reviews and technician ratings.</p>
+      </section>
+    `,
+    isPrimarySitemapUrl: true
   }
 ];
 
