@@ -12,6 +12,7 @@ import Footer from "./components/Footer";
 import { ScrollToTop } from "./components/ScrollToTop";
 import { SmoothScroll } from "./components/SmoothScroll";
 import { RouteSkeletonLoader } from "./components/skeletons";
+import { FeedbackButton } from "./components/FeedbackButton";
 
 // 🏠 Pages (Lazy Loaded)
 const Home = lazy(() => import("./pages/Home"));
@@ -33,6 +34,7 @@ const PartnerGuidelines = lazy(() => import("./pages/PartnerGuidelines"));
 const PartnerBenefits = lazy(() => import("./pages/PartnerBenefits"));
 const PartnerSupport = lazy(() => import("./pages/PartnerSupport"));
 const EngineerReviews = lazy(() => import("./pages/EngineerReviews"));
+const Feedback = lazy(() => import("./pages/Feedback"));
 
 // ⚙️ Meta Pixel Tracker Component
 // This component listens to URL changes and fires the Pixel event
@@ -104,6 +106,8 @@ const App = () => {
                 <Route path="/partner-guidelines" element={<PartnerGuidelines />} />
                 <Route path="/partner-benefits" element={<PartnerBenefits />} />
                 <Route path="/engineer-reviews" element={<EngineerReviews />} />
+                <Route path="/feedback" element={<Feedback />} />
+                <Route path="/feedback-form" element={<Feedback />} />
                 <Route path="/partner-support" element={<PartnerSupport />} />
                 <Route path="/blogs" element={<BlogList />} />
                 <Route path="/blog/:slug" element={<BlogPage />} />
@@ -111,6 +115,9 @@ const App = () => {
                 <Route path="*" element={<NotFound />} />
               </Routes>
             </Suspense>
+
+            {/* Floating Feedback Form Icon Button (Mobile & Desktop) */}
+            <FeedbackButton />
 
             <Footer />
           </BrowserRouter>
