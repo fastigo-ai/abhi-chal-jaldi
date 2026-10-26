@@ -12,7 +12,7 @@ import Footer from "./components/Footer";
 import { ScrollToTop } from "./components/ScrollToTop";
 import { SmoothScroll } from "./components/SmoothScroll";
 import { RouteSkeletonLoader } from "./components/skeletons";
-import { FeedbackButton } from "./components/FeedbackButton";
+import { FeedbackButton } from "./feedback";
 
 // 🏠 Pages (Lazy Loaded)
 const Home = lazy(() => import("./pages/Home"));
@@ -34,7 +34,7 @@ const PartnerGuidelines = lazy(() => import("./pages/PartnerGuidelines"));
 const PartnerBenefits = lazy(() => import("./pages/PartnerBenefits"));
 const PartnerSupport = lazy(() => import("./pages/PartnerSupport"));
 const EngineerReviews = lazy(() => import("./pages/EngineerReviews"));
-const Feedback = lazy(() => import("./pages/Feedback"));
+const Feedback = lazy(() => import("./feedback/FeedbackPage"));
 
 // ⚙️ Meta Pixel Tracker Component
 // This component listens to URL changes and fires the Pixel event
